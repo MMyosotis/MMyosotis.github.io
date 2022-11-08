@@ -1,0 +1,959 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/blog-icon.png">
+  <link rel="icon" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/blog-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="MQY">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="泛型的使用、泛型的定义、泛型的特性、泛型通配符、泛型擦除">
+<meta property="og:type" content="article">
+<meta property="og:title" content="泛型">
+<meta property="og:url" content="http://example.com/post/2053/">
+<meta property="og:site_name" content="Myosotis">
+<meta property="og:description" content="泛型的使用、泛型的定义、泛型的特性、泛型通配符、泛型擦除">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-01T12:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-27T12:00:00.000Z">
+<meta property="article:author" content="MQY">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Java SE">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>泛型 - Myosotis</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid/basicSetting.css">
+<link rel="stylesheet" href="/css/fluid/animation.css">
+<link rel="stylesheet" href="/css/fluid/switchColumn.css">
+<link rel="stylesheet" href="/css/fluid/codecollapse.css">
+<link rel="stylesheet" href="/css/fluid/changecolor.css">
+<link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Myosotis</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <!-- 此处我自己删除了nav-link后的类dropdown-toggle -->
+              <a class="nav-link" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-university"></i>
+                土木
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/civileng/">
+                    <i class="fa fa-bars"></i>
+                    笔记整理
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">
+                    <i class="fa fa-wpforms"></i>
+                    文献阅读
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/artitalk/">
+                <i class="fa fa-commenting"></i>
+                嘀咕
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/bannerimg.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">泛型</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        MQY
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-01 20:00" pubdate>
+          2022年9月1日
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          4.3k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+  <!-- 自己加入的代码！！ -->
+  <span class="myupdated">
+    
+      <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
+      <span class="post-meta ">
+        
+          
+            2022年9月27日
+          
+        
+      </span>
+    
+  </span>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    <!-- 这一部分全改成自己的侧边栏了 -->
+    
+    <section id="mysidebar" class="mysidebar-left">
+      <!--头部-->
+      <div class="content-header clearfix">
+        <div class="pack">
+        <a class="current"><i class="iconfont icon-list"></i></a>
+        <a class="current"><i class="iconfont icon-category-fill"></i></a>
+        </div>
+      </div>
+      <!-- 内容 -->
+        <!-- 位于sidebar-right文件中 -->
+    </section>
+
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">泛型</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-泛型的使用"><a href="#1-泛型的使用" class="headerlink" title="1. 泛型的使用"></a>1. 泛型的使用</h1><p><strong>泛型的概念</strong></p>
+<p>泛型是 JDK5 中引入的特性，它限制了能添加进集合的类型，可以在<font class="word-stress">编译阶段约束操作的数据类型</font>，并进行检查。实际在运行时类并未收到泛型的约束。</p>
+<p><strong>泛型的格式</strong></p>
+<p>泛型格式为 <font class="code-word"><code>&lt;数据类型&gt;</code></font> ，其数据类型只支持引用数据类型。</p>
+<p>在未给集合指定任何类型时，默认所有的数据类型都是 <font class="code-word"><code>Object</code></font>  类型。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3tg2eyla8awp46"></i><span>java</span><div class="collapse show" id="collapse-3tg2eyla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//未使用泛型：默认数据类型Object</span><br><span class="hljs-type">ArrayList</span> <span class="hljs-variable">list</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>();<br><br><span class="hljs-comment">//使用泛型：数据类型String</span><br>ArrayList&lt;String&gt; list = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+<h1 id="2-泛型的定义"><a href="#2-泛型的定义" class="headerlink" title="2. 泛型的定义"></a>2. 泛型的定义</h1><h2 id="2-1-泛型类"><a href="#2-1-泛型类" class="headerlink" title="2.1 泛型类"></a>2.1 泛型类</h2><p>定义类时同时定义了泛型的类就是泛型类，其原理是把出现泛型变量的地方全部替换成传输的真实数据类型。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ku7x2ola8awp46"></i><span>java</span><div class="collapse show" id="collapse-ku7x2ola8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义泛型类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Example</span>&lt;E&gt; &#123;<br>    <br>    <span class="hljs-comment">//成员类型可以由外部输入的类型E指定</span><br>    E member;<br>    <br>    <span class="hljs-comment">//方法形参可以由外部输入的类型E指定</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span> <span class="hljs-params">(E e)</span> &#123;<br>    	member = e;<br>    &#125;<br>    <br>    <span class="hljs-comment">//方法返回类型可以由外部输入的类型E指定</span><br>    <span class="hljs-keyword">public</span> E <span class="hljs-title function_">get</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> member;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-9sgwdfla8awp46"></i><span>java</span><div class="collapse show" id="collapse-9sgwdfla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        Example&lt;Integer&gt; example = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Example</span>&lt;&gt;();<br>        example.add(<span class="hljs-number">10</span>);<br>        <span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> example.get();<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<h2 id="2-2-泛型方法"><a href="#2-2-泛型方法" class="headerlink" title="2.2 泛型方法"></a>2.2 泛型方法</h2><p>定义方法时同时定义了泛型的方法就是泛型方法，泛型写在修饰符之后，返回类型之前。</p>
+<p>在调用泛型方法时，即可以显示指定类型，也可以根据形参类型隐式推断而不必指定。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-is71vpla8awp46"></i><span>java</span><div class="collapse show" id="collapse-is71vpla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Example</span> &#123;<br><br>    <span class="hljs-comment">//定义泛型构造方法</span><br>    <span class="hljs-keyword">public</span> &lt;T&gt; Example(T t) &#123;<br>        System.out.println(t);<br>    &#125;<br><br>    <span class="hljs-comment">//定义泛型方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span>&lt;E&gt; <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(ArrayList&lt;E&gt; list, E e)</span> &#123;<br>        list.add(e);<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-moxqm6la8awp46"></i><span>java</span><div class="collapse show" id="collapse-moxqm6la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-comment">//显式指定</span><br>        <span class="hljs-keyword">new</span> &lt;String&gt;Example(<span class="hljs-string">&quot;Hello&quot;</span>);<br>        Example.&lt;String&gt;add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;(), <span class="hljs-string">&quot;你好&quot;</span>);<br><br>        <span class="hljs-comment">//隐式推断</span><br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Example</span>(<span class="hljs-string">&quot;Hello&quot;</span>);<br>        Example.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;(), <span class="hljs-string">&quot;你好&quot;</span>);<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<h2 id="2-3-泛型接口"><a href="#2-3-泛型接口" class="headerlink" title="2.3 泛型接口"></a>2.3 泛型接口</h2><p>使用了泛型定义的接口就是泛型接口，泛型写在接口名之后。泛型接口有两种使用方式：</p>
+<ul>
+<li><p>实现类给出具体的类型。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0hei9pla8awp46"></i><span>java</span><div class="collapse show" id="collapse-0hei9pla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-comment">//定义泛型接口</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">MyList</span>&lt;E&gt; &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(ArrayList&lt;E&gt; list, E e)</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-hbv1vxla8awp46"></i><span>java</span><div class="collapse show" id="collapse-hbv1vxla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-comment">//使用方式一：实现类给出具体类型</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Example1</span> <span class="hljs-keyword">implements</span> <span class="hljs-title class_">MyList</span>&lt;String&gt; &#123;<br>    <br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(ArrayList&lt;String&gt; list, String str)</span> &#123;<br>        list.add(str);<br>    &#125; <br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+</li>
+<li><p>实现类延续泛型，创建实现类对象时再确定类型。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-s3xmx8la8awp46"></i><span>java</span><div class="collapse show" id="collapse-s3xmx8la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-comment">//定义泛型接口</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">interface</span> <span class="hljs-title class_">MyList</span>&lt;E&gt; &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">abstract</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(ArrayList&lt;E&gt; list, E e)</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-zswbo4la8awp46"></i><span>java</span><div class="collapse show" id="collapse-zswbo4la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-comment">//使用方式二：实现类延续泛型，创建实现类对象时再确定类型</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Example2</span>&lt;E&gt; <span class="hljs-keyword">implements</span> <span class="hljs-title class_">MyList</span>&lt;E&gt; &#123;<br>    <br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">add</span><span class="hljs-params">(ArrayList&lt;E&gt; list, E e)</span> &#123;<br>        list.add(e);<br>    &#125; <br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-6qwbo2la8awp46"></i><span>java</span><div class="collapse show" id="collapse-6qwbo2la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-type">Example1</span> <span class="hljs-variable">list1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Example1</span>();<br>        <br>        <span class="hljs-comment">//创建实现类对象时才确定类型</span><br>        Example2&lt;String&gt; list2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">Example2</span>&lt;&gt;();<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure></li>
+</ul>
+<h1 id="3-泛型的特性"><a href="#3-泛型的特性" class="headerlink" title="3. 泛型的特性"></a>3. 泛型的特性</h1><p>泛型具有如下特性：</p>
+<ul>
+<li><p>指定泛型的具体类型后，传递泛型时不具备多态，不能传入其子类类型；传递数据时，可以传入该类类型或者其子类类型。</p>
+</li>
+<li><p>泛型不能实例化：不能创建对象、创建对应数组等。</p>
+</li>
+</ul>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-gaib8rla8awp46"></i><span>java</span><div class="collapse show" id="collapse-gaib8rla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">People</span> &#123;&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-aqnyt9la8awp46"></i><span>java</span><div class="collapse show" id="collapse-aqnyt9la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">People</span> &#123;&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3vdvrsla8awp46"></i><span>java</span><div class="collapse show" id="collapse-3vdvrsla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">YoungStudents</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Students</span> &#123;&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0yocr1la8awp46"></i><span>java</span><div class="collapse show" id="collapse-0yocr1la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        ArrayList&lt;People&gt; list1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        ArrayList&lt;Students&gt; list2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        ArrayList&lt;YoungStudents&gt; list3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <br>        <span class="hljs-comment">//数据能传递本类型和子类型</span><br>        list1.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">People</span>());<br>        list1.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>());<br>        list1.add(<span class="hljs-keyword">new</span> <span class="hljs-title class_">YoungStudents</span>());<br>        <br>        <span class="hljs-comment">//只能传递对应泛型的形参list2，不能传递list1和list3</span><br>        method(list2);<br>        <br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method</span><span class="hljs-params">(ArrayList&lt;Students&gt; list)</span> &#123;&#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+<h1 id="4-泛型通配符"><a href="#4-泛型通配符" class="headerlink" title="4. 泛型通配符"></a>4. 泛型通配符</h1><p>当泛型类型不确定，但又想要指定为某一个继承体系里的类型，则可以使用泛型通配符：</p>
+<ul>
+<li><font class="code-word"><code>&lt;?&gt;</code></font> ：无边界通配符，可以接受未知的数据类型</li>
+<li><font class="code-word"><code>&lt;? extends E&gt;</code></font>  ：表示可以传递 E 和 E 的所有子类类型。</li>
+<li><font class="code-word"><code>&lt;? super E&gt;</code></font> ：表示可以传递 E 和 E 的所有父类类型。</li>
+</ul>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-y4m9ozla8awp46"></i><span>java</span><div class="collapse show" id="collapse-y4m9ozla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">People</span> &#123;&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7l5a0mla8awp46"></i><span>java</span><div class="collapse show" id="collapse-7l5a0mla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">People</span> &#123;&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-s81yeola8awp46"></i><span>java</span><div class="collapse show" id="collapse-s81yeola8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">YoungStudents</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Students</span> &#123;&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-kqkzsdla8awp46"></i><span>java</span><div class="collapse show" id="collapse-kqkzsdla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.ArrayList;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        ArrayList&lt;People&gt; list1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        ArrayList&lt;Students&gt; list2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        ArrayList&lt;YoungStudents&gt; list3 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;&gt;();<br>        <br>        <span class="hljs-comment">//只能传递对应泛型list2，不能传递list1和list3</span><br>        method1(list2);<br>        <br>        <span class="hljs-comment">//能传递对应泛型的list2和泛型为其子类的list3</span><br>        method2(list2);<br>        method2(list3);<br>        <br>        <span class="hljs-comment">//能传递对应泛型的list2和泛型为其父类的list1</span><br>        method3(list2);<br>        method3(list1);<br>        <br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method1</span><span class="hljs-params">(ArrayList&lt;Students&gt; list)</span> &#123;&#125;<br>    <span class="hljs-comment">//使用泛型通配符</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method2</span><span class="hljs-params">(ArrayList&lt;? extends Students&gt; list)</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">method3</span><span class="hljs-params">(ArrayList&lt;? <span class="hljs-built_in">super</span> Students&gt; list)</span> &#123;&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+<h1 id="5-泛型擦除"><a href="#5-泛型擦除" class="headerlink" title="5. 泛型擦除"></a>5. 泛型擦除</h1><p>泛型信息只存在于<font class="word-stress">代码编译阶段</font>，在进入 JVM 之前，与泛型相关的信息会被擦除掉，即泛型擦除。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-sl8mzcla8awp46"></i><span>java</span><div class="collapse show" id="collapse-sl8mzcla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">List&lt;String&gt; l1 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;String&gt;();<br>List&lt;Integer&gt; l2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayList</span>&lt;Integer&gt;();        <br><br>System.out.println(l1.getClass() == l2.getClass());   <span class="hljs-comment">//输出：true</span><br></code></pre></td></tr></table></div></figure>
+
+<p>泛型擦除这一性质可以使得<a href="">反射</a>能绕过泛型向集合中添加元素。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/02-Java-SE/" class="category-chain-item">02 Java SE</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Java/">#Java</a>
+      
+        <a href="/tags/Java-SE/">#Java SE</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>泛型</div>
+      <div>http://example.com/post/2053/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>MQY</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月1日</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>更新于</div>
+          <div>2022年9月27日</div>
+        </div>
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+<!-- 这部分全改成自己的侧边栏了 -->
+
+<!--主体-->
+<section id="mysidebar" class="mysidebar-right">
+<!--头部-->
+  <!-- 在sidebar-left文件中 -->
+  
+<!--内容-->
+  <div class="content-body">
+      <div class="dom" style="display: block">
+        <aside class="sidebar" style="margin-left: -1rem">
+          <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+        </aside>            
+      </div>
+        <div class="dom">
+          <aside class="sidebar category-bar" style="margin-right: -1rem">
+            
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="02 Java SE"
+        id="heading-d38f32cc8472004d980caddd508b0093" role="tab" data-toggle="collapse" href="#collapse-d38f32cc8472004d980caddd508b0093"
+        aria-expanded="true"
+      >
+        02 Java SE
+        <span class="list-group-count">(15)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-d38f32cc8472004d980caddd508b0093"
+           role="tabpanel" aria-labelledby="heading-d38f32cc8472004d980caddd508b0093">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/post/28534/" title="基础语法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基础语法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/3799/" title="基础进阶"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基础进阶</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/50013/" title="面向对象 (一)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">面向对象 (一)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/1017/" title="面向对象 (二)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">面向对象 (二)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/37723/" title="面向对象 (三)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">面向对象 (三)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/45824/" title="常用 API"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">常用 API</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/2053/" title="泛型"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">泛型</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/28199/" title="集合 (一)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">集合 (一)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/44675/" title="集合 (二)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">集合 (二)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/4876/" title="异常"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">异常</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/5808/" title="IO 流 (一)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">IO 流 (一)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/54804/" title="IO 流 (二)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">IO 流 (二)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/52505/" title="并发"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">并发</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/53772/" title="反射"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">反射</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/49545/" title="注解"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">注解</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+          </aside>            
+        </div>
+      </div>
+</section>
+<!-- 点击切换 -->
+<script type="application/javascript" >
+    window.onload=function () {
+        let as=document.getElementsByClassName('content-header')[0].getElementsByTagName('a');
+        let contents=document.getElementsByClassName("dom");
+        for (let i=0;i<as.length;i++){
+            let a=as[i];
+            a.id=i;
+            // 设置每个a标签的onclick事件
+            a.onclick=function () {
+                // 清楚所有标签的css设置，隐藏dom标签
+                for(let j=0;j<as.length;j++){
+                    as[j].className="";
+                    contents[j].style.display="none";
+                }
+                // 设置当前标签样式及当前标签下的所有dom标签可见
+                this.className='current';
+                // 当前div可见
+                contents[this.id].style.display='block';
+            }
+        }
+    }
+</script>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      蜀ICP备2022023418号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+<!-- hexo injector body_end start --></div><!-- hexo injector body_end end --></body>
+</html>

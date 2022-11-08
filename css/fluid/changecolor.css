@@ -1,0 +1,67 @@
+:root {
+  --highlight-title-bg-color: #eff3f8;
+}
+[data-user-color-scheme='dark'] {
+  --highlight-title-bg-color: #343a43;
+  --highlight-bg-color: #2d333b;
+}
+[data-user-color-scheme='dark'] .markdown-body .highlight,
+[data-user-color-scheme='dark'] .markdown-body .code-wrapper {
+  background-color: var(--highlight-title-bg-color);
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .markdown-body .highlight > i,
+[data-user-color-scheme='dark'] .markdown-body .code-wrapper > i {
+  color: #c4c6c9;
+}
+[data-user-color-scheme='dark'] .markdown-body .highlight > span,
+[data-user-color-scheme='dark'] .markdown-body .code-wrapper > span {
+  color: #c4c6c9;
+  transition: color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .copy-btn {
+  color: #c4c6c9;
+  transition: color 0.2s ease-in-out;
+}
+[data-user-color-scheme='light'] .markdown-body .highlight,
+[data-user-color-scheme='light'] .markdown-body .code-wrapper {
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='light'] .markdown-body .highlight > span,
+[data-user-color-scheme='light'] .markdown-body .code-wrapper > span {
+  transition: color 0.2s ease-in-out;
+}
+:root {
+  --form-color: #f6f8fa;
+  --form-border-color: #e6ebf1;
+}
+[data-user-color-scheme='dark'] {
+  --form-color: #2d333b;
+  --form-border-color: #4a5360;
+}
+:root {
+  --code-word-color: #c72541;
+  --code-sentence-color: #008000;
+}
+[data-user-color-scheme='dark'] {
+  --code-word-color: #d88;
+  --code-sentence-color: #5be17b;
+}
+[data-user-color-scheme='dark'] .categoryinpost {
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .categoryinpost button {
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='dark'] .categoryinpost .dropdown-divider {
+  transition: border-top 0.2s ease-in-out;
+}
+[data-user-color-scheme='light'] .categoryinpost {
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='light'] .categoryinpost button {
+  transition: background-color 0.2s ease-in-out;
+}
+[data-user-color-scheme='light'] .categoryinpost .dropdown-divider {
+  transition: border-top 0.2s ease-in-out;
+}

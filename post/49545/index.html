@@ -1,0 +1,1009 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/blog-icon.png">
+  <link rel="icon" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/blog-icon.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="MQY">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="注解概述、自带注解、自定义注解、元注解、注解解析">
+<meta property="og:type" content="article">
+<meta property="og:title" content="注解">
+<meta property="og:url" content="http://example.com/post/49545/">
+<meta property="og:site_name" content="Myosotis">
+<meta property="og:description" content="注解概述、自带注解、自定义注解、元注解、注解解析">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2022-09-27T12:00:00.000Z">
+<meta property="article:modified_time" content="2022-09-27T12:00:00.000Z">
+<meta property="article:author" content="MQY">
+<meta property="article:tag" content="Java">
+<meta property="article:tag" content="Java SE">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>注解 - Myosotis</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+  
+<link rel="stylesheet" href="/css/fluid/basicSetting.css">
+<link rel="stylesheet" href="/css/fluid/animation.css">
+<link rel="stylesheet" href="/css/fluid/switchColumn.css">
+<link rel="stylesheet" href="/css/fluid/codecollapse.css">
+<link rel="stylesheet" href="/css/fluid/changecolor.css">
+<link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
+<link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 60vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Myosotis</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item dropdown">
+              <!-- 此处我自己删除了nav-link后的类dropdown-toggle -->
+              <a class="nav-link" target="_self" href="javascript:;" role="button"
+                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="fa fa-university"></i>
+                土木
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/civileng/">
+                    <i class="fa fa-bars"></i>
+                    笔记整理
+                  </a>
+                
+                  
+                  
+                  
+                  <a class="dropdown-item" href="/categories/%E6%96%87%E7%8C%AE%E9%98%85%E8%AF%BB%E7%AC%94%E8%AE%B0/">
+                    <i class="fa fa-wpforms"></i>
+                    文献阅读
+                  </a>
+                
+              </div>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/artitalk/">
+                <i class="fa fa-commenting"></i>
+                嘀咕
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/bannerimg.jpg') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">注解</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        MQY
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2022-09-27 20:00" pubdate>
+          2022年9月27日
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.8k 字
+        
+      </span>
+    
+
+    
+
+    
+    
+  </div>
+
+  <!-- 自己加入的代码！！ -->
+  <span class="myupdated">
+    
+  </span>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    <!-- 这一部分全改成自己的侧边栏了 -->
+    
+    <section id="mysidebar" class="mysidebar-left">
+      <!--头部-->
+      <div class="content-header clearfix">
+        <div class="pack">
+        <a class="current"><i class="iconfont icon-list"></i></a>
+        <a class="current"><i class="iconfont icon-category-fill"></i></a>
+        </div>
+      </div>
+      <!-- 内容 -->
+        <!-- 位于sidebar-right文件中 -->
+    </section>
+
+
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">注解</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="1-注解概述"><a href="#1-注解概述" class="headerlink" title="1. 注解概述"></a>1. 注解概述</h1><p>Java 注解又称 Java 标注，是 JDK5.0 引入的一种注释机制。Java 语言中的类、构造器、方法、成员变量、参数等都可以被注解进行标注，然后进行特殊处理。</p>
+<h1 id="2-自带注解"><a href="#2-自带注解" class="headerlink" title="2. 自带注解"></a>2. 自带注解</h1><p>Java 中自带了一些注解，其中作用在代码中的常见注解有：</p>
+<ul>
+<li><font class="code-word"><code>@Override</code></font>：重写标记，一般在子类继承父类后，标注在重写过后的子类方法上。如果发现其父类，或者是引用的接口中并没有该方法时，会报编译错误。</li>
+<li><font class="code-word"><code>@Deprecated</code></font>：用此注解注释的代码已经过时，不再推荐使用。</li>
+<li><font class="code-word"><code>@SuppressWarnings</code></font>：这个注解起到忽略编译器的警告作用。</li>
+<li><font class="code-word"><code>@FunctionalInterface</code></font>：表明这个方法是一个函数式接口。</li>
+</ul>
+<h1 id="3-自定义注解"><a href="#3-自定义注解" class="headerlink" title="3. 自定义注解"></a>3. 自定义注解</h1><p><strong>自定义注解的格式</strong></p>
+<p>自定义注解就是自己做一个注解来使用，注解使用 <font class="code-word"><code>@interface</code></font> 关键字来定义。注解内的属性定义格式如下：<font class="code-sentence"><code>public 属性类型 属性名() default 默认值;</code></font> </p>
+<p>在使用自定义注解时，括号内必须采用 <font class="code-word"><code>名称=值</code></font> 的形式，对于有默认值的属性，可以不写出来而直接取默认值。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-er3tmwla8awp46"></i><span>java</span><div class="collapse show" id="collapse-er3tmwla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义注解</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">name</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-string">&quot;默认书本&quot;</span>;  <br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span>;                            <br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-u8889wla8awp46"></i><span>java</span><div class="collapse show" id="collapse-u8889wla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br><br>    <span class="hljs-comment">//使用注解标记方法</span><br>    <span class="hljs-meta">@MyBook(price = 500)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//使用注解标记变量</span><br>        <span class="hljs-meta">@MyBook(name = &quot;书本&quot;, price = 128)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第一本书&quot;</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<p><strong>注解类的特殊属性</strong></p>
+<p><font class="code-word"><code>value</code></font> 属性：如果只有一个 value 属性或有多个属性但除了 value 均有默认值的情况下，若只设定 value 属性的值，可以省略 value 的名称不写。</p>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0l5ggola8awp46"></i><span>java</span><div class="collapse show" id="collapse-0l5ggola8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;                  <span class="hljs-comment">//value属性</span><br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-zo7ot3la8awp46"></i><span>java</span><div class="collapse show" id="collapse-zo7ot3la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-meta">@MyBook(&quot;书本&quot;)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第一本书&quot;</span>;<br>       <br>        <span class="hljs-meta">@MyBook(value = &quot;书本&quot;, price = 100)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第二本书&quot;</span>;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+
+
+
+
+<h1 id="4-元注解"><a href="#4-元注解" class="headerlink" title="4. 元注解"></a>4. 元注解</h1><p>元注解即是<font class="word-stress">注解的注解</font>，用于注释注解定义的代码。常见的两个元注解如下：</p>
+<ul>
+<li><p><font class="code-word"><code>@Target</code></font>：约束自定义注解只能在哪些地方使用。其中常用的值定义在 <font class="code-word"><code>ElementType</code></font> 枚举类中，常用值如下：</p>
+<table class="myform">
+    <head>
+        <tr>
+            <th style="text-align: center;" width=50%>常用值</th>
+            <th style="text-align: center;" width=50%>值说明</th>
+            <th style="padding:0; margin:0;"></th>
+        </tr>
+    </head>
+    <body>
+        <tr>
+            <td style="text-align: center;">TYPE</td> 
+            <td style="text-align: center;">类，接口</td> 
+         </tr>  
+        <tr>
+            <td style="text-align: center;">FIELD</td> 
+            <td style="text-align: center;">成员变量</td> 
+         </tr>
+        <tr>
+            <td style="text-align: center;">METHOD</td> 
+            <td style="text-align: center;">成员方法</td> 
+         </tr>
+        <tr>
+            <td style="text-align: center;">PARAMETER</td> 
+            <td style="text-align: center;">方法参数</td> 
+         </tr>
+        <tr>
+            <td style="text-align: center;">/td> 
+            <td style="text-align: center;">构造器</td> 
+         </tr>
+        <tr>
+            <td style="text-align: center;">LE</td> 
+            <td style="text-align: center;">局部变量</td> 
+         </tr>
+    <!-- hexo injector body_end start --></div><!-- hexo injector body_end end --></body>
+</table>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-jqtqiyla8awp46"></i><span>java</span><div class="collapse show" id="collapse-jqtqiyla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;<br><span class="hljs-keyword">import</span> java.lang.annotation.Target;<br><br><span class="hljs-meta">@Target(ElementType.METHOD)</span>    <span class="hljs-comment">//设定MyBook注解只可以在方法中使用</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+</li>
+<li><p><font class="code-word"><code>@Retention</code></font>：声明注解的生命周期。其中使用的值定义在 <font class="code-word"><code>RetentionPolicy</code></font> 枚举类中，常用值如下：</p>
+<table class="myform">
+    <head>
+        <tr>
+            <th style="text-align: center;" width=50%>常用值</th>
+            <th style="text-align: center;" width=50%>值说明</th>
+            <th style="padding:0; margin:0;"></th>
+        </tr>
+    </head>
+    <body>
+        <tr>
+            <td style="text-align: center;">SOURCE</td> 
+            <td style="text-align: center;">注解只作用在源码阶段，生成的字节码文件中不存在</td> 
+         </tr>  
+        <tr>
+            <td style="text-align: center;">CLASS</td> 
+            <td style="text-align: center;">注解作用在源码阶段，字节码文件阶段，运行阶段不存在</td> 
+         </tr>
+        <tr>
+            <td style="text-align: center;">RUNTIME</td> 
+            <td style="text-align: center;">注解作用在源码阶、字节码文件阶段、运行阶段</td> 
+         </tr>
+    </body>
+</table>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-aa2kl6la8awp46"></i><span>java</span><div class="collapse show" id="collapse-aa2kl6la8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.Retention;<br><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;<br><br><span class="hljs-meta">@Retention(RetentionPolicy.RUNTIME)</span>   <span class="hljs-comment">//设定MyBook注解在源码阶段、字节码文件阶段、运行阶段均存在</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure></li>
+</ul>
+<h1 id="5-注解解析"><a href="#5-注解解析" class="headerlink" title="5. 注解解析"></a>5. 注解解析</h1><p>注解的操作中经常需要进行解析，注解的解析就是判断是否存在注解，存在注解就解析出内容。</p>
+<p>与注解解析相关的接口如下：</p>
+<ul>
+<li><p><font class="code-word"><code>Annotation</code></font>：注解的顶级接口，注解都是 Annotation 类型的对象。</p>
+</li>
+<li><p><font class="code-word"><code>AnnotatedElement</code></font>：注解的元素接口，该接口定义了与注解解析相关的解析方法：</p>
+<table class="myform">
+    <head>
+        <tr>
+            <th style="text-align: center;" width=50%>方法名称</th>
+            <th style="text-align: center;" width=50%>方法说明</th>
+            <th style="padding:0; margin:0;"></th>
+        </tr>
+    </head>
+    <body>
+        <tr>
+            <td style="text-align: center;">Annotation[] getDeclaredAnnotations()</td> 
+            <td style="text-align: center;">获得当前对象上使用的所有注解，返回注解数组</td> 
+         </tr>  
+        <tr>
+            <td style="text-align: center;">Annotation getDeclaredAnnotation(Class&lt;T&gt; annotationClass)</td> 
+            <td style="text-align: center;">获取指定的注解</td> 
+         </tr>  
+        <tr>
+            <td style="text-align: center;">T getDeclaredAnnotation(Class&lt;T&gt; annotationClass)</td> 
+            <td style="text-align: center;">清空集合中所有的元素</td> 
+         </tr>
+        <tr>
+            <td style="text-align: center;">boolean isAnnotationPresent(Class&lt;Annotation&gt; annotationClass)</td> 
+            <td style="text-align: center;">判断当前对象是否使用了指定的注解，如果使用了则返回true，否则false</td> 
+         </tr>
+    </body>
+</table></li>
+</ul>
+<p>所有的类成分 Class、Method 、 Field 、 Constructor 都实现了 AnnotatedElement 接口，他们都拥有解析注解的能力。</p>
+<p>注解解析的注意事项如下：</p>
+<ul>
+<li>使用 <font class="code-sentence"><code>getDeclaredAnnotation</code></font> 获取值时返回类型为 <font class="code-sentence"><code>Annotation</code></font> 类型，可以将其强转成实际的注解类型。</li>
+<li>注解作用成员方法，则要获得该成员方法对应的 Method 对象，再来拿上面的注解。</li>
+<li>注解作用在类上，则要该类的 Class 对象，再来拿上面的注解。</li>
+<li>注解作用在成员变量上，则要获得该成员变量对应的 Field 对象，再来拿上面的注解。</li>
+</ul>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ka58xwla8awp46"></i><span>java</span><div class="collapse show" id="collapse-ka58xwla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;<br><span class="hljs-keyword">import</span> java.lang.annotation.Retention;<br><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;<br><span class="hljs-keyword">import</span> java.lang.annotation.Target;<br><br><span class="hljs-comment">//定义注解</span><br><span class="hljs-meta">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span><br><span class="hljs-meta">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">name</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-avmfyola8awp46"></i><span>java</span><div class="collapse show" id="collapse-avmfyola8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义类并使用注解</span><br><span class="hljs-meta">@MyBook(name = &quot;书库&quot;, price = 500)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BookStore</span> &#123;<br><br>    <span class="hljs-meta">@MyBook(name = &quot;第一本书&quot;, price = 128)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-lckl3nla8awp46"></i><span>java</span><div class="collapse show" id="collapse-lckl3nla8awp46"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;<br><span class="hljs-keyword">import</span> java.lang.reflect.Method;<br><br><span class="hljs-comment">//测试类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Demo</span> &#123;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">parseClass</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> NoSuchMethodException &#123;<br><br>        <span class="hljs-comment">//获取类对象</span><br>        <span class="hljs-type">Class</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> BookStore.class;<br><br>        <span class="hljs-comment">//判断类上是否存在注解</span><br>        <span class="hljs-keyword">if</span> (c.isAnnotationPresent(MyBook.class)) &#123;<br>            <span class="hljs-comment">//获取类的注解对象</span><br>            <span class="hljs-type">MyBook</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> (MyBook) c.getAnnotation(MyBook.class);<br>            System.out.println(book.name());         <span class="hljs-comment">//输出：书库</span><br>            System.out.println(book.price());        <span class="hljs-comment">//输出：500.0</span><br>        &#125;<br><br>        <span class="hljs-comment">//获取方法对象</span><br>        <span class="hljs-type">Method</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> c.getDeclaredMethod(<span class="hljs-string">&quot;test&quot;</span>);<br><br>        <span class="hljs-comment">//判断方法上是都存在注解</span><br>        <span class="hljs-keyword">if</span> (m.isAnnotationPresent(MyBook.class)) &#123;<br>            <span class="hljs-comment">//获取方法的注解对象</span><br>            <span class="hljs-type">MyBook</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> (MyBook) m.getAnnotation(MyBook.class);<br>            System.out.println(book.name());         <span class="hljs-comment">//输出：第一本书</span><br>            System.out.println(book.price());        <span class="hljs-comment">//输出：128.0</span><br>        &#125;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/02-Java-SE/" class="category-chain-item">02 Java SE</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Java/">#Java</a>
+      
+        <a href="/tags/Java-SE/">#Java SE</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>注解</div>
+      <div>http://example.com/post/49545/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>MQY</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2022年9月27日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+<!-- 这部分全改成自己的侧边栏了 -->
+
+<!--主体-->
+<section id="mysidebar" class="mysidebar-right">
+<!--头部-->
+  <!-- 在sidebar-left文件中 -->
+  
+<!--内容-->
+  <div class="content-body">
+      <div class="dom" style="display: block">
+        <aside class="sidebar" style="margin-left: -1rem">
+          <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+        </aside>            
+      </div>
+        <div class="dom">
+          <aside class="sidebar category-bar" style="margin-right: -1rem">
+            
+
+
+
+
+
+<div class="category-list">
+  
+  
+    
+    
+    
+    <div class="category row nomargin-x">
+      <a class="category-item 
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="02 Java SE"
+        id="heading-d38f32cc8472004d980caddd508b0093" role="tab" data-toggle="collapse" href="#collapse-d38f32cc8472004d980caddd508b0093"
+        aria-expanded="true"
+      >
+        02 Java SE
+        <span class="list-group-count">(15)</span>
+        <i class="iconfont icon-arrowright"></i>
+      </a>
+      
+      <div class="category-collapse collapse show" id="collapse-d38f32cc8472004d980caddd508b0093"
+           role="tabpanel" aria-labelledby="heading-d38f32cc8472004d980caddd508b0093">
+        
+        
+          
+  <div class="category-post-list">
+    
+    
+      
+      
+        <a href="/post/28534/" title="基础语法"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基础语法</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/3799/" title="基础进阶"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基础进阶</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/50013/" title="面向对象 (一)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">面向对象 (一)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/1017/" title="面向对象 (二)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">面向对象 (二)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/37723/" title="面向对象 (三)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">面向对象 (三)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/45824/" title="常用 API"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">常用 API</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/2053/" title="泛型"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">泛型</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/28199/" title="集合 (一)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">集合 (一)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/44675/" title="集合 (二)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">集合 (二)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/4876/" title="异常"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">异常</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/5808/" title="IO 流 (一)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">IO 流 (一)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/54804/" title="IO 流 (二)"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">IO 流 (二)</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/52505/" title="并发"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">并发</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/53772/" title="反射"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">反射</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/49545/" title="注解"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">注解</span>
+        </a>
+      
+    
+  </div>
+
+        
+      </div>
+    </div>
+  
+</div>
+
+
+          </aside>            
+        </div>
+      </div>
+</section>
+<!-- 点击切换 -->
+<script type="application/javascript" >
+    window.onload=function () {
+        let as=document.getElementsByClassName('content-header')[0].getElementsByTagName('a');
+        let contents=document.getElementsByClassName("dom");
+        for (let i=0;i<as.length;i++){
+            let a=as[i];
+            a.id=i;
+            // 设置每个a标签的onclick事件
+            a.onclick=function () {
+                // 清楚所有标签的css设置，隐藏dom标签
+                for(let j=0;j<as.length;j++){
+                    as[j].className="";
+                    contents[j].style.display="none";
+                }
+                // 设置当前标签样式及当前标签下的所有dom标签可见
+                this.className='current';
+                // 当前div可见
+                contents[this.id].style.display='block';
+            }
+        }
+    }
+</script>
+
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
+    </div>
+  
+  
+  
+    <!-- 备案信息 ICP for China -->
+    <div class="beian">
+  <span>
+    <a href="http://beian.miit.gov.cn/" target="_blank" rel="nofollow noopener">
+      蜀ICP备2022023418号-1
+    </a>
+  </span>
+  
+</div>
+
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    
+      <script  src="/js/img-lazyload.js" ></script>
+    
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

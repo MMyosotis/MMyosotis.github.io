@@ -1,0 +1,222 @@
+/* ______基于 Fluid 主题基础功能修改______ */
+
+
+
+
+/* ---------页面样式修改--------- */
+
+/*修改文章页页边距*/
+.post-content {
+  box-sizing: border-box;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+
+
+/*修改自定义页页边距*/
+.markdown-body.civil {
+   box-sizing: border-box;
+   padding-left: 15%;
+   padding-right: 15%;
+}
+
+
+/* 修改手机端页边距 */
+@media (max-width: 767px) {
+  .container .col-12.col-md-10.m-auto {
+    padding: 2rem;
+  }
+}
+
+
+/* 修改页面宽度 */
+.col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board {
+  width: 112%;
+  left: -12%; 
+}
+@media (max-width: 993px) {
+  .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board {
+    width: 100%;
+    left: 0%;
+  }
+}
+
+
+/* 解决高分屏下元素过宽的问题 */
+.post .row.nomargin-x {
+  max-width: 100rem;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+
+
+
+/* ---------文章样式修改--------- */
+
+/*设置图片居中*/
+img.img-center { 
+  display: block ;
+  margin: auto;
+  text-align: center;
+}
+
+
+/* 设置特殊文字样式 */
+font.code-word {
+  color: var(--code-word-color);
+}
+
+font.code-sentence {
+  color: var(--code-sentence-color);
+}
+
+font.word-stress {
+  color: #008B8B;
+}
+
+
+/* 设置表格样式 */
+table.myform tbody{
+  border-spacing: 0;
+  border-collapse: collapse;
+  text-overflow: ellipsis;
+  word-break: keep-all;
+  white-space: nowrap; 
+  width: 100%;
+}
+/* 表格边框样式：有内框 */
+table.myform tbody td {
+  /* 无内框设置 
+  border-left-width: 0;
+  border-right-width :0; */
+  border-color: var(--form-border-color);
+}
+table.myform tbody th {
+  border-color: var(--form-border-color);
+}
+table.myform tr:nth-child(2n+1) {
+  background-color: var(--form-color);
+}
+table.myform th:last-child {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+/* table.myform td:first-child {
+  border-left-width: 1px;
+}
+table.myform th:first-child {
+  border-left-width: 1px;
+}
+table.myform td:last-child {
+  border-right-width: 1px;
+} */
+
+
+/* 文中分类折叠栏：现在已关闭 */
+.categoryinpost {
+  display: none;
+  margin-bottom: 0.15em;
+  background-color: var(--highlight-bg-color);
+  border-radius: 18px;
+  padding: 0.15em;
+}
+.categoryinpost button {
+  text-align: left;
+  width:100%;
+  border: none;
+  font-size: 1.2em;
+  color: var(--text-color);
+  background-color: var(--highlight-bg-color);
+  border-radius: 20px;
+}
+.categoryinpost button > i {
+  margin-left: 0.75rem;
+  margin-right: 0.5rem;
+  transition: transform 0.35s ease;
+  -o-transition:transform 0.35s ease;
+  -moz-transition:transform 0.35s ease;
+  -webkit-transition: transform 0.35s ease;
+  font-size: 1.2em;
+}
+.categoryinpost button.collapsed > i {
+  transform:rotate(-90deg);
+}
+.categoryinpost .titleblock {
+  margin-left: 0.75em;
+  margin-right: 0.75em;
+}
+.categoryinpost .title {
+  color: var(--text-color);
+}
+.categoryinpost .dropdown-divider {
+  border-top: 1px solid var(--form-color);
+  margin-top: 0.15em;
+}
+
+
+/* 代码块样式修改 */
+figure.highlight table{
+  background-color: var(--highlight-bg-color) !important;
+  transition: background-color 0.2s ease-in-out;
+  -o-transition:background-color 0.2s ease-in-out;
+  -moz-transition:background-color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out;
+  border-radius: 0 0 10px 10px;
+}
+figure.highlight table td.gutter{
+  position: static;
+  border-bottom-left-radius: 14px;
+}
+figure.highlight table td.code {
+  border-radius: 0 0 10px 10px;
+}
+
+
+
+
+/* ---------归档页样式修改--------- */
+
+/* 设置日期在右侧显示 */
+.archive .list-group .list-group-item,
+.tag .list-group .list-group-item,
+.category .list-group .list-group-item,
+.thesisReading .list-group .list-group-item,
+.civilEngineeringBody .list-group .list-group-item {
+  justify-content: space-between;
+}
+
+
+
+
+/* --------分类页样式修改-------- */
+
+/* 不显示文献阅读笔记 */
+.categories .category-list div.category.row.nomargin-x:last-child{
+  display: none;
+}
+
+
+
+
+/* --------自定义页面样式-------- */
+
+/* 笔记目录设置 */
+.civilEngineeringBody .list-group p.h5 i {
+  margin-right: 1rem;
+}
+.civilEngineeringBody .list-group .list-group-item time {
+  text-overflow: ellipsis;
+  white-space:nowrap;
+}
+.civilEngineeringBody .list-group .list-group-item i {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+
+/* 土木分类下icon距离文字的距离 */
+.nav-item .dropdown-menu.dropdown-collapse .dropdown-item i{
+  margin-right: 0.3rem;
+}

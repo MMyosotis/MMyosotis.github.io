@@ -1,0 +1,33 @@
+.markdown-body .highlight,
+.markdown-body .code-wrapper {
+  background-color: var(--highlight-title-bg-color);
+  border-radius: 15px;
+}
+.markdown-body .highlight > i,
+.markdown-body .code-wrapper > i {
+  color: #777;
+  margin-left: 1rem;
+  margin-right: 0.65rem;
+  line-height: 2rem;
+  transform: none;
+  transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  font-size: 18px;
+}
+.markdown-body .highlight > i.collapsed,
+.markdown-body .code-wrapper > i.collapsed {
+  transform: rotate(-90deg);
+}
+.markdown-body .highlight > span,
+.markdown-body .code-wrapper > span {
+  color: #777;
+  font-weight: bold;
+  font-family: "Arial";
+}
+.copy-btn {
+  font-size: 1rem;
+  color: #777;
+}
+.copy-btn > i {
+  font-size: 1rem !important;
+  font-weight: bold;
+}
