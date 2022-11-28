@@ -1,13 +1,13 @@
 .markdown-body .highlight,
 .markdown-body .code-wrapper {
   background-color: var(--highlight-title-bg-color);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 .markdown-body .highlight > i,
 .markdown-body .code-wrapper > i {
   color: #777;
-  margin-left: 1rem;
-  margin-right: 0.65rem;
+  margin-left: 0.7rem;
+  margin-right: 0.6rem;
   line-height: 2rem;
   transform: none;
   transition: color 0.2s ease-in-out, transform 0.2s ease-in-out;
