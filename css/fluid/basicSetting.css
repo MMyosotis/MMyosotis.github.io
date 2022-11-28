@@ -192,10 +192,10 @@ figure.highlight table td.code {
 
 /* --------分类页样式修改-------- */
 
-/* 不显示文献阅读笔记 */
+/* 不显示文献阅读笔记（该功能已停用）
 .categories .category-list div.category.row.nomargin-x:last-child{
   display: none;
-}
+} */
 
 
 
