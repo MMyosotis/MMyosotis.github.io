@@ -16,24 +16,38 @@
   <meta name="author" content="MQY">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言、文章页切换颜色">
+    <meta name="description" content="软件下载、软件安装、软件配置、IDEA 配置 Maven">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于 Fluid 主题适配深浅两色">
-<meta property="og:url" content="http://example.com/post/4228881379/">
+<meta property="og:title" content="Maven - 软件配置">
+<meta property="og:url" content="http://example.com/post/2655733482/">
 <meta property="og:site_name" content="Myosotis">
-<meta property="og:description" content="前言、文章页切换颜色">
+<meta property="og:description" content="软件下载、软件安装、软件配置、IDEA 配置 Maven">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2022-11-08T12:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-08T12:00:00.000Z">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-1.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-2.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-3.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-4.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-5.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-6.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-7.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-8.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-9.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-10.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-12.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-13.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-11.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-14.png">
+<meta property="og:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-15.png">
+<meta property="article:published_time" content="2022-11-30T12:00:00.000Z">
+<meta property="article:modified_time" content="2022-11-30T12:00:00.000Z">
 <meta property="article:author" content="MQY">
-<meta property="article:tag" content="Hexo">
-<meta property="article:tag" content="Fluid">
-<meta property="article:tag" content="CSS">
+<meta property="article:tag" content="软件配置">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-1.png">
   
   
   
-  <title>基于 Fluid 主题适配深浅两色 - Myosotis</title>
+  <title>Maven - 软件配置 - Myosotis</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -232,7 +246,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle">基于 Fluid 主题适配深浅两色</span>
+            <span id="subtitle">Maven - 软件配置</span>
           
         </div>
 
@@ -248,8 +262,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2022-11-08 20:00" pubdate>
-          2022年11月8日
+        <time datetime="2022-11-30 20:00" pubdate>
+          2022年11月30日
         </time>
       </span>
     
@@ -260,7 +274,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.2k 字
+          811 字
         
       </span>
     
@@ -321,26 +335,71 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">基于 Fluid 主题适配深浅两色</h1>
+            <h1 style="display: none">Maven - 软件配置</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>Fluid 主题可以切换深色和浅色两种模式，所以为了适配这两种不同的模式，部分自定义的样式需要手动设置在两种模式下的切换和颜色，具体的代码格式可以从 Fluid 的源码中扒出来。</p>
-<p>styl 文件都一律放在了 <code>Blog\source\css\fluid</code> 路径下，直接在主题中引入就行。</p>
-<h1 id="2-文章页切换颜色"><a href="#2-文章页切换颜色" class="headerlink" title="2.  文章页切换颜色"></a>2.  文章页切换颜色</h1><h2 id="2-1-文字切换颜色"><a href="#2-1-文字切换颜色" class="headerlink" title="2.1 文字切换颜色"></a>2.1 文字切换颜色</h2><p> 为了适配 Fluid 主题的深浅色两种外观，所以颜色进行了一些设置，这是后来在弄代码块折叠的时候学来的。自定一个 styl 文件加入以下内容来配置深浅两种外观下的不同代码块颜色。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-2rgx3elb3u2ec2"></i><span>styl</span><div class="collapse show" id="collapse-2rgx3elb3u2ec2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--code-word-color</span>: <span class="hljs-number">#C72541</span>;<br>  <span class="hljs-attr">--code-sentence-color</span>: green;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;     <br>    <span class="hljs-attr">--code-word-color</span>: <span class="hljs-number">#dd8888</span>;<br>    <span class="hljs-attr">--code-sentence-color</span>: <span class="hljs-number">#5be17b</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+                <h1 id="1-软件下载"><a href="#1-软件下载" class="headerlink" title="1. 软件下载"></a>1. 软件下载</h1><p>Maven 官网地址：<a target="_blank" rel="noopener" href="https://maven.apache.org/">https://maven.apache.org/</a></p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-1.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:100%;" />
 
-<h2 id="2-2-表格切换颜色"><a href="#2-2-表格切换颜色" class="headerlink" title="2.2 表格切换颜色"></a>2.2 表格切换颜色</h2><p>同样颜色在深浅两种模式下有如下设置，这些都根据自己喜好弄就可以了。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ihe3qtlb3u2ec2"></i><span>styl</span><div class="collapse show" id="collapse-ihe3qtlb3u2ec2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--form-color</span>: <span class="hljs-number">#f6f8fa</span>;<br>  <span class="hljs-attr">--form-border-color</span>: <span class="hljs-number">#e6ebf1</span>;<br>  <br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;      <br>    <span class="hljs-attr">--form-color</span>: <span class="hljs-number">#2d333b</span>;<br>    <span class="hljs-attr">--form-border-color</span>: <span class="hljs-number">#4a5360</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<h2 id="2-3-文中折叠栏切换颜色"><a href="#2-3-文中折叠栏切换颜色" class="headerlink" title="2.3 文中折叠栏切换颜色"></a>2.3 文中折叠栏切换颜色</h2><p>为了适配深色模式，还要自己设定好颜色以及切换模式时动画的过度。我颜色是直接用了和代码块一个颜色，就没有再单独加颜色了。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-33are5lb3u2ec2"></i><span>styl</span><div class="collapse show" id="collapse-33are5lb3u2ec2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;   <br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.dropdown-divider</span> &#123;<br>        <span class="hljs-attribute">transition</span>: border-top <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;light&#x27;</span>]</span> &#123;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.dropdown-divider</span> &#123;<br>        <span class="hljs-attribute">transition</span>: border-top <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<h2 id="2-4-代码块切换颜色"><a href="#2-4-代码块切换颜色" class="headerlink" title="2.4 代码块切换颜色"></a>2.4 代码块切换颜色</h2><p>代码块切换大部分参考了 <a target="_blank" rel="noopener" href="https://kiyanyang.github.io/posts/c4dd4019/">Kiyan’s Blog</a> 的文章，设置好后从浅色切换到深色是平滑过度的，但是发现从深色到浅色动画不平滑，所以我自己又添了一小段，并修改了颜色。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-8rkg08lb3u2ec2"></i><span>styl</span><div class="collapse show" id="collapse-8rkg08lb3u2ec2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--highlight-title-bg-color</span>: <span class="hljs-number">#eff3f8</span>;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;<br><br>  <span class="hljs-attr">--highlight-title-bg-color</span>: <span class="hljs-number">#343a43</span>;<br>  <span class="hljs-attr">--highlight-bg-color</span>: <span class="hljs-number">#2d333b</span>;<br><br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.highlight</span>,<br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.code-wrapper</span> &#123;<br><br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--highlight-title-bg-color);<br>    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br><br>    &gt; <span class="hljs-selector-tag">i</span> &#123;<br>      <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>    &#125;<br><br>    &gt; <span class="hljs-selector-tag">span</span> &#123;<br>      <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>      <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-selector-class">.copy-btn</span> &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>    <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>  &#125;<br>&#125;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;light&#x27;</span>]</span> &#123;<br><br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.highlight</span>,<br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.code-wrapper</span> &#123;<br><br>    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br><br>    &gt; <span class="hljs-selector-tag">span</span> &#123;<br>      <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<p>点击 Download 进入下载页面后，下载对应系统的安装包。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-2.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:100%;" />
 
 
+
+
+
+<h1 id="2-软件安装"><a href="#2-软件安装" class="headerlink" title="2. 软件安装"></a>2. 软件安装</h1><p>下载好的压缩包如下。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-3.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 80%;" />
+
+<p>将该压缩包打开后里面内容如下，将该文件夹复制到存放软件的目录即可，无需安装。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-4.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
+
+
+
+
+
+<h1 id="3-软件配置"><a href="#3-软件配置" class="headerlink" title="3. 软件配置"></a>3. 软件配置</h1><h2 id="3-1-配置环境变量"><a href="#3-1-配置环境变量" class="headerlink" title="3.1 配置环境变量"></a>3.1 配置环境变量</h2><p>右键单击计算机 -&gt; 属性 -&gt; 高级系统设置 -&gt; 环境变量 -&gt;  新建</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-5.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 80%;" />
+
+<p>新建如下系统变量，变量值输入之前解压出的文件夹存放的目录，然后点击确定。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-6.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
+
+<p>然后双击系统变量 Path，在里面新建如下环境变量，然后点击确定。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-7.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
+
+<h2 id="3-2-配置本地仓库"><a href="#3-2-配置本地仓库" class="headerlink" title="3.2 配置本地仓库"></a>3.2 配置本地仓库</h2><p>打开 maven 文件夹中配置文件： <code>/.../apache-maven-3.8.6/conf/settings.xml</code></p>
+<p>在如下位置插入本地仓库配置项，其中填入本地仓库文件夹的路径，不配置该项则会默认存放于C盘中。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-8.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 80%;" />
+
+<h2 id="3-3-配置阿里云私服"><a href="#3-3-配置阿里云私服" class="headerlink" title="3.3 配置阿里云私服"></a>3.3 配置阿里云私服</h2><p>打开 maven 文件夹中配置文件： <code>/.../apache-maven-3.8.6/conf/settings.xml</code></p>
+<p>查看阿里云私服的配置：<a target="_blank" rel="noopener" href="https://developer.aliyun.com/mvn/guide">阿里云官网-Maven仓库</a>，并复制教程中的内容到如下指定位置。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-9.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 80%;" />
+
+
+
+
+
+<h1 id="4-IDEA-配置-Maven"><a href="#4-IDEA-配置-Maven" class="headerlink" title="4. IDEA 配置 Maven"></a>4. IDEA 配置 Maven</h1><h2 id="4-1-项目配置"><a href="#4-1-项目配置" class="headerlink" title="4.1 项目配置"></a>4.1 项目配置</h2><p>选择 IDEA 里的设置 -&gt; 搜索 Maven -&gt; 点开 Maven 配置界面</p>
+<p>进行如下配置，设置 IDEA 使用本地的 Maven，并修改文件配置，此配置将对该项目生效。</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-10.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 80%;" />
+
+<h2 id="4-2-全局配置"><a href="#4-2-全局配置" class="headerlink" title="4.2 全局配置"></a>4.2 全局配置</h2><p>在 IDEA 中选择文件 -&gt; 关闭所有项目 -&gt; 进入 IDEA 启动界面 -&gt; 自定义 -&gt; 所有设置</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-12.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
+
+<p>之后的配置过程与<a href="#4-1-%E9%A1%B9%E7%9B%AE%E9%85%8D%E7%BD%AE">项目配置</a>相同，此配置为全局配置，将对所有项目生效。</p>
+<h2 id="4-3-创建项目"><a href="#4-3-创建项目" class="headerlink" title="4.3 创建项目"></a>4.3 创建项目</h2><p>可以直接创建 Maven 项目</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-13.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
+
+<p>也可以创建空项目 -&gt; 创建新模块 -&gt; 选择 Maven 模块</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-11.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
+
+<h2 id="4-4-导入项目"><a href="#4-4-导入项目" class="headerlink" title="4.4 导入项目"></a>4.4 导入项目</h2><p>从侧边栏选中 Maven -&gt; 点击加号 -&gt; 选择要导入的 Maven 项目的 <code>pom.xml</code> 文件</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-14.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
+
+<h2 id="4-5-插件安装"><a href="#4-5-插件安装" class="headerlink" title="4.5 插件安装"></a>4.5 插件安装</h2><p>推荐插件：Maven Helper，包含右键单击选择操作和断点调试功能</p>
+<img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/04-15.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 80%;" />
 
 
                 
@@ -360,7 +419,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/01-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category-chain-item">01 博客搭建</a>
+  <a href="/categories/05-%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" class="category-chain-item">05 软件配置</a>
   
   
 
@@ -375,11 +434,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Hexo/">#Hexo</a>
-      
-        <a href="/tags/Fluid/">#Fluid</a>
-      
-        <a href="/tags/CSS/">#CSS</a>
+        <a href="/tags/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/">#软件配置</a>
       
     </div>
   
@@ -391,8 +446,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>基于 Fluid 主题适配深浅两色</div>
-      <div>http://example.com/post/4228881379/</div>
+      <div>Maven - 软件配置</div>
+      <div>http://example.com/post/2655733482/</div>
     </div>
     <div class="license-meta">
       
@@ -404,7 +459,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2022年11月8日</div>
+          <div>2022年11月30日</div>
         </div>
       
       
@@ -479,17 +534,17 @@
     
     <div class="category row nomargin-x">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="01 博客搭建"
-        id="heading-b158fd3758ab996dc4ae4d8bfaf5a4b2" role="tab" data-toggle="collapse" href="#collapse-b158fd3758ab996dc4ae4d8bfaf5a4b2"
+          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="05 软件配置"
+        id="heading-e78e4030a67755094336db6a1f8b128a" role="tab" data-toggle="collapse" href="#collapse-e78e4030a67755094336db6a1f8b128a"
         aria-expanded="true"
       >
-        01 博客搭建
-        <span class="list-group-count">(4)</span>
+        05 软件配置
+        <span class="list-group-count">(1)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-      <div class="category-collapse collapse show" id="collapse-b158fd3758ab996dc4ae4d8bfaf5a4b2"
-           role="tabpanel" aria-labelledby="heading-b158fd3758ab996dc4ae4d8bfaf5a4b2">
+      <div class="category-collapse collapse show" id="collapse-e78e4030a67755094336db6a1f8b128a"
+           role="tabpanel" aria-labelledby="heading-e78e4030a67755094336db6a1f8b128a">
         
         
           
@@ -498,37 +553,10 @@
     
       
       
-        <a href="/post/3433766775/" title="基于 Fluid 主题基础功能修改"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">基于 Fluid 主题基础功能修改</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/3999439793/" title="基于 Fluid 主题添加动画"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">基于 Fluid 主题添加动画</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/1063853434/" title="基于 Fluid 主题修改侧边栏"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">基于 Fluid 主题修改侧边栏</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/4228881379/" title="基于 Fluid 主题适配深浅两色"
+        <a href="/post/2655733482/" title="Maven - 软件配置"
            class="list-group-item list-group-item-action
            active">
-          <span class="category-post">基于 Fluid 主题适配深浅两色</span>
+          <span class="category-post">Maven - 软件配置</span>
         </a>
       
     
