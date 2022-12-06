@@ -1,0 +1,37 @@
+/* ______基于 Fluid 主题添加tabs标签______ */
+
+
+
+/* 修改tabs标签内边距 */
+.post .tag-common.tabs .tab-content .tab-pane, 
+.post .tabs-comment .tab-content .tab-pane {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 修改tabs标签外边框 */
+.post .tag-common.tabs .tab-content, .tabs-comment .tab-content {
+    border: none;
+}
+
+.tag-common.tabs ul.nav-tabs li.tab, 
+.tabs-comment ul.nav-tabs li.tab {
+    border-bottom: 1px solid var(--line-color);
+}
+
+.post .tag-common.tabs ul.nav-tabs li.tab.active, 
+.tabs-comment ul.nav-tabs li.tab.active {
+    border-top-color: var(--tabs-color);
+    border-left-color: var(--line-color);
+    border-right-color: var(--line-color);
+}
+
+.post .tag-common.tabs ul.nav-tabs li.tab.active a, 
+.tabs-comment ul.nav-tabs li.tab.active a {
+    color: var(--tabs-color);
+}
+
+.tag-common.tabs ul.nav-tabs, 
+.tabs-comment ul.nav-tabs {
+    border: none;
+}

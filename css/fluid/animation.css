@@ -309,11 +309,11 @@
     animation: getnote 1s ease, getsolid 0.4s ease-in;
     animation-fill-mode: both;
   }
-  .categories .category-post-list .list-group-item {
+  .categories #board .category-post-list .list-group-item {
     font-size: 1rem;
   }
-  .categories .category-item, 
-  .categories .category-subitem{
+  .categories #board .category-item, 
+  .categories #board .category-subitem{
     font-size: 1.3rem;
   }
   .categories .category-count {

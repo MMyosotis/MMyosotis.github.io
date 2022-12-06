@@ -65,3 +65,9 @@
 [data-user-color-scheme='light'] .categoryinpost .dropdown-divider {
   transition: border-top 0.2s ease-in-out;
 }
+:root {
+  --tabs-color: #0078e7;
+}
+[data-user-color-scheme='dark'] {
+  --tabs-color: rgba(97,168,235,0.843);
+}
