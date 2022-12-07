@@ -15,7 +15,7 @@
 }
 .post #mysidebar.mysidebar-left{
   top: 5rem;
-  width: 60%;
+  width: 67%;
 }
 .post #mysidebar .content-header{
   margin-top: 3rem;
@@ -61,30 +61,40 @@
 }
 @keyframes bar-icon {
   0% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
   50% {
-    -webkit-transform: translateY(-0.3rem);
     transform: translateY(-0.3rem);
   }
   100% {
-    -webkit-transform: translateY(0);
     transform: translateY(0);
   }
-}
-
-
-/* 按钮进入动画 */
-.post #mysidebar.mysidebar-left{
-  animation: getnotedown 1s ease, getsolid 0.4s ease-in;
-  animation-delay: 1s;
-  animation-fill-mode: both;
 }
 
 
 /* 切换动画 */
-.container-fluid.nopadding-x aside.sidebar {
+.post .container-fluid.nopadding-x aside.sidebar {
   animation: getright 1s ease;
   animation-fill-mode: both;
 }
+
+
+/* 按钮进入动画：随页面进入       该动画已弃用，替换成随鼠标出现的动画  */
+/* .post #mysidebar.mysidebar-left{
+  animation: getnotedown 1s ease, getsolid 0.4s ease-in;
+  animation-delay: 1s;
+  animation-fill-mode: both;
+} */
+
+
+/* 按钮进入动画：随鼠标移动出现 */
+.post .side-col.d-none.d-lg-block.col-lg-2:hover #mysidebar .content-header{
+  transform: translate(-14%, 0);
+  opacity: 100;
+}
+
+.post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar .content-header{
+  transition: 0.5s ease;
+  opacity: 0;
+}
+

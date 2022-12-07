@@ -30,12 +30,12 @@
 
 
 /* 修改页面宽度 */
-.col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board {
+.col-lg-8.nopadding-x-md .container.nopadding-x-md #board {
   width: 112%;
   left: -12%; 
 }
 @media (max-width: 993px) {
-  .col-lg-8.nopadding-x-md > .container.nopadding-x-md > #board {
+  .col-lg-8.nopadding-x-md .container.nopadding-x-md #board {
     width: 100%;
     left: 0%;
   }
