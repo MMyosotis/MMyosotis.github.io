@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" >
 
 
 
@@ -16,15 +16,15 @@
   <meta name="author" content="MQY">
   <meta name="keywords" content="">
   
-    <meta name="description" content="前言、代码注入器、页面样式修改、文章样式修改、归档页样式修改、分类页样式修改、自定义页面样式">
+    <meta name="description" content="前言">
 <meta property="og:type" content="article">
 <meta property="og:title" content="基于 Fluid 主题基础功能修改">
 <meta property="og:url" content="http://example.com/post/3433766775/">
 <meta property="og:site_name" content="Myosotis">
-<meta property="og:description" content="前言、代码注入器、页面样式修改、文章样式修改、归档页样式修改、分类页样式修改、自定义页面样式">
+<meta property="og:description" content="前言">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-10-02T12:00:00.000Z">
-<meta property="article:modified_time" content="2022-11-08T12:00:00.000Z">
+<meta property="article:modified_time" content="2022-12-10T12:00:00.000Z">
 <meta property="article:author" content="MQY">
 <meta property="article:tag" content="Hexo">
 <meta property="article:tag" content="Fluid">
@@ -63,18 +63,21 @@
 
   <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
 
 
 
   
-<link rel="stylesheet" href="/css/fluid/basicSetting.css">
-<link rel="stylesheet" href="/css/fluid/animation.css">
-<link rel="stylesheet" href="/css/fluid/switchColumn.css">
-<link rel="stylesheet" href="/css/fluid/codecollapse.css">
+<link rel="stylesheet" href="/css/fluid/aboutPages.css">
+<link rel="stylesheet" href="/css/fluid/allPages.css">
+<link rel="stylesheet" href="/css/fluid/archivePages.css">
+<link rel="stylesheet" href="/css/fluid/categoryPages.css">
 <link rel="stylesheet" href="/css/fluid/changecolor.css">
-<link rel="stylesheet" href="/css/fluid/tabsSetting.css">
+<link rel="stylesheet" href="/css/fluid/civilPages.css">
+<link rel="stylesheet" href="/css/fluid/codecollapse.css">
+<link rel="stylesheet" href="/css/fluid/homePage.css">
+<link rel="stylesheet" href="/css/fluid/myNavbar.css">
+<link rel="stylesheet" href="/css/fluid/postPages.css">
+<link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
 
@@ -127,9 +130,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/">
+                <span class="show"><i class="iconfont icon-home-fill"></i></span>
+                <span class="hidden">首页</span>
               </a>
             </li>
           
@@ -139,9 +143,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/archives/">
+                <span class="show"><i class="iconfont icon-archive-fill"></i></span>
+                <span class="hidden">归档</span>
               </a>
             </li>
           
@@ -151,9 +156,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/categories/">
+                <span class="show"><i class="iconfont icon-category-fill"></i></span>
+                <span class="hidden">分类</span>
               </a>
             </li>
           
@@ -163,9 +169,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/tags/">
+                <span class="show"><i class="iconfont icon-tags-fill"></i></span>
+                <span class="hidden">标签</span>
               </a>
             </li>
           
@@ -175,9 +182,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/civileng/">
-                <i class="fa fa-university"></i>
-                土木
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/civileng/">
+                <span class="show"><i class="fa fa-university"></i></span>
+                <span class="hidden">土木</span>
               </a>
             </li>
           
@@ -187,9 +195,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/artitalk/">
-                <i class="fa fa-commenting"></i>
-                嘀咕
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/artitalk/">
+                <span class="show"><i class="fa fa-commenting"></i></span>
+                <span class="hidden">嘀咕</span>
               </a>
             </li>
           
@@ -199,26 +208,23 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/about/">
+                <span class="show"><i class="iconfont icon-user-fill"></i></span>
+                <span class="hidden">关于</span>
               </a>
             </li>
           
         
         
           <li class="nav-item" id="search-btn">
+            <!-- 把搜索按钮仿照其他按钮做了 -->
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <span class="show"><i class="iconfont icon-search"></i>&nbsp;</span>
             </a>
           </li>
           
         
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
         
       </ul>
     </div>
@@ -262,7 +268,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          15k 字
+          2.7k 字
         
       </span>
     
@@ -280,7 +286,7 @@
       <span class="post-meta ">
         
           
-            2022年11月8日
+            2022年12月10日
           
         
       </span>
@@ -313,7 +319,7 @@
     
     <section id="mysidebar" class="mysidebar-left">
       <!--头部-->
-      <div class="content-header clearfix">
+      <div class="content-header clearfix navbar-dark">
         <div class="pack">
         <a class="current"><i class="iconfont icon-list"></i></a>
         <a class="current"><i class="iconfont icon-category-fill"></i></a>
@@ -337,108 +343,17 @@
             
               <div class="markdown-body">
                 
-                <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>从准备搭建个人博客到今天，陆陆续续也快过去接近一个月了。刚好现在正是国庆假期，于是给自己放个小假，做点自己想做的事情，博文也当是个备份。</p>
+                <h1 id="1-前言"><a href="#1-前言" class="headerlink" title="1. 前言"></a>1. 前言</h1><p>从准备搭建个人博客到今天，陆陆续续也快过去接近一个月了。刚好现在正是国庆假期，于是给自己放个小假，做点自己想做的事情。</p>
 <p>因为之前完全没有接触过前端的东西，所以除了按照 Fluid 主题官方的使用文档和官网提供的功能进行基本配置以外，基本上就是到处去看别人的页面源代码，大量阅读然后再自己复制一些看看效果，查一些标签的用法，等大致上能看懂后就根据自己的需求修改。整个过程确实艰难，如果不是我对于美观有着惊人的执著，大概我已经放弃了。</p>
 <p>博客框架使用的是 <a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/">Hexo</a>，主题是 <a target="_blank" rel="noopener" href="https://github.com/fluid-dev/hexo-theme-fluid">Fluid</a>。代码大概还有很多不规范的地方，等以后正式学习前端知识后应该会再整理一遍。</p>
 <p>css 文件都一律放在了 <code>Blog\source\css\fluid</code> 路径下，然后按照 Fluid 主题官方文档中的方式进行引入，不会修改源码。js 文件一部分是放在主题的文件夹下并会表明路径，除此之外还有一小部分就是直接修改主题的源码了。</p>
 <h1 id="2-代码注入器"><a href="#2-代码注入器" class="headerlink" title="2. 代码注入器"></a>2. 代码注入器</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/api/injector.html">Hexo 注入器</a>是 Hexo 5 版本自身加入的一项新功能，Fluid 主题还提供了更细致的注入器，不过我用 Hexo 的注入器就已经能满足基本需求了。</p>
 <p>这里主要是给不同的页面的 <code>&lt;body&gt;</code> 标签内部又包上了一层标签，这样就可以通过标签来实现修改特定页面的元素 css 样式。</p>
 <p>代码如下，文件路径遵照官方使用文档放在了 <code>Blog\scripts</code> 。</p>
-<figure class="highlight js"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-r6e1y4lbdts2n1"></i><span>js</span><div class="collapse show" id="collapse-r6e1y4lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js">hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;civilEngineeringBody&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;categories&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;categories&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;category&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;archive&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;about&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;home&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;post&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;tag&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;thesisReading&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight js"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0kty1clbi87rff"></i><span>js</span><div class="collapse show" id="collapse-0kty1clbi87rff"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js">hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;civilEngineeringBody&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;categories&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;categories&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;category&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;archive&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;about&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;home&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;post&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;tag&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;thesisReading&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br></code></pre></td></tr></table></div></figure>
 
 <p>像这样设置后，比如我之后只想针对文章页面的元素修改，只需要在 css 选择器的开头加上 <code>.post</code> 就可以了。</p>
-<h1 id="3-页面样式修改"><a href="#3-页面样式修改" class="headerlink" title="3. 页面样式修改"></a>3. 页面样式修改</h1><p>Fluid 主题默认的页边距有点宽了两边空白很多，所以最后修改了页边距，并将整体文章宽度往左侧拉长了，这样能显示更多的内容。这里参考了 <a target="_blank" rel="noopener" href="http://lzqlearn.com/blog/6560820db005/#2-%E4%BF%AE%E6%94%B9%E4%B8%BB%E9%A2%98">Gilgamesh’s Blog</a> 的一篇文章。</p>
-<h2 id="3-1-修改页边距"><a href="#3-1-修改页边距" class="headerlink" title="3.1 修改页边距"></a>3.1 修改页边距</h2><p>这里主要修改了文章页、自定的一个土木页、和手机端的关于页的页边距，代码如下。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-zvu3shlbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-zvu3shlbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/*修改文章页页边距*/</span><br><span class="hljs-selector-class">.post-content</span> &#123;<br>  <span class="hljs-attribute">box-sizing</span>: border-box;<br>  <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">8%</span>;<br>  <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">8%</span>;<br>&#125;<br><br><span class="hljs-comment">/*修改自定义页页边距*/</span><br><span class="hljs-selector-class">.markdown-body</span><span class="hljs-selector-class">.civil</span> &#123;<br>   <span class="hljs-attribute">box-sizing</span>: border-box;<br>   <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">15%</span>;<br>   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">15%</span>;<br>&#125;<br><br><span class="hljs-comment">/* 修改手机端页边距 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">767px</span>) &#123;<br>  <span class="hljs-selector-class">.container</span> <span class="hljs-selector-class">.col-12</span><span class="hljs-selector-class">.col-md-10</span><span class="hljs-selector-class">.m-auto</span> &#123;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<h2 id="3-2-修改页面宽度"><a href="#3-2-修改页面宽度" class="headerlink" title="3.2 修改页面宽度"></a>3.2 修改页面宽度</h2><p>左边有很大的空隙，所以把页面整体往左加宽了，后面换了高分屏之后又补充了修改。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-fnrjj9lbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-fnrjj9lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 修改页面宽度 */</span><br><span class="hljs-selector-class">.col-lg-8</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-class">.container</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-id">#board</span> &#123;<br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">112%</span>;<br>  <span class="hljs-attribute">left</span>: -<span class="hljs-number">12%</span>; <br>&#125;<br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">993px</span>) &#123;<br>  <span class="hljs-selector-class">.col-lg-8</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-class">.container</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-id">#board</span> &#123;<br>    <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>    <span class="hljs-attribute">left</span>: <span class="hljs-number">0%</span>;<br>  &#125;<br>&#125;<br><br><span class="hljs-comment">/* 解决高分屏下元素过宽的问题 */</span><br><span class="hljs-selector-class">.post</span> <span class="hljs-selector-class">.row</span><span class="hljs-selector-class">.nomargin-x</span> &#123;<br>  <span class="hljs-attribute">max-width</span>: <span class="hljs-number">100rem</span>;<br>  <span class="hljs-attribute">margin-right</span>: auto <span class="hljs-meta">!important</span>;<br>  <span class="hljs-attribute">margin-left</span>: auto <span class="hljs-meta">!important</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-<h1 id="4-文章样式修改"><a href="#4-文章样式修改" class="headerlink" title="4.  文章样式修改"></a>4.  文章样式修改</h1><h2 id="4-1-设置图片居中"><a href="#4-1-设置图片居中" class="headerlink" title="4.1 设置图片居中"></a>4.1 设置图片居中</h2><p>这里不得不提 Fluid 主题很让强迫症难受的地方，那就是图片和表格没有居中。图片的处理就很简单粗暴了，我是直接在写笔记的时候给所有图片都设置一个 class，之后再设定样式。</p>
-<p>这是 markdown 文章中插入图片后设置的部分：<code>&lt;img src=&quot;...&quot; class=&quot;img-center&quot; style=&quot;...&quot; /&gt;</code></p>
-<p>然后 css 文件中代码如下，直接用选择器找设定的 img-center 就好。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-tkee45lbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-tkee45lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/*设置图片居中*/</span><br><span class="hljs-selector-tag">img</span><span class="hljs-selector-class">.img-center</span> &#123; <br>  <span class="hljs-attribute">display</span>: block ;<br>  <span class="hljs-attribute">margin</span>: auto;<br>  <span class="hljs-attribute">text-align</span>: center;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<h2 id="4-2-设定文字样式"><a href="#4-2-设定文字样式" class="headerlink" title="4.2 设定文字样式"></a>4.2 设定文字样式</h2><p>因为笔记中有一些想要重点强调的部分，代码块也不喜欢用灰扑扑的默认样式，所以自己设定了一下。</p>
-<p>在 markdown 文章中用标签包裹住内容：<code>&lt;font class=&quot;word-stress&quot;&gt;内容&lt;/font&gt;</code> ，之后渲染成网页后就能看到效果了。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-to4x0glbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-to4x0glbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 设置特殊文字样式 */</span><br><span class="hljs-attribute">font</span><span class="hljs-selector-class">.code-word</span> &#123;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--code-word-color);<br>&#125;<br><br><span class="hljs-attribute">font</span><span class="hljs-selector-class">.code-sentence</span> &#123;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--code-sentence-color);<br>&#125;<br><br><span class="hljs-attribute">font</span><span class="hljs-selector-class">.word-stress</span> &#123;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#008B8B</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<h2 id="4-3-设置表格样式"><a href="#4-3-设置表格样式" class="headerlink" title="4.3 设置表格样式"></a>4.3 设置表格样式</h2><p><strong>设置表格居中</strong></p>
-<p>主题本身好像就不支持表格居中，所以一直没弄成。后面换了一种思路，就是把表格直接全部拉长到和页面齐宽。</p>
-<p>为了实现这一点，需要在笔记中写表格的时候，先设置好了每一列的宽度，加起来等于100%。但这样设置好之后，网页上的表格仍然无法撑满整个页面宽度。最后试了各种各样的方式，找到了一个可行的办法，只是还没有弄懂是什么原理。</p>
-<p>需要使用 html 创建表格，并多创建一列，将多的一列的 margin 和 padding 全部设置成0，相当于是完全隐身的。在文章中用这种形式写表格，也不会影响到我在本地 Typora 上的阅读。同时加上 <code>class=&quot;myform&quot;</code> 是为了防止后续修改样式时修改到代码块的样式。</p>
-<figure class="highlight html"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-nm67uolbdts2n1"></i><span>html</span><div class="collapse show" id="collapse-nm67uolbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">table</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;myform&quot;</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">head</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>		    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align: center;&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">50%</span>&gt;</span>标题1<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>		    <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align: center;&quot;</span> <span class="hljs-attr">width</span>=<span class="hljs-string">50%</span>&gt;</span>标题2<span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">th</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;padding:0; margin:0;&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">th</span>&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">head</span>&gt;</span><br>	<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">tr</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align: center;&quot;</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span> <br>            <span class="hljs-tag">&lt;<span class="hljs-name">td</span> <span class="hljs-attr">style</span>=<span class="hljs-string">&quot;text-align: center;&quot;</span>&gt;</span>内容<span class="hljs-tag">&lt;/<span class="hljs-name">td</span>&gt;</span> <br>		<span class="hljs-tag">&lt;/<span class="hljs-name">tr</span>&gt;</span><br>	<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">table</span>&gt;</span><br></code></pre></td></tr></table></div></figure>
-
-<p><strong>设置表格样式</strong></p>
-<p>我比较喜欢 Typora 主题中表格样式，所以照着它设置了表格样式，代码中注释掉的部分是之前写的无内框的留作备份，不过现在还是用有边框的样式了。</p>
-<p>除此之外还设置表格在一行显示，显示外的部分可以拖动下方进度条看到，这样就避免了换行显示。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-gpxya3lbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-gpxya3lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 设置表格样式 */</span><br><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.myform</span> <span class="hljs-selector-tag">tbody</span>&#123;<br>  <span class="hljs-attribute">border-spacing</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">border-collapse</span>: collapse;<br>  <span class="hljs-attribute">text-overflow</span>: ellipsis;<br>  <span class="hljs-attribute">word-break</span>: keep-all;<br>  <span class="hljs-attribute">white-space</span>: nowrap; <br>  <span class="hljs-attribute">width</span>: <span class="hljs-number">100%</span>;<br>&#125;<br><span class="hljs-comment">/* 表格边框样式：有内框 */</span><br><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.myform</span> <span class="hljs-selector-tag">tbody</span> <span class="hljs-selector-tag">td</span> &#123;<br>  <span class="hljs-comment">/* 无内框设置 </span><br><span class="hljs-comment">  border-left-width: 0;</span><br><span class="hljs-comment">  border-right-width :0; */</span><br>  <span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">var</span>(--form-border-color);<br>&#125;<br><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.myform</span> <span class="hljs-selector-tag">tbody</span> <span class="hljs-selector-tag">th</span> &#123;<br>  <span class="hljs-attribute">border-color</span>: <span class="hljs-built_in">var</span>(--form-border-color);<br>&#125;<br><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.myform</span> <span class="hljs-selector-tag">tr</span><span class="hljs-selector-pseudo">:nth-child</span>(<span class="hljs-number">2</span>n+<span class="hljs-number">1</span>) &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--form-color);<br>&#125;<br><span class="hljs-selector-tag">table</span><span class="hljs-selector-class">.myform</span> <span class="hljs-selector-tag">th</span><span class="hljs-selector-pseudo">:last-child</span> &#123;<br>  <span class="hljs-attribute">border</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">margin</span>: <span class="hljs-number">0</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0</span>;<br>&#125;<br><span class="hljs-comment">/* table.myform td:first-child &#123;</span><br><span class="hljs-comment">  border-left-width: 1px;</span><br><span class="hljs-comment">&#125;</span><br><span class="hljs-comment">table.myform th:first-child &#123;</span><br><span class="hljs-comment">  border-left-width: 1px;</span><br><span class="hljs-comment">&#125;</span><br><span class="hljs-comment">table.myform td:last-child &#123;</span><br><span class="hljs-comment">  border-right-width: 1px;</span><br><span class="hljs-comment">&#125; */</span><br></code></pre></td></tr></table></div></figure>
-
-<h2 id="4-4-文中折叠栏"><a href="#4-4-文中折叠栏" class="headerlink" title="4.4 文中折叠栏"></a>4.4 文中折叠栏</h2><p>这部分代码主要是之前在文章内部搞了一个分类折叠栏，现在因为找到了更好的方式，所以已经不用了，放在这作为备用。</p>
-<p>这里用到了 bootstrap 工具包，参考了 <a target="_blank" rel="noopener" href="https://kiyanyang.github.io/">Kiyan’s Blog</a>，但这位博主其实也没有教程，我是在阅读折叠代码块的相关内容时发现页面有这个功能，然后直接去看的页面源码并查了不少相关知识然后写出来的。</p>
-<p>在 markdown 文章中可以用 html 像这样写一个目录栏。</p>
-<figure class="highlight html"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0eye85lbdts2n1"></i><span>html</span><div class="collapse show" id="collapse-0eye85lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs html"><span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;categoryinpost&quot;</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;collapsed&quot;</span> <span class="hljs-attr">type</span>=<span class="hljs-string">&quot;button&quot;</span> <span class="hljs-attr">data-toggle</span>=<span class="hljs-string">&quot;collapse&quot;</span> <span class="hljs-attr">data-target</span>=<span class="hljs-string">&quot;#content&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;fa fa-angle-down&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">b</span>&gt;</span>分类名称<span class="hljs-tag">&lt;/<span class="hljs-name">b</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span><br>    <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;collapse titleblock&quot;</span> <span class="hljs-attr">id</span>=<span class="hljs-string">&quot;content&quot;</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;dropdown-divider&quot;</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;titleblock&quot;</span>&gt;</span><br>        	<span class="hljs-tag">&lt;<span class="hljs-name">ul</span>&gt;</span><br>            	<span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>标题一<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>           	    <span class="hljs-tag">&lt;<span class="hljs-name">li</span>&gt;</span><span class="hljs-tag">&lt;<span class="hljs-name">a</span> <span class="hljs-attr">href</span>=<span class="hljs-string">&quot;...&quot;</span> <span class="hljs-attr">class</span>=<span class="hljs-string">&quot;title&quot;</span>&gt;</span>标题二<span class="hljs-tag">&lt;/<span class="hljs-name">a</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span><br>             <span class="hljs-tag">&lt;/<span class="hljs-name">ul</span>&gt;</span><br>         <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br><span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span><br></code></pre></td></tr></table></div></figure>
-
-<p>这样文章中折叠栏就已经有了，然后再在 css 文件中设定样式并加一个图标动画。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3eh641lbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-3eh641lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 文中分类折叠栏：现在已关闭 */</span><br><span class="hljs-selector-class">.categoryinpost</span> &#123;<br>  <span class="hljs-attribute">display</span>: none;<br>  <span class="hljs-attribute">margin-bottom</span>: <span class="hljs-number">0.15em</span>;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--highlight-bg-color);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">18px</span>;<br>  <span class="hljs-attribute">padding</span>: <span class="hljs-number">0.15em</span>;<br>&#125;<br><span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &#123;<br>  <span class="hljs-attribute">text-align</span>: left;<br>  <span class="hljs-attribute">width</span>:<span class="hljs-number">100%</span>;<br>  <span class="hljs-attribute">border</span>: none;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2em</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--text-color);<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--highlight-bg-color);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">20px</span>;<br>&#125;<br><span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &gt; <span class="hljs-selector-tag">i</span> &#123;<br>  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.75rem</span>;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.5rem</span>;<br>  <span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.35s</span> ease;<br>  -o-<span class="hljs-attribute">transition</span>:transform <span class="hljs-number">0.35s</span> ease;<br>  -moz-<span class="hljs-attribute">transition</span>:transform <span class="hljs-number">0.35s</span> ease;<br>  -webkit-<span class="hljs-attribute">transition</span>: transform <span class="hljs-number">0.35s</span> ease;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1.2em</span>;<br>&#125;<br><span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span><span class="hljs-selector-class">.collapsed</span> &gt; <span class="hljs-selector-tag">i</span> &#123;<br>  <span class="hljs-attribute">transform</span>:<span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);<br>&#125;<br><span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.titleblock</span> &#123;<br>  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.75em</span>;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.75em</span>;<br>&#125;<br><span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.title</span> &#123;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-built_in">var</span>(--text-color);<br>&#125;<br><span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.dropdown-divider</span> &#123;<br>  <span class="hljs-attribute">border-top</span>: <span class="hljs-number">1px</span> solid <span class="hljs-built_in">var</span>(--form-color);<br>  <span class="hljs-attribute">margin-top</span>: <span class="hljs-number">0.15em</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<h2 id="4-5-设置代码块折叠"><a href="#4-5-设置代码块折叠" class="headerlink" title="4.5 设置代码块折叠"></a>4.5 设置代码块折叠</h2><p>这里基本上完全参考了 <a target="_blank" rel="noopener" href="https://kiyanyang.github.io/posts/c4dd4019/">Kiyan’s Blog</a> 的文章，文章的大致思路就是自定义一个过滤器，在文章完成渲染后，通过替换掉部份代码，来增加折叠功能的代码。如果还想要实现一些功能的话，可以修改 js 文件中 replace 替换代码的部分。</p>
-<p>js 文件需要放在 <code>Blog\themes\fluid\scripts</code> 路径下，代码如下。</p>
-<figure class="highlight js"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-m4rkczlbdts2n1"></i><span>js</span><div class="collapse show" id="collapse-m4rkczlbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs js"><span class="hljs-comment">// 获取唯一 ID</span><br><span class="hljs-keyword">function</span> <span class="hljs-title function_">getUuid</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-title class_">Math</span>.<span class="hljs-title function_">random</span>().<span class="hljs-title function_">toString</span>(<span class="hljs-number">36</span>).<span class="hljs-title function_">substring</span>(<span class="hljs-number">2</span>, <span class="hljs-number">8</span>) + <span class="hljs-title class_">Date</span>.<span class="hljs-title function_">now</span>().<span class="hljs-title function_">toString</span>(<span class="hljs-number">36</span>);<br>&#125;<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">filter</span>.<span class="hljs-title function_">register</span>(<br>  <span class="hljs-string">&quot;after_post_render&quot;</span>,<br>  <span class="hljs-function">(<span class="hljs-params">data</span>) =&gt;</span> &#123;<br>    <span class="hljs-keyword">const</span> &#123; line_number, lib &#125; = hexo.<span class="hljs-property">theme</span>.<span class="hljs-property">config</span>.<span class="hljs-property">code</span>.<span class="hljs-property">highlight</span>;<br><br>    <span class="hljs-keyword">let</span> reg;<br>    <span class="hljs-keyword">if</span> (lib === <span class="hljs-string">&quot;highlightjs&quot;</span>) &#123;<br>      <span class="hljs-keyword">if</span> (line_number) &#123;<br>        reg = <span class="hljs-regexp">/(&lt;figure class=&quot;highlight.+?&gt;)(.+?hljs (.*?)&quot;.+?)(&lt;\/figure&gt;)/gim</span>s;<br>      &#125; <span class="hljs-keyword">else</span> &#123;<br>        reg = <span class="hljs-regexp">/(&lt;div class=&quot;code-wrapper.+?&gt;)(.+?hljs (.*?)&quot;.+?)(&lt;\/div&gt;)/gim</span>s;<br>      &#125;<br>    &#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (lib === <span class="hljs-string">&quot;prismjs&quot;</span>) &#123;<br>      reg = <span class="hljs-regexp">/(&lt;div class=&quot;code-wrapper.+?&gt;)(.+?data-language=&quot;(.*?)&quot;.+?)(&lt;\/div&gt;)/gim</span>s;<br>    &#125;<br><br>    data.<span class="hljs-property">content</span> = data.<span class="hljs-property">content</span>.<span class="hljs-title function_">replace</span>(reg, <span class="hljs-function">(<span class="hljs-params">match, begin, inner, lang, end, offset, string</span>) =&gt;</span> &#123;<br>      <span class="hljs-keyword">const</span> collapseId = <span class="hljs-string">`collapse-<span class="hljs-subst">$&#123;getUuid()&#125;</span>`</span>;<br>      <span class="hljs-comment">//                             ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 设置折叠按钮图标，此处使用 angle-down 图标</span><br>      <span class="hljs-keyword">const</span> collapseBtn = <span class="hljs-string">`&lt;i class=&quot;fa fa-angle-down&quot; type=&quot;button&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#<span class="hljs-subst">$&#123;collapseId&#125;</span>&quot;&gt;&lt;/i&gt;`</span>;<br>      <span class="hljs-keyword">const</span> collapseDiv = <span class="hljs-string">`&lt;div class=&quot;collapse show&quot; id=&quot;<span class="hljs-subst">$&#123;collapseId&#125;</span>&quot;&gt;<span class="hljs-subst">$&#123;inner&#125;</span>&lt;/div&gt;`</span>;<br>      <span class="hljs-keyword">const</span> langSpan = <span class="hljs-string">`&lt;span&gt;<span class="hljs-subst">$&#123;lang&#125;</span>&lt;/span&gt;`</span>;<br>      <span class="hljs-keyword">return</span> begin + collapseBtn + langSpan + collapseDiv + end;<br>    &#125;);<br>    <span class="hljs-keyword">return</span> data;<br>  &#125;,<br>  <span class="hljs-number">10000</span> <span class="hljs-comment">// 应该在完成其他渲染后执行，因此将优先级设大一点</span><br>);<br></code></pre></td></tr></table></div></figure>
-
-<p>然后在 styl 文件设置相关的样式即可，我按照我自己的喜好修改了原文的一些设置。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-hxxv6olbdts2n1"></i><span>styl</span><div class="collapse show" id="collapse-hxxv6olbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.highlight</span>,<br><span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.code-wrapper</span> &#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--highlight-title-bg-color);<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">10px</span>;<br>  <br>  <span class="hljs-comment">// 折叠图标</span><br>  &gt; <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#777777</span>;<br>    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">0.6rem</span>;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.7rem</span>;<br>    <span class="hljs-attribute">line-height</span>: <span class="hljs-number">2rem</span>;<br>    <span class="hljs-attribute">transform</span>: none;<br>    <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out, transform <span class="hljs-number">0.2s</span> ease-in-out;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">18px</span>;<br><br>    &amp;<span class="hljs-selector-class">.collapsed</span> &#123;<br>      <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">rotate</span>(-<span class="hljs-number">90deg</span>);<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-comment">// 代码语言</span><br>  &gt; <span class="hljs-selector-tag">span</span> &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#777777</span>;<br>    <span class="hljs-attribute">font-weight</span>: bold;<br>    <span class="hljs-attribute">font-family</span>: <span class="hljs-string">&quot;Arial&quot;</span>;<br>  &#125;<br>&#125;<br><br><br><span class="hljs-comment">// 复制按钮</span><br><span class="hljs-selector-class">.copy-btn</span> &#123;<br>  <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span>;<br>  <span class="hljs-attribute">color</span>: <span class="hljs-number">#777777</span>;<br><br>  &gt; <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">font-size</span>: <span class="hljs-number">1rem</span> <span class="hljs-meta">!important</span>;<br>    <span class="hljs-attribute">font-weight</span>: bold;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<p>由于发现代码块在 ios 端显示有一些不对劲，所以自己又在 css 文件中添加了样式。</p>
-<p>主要是填充了背景，然后取消了行号的 sticky 属性，因为如果行号设置了 sticky，那么在 ios 端下面的滑动条会被覆盖住很不美观，暂时还未找到解决办法。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-v0pj69lbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-v0pj69lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 代码块样式修改 */</span><br><span class="hljs-selector-tag">figure</span><span class="hljs-selector-class">.highlight</span> <span class="hljs-selector-tag">table</span>&#123;<br>  <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--highlight-bg-color) <span class="hljs-meta">!important</span>;<br>  <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>  -o-<span class="hljs-attribute">transition</span>:background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>  -moz-<span class="hljs-attribute">transition</span>:background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>  -webkit-<span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">10px</span>;<br>&#125;<br><span class="hljs-selector-tag">figure</span><span class="hljs-selector-class">.highlight</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">td</span><span class="hljs-selector-class">.gutter</span>&#123;<br>  <span class="hljs-attribute">position</span>: static;<br>  <span class="hljs-attribute">border-bottom-left-radius</span>: <span class="hljs-number">14px</span>;<br>&#125;<br><span class="hljs-selector-tag">figure</span><span class="hljs-selector-class">.highlight</span> <span class="hljs-selector-tag">table</span> <span class="hljs-selector-tag">td</span><span class="hljs-selector-class">.code</span> &#123;<br>  <span class="hljs-attribute">border-radius</span>: <span class="hljs-number">0</span> <span class="hljs-number">0</span> <span class="hljs-number">10px</span> <span class="hljs-number">10px</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-<h2 id="4-6-修改标题下方信息"><a href="#4-6-修改标题下方信息" class="headerlink" title="4.6 修改标题下方信息"></a>4.6 修改标题下方信息</h2><p>虽然 Fluid 主题自带了显示更新日期，但那是以标签的形式显示在文章中，我想实现的效果是在标题下方和文章时间这些信息一起显示。</p>
-<p>这里需要修改主题的源码，在 <code>Blog\themes\fluid\layout\_partials\post</code> 路径下的 <code>meta-top.ejs</code> 文件，在结尾处添上一段。</p>
-<p>这段代码本身不复杂，格式照着该文件的其他内容写就好。关于更新日期的获取，这部分代码是直接复制主题中 <code>post.ejs</code> 的内容，也就是原本主题自带的在文章中显示的代码内容。</p>
-<figure class="highlight plaintext"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-pal8ujlbdts2n1"></i><span>ejs</span><div class="collapse show" id="collapse-pal8ujlbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs ejs">&lt;% if (page.meta !== false) &#123; %&gt;<br><br>  &lt;!-- 这里是原本的代码部分，在这之后添加如下内容 --&gt;<br>  <br>  &lt;span class=&quot;myupdated&quot;&gt;<br>    &lt;% if (theme.post.updated &amp;&amp; compare_date(page.date, page.updated)) &#123; %&gt;<br>      &lt;i class=&quot;fa fa-repeat&quot; aria-hidden=&quot;true&quot; style=&quot;margin-right: 0.3rem;&quot;&gt;&lt;/i&gt;<br>      &lt;span class=&quot;post-meta &quot;&gt;<br>        &lt;% if (theme.post.updated.relative) &#123; %&gt;<br>          &lt;% if (theme.post.updated.content) &#123; %&gt;<br>            &lt;!-- compatible with older versions--&gt;<br>            &lt;%- theme.post.updated.content %&gt;&lt;%- relative_date(page.updated, theme.post.updated.date_format) %&gt;<br>          &lt;% &#125; else &#123; %&gt;<br>            &lt;%- __(&#x27;post.updated&#x27;, relative_date(page.updated, theme.post.updated.date_format)) %&gt;<br>          &lt;% &#125; %&gt;<br>        &lt;% &#125; else &#123; %&gt;<br>          &lt;% if (theme.post.updated.content) &#123; %&gt;<br>            &lt;!-- compatible with older versions--&gt;<br>            &lt;%- theme.post.updated.content %&gt;&lt;%- date(page.updated, theme.post.updated.date_format) %&gt;<br>          &lt;% &#125; else &#123; %&gt;<br>            &lt;%- __(&#x27;post.updated&#x27;, date(page.updated, theme.post.updated.date_format)) %&gt;<br>          &lt;% &#125; %&gt;<br>        &lt;% &#125; %&gt;<br>      &lt;/span&gt;<br>    &lt;% &#125; %&gt;<br>  &lt;/span&gt;<br>&lt;% &#125; %&gt;<br></code></pre></td></tr></table></div></figure>
-
-<p>如果想要修改具体的显示内容的话，还可以到 <code>Blog\themes\fluid\languages</code> 路径下去修改 <code>zh-CN.yml</code> 文件，找到以下内容换成自己想要显示的就好，我这里是直接去掉了全部文字。</p>
-<figure class="highlight yml"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-uurx6ylbdts2n1"></i><span>yml</span><div class="collapse show" id="collapse-uurx6ylbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs yml"><span class="hljs-attr">post:</span><br>  <span class="hljs-attr">toc:</span> <span class="hljs-string">&#x27;目录&#x27;</span><br>  <span class="hljs-attr">prev_post:</span> <span class="hljs-string">&#x27;上一篇&#x27;</span><br>  <span class="hljs-attr">next_post:</span> <span class="hljs-string">&#x27;下一篇&#x27;</span><br>  <span class="hljs-comment"># 此处自己修改了update的显示内容，去掉了文字。</span><br>  <span class="hljs-attr">updated:</span> <span class="hljs-string">&#x27;%s&#x27;</span>   <br></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-<h1 id="5-归档页样式修改"><a href="#5-归档页样式修改" class="headerlink" title="5. 归档页样式修改"></a>5. 归档页样式修改</h1><p>Fluid 主题原本的归档页日期和标题都是靠左显示的，导致右边看起来很空，所以我就想着把日期放到右边去。</p>
-<p>这里直接修改了主题的源码，在 <code>Blog\themes\fluid\layout\_partials</code> 路径下的 <code>archive-list.ejs</code> 文件，修改的内容已经标注出来了，就是对换了div 和 time 标签的顺序，让先显示标题再显示时间。</p>
-<figure class="highlight plaintext"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-aejw4blbdts2n1"></i><span>ejs</span><div class="collapse show" id="collapse-aejw4blbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs ejs">&lt;div class=&quot;list-group&quot;&gt;<br>  &lt;p class=&quot;h4&quot;&gt;&lt;%= __(params.key + &#x27;.post_total&#x27;, params.postTotal) %&gt;&lt;/p&gt;<br>  &lt;hr&gt;<br>  &lt;% var dateCursor %&gt;<br>  &lt;% page.posts.each(function (post) &#123; %&gt;<br>    &lt;% if(date(post.date, &quot;YYYY&quot;) !== dateCursor) &#123; %&gt;<br>      &lt;% dateCursor = date(post.date, &quot;YYYY&quot;) %&gt;<br>      &lt;p class=&quot;h5&quot;&gt;&lt;%= dateCursor %&gt;&lt;/p&gt;<br>    &lt;% &#125; %&gt;<br>    &lt;a href=&quot;&lt;%= url_for(post.path) %&gt;&quot; class=&quot;list-group-item list-group-item-action&quot;&gt;     <br>      &lt;!-- 此处自己修改了显示顺序 --&gt;<br>      &lt;div class=&quot;list-group-item-title&quot;&gt;&lt;%= post.title %&gt;&lt;/div&gt;<br>      &lt;time&gt;&lt;%= date(post.date, &quot;MM-DD&quot;) %&gt;&lt;/time&gt;<br>    &lt;/a&gt;<br>  &lt;% &#125;) %&gt;<br>&lt;/div&gt;<br><br>&lt;%- partial(&#x27;_partials/paginator&#x27;) %&gt;<br></code></pre></td></tr></table></div></figure>
-
-<p>然后要使时间靠右边显示，要设置一下 css 样式 <code>justify-content: space-between</code>，它会把子元素靠边对齐平均分剩余的空间，这样就达到想要的效果了。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-fp3sfelbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-fp3sfelbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 设置日期在右侧显示 */</span><br><span class="hljs-selector-class">.archive</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span>,<br><span class="hljs-selector-class">.tag</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span>,<br><span class="hljs-selector-class">.category</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span>,<br><span class="hljs-selector-class">.thesisReading</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span>,<br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span> &#123;<br>  <span class="hljs-attribute">justify-content</span>: space-between;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-<h1 id="6-分类页样式修改"><a href="#6-分类页样式修改" class="headerlink" title="6. 分类页样式修改"></a>6. 分类页样式修改</h1><p>以下功能已经停用，仅记录留作备份：</p>
-<p>在文章中我添加了一个分类用来保存文献阅读的笔记，但是并不希望这个分类在分类页中显示出来，所以设置了不显示。</p>
-<p>因为我分类在命名时都会加上序号，所以文献阅读笔记这个分类我没加序号，按照顺序是排在最后一个的，所以用 css 选择器找最后一元素即可。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-aqsbgklbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-aqsbgklbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 不显示文献阅读笔记 */</span><br><span class="hljs-selector-class">.categories</span> <span class="hljs-selector-class">.category-list</span> <span class="hljs-selector-tag">div</span><span class="hljs-selector-class">.category</span><span class="hljs-selector-class">.row</span><span class="hljs-selector-class">.nomargin-x</span><span class="hljs-selector-pseudo">:last-child</span>&#123;<br>  <span class="hljs-attribute">display</span>: none;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-
-
-
-
-<h1 id="7-自定义页面样式"><a href="#7-自定义页面样式" class="headerlink" title="7. 自定义页面样式"></a>7. 自定义页面样式</h1><p>创建自定义的页面直接查看 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/">Fluid 官方文档</a>就好，如果希望自定义页面采用某些已有的样式，可以参考<a target="_blank" rel="noopener" href="https://tothefor.com/DragonOne/1718922556.html">墨水记忆</a>的文章。如果还想进行更细致的修改，可以复制或自己创建一个 layout 文件，并在里面添加想要的格式。</p>
-<p>由于我需要<a href="#2-%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5%E5%99%A8">代码注入器</a>能单独为这一页添加标签，所以我将我自定义页的 layout 设置成了我指定的名字。</p>
-<figure class="highlight markdown"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-nbf1pelbdts2n1"></i><span>markdown</span><div class="collapse show" id="collapse-nbf1pelbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>layout: civileng<br>title: 土木<br><span class="hljs-section">subtitle: 你喜欢土木工程吗</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></div></figure>
-
-<p>大部分元素的样式设置是跟着归档页一起设置了，详见<a href="/post/3999439793/#4-%E5%BD%92%E6%A1%A3%E9%A1%B5%E5%8A%A8%E7%94%BB">给归档页添加动画</a>。除此之外，我还将在手机上不需要显示的元素设置了 <code>display: none</code>，主要是一行确实放不下，分行又破坏美观了。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-qnkhp1lbdts2n1"></i><span>css</span><div class="collapse show" id="collapse-qnkhp1lbdts2n1"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 笔记目录设置 */</span><br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.h5</span> <span class="hljs-selector-tag">i</span> &#123;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;<br>&#125;<br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span> <span class="hljs-selector-tag">time</span> &#123;<br>  <span class="hljs-attribute">text-overflow</span>: ellipsis;<br>  <span class="hljs-attribute">white-space</span>:nowrap;<br>&#125;<br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span> <span class="hljs-selector-tag">i</span> &#123;<br>  <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1rem</span>;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;<br>&#125;<br><br><span class="hljs-comment">/* 土木分类下icon距离文字的距离 */</span><br><span class="hljs-selector-class">.nav-item</span> <span class="hljs-selector-class">.dropdown-menu</span><span class="hljs-selector-class">.dropdown-collapse</span> <span class="hljs-selector-class">.dropdown-item</span> <span class="hljs-selector-tag">i</span>&#123;<br>  <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.3rem</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
-
-
-
-
+<h1 id="3-所有页样式"><a href="#3-所有页样式" class="headerlink" title="3. 所有页样式"></a>3. 所有页样式</h1><h1 id="4-主页样式"><a href="#4-主页样式" class="headerlink" title="4. 主页样式"></a>4. 主页样式</h1><h1 id="5-归档页样式"><a href="#5-归档页样式" class="headerlink" title="5. 归档页样式"></a>5. 归档页样式</h1><h1 id="6-分类页样式"><a href="#6-分类页样式" class="headerlink" title="6. 分类页样式"></a>6. 分类页样式</h1><h1 id="7-自定页样式"><a href="#7-自定页样式" class="headerlink" title="7. 自定页样式"></a>7. 自定页样式</h1><h1 id="8-关于页样式"><a href="#8-关于页样式" class="headerlink" title="8. 关于页样式"></a>8. 关于页样式</h1>
                 
               </div>
             
@@ -508,7 +423,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>更新于</div>
-          <div>2022年11月8日</div>
+          <div>2022年12月10日</div>
         </div>
       
       
@@ -587,7 +502,7 @@
         aria-expanded="true"
       >
         01 博客搭建
-        <span class="list-group-count">(4)</span>
+        <span class="list-group-count">(10)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
@@ -610,19 +525,64 @@
     
       
       
-        <a href="/post/3999439793/" title="基于 Fluid 主题添加动画"
+        <a href="/post/2826041948/" title="基于 Fluid 主题修改所有页样式"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">基于 Fluid 主题添加动画</span>
+          <span class="category-post">基于 Fluid 主题修改所有页样式</span>
         </a>
       
     
       
       
-        <a href="/post/1063853434/" title="基于 Fluid 主题修改侧边栏"
+        <a href="/post/2803643418/" title="基于 Fluid 主题修改文章页样式"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">基于 Fluid 主题修改侧边栏</span>
+          <span class="category-post">基于 Fluid 主题修改文章页样式</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/1652804318/" title="基于 Fluid 主题修改主页样式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基于 Fluid 主题修改主页样式</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/1689050393/" title="基于 Fluid 主题修改归档页样式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基于 Fluid 主题修改归档页样式</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/1045262900/" title="基于 Fluid 主题修改分类页样式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基于 Fluid 主题修改分类页样式</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/3865438893/" title="基于 Fluid 修改关于页样式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基于 Fluid 修改关于页样式</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/1760942373/" title="基于 Fluid 主题修改土木页样式"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基于 Fluid 主题修改土木页样式</span>
         </a>
       
     
@@ -632,6 +592,15 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基于 Fluid 主题适配深浅两色</span>
+        </a>
+      
+    
+      
+      
+        <a href="/post/1063853434/" title="基于 Fluid 主题添加侧边栏切换"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">基于 Fluid 主题添加侧边栏切换</span>
         </a>
       
     

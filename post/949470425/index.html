@@ -1,7 +1,7 @@
 
 
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
+<html lang="zh-CN" >
 
 
 
@@ -64,18 +64,21 @@
 
   <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
   
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
 
 
 
   
-<link rel="stylesheet" href="/css/fluid/basicSetting.css">
-<link rel="stylesheet" href="/css/fluid/animation.css">
-<link rel="stylesheet" href="/css/fluid/switchColumn.css">
-<link rel="stylesheet" href="/css/fluid/codecollapse.css">
+<link rel="stylesheet" href="/css/fluid/aboutPages.css">
+<link rel="stylesheet" href="/css/fluid/allPages.css">
+<link rel="stylesheet" href="/css/fluid/archivePages.css">
+<link rel="stylesheet" href="/css/fluid/categoryPages.css">
 <link rel="stylesheet" href="/css/fluid/changecolor.css">
-<link rel="stylesheet" href="/css/fluid/tabsSetting.css">
+<link rel="stylesheet" href="/css/fluid/civilPages.css">
+<link rel="stylesheet" href="/css/fluid/codecollapse.css">
+<link rel="stylesheet" href="/css/fluid/homePage.css">
+<link rel="stylesheet" href="/css/fluid/myNavbar.css">
+<link rel="stylesheet" href="/css/fluid/postPages.css">
+<link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
 
@@ -128,9 +131,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/">
-                <i class="iconfont icon-home-fill"></i>
-                首页
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/">
+                <span class="show"><i class="iconfont icon-home-fill"></i></span>
+                <span class="hidden">首页</span>
               </a>
             </li>
           
@@ -140,9 +144,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/archives/">
-                <i class="iconfont icon-archive-fill"></i>
-                归档
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/archives/">
+                <span class="show"><i class="iconfont icon-archive-fill"></i></span>
+                <span class="hidden">归档</span>
               </a>
             </li>
           
@@ -152,9 +157,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/categories/">
-                <i class="iconfont icon-category-fill"></i>
-                分类
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/categories/">
+                <span class="show"><i class="iconfont icon-category-fill"></i></span>
+                <span class="hidden">分类</span>
               </a>
             </li>
           
@@ -164,9 +170,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/tags/">
-                <i class="iconfont icon-tags-fill"></i>
-                标签
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/tags/">
+                <span class="show"><i class="iconfont icon-tags-fill"></i></span>
+                <span class="hidden">标签</span>
               </a>
             </li>
           
@@ -176,9 +183,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/civileng/">
-                <i class="fa fa-university"></i>
-                土木
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/civileng/">
+                <span class="show"><i class="fa fa-university"></i></span>
+                <span class="hidden">土木</span>
               </a>
             </li>
           
@@ -188,9 +196,10 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/artitalk/">
-                <i class="fa fa-commenting"></i>
-                嘀咕
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/artitalk/">
+                <span class="show"><i class="fa fa-commenting"></i></span>
+                <span class="hidden">嘀咕</span>
               </a>
             </li>
           
@@ -200,26 +209,23 @@
           
           
             <li class="nav-item">
-              <a class="nav-link" href="/about/">
-                <i class="iconfont icon-user-fill"></i>
-                关于
+              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
+              <a class="nav-link middle" href="/about/">
+                <span class="show"><i class="iconfont icon-user-fill"></i></span>
+                <span class="hidden">关于</span>
               </a>
             </li>
           
         
         
           <li class="nav-item" id="search-btn">
+            <!-- 把搜索按钮仿照其他按钮做了 -->
             <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+              <span class="show"><i class="iconfont icon-search"></i>&nbsp;</span>
             </a>
           </li>
           
         
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
-                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
-          </li>
         
       </ul>
     </div>
@@ -305,7 +311,7 @@
     
     <section id="mysidebar" class="mysidebar-left">
       <!--头部-->
-      <div class="content-header clearfix">
+      <div class="content-header clearfix navbar-dark">
         <div class="pack">
         <a class="current"><i class="iconfont icon-list"></i></a>
         <a class="current"><i class="iconfont icon-category-fill"></i></a>
@@ -352,9 +358,9 @@
 <li><p>如果测试良好则是绿色；如果测试失败，则是红色。</p>
 </li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-yr3ldxlbdts2n3"></i><span>java</span><div class="collapse show" id="collapse-yr3ldxlbdts2n3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br><br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">()</span> &#123;<br><br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//等待测试的方法</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.name;<br>    &#125;<br><br>    <span class="hljs-comment">//等待测试的方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showAge</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name + <span class="hljs-string">&quot;年龄为&quot;</span> + <span class="hljs-built_in">this</span>.age);<br>        System.out.println(<span class="hljs-number">10</span>/<span class="hljs-number">0</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-bn72d6lbi87rfh"></i><span>java</span><div class="collapse show" id="collapse-bn72d6lbi87rfh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br><br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">()</span> &#123;<br><br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//等待测试的方法</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.name;<br>    &#125;<br><br>    <span class="hljs-comment">//等待测试的方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showAge</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name + <span class="hljs-string">&quot;年龄为&quot;</span> + <span class="hljs-built_in">this</span>.age);<br>        System.out.println(<span class="hljs-number">10</span>/<span class="hljs-number">0</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-id3w7ylbdts2n3"></i><span>java</span><div class="collapse show" id="collapse-id3w7ylbdts2n3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Assert;<br><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-comment">//测试类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestStudents</span> &#123;<br><br>    <span class="hljs-comment">//该测试标绿，测试良好</span><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testGetName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).getName();<br>        System.out.println(str);<br>        <span class="hljs-comment">/**</span><br><span class="hljs-comment">         * 进行预期结果的正确性测试</span><br><span class="hljs-comment">         * 三个参数依次是：出现错误后的提示词，预期值，实际值。</span><br><span class="hljs-comment">         */</span><br>        Assert.assertEquals(<span class="hljs-string">&quot;方法可能出现问题&quot;</span>, <span class="hljs-string">&quot;张三&quot;</span>, str);<br>    &#125;<br><br>    <span class="hljs-comment">//该测试运行后会标红，并抛出异常</span><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testShowAge</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).showAge();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-brcwtklbi87rfh"></i><span>java</span><div class="collapse show" id="collapse-brcwtklbi87rfh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Assert;<br><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-comment">//测试类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestStudents</span> &#123;<br><br>    <span class="hljs-comment">//该测试标绿，测试良好</span><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testGetName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).getName();<br>        System.out.println(str);<br>        <span class="hljs-comment">/**</span><br><span class="hljs-comment">         * 进行预期结果的正确性测试</span><br><span class="hljs-comment">         * 三个参数依次是：出现错误后的提示词，预期值，实际值。</span><br><span class="hljs-comment">         */</span><br>        Assert.assertEquals(<span class="hljs-string">&quot;方法可能出现问题&quot;</span>, <span class="hljs-string">&quot;张三&quot;</span>, str);<br>    &#125;<br><br>    <span class="hljs-comment">//该测试运行后会标红，并抛出异常</span><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testShowAge</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).showAge();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -395,9 +401,9 @@
 </table>
 
 <p><strong>案例</strong></p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wk5eh9lbdts2n3"></i><span>java</span><div class="collapse show" id="collapse-wk5eh9lbdts2n3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br>    <br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">()</span> &#123;<br><br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//待测试方法</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.name;<br>    &#125;<br><br>    <span class="hljs-comment">//待测试方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showAge</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name + <span class="hljs-string">&quot;年龄为&quot;</span> + <span class="hljs-built_in">this</span>.age);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1mlhv0lbi87rfh"></i><span>java</span><div class="collapse show" id="collapse-1mlhv0lbi87rfh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br>    <br>    <span class="hljs-keyword">private</span> String name;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">()</span> &#123;<br><br>    &#125;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//待测试方法</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>.name;<br>    &#125;<br><br>    <span class="hljs-comment">//待测试方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showAge</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-built_in">this</span>.name + <span class="hljs-string">&quot;年龄为&quot;</span> + <span class="hljs-built_in">this</span>.age);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-l6fzvklbdts2n3"></i><span>java</span><div class="collapse show" id="collapse-l6fzvklbdts2n3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.After;<br><span class="hljs-keyword">import</span> org.junit.Before;<br><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestStudents</span> &#123;<br><br>    <span class="hljs-comment">//在每个测试方法执行前会执行一次</span><br>    <span class="hljs-meta">@Before</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">before</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;before&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testGetName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).getName();<br>        System.out.println(str);<br>    &#125;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testShowAge</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).showAge();<br>    &#125;<br><br>    <span class="hljs-comment">//在每个测试方法执行后会执行一次</span><br>    <span class="hljs-meta">@After</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">after</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;after&quot;</span>);<br>    &#125;<br><br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 输出结果：</span><br><span class="hljs-comment"> * before</span><br><span class="hljs-comment"> * 张三</span><br><span class="hljs-comment"> * after</span><br><span class="hljs-comment"> * before</span><br><span class="hljs-comment"> * 张三年龄为23</span><br><span class="hljs-comment"> * after  </span><br><span class="hljs-comment"> */</span> <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-t2g552lbi87rfh"></i><span>java</span><div class="collapse show" id="collapse-t2g552lbi87rfh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.After;<br><span class="hljs-keyword">import</span> org.junit.Before;<br><span class="hljs-keyword">import</span> org.junit.Test;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">TestStudents</span> &#123;<br><br>    <span class="hljs-comment">//在每个测试方法执行前会执行一次</span><br>    <span class="hljs-meta">@Before</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">before</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;before&quot;</span>);<br>    &#125;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testGetName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).getName();<br>        System.out.println(str);<br>    &#125;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">testShowAge</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>).showAge();<br>    &#125;<br><br>    <span class="hljs-comment">//在每个测试方法执行后会执行一次</span><br>    <span class="hljs-meta">@After</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">after</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;after&quot;</span>);<br>    &#125;<br><br>&#125;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * 输出结果：</span><br><span class="hljs-comment"> * before</span><br><span class="hljs-comment"> * 张三</span><br><span class="hljs-comment"> * after</span><br><span class="hljs-comment"> * before</span><br><span class="hljs-comment"> * 张三年龄为23</span><br><span class="hljs-comment"> * after  </span><br><span class="hljs-comment"> */</span> <br></code></pre></td></tr></table></div></figure>
 
 
                 

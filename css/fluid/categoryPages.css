@@ -1,0 +1,81 @@
+/* ----------分类页样式---------- */
+
+
+
+
+/* 不显示文献阅读笔记（该功能已停用）
+.categories .category-list div.category.row.nomargin-x:last-child{
+  display: none;
+} */
+
+
+
+
+/* 分类页悬停动画和字体修改 */
+.categories #board .category-post-list .list-group-item {
+    transition: 0.3s ease-out;
+    font-size: 1.1rem;
+}
+
+.categories #board .category-item,
+.categories #board .category-subitem {
+    font-size: 1.5rem;
+}
+
+.categories .category-count {
+    font-size: 1rem;
+}
+
+@media (min-width:424px) {
+    .categories .category-post-list .list-group-item:hover {
+        transform: scale(1.02);
+    }
+}
+
+
+
+
+/* 手机端入场动画和字体修改 */
+@media (max-width:424px) {
+
+    .categories .category-item,
+    .categories .category-count {
+        animation: getnote-category 1s ease, getsolid-category 0.4s ease-in;
+        animation-fill-mode: both;
+    }
+
+    .categories #board .category-post-list .list-group-item {
+        font-size: 1rem;
+    }
+
+    .categories #board .category-item,
+    .categories #board .category-subitem {
+        font-size: 1.3rem;
+    }
+
+    .categories .category-count {
+        font-size: 0.9rem;
+    }
+}
+
+/* 文字上移动画 */
+@keyframes getnote-category {
+    from {
+        transform: translate(0rem, 3rem);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+/* 渐入动画 */
+@keyframes getsolid-category {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}

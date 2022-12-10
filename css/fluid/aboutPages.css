@@ -1,0 +1,54 @@
+/* ----------关于页样式---------- */
+
+
+
+
+/* 关于页图标动画 */
+@media (min-width:424px) {
+    .about .container.nopadding-x-md img.img-fluid {
+        animation: getdown-about 0.5s ease, getsolid-about 0.4s ease;
+        animation-delay: 0.5s;
+        animation-fill-mode: both;
+    }
+}
+
+/* 头像下移动画 */
+@keyframes getdown-about {
+    from {
+        transform: translate(0rem, -2rem);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+/* 渐入动画 */
+@keyframes getsolid-about {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+/* 手机端入场动画和字体修改 */
+@media (max-width:424px) {
+    .about .container.nopadding-x-md .container {
+        animation: getnote-about 1s ease, getsolid-about 0.4s ease-in;
+        animation-fill-mode: both;
+    }
+}
+
+/* 文字上移动画 */
+@keyframes getnote-about {
+    from {
+        transform: translate(0rem, 3rem);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}

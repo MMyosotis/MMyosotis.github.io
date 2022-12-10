@@ -7,13 +7,14 @@ HTMLElement.prototype.wrap = function(wrapper) {
 };
 
 Fluid.events = {
-
+// ————————————————————关于mysidebar的部分都是自己加的——————————————————
   registerNavbarEvent: function() {
     var navbar = jQuery('#navbar');
     if (navbar.length === 0) {
       return;
     }
     var submenu = jQuery('#navbar .dropdown-menu');
+    var mysidebar = jQuery('#mysidebar .content-header');        //自加代码
     if (navbar.offset().top > 0) {
       navbar.removeClass('navbar-dark');
       submenu.removeClass('navbar-dark');
@@ -21,12 +22,15 @@ Fluid.events = {
     Fluid.utils.listenScroll(function() {
       navbar[navbar.offset().top > 50 ? 'addClass' : 'removeClass']('top-nav-collapse');
       submenu[navbar.offset().top > 50 ? 'addClass' : 'removeClass']('dropdown-collapse');
+      mysidebar[navbar.offset().top > 50 ? 'addClass' : 'removeClass']('mysidebar-collapse');    //自加代码
       if (navbar.offset().top > 0) {
         navbar.removeClass('navbar-dark');
         submenu.removeClass('navbar-dark');
+        mysidebar.removeClass('navbar-dark');       //自加代码
       } else {
         navbar.addClass('navbar-dark');
-        submenu.removeClass('navbar-dark');
+        mysidebar.addClass('navbar-dark');
+        submenu.removeClass('navbar-dark');         //自加代码
       }
     });
     jQuery('#navbar-toggler-btn').on('click', function() {
@@ -34,7 +38,7 @@ Fluid.events = {
       jQuery('#navbar').toggleClass('navbar-col-show');
     });
   },
-
+//————————————————————————————————————————————————————————————————————
   registerParallaxEvent: function() {
     var ph = jQuery('#banner[parallax="true"]');
     if (ph.length === 0) {

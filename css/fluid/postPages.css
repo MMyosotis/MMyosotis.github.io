@@ -1,0 +1,293 @@
+/* ----------文章页样式---------- */
+
+
+
+
+/*修改文章页页边距*/
+.post-content {
+    box-sizing: border-box;
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+/* 修改页面宽度 */
+.col-lg-8.nopadding-x-md .container.nopadding-x-md #board {
+    width: 112%;
+    left: -12%;
+}
+
+@media (max-width: 993px) {
+    .col-lg-8.nopadding-x-md .container.nopadding-x-md #board {
+        width: 100%;
+        left: 0%;
+    }
+}
+
+/* 解决高分屏下元素过宽的问题 */
+.post .row.nomargin-x {
+    max-width: 100rem;
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+
+
+
+
+/*设置图片居中*/
+img.img-center {
+    display: block;
+    margin: auto;
+    text-align: center;
+}
+
+
+
+
+/* 设置特殊文字样式 */
+font.code-word {
+    color: var(--code-word-color);
+}
+
+font.code-sentence {
+    color: var(--code-sentence-color);
+}
+
+font.word-stress {
+    color: #008B8B;
+}
+
+
+
+
+/* 设置表格样式 */
+table.myform tbody {
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-overflow: ellipsis;
+    word-break: keep-all;
+    white-space: nowrap;
+    width: 100%;
+}
+
+/* 表格边框样式：有内框 */
+table.myform tbody td {
+    /* 无内框设置 
+    border-left-width: 0;
+    border-right-width :0; */
+    border-color: var(--form-border-color);
+}
+
+table.myform tbody th {
+    border-color: var(--form-border-color);
+}
+
+table.myform tr:nth-child(2n+1) {
+    background-color: var(--form-color);
+}
+
+table.myform th:last-child {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* table.myform td:first-child {
+    border-left-width: 1px;
+  }
+  table.myform th:first-child {
+    border-left-width: 1px;
+  }
+  table.myform td:last-child {
+    border-right-width: 1px;
+  } */
+
+
+
+
+/* 文中分类折叠栏：现在已关闭 */
+.categoryinpost {
+    display: none;
+    margin-bottom: 0.15em;
+    background-color: var(--highlight-bg-color);
+    border-radius: 18px;
+    padding: 0.15em;
+}
+
+.categoryinpost button {
+    text-align: left;
+    width: 100%;
+    border: none;
+    font-size: 1.2em;
+    color: var(--text-color);
+    background-color: var(--highlight-bg-color);
+    border-radius: 20px;
+}
+
+.categoryinpost button>i {
+    margin-left: 0.75rem;
+    margin-right: 0.5rem;
+    transition: transform 0.35s ease;
+    -o-transition: transform 0.35s ease;
+    -moz-transition: transform 0.35s ease;
+    -webkit-transition: transform 0.35s ease;
+    font-size: 1.2em;
+}
+
+.categoryinpost button.collapsed>i {
+    transform: rotate(-90deg);
+}
+
+.categoryinpost .titleblock {
+    margin-left: 0.75em;
+    margin-right: 0.75em;
+}
+
+.categoryinpost .title {
+    color: var(--text-color);
+}
+
+.categoryinpost .dropdown-divider {
+    border-top: 1px solid var(--form-color);
+    margin-top: 0.15em;
+}
+
+
+
+
+/* 代码块样式修改 */
+figure.highlight table {
+    background-color: var(--highlight-bg-color) !important;
+    transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    border-radius: 0 0 10px 10px;
+}
+
+figure.highlight table td.gutter {
+    position: static;
+    border-bottom-left-radius: 14px;
+}
+
+figure.highlight table td.code {
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+
+/*目录进入动画 */
+.container-fluid.nopadding-x #mysidebar.mysidebar-right {
+    animation: getright-post 1s ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: both;
+
+}
+
+.container-fluid.nopadding-x aside.sidebar .category-list {
+    margin-left: -1rem;
+}
+
+/* 右移渐入动画 */
+@keyframes getright-post {
+    from {
+        transform: translate(-1.5em, 0em);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 100;
+    }
+}
+
+
+
+
+/* 手机端文字进入 */
+@media (max-width:424px) {
+    .post .container-fluid.nopadding-x .post-content {
+        animation: getnote-post 1s ease, getsolid-post 0.4s ease-in;
+        animation-fill-mode: both;
+    }
+}
+
+/* 文字上移动画 */
+@keyframes getnote-post {
+    from {
+        transform: translate(0rem, 3rem);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+/* 渐入动画 */
+@keyframes getsolid-post {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 100;
+    }
+}
+
+
+
+
+/* 文章页标题进入 */
+.post .banner-text.text-center.fade-in-up {
+    animation: getnotedown 1s ease, getsolid-post 0.4s ease-in;
+    animation-fill-mode: both;
+}
+
+/* 文字下移动画 */
+@keyframes getnotedown-post {
+    from {
+        transform: translate(0rem, -3rem);
+    }
+
+    to {
+        transform: translate(0, 0);
+    }
+}
+
+
+
+
+/* 修改tabs标签内边距 */
+.post .tag-common.tabs .tab-content .tab-pane,
+.post .tabs-comment .tab-content .tab-pane {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+/* 修改tabs标签外边框 */
+.post .tag-common.tabs .tab-content,
+.tabs-comment .tab-content {
+    border: none;
+}
+
+.tag-common.tabs ul.nav-tabs li.tab,
+.tabs-comment ul.nav-tabs li.tab {
+    border-bottom: 1px solid var(--line-color);
+}
+
+.post .tag-common.tabs ul.nav-tabs li.tab.active,
+.tabs-comment ul.nav-tabs li.tab.active {
+    border-top-color: var(--tabs-color);
+    border-left-color: var(--line-color);
+    border-right-color: var(--line-color);
+}
+
+.post .tag-common.tabs ul.nav-tabs li.tab.active a,
+.tabs-comment ul.nav-tabs li.tab.active a {
+    color: var(--tabs-color);
+}
+
+.tag-common.tabs ul.nav-tabs,
+.tabs-comment ul.nav-tabs {
+    border: none;
+}
