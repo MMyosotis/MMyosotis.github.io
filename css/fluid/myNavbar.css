@@ -42,139 +42,423 @@
 
 
 
+
+
 @media (min-width:992px) {
 
-    /* 针对动画进行导航栏样式适配 */
-    .nav-item .nav-link.middle .show {
-        margin-right: 0.3rem;
-        margin-left: 0.2rem;
+    /* 导航栏整体样式 */
+    .container>.navbar-brand {
+        display: none;
     }
 
-    .nav-item .nav-link.middle {
-        display: flex !important;
+
+    .navbar-nav {
+        text-align: center;
+        display: flex;
+        flex-direction: row;
         justify-content: center;
-        color: white;
+        width: 100%;
     }
 
-    .nav-item .nav-link.middle .hidden {
-        max-width: 0;
-        max-height: 0;
-        overflow-y: hidden;
+
+    #navbar.top-nav-collapse {
+        background-color: rgba(26, 52, 64, 0.7);
+        backdrop-filter: blur(3px);
+        padding: 8px 16px;
+        border: 0;
     }
 
-    #navbar .container {
-        margin-bottom: 0.1rem;
-    }
-
-    /* 正常情况下隐藏文字 */
-    .nav-item .nav-link.middle .hidden {
-        animation: nav-out 0.3s ease, nav-getnone 1s ease;
-        animation-fill-mode: both;
-    }
-
-    /* 鼠标悬浮显示文字 */
-    .nav-item:hover .nav-link.middle .hidden {
-        animation: nav-come 1s ease, nav-getsolid 0.2s ease-in 0.1s;
-        animation-fill-mode: both;
-        max-height: 1.3rem;
-    }
-
-    @keyframes nav-getsolid {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes nav-getnone {
-        from {
-            opacity: 1;
-        }
-
-        to {
-            opacity: 0;
-        }
-    }
-
-    @keyframes nav-getsolid {
-        from {
-            opacity: 0;
-        }
-
-        to {
-            opacity: 1;
-        }
-    }
-
-    @keyframes nav-come {
-        0% {
-            max-width: 0;
-        }
-
-        100% {
-            max-width: 10em;
-        }
-    }
-
-    @keyframes nav-out {
-        0% {
-            max-width: 10em;
-        }
-
-        100% {
-            max-width: 0;
-        }
-    }
-}
 
 
 
-
-/* 鼠标悬浮下划线动画 */
-@media (min-width:992px) {
-    .nav-item .nav-link {
+    /* 中间栏样式 */
+    .navbar-nav .barcenter {
+        display: flex;
+        flex-direction: row;
+        width: fit-content;
         position: relative;
     }
 
-    .nav-item:hover .nav-link {
-        position: relative;
-        margin: 0, 0.1rem;
+    .navbar-nav .barcenter .nav-item {
+        padding: 0 0.6rem;
+    }
+
+    .navbar-nav .barcenter .nav-item .icon {
+        display: none;
+    }
+
+    .navbar-nav .barcenter .nav-item>a {
+        font-weight: bold;
+        border-radius: 40px;
         color: white !important;
+        font-size: 15px;
     }
 
-    .nav-item .nav-link.middle:not(.child):after {
+    /* 中间栏鼠标悬浮动画 */
+    .navbar-nav .barcenter .nav-box {
         position: absolute;
-        bottom: 0;
-        left: 13%;
-        width: 0;
-        height: 3px;
-        background-color: #80c8f8;
-        content: '';
-        transition: all .3s ease-in-out;
+        bottom: -8.4px;
+        left: -25%;
+        background: rgb(255,255,255,0.95);
+        height: 4.5px;
+        width: 25%;
+        transition: 0.4s;
+        opacity: 0;
     }
 
-    .nav-item .nav-link.middle:not(.child):hover:after {
-        width: 80%;
-    }
-}
-
-
-
-/* 搜索按钮动画 */
-@media (min-width:992px) {
-    .nav-item#search-btn:hover {
-        transform: scale(1.4);
-        padding-left: 5px;
+    .navbar-nav .barcenter .nav-item:hover~.nav-box {
+        opacity: 1;
     }
 
-    .nav-item#search-btn {
+    .navbar-nav .barcenter .nav-item:nth-child(1):hover~.nav-box {
+        left: 0;
+    }
+
+    .navbar-nav .barcenter .nav-item:nth-child(2):hover~.nav-box {
+        left: 25%;
+    }
+
+    .navbar-nav .barcenter .nav-item:nth-child(3):hover~.nav-box {
+        left: 50%;
+    }
+
+    .navbar-nav .barcenter .nav-item:nth-child(4):hover~.nav-box {
+        left: 75%;
+    }
+
+
+
+    /* 右侧栏样式 */
+    .navbar-nav .iconbar {
+        display: flex;
+        flex-direction: row;
+        position: absolute;
+        right: 0;
+        margin: 0;
+        transition: 0.2s;
+
+    }
+
+    .navbar-nav .iconbar .nav-item {
+        position: relative;
+        white-space: nowrap;
+        margin: 0 0.2rem;
+    }
+
+    .navbar-nav .iconbar .nav-item .text {
+        display: none;
+    }
+
+    .navbar-nav .iconbar .nav-item a {
+        transition: 0.2s;
+        overflow: hidden;
+    }
+
+    .navbar-nav .iconbar .nav-item a i {
         transition: 0.2s;
     }
 
-    .nav-item#search-btn:hover i {
-        color: #80c8f8;
+    /* 右侧栏鼠标悬浮动画 */
+    .navbar-nav .iconbar .nav-item:hover a i {
+        color: black;
+    }
+
+    .navbar-nav .iconbar .nav-item:after {
+        opacity: 0;
+        z-index: -1;
+        border-radius: 100px;
+        position: absolute;
+        bottom: -2px;
+        left: -5px;
+        filter: blur(2px);
+        background: rgb(255,255,255,0.95);
+        content: '';
+        transition: all 0.4s ease;
+        width: 40px;
+        height: 40px;
+    }
+
+    .navbar-nav .iconbar .nav-item:nth-last-child(1):after {
+        display: none;
+    }
+
+    .navbar-nav .iconbar .nav-item:hover:after {
+        width: 30px;
+        height: 30px;
+        bottom: 3px;
+        left: 0;
+        filter: blur(0px);
+        opacity: 1;
+    }
+
+
+    /* 返回顶部 */
+    .navbar-nav .iconbar .nav-item#toTop {
+        opacity: 0;
+        transition: 0.5s ease;
+        transition-delay: 0s;
+    }
+
+    .navbar-nav .iconbar .nav-item #scroll-top-button {
+        position: relative;
+        bottom: 0 !important;
+        min-width: 0 !important;
+        min-height: 0 !important;
+        background-color: transparent;
+        box-shadow: none;
+        display: block;
+        max-width: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        transition: 0.5s ease;
+        transition-delay: 0s;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .navbar-nav .iconbar .nav-item #scroll-top-button i {
+        font-size: 17px !important;
+        justify-content: center;
+        color: white;
+        transition: 0.2s;
+        
+    }
+
+    .navbar-nav .iconbar .nav-item #scroll-top-button span {
+        width: 18.48px;
+        height: 18.4px;
+
+    }
+
+    .navbar-nav .iconbar .nav-item:hover #scroll-top-button i {
+        transform: scale(1.4);
+        animation:none;
+    }
+
+
+
+
+
+    /* 左侧栏样式 */
+    .navbar-nav .backhome {
+        position: absolute;
+        left: 0;
+        bottom: 0.03rem;
+    }
+
+    .navbar-nav .backhome .nav-item {
+        margin-left: 0.7rem;
+        position: relative;
+    }
+
+    .navbar-nav .backhome .nav-item .navbar-brand {
+        margin: auto !important;
+        opacity: 1;
+        transition: 0.3s ease;
+        transition-delay: 0.2s;
+    }
+
+    .navbar-nav .backhome .nav-item .homeicon {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        opacity: 0;
+        filter: blur(2px);
+        transition: all 0.4s ease;
+        bottom: 0rem;
+        margin: auto;
+    }
+
+    .navbar-nav .backhome .nav-item .homeicon i {
+        font-size: 16px;
+        transition: all 0.4s ease;
+    }
+
+    /* 左侧栏动画 */
+    .navbar-nav .backhome .nav-item:hover .homeicon {
+        opacity: 100;
+        filter: blur(0px);
+        padding: auto;
+    }
+
+    .navbar-nav .backhome .nav-item:hover .homeicon i {
+        color: black !important;
+    }
+
+    .navbar-nav .backhome .nav-item:hover .navbar-brand {
+        opacity: 0;
+        transition-delay: 0s;
+    }
+
+    .navbar-nav .backhome .nav-item:after {
+        z-index: 0;
+        opacity: 0;
+        transition: 0.4s ease;
+        position: absolute;
+        width: 100%;
+        bottom: 7%;
+        height: 80%;
+        content: '';
+        left: 0%;
+        background: rgb(255,255,255,0.95);
+        border-radius: 100px;
+        filter: blur(2px);
+    }
+
+    .navbar-nav .backhome .nav-item:hover:after {
+        opacity: 1;
+        width: 80%;
+        bottom: 7%;
+        height: 80%;
+        left: 10%;
+        filter: blur(0px);
+    }
+
+    .navbar-nav .iconbar .nav-item a div {
+        transition: transform 0.3s;
+    }
+
+
+
+    /* 右侧栏展开 */
+    .navbar-nav .iconbar .myself {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+
+    .navbar-nav .iconbar .myself .nav-item:nth-child(2) {
+        max-width: 0px;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 0;
+        transition: 0.4s ease;
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    .navbar-nav .iconbar .myself .nav-item:nth-child(2) a {
+        color: black !important;
+    }
+
+    .navbar-nav .iconbar .myself:hover .nav-item:nth-child(2) {
+        max-width: 2rem;
+        margin: 0 0.2rem;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .navbar-nav .iconbar .myself.nav-item:nth-child(1):after {
+        opacity: 0;
+        z-index: -1;
+        border-radius: 100px;
+        position: absolute;
+        bottom: -2px;
+        left: -5px;
+        filter: blur(2px);
+        background: rgb(255,255,255,0.95);
+        content: '';
+        transition: all 0.4s;
+        width: 80px;
+        height: 40px;
+    }
+
+    .navbar-nav .iconbar .myself .nav-item:nth-child(2):after {
+        display: none;
+    }
+
+    .navbar-nav .iconbar .myself:hover .nav-item:nth-child(1):after {
+        opacity: 1;
+        width: 245%;
+        bottom: 7%;
+        height: 80%;
+        left: -10%;
+        filter: blur(0px);
+    }
+
+
+    .navbar-nav .iconbar .myself:hover .nav-item a {
+        color: black;
+    }
+
+
+
+    /* 触顶颜色修改 */
+    .navbar-dark .navbar-nav .barcenter .nav-box,
+    .navbar-dark .navbar-nav .iconbar .nav-item:after,
+    .navbar-dark .navbar-nav .backhome .nav-item:after,
+    .navbar-dark .navbar-nav .iconbar .myself.nav-item:nth-child(1):after
+    {
+        background: rgb(255,255,255,0.6);
+    }
+
+    .navbar-dark .navbar-nav .barcenter .nav-box {
+        bottom: -11px;
+        height: 5.5px;
+    }
+
+}
+
+
+@media (max-width:992px) {
+
+    /* 整体设置 */
+    .navbar-nav .backhome {
+        display: none;
+    }
+
+    .navbar-nav .iconbar .nav-item#toTop {
+        display: none;
+    }
+
+
+    /* 文章栏 */
+
+    .navbar-nav .barcenter {
+        display: flex;
+        flex-wrap: wrap;
+        width: 80%;
+        margin: auto;
+    }
+
+    .navbar-nav .barcenter .nav-item {
+        width: 50%;
+    }
+
+    .navbar-nav .barcenter .nav-item .icon {
+        display: none;
+    }
+
+    .navbar-nav .barcenter .nav-item a {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+
+
+    /* 个人栏 */
+
+    .navbar-nav .iconbar .myself {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+    }
+    .navbar-nav .iconbar {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: auto;
+    }
+
+    .navbar-nav .iconbar .nav-item {
+        margin: 0 0.5rem;
+    }
+
+    .navbar-nav .iconbar .nav-item .text {
+        display: none;
+    }
+
+    .navbar-nav .iconbar .nav-item a {
+        font-size: 16px;
     }
 }

@@ -110,123 +110,148 @@
     
 
 <div class="header-inner" style="height: 60vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
+
+<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
+    <!-- 该栏只在移动端显示 -->
     <a class="navbar-brand" href="/">
-      <strong>Myosotis</strong>
+      <strong>MYOSOTIS</strong>
     </a>
+    
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/">
-                <span class="show"><i class="iconfont icon-home-fill"></i></span>
-                <span class="hidden">首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/archives/">
-                <span class="show"><i class="iconfont icon-archive-fill"></i></span>
-                <span class="hidden">归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/categories/">
-                <span class="show"><i class="iconfont icon-category-fill"></i></span>
-                <span class="hidden">分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/tags/">
-                <span class="show"><i class="iconfont icon-tags-fill"></i></span>
-                <span class="hidden">标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/civileng/">
-                <span class="show"><i class="fa fa-university"></i></span>
-                <span class="hidden">土木</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/artitalk/">
-                <span class="show"><i class="fa fa-commenting"></i></span>
-                <span class="hidden">嘀咕</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/about/">
-                <span class="show"><i class="iconfont icon-user-fill"></i></span>
-                <span class="hidden">关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <!-- 把搜索按钮仿照其他按钮做了 -->
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <span class="show"><i class="iconfont icon-search"></i>&nbsp;</span>
+
+        <!-- 返回主页按钮 -->
+        <div class="backhome">
+          <div class="nav-item">
+            <a class="navbar-brand" href="/">
+              <strong>
+                MYOSOTIS
+              </strong>
             </a>
-          </li>
+            <div class="homeicon">
+              <a class="nav-link" href="/">
+                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="barcenter">
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/archives/">
+                  <span class="icon"><i class="iconfont icon-archive-fill"></i></span>
+                  <span class="text">归 档</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/categories/">
+                  <span class="icon"><i class="iconfont icon-category-fill"></i></span>
+                  <span class="text">分 类</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/tags/">
+                  <span class="icon"><i class="iconfont icon-tags-fill"></i></span>
+                  <span class="text">标 签</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/civileng/">
+                  <span class="icon"><i class="fa fa-university"></i></span>
+                  <span class="text">专 栏</span>
+                </a>
+              </li>
+            
+          
+          <div class="nav-box"></div>
+        </div>
+
+        
+          <div class="iconbar">
+            <!-- 关于按钮 -->
+            <div class="myself">
+              <li class="nav-item">
+                <a class="nav-link" href="/about/">
+                  <div>
+                    <span class="icon"><i class="iconfont icon-user-fill"></i></span>
+                    <span class="text">关 于</span>
+                  </div>
+                </a>
+              </li>
+              <!-- 嘀咕按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/artitalk/">
+                  <div>
+                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="text">嘀 咕</span>
+                  </div>
+                </a>
+              </li>
+            </div>
+            <!-- 搜索按钮 -->
+            <li class="nav-item" id="search-btn">
+              <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
+                aria-label="Search">
+                <div>
+                  <span class="icon"><i class="iconfont icon-search"></i></span>
+                  <span class="text">搜 索</span>
+                </div>
+              </a>
+            </li>
+            <!-- 到顶按钮 -->
+            
+              <li class="nav-item" id="toTop">
+                <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+                  <div>
+                    <i class="fa-solid fa-circle-chevron-up"></i>
+                  </div>
+                </a>
+              </li>
+            
+          </div>
           
         
+
         
+
       </ul>
     </div>
   </div>
@@ -314,24 +339,19 @@
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
-      
+      <!-- 这一部分全改成自己的侧边栏了 -->
 
-    <!-- 这一部分全改成自己的侧边栏了 -->
-    
-    <section id="mysidebar" class="mysidebar-left">
-      <!--头部-->
-      <div class="content-header clearfix navbar-dark">
-        <div class="pack">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        </div>
-      </div>
-      <!-- 内容 -->
-        <!-- 位于sidebar-right文件中 -->
-    </section>
-
-
-
+<section id="mysidebar" class="mysidebar-left">
+  <!--头部-->
+  <div class="content-header clearfix navbar-dark">
+    <div class="barpack">
+      <a class="current"><i class="iconfont icon-list"></i></a>
+      <a class="current"><i class="iconfont icon-category-fill"></i></a>
+    </div>
+  </div>
+  <!-- 内容 -->
+  <!-- 位于sidebar-right文件中 -->
+</section>
     </div>
 
     <div class="col-lg-8 nopadding-x-md">
@@ -374,29 +394,29 @@
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/02-1.png" srcset="/img/loading.gif" lazyload alt="02-1" class="img-center" style="zoom:80%;" />
 
 <h2 id="2-1-定义队列类"><a href="#2-1-定义队列类" class="headerlink" title="2.1 定义队列类"></a>2.1 定义队列类</h2><p>创建一个单向队列类用来实现单向队列功能。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-9varsylbixkex7"></i><span>java</span><div class="collapse show" id="collapse-9varsylbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义队列类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ArrayQueue</span> &#123;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> maxSize;    <span class="hljs-comment">//数组的最大容量</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> front;      <span class="hljs-comment">//指向队列头</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> rear;       <span class="hljs-comment">//指向队列尾</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span>[] arr;      <span class="hljs-comment">//存放数据</span><br>    <br>    <span class="hljs-comment">//---------队列方法---------</span><br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1iqv1ylbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-1iqv1ylbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义队列类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">ArrayQueue</span> &#123;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> maxSize;    <span class="hljs-comment">//数组的最大容量</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> front;      <span class="hljs-comment">//指向队列头</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> rear;       <span class="hljs-comment">//指向队列尾</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span>[] arr;      <span class="hljs-comment">//存放数据</span><br>    <br>    <span class="hljs-comment">//---------队列方法---------</span><br><br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <p>初始化队列，即让指针 front &#x3D; rear &#x3D; 0。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-5g85tvlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-5g85tvlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//构造方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">ArrayQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> maxSize)</span> &#123;<br>    <br>    <span class="hljs-built_in">this</span>.maxSize = maxSize;<br>    arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[maxSize];<br>    front = <span class="hljs-number">0</span>;    <span class="hljs-comment">//指向队列头部</span><br>    rear = <span class="hljs-number">0</span>;     <span class="hljs-comment">//指向队列尾部的下一个位置</span><br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1wrq2plbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-1wrq2plbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//构造方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">ArrayQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> maxSize)</span> &#123;<br>    <br>    <span class="hljs-built_in">this</span>.maxSize = maxSize;<br>    arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[maxSize];<br>    front = <span class="hljs-number">0</span>;    <span class="hljs-comment">//指向队列头部</span><br>    rear = <span class="hljs-number">0</span>;     <span class="hljs-comment">//指向队列尾部的下一个位置</span><br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-2-队列方法"><a href="#2-2-队列方法" class="headerlink" title="2.2 队列方法"></a>2.2 队列方法</h2><h3 id="2-2-1-判断队列空满"><a href="#2-2-1-判断队列空满" class="headerlink" title="2.2.1 判断队列空满"></a>2.2.1 判断队列空满</h3><p>判断队列为空的标志是：front &#x3D; rear。</p>
 <p>判断队列为满的标志是：rear &#x3D; maxSize。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-a4deuelbixkex7"></i><span>java</span><div class="collapse show" id="collapse-a4deuelbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//判断队列是否满</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isFull</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> rear == maxSize;<br>    <br>&#125;<br><br><span class="hljs-comment">//判断队列是否为空</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isEmpty</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> rear == front;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-q6e2gtlbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-q6e2gtlbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//判断队列是否满</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isFull</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> rear == maxSize;<br>    <br>&#125;<br><br><span class="hljs-comment">//判断队列是否为空</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isEmpty</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> rear == front;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="2-2-2-数据进队列"><a href="#2-2-2-数据进队列" class="headerlink" title="2.2.2 数据进队列"></a>2.2.2 数据进队列</h3><p>实现思路为：在 rear 处添加元素，然后 rear++。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-qz0h4qlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-qz0h4qlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据进队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isFull()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列满，不能添加数据&quot;</span>);<br>    &#125;<br>    arr[rear] = n;<br>    rear++;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7htdi0lbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-7htdi0lbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据进队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isFull()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列满，不能添加数据&quot;</span>);<br>    &#125;<br>    arr[rear] = n;<br>    rear++;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="2-2-3-数据出队列"><a href="#2-2-3-数据出队列" class="headerlink" title="2.2.3 数据出队列"></a>2.2.3 数据出队列</h3><p>实现思路为：输出 front 处元素，清除 front 处元素，最后 front++。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ltrw9llbixkex7"></i><span>java</span><div class="collapse show" id="collapse-ltrw9llbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据出队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> arr[front];   <span class="hljs-comment">//获取数据</span><br>    arr[front] = <span class="hljs-number">0</span>;           <span class="hljs-comment">//元素清空</span><br>    front++;                  <span class="hljs-comment">//尾指针后移</span><br>    <span class="hljs-keyword">return</span> value;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-fyfgnplbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-fyfgnplbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据出队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> arr[front];   <span class="hljs-comment">//获取数据</span><br>    arr[front] = <span class="hljs-number">0</span>;           <span class="hljs-comment">//元素清空</span><br>    front++;                  <span class="hljs-comment">//尾指针后移</span><br>    <span class="hljs-keyword">return</span> value;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="2-2-4-显示队列"><a href="#2-2-4-显示队列" class="headerlink" title="2.2.4 显示队列"></a>2.2.4 显示队列</h3><p>显示队列头的思路为：输出 front 处元素。</p>
 <p>显示队列所有数据的思路为：从 front 至 rear - 1 遍历所有元素并输出。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-kpcmuelbixkex7"></i><span>java</span><div class="collapse show" id="collapse-kpcmuelbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列所有数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> front; i &lt; rear; i++) &#123;<br>        System.out.printf(<span class="hljs-string">&quot;arr[%d] = %d\n&quot;</span>, i, arr[i]);<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7nl8brlbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-7nl8brlbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列所有数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> front; i &lt; rear; i++) &#123;<br>        System.out.printf(<span class="hljs-string">&quot;arr[%d] = %d\n&quot;</span>, i, arr[i]);<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-c8wqyqlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-c8wqyqlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列头数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">headQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> arr[front];<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ticmdwlbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-ticmdwlbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列头数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">headQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> arr[front];<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-3-测试代码"><a href="#2-3-测试代码" class="headerlink" title="2.3 测试代码"></a>2.3 测试代码</h2><p>测试功能的代码如下：</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-r3t6dglbixkex7"></i><span>java</span><div class="collapse show" id="collapse-r3t6dglbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.InputMismatchException;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">ArrayQueue</span> <span class="hljs-variable">queue</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayQueue</span>(<span class="hljs-number">3</span>);<br><br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">loop</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">while</span> (loop) &#123;<br><br>            <span class="hljs-comment">//输出菜单</span><br>            System.out.println(<span class="hljs-string">&quot;---------菜单--------&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;s(show)：显示队列&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;e(exit)：退出程序&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;a(add)：数据进队列&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;g(get)：数据出队列&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;h(head)：显示队列头&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;-------------------&quot;</span>);<br><br>            System.out.println(<span class="hljs-string">&quot;请输入选择：&quot;</span>);<br>            <span class="hljs-type">char</span> <span class="hljs-variable">choice</span> <span class="hljs-operator">=</span> sc.next().charAt(<span class="hljs-number">0</span>);<br>            <span class="hljs-keyword">switch</span> (choice) &#123;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;s&#x27;</span>:  <span class="hljs-comment">//显示队列</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        queue.showQueue();<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列空，显示队列失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;e&#x27;</span>:  <span class="hljs-comment">//退出程序</span><br>                    System.out.println(<span class="hljs-string">&quot;欢迎下次使用！&quot;</span>);<br>                    loop = <span class="hljs-literal">false</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;a&#x27;</span>:  <span class="hljs-comment">//数据进队列</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        System.out.println(<span class="hljs-string">&quot;请输入进队列数据：&quot;</span>);<br>                        <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> sc.nextInt();<br>                        queue.addQueue(value);<br>                    &#125; <span class="hljs-keyword">catch</span> (InputMismatchException e) &#123;<br>                        <span class="hljs-type">Object</span> <span class="hljs-variable">valueskip</span> <span class="hljs-operator">=</span> sc.next();<br>                        System.out.println(<span class="hljs-string">&quot;输入数据非数字，进队列失败！&quot;</span>);<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列满，进队列失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;g&#x27;</span>:  <span class="hljs-comment">//数据出队列</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> queue.getQueue();<br>                        System.out.println(<span class="hljs-string">&quot;出队列数据为：&quot;</span> + result);<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列空，出队列失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;h&#x27;</span>:  <span class="hljs-comment">//显示队列头</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> queue.headQueue();<br>                        System.out.println(<span class="hljs-string">&quot;队列头数据为：&quot;</span> + result);<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列空，显示队列头失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">default</span>:<br>                    System.out.println(<span class="hljs-string">&quot;输入不在选项范围内！&quot;</span>);<br>                    <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-jqqfs9lbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-jqqfs9lbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.InputMismatchException;<br><span class="hljs-keyword">import</span> java.util.Scanner;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">ArrayQueue</span> <span class="hljs-variable">queue</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ArrayQueue</span>(<span class="hljs-number">3</span>);<br><br>        <span class="hljs-type">Scanner</span> <span class="hljs-variable">sc</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br>        <span class="hljs-type">boolean</span> <span class="hljs-variable">loop</span> <span class="hljs-operator">=</span> <span class="hljs-literal">true</span>;<br>        <span class="hljs-keyword">while</span> (loop) &#123;<br><br>            <span class="hljs-comment">//输出菜单</span><br>            System.out.println(<span class="hljs-string">&quot;---------菜单--------&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;s(show)：显示队列&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;e(exit)：退出程序&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;a(add)：数据进队列&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;g(get)：数据出队列&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;h(head)：显示队列头&quot;</span>);<br>            System.out.println(<span class="hljs-string">&quot;-------------------&quot;</span>);<br><br>            System.out.println(<span class="hljs-string">&quot;请输入选择：&quot;</span>);<br>            <span class="hljs-type">char</span> <span class="hljs-variable">choice</span> <span class="hljs-operator">=</span> sc.next().charAt(<span class="hljs-number">0</span>);<br>            <span class="hljs-keyword">switch</span> (choice) &#123;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;s&#x27;</span>:  <span class="hljs-comment">//显示队列</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        queue.showQueue();<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列空，显示队列失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;e&#x27;</span>:  <span class="hljs-comment">//退出程序</span><br>                    System.out.println(<span class="hljs-string">&quot;欢迎下次使用！&quot;</span>);<br>                    loop = <span class="hljs-literal">false</span>;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;a&#x27;</span>:  <span class="hljs-comment">//数据进队列</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        System.out.println(<span class="hljs-string">&quot;请输入进队列数据：&quot;</span>);<br>                        <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> sc.nextInt();<br>                        queue.addQueue(value);<br>                    &#125; <span class="hljs-keyword">catch</span> (InputMismatchException e) &#123;<br>                        <span class="hljs-type">Object</span> <span class="hljs-variable">valueskip</span> <span class="hljs-operator">=</span> sc.next();<br>                        System.out.println(<span class="hljs-string">&quot;输入数据非数字，进队列失败！&quot;</span>);<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列满，进队列失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;g&#x27;</span>:  <span class="hljs-comment">//数据出队列</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> queue.getQueue();<br>                        System.out.println(<span class="hljs-string">&quot;出队列数据为：&quot;</span> + result);<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列空，出队列失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;h&#x27;</span>:  <span class="hljs-comment">//显示队列头</span><br>                    <span class="hljs-keyword">try</span> &#123;<br>                        <span class="hljs-type">int</span> <span class="hljs-variable">result</span> <span class="hljs-operator">=</span> queue.headQueue();<br>                        System.out.println(<span class="hljs-string">&quot;队列头数据为：&quot;</span> + result);<br>                    &#125; <span class="hljs-keyword">catch</span> (RuntimeException e) &#123;<br>                        System.out.println(<span class="hljs-string">&quot;队列空，显示队列头失败！&quot;</span>);<br>                    &#125;<br>                    <span class="hljs-keyword">break</span>;<br>                <span class="hljs-keyword">default</span>:<br>                    System.out.println(<span class="hljs-string">&quot;输入不在选项范围内！&quot;</span>);<br>                    <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -408,29 +428,29 @@
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/02-2.png" srcset="/img/loading.gif" lazyload alt="02-2" class="img-center" style="zoom:80%;" />
 
 <h2 id="3-1-定义队列类"><a href="#3-1-定义队列类" class="headerlink" title="3.1 定义队列类"></a>3.1 定义队列类</h2><p>创建一个环形队列类用来实现环形队列功能。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-uzw8e8lbixkex7"></i><span>java</span><div class="collapse show" id="collapse-uzw8e8lbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CircleArrayQueue</span> &#123;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> maxSize;    <span class="hljs-comment">//数组的最大容量</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> front;      <span class="hljs-comment">//指向队列头</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> rear;       <span class="hljs-comment">//指向队列尾</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span>[] arr;      <span class="hljs-comment">//存放数据</span><br><br>    <span class="hljs-comment">//---------队列方法---------</span><br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3zhvlrlbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-3zhvlrlbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">CircleArrayQueue</span> &#123;<br><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> maxSize;    <span class="hljs-comment">//数组的最大容量</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> front;      <span class="hljs-comment">//指向队列头</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> rear;       <span class="hljs-comment">//指向队列尾</span><br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span>[] arr;      <span class="hljs-comment">//存放数据</span><br><br>    <span class="hljs-comment">//---------队列方法---------</span><br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <p>初始化队列，即让指针 front &#x3D; rear &#x3D; 0。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-941q6tlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-941q6tlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//队列构造器</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">CircleArrayQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> maxSize)</span> &#123;<br>        <br>    <span class="hljs-built_in">this</span>.maxSize = maxSize;<br>    arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[maxSize];<br>    front = <span class="hljs-number">0</span>;    <span class="hljs-comment">//指向队列头部</span><br>    rear = <span class="hljs-number">0</span>;     <span class="hljs-comment">//指向队列尾部的下一个位置</span><br>        <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-k5iabilbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-k5iabilbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//队列构造器</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">CircleArrayQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> maxSize)</span> &#123;<br>        <br>    <span class="hljs-built_in">this</span>.maxSize = maxSize;<br>    arr = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[maxSize];<br>    front = <span class="hljs-number">0</span>;    <span class="hljs-comment">//指向队列头部</span><br>    rear = <span class="hljs-number">0</span>;     <span class="hljs-comment">//指向队列尾部的下一个位置</span><br>        <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="3-2-队列方法"><a href="#3-2-队列方法" class="headerlink" title="3.2 队列方法"></a>3.2 队列方法</h2><h3 id="3-2-1-判断队列空满"><a href="#3-2-1-判断队列空满" class="headerlink" title="3.2.1 判断队列空满"></a>3.2.1 判断队列空满</h3><p>判断队列为空的标志是：front &#x3D; rear。</p>
 <p>判断队列为满的标志是：front &#x3D; (rear  + 1) % maxSize。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-nelub3lbixkex7"></i><span>java</span><div class="collapse show" id="collapse-nelub3lbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//判断队列是否满</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isFull</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> front == (rear + <span class="hljs-number">1</span>) % maxSize;<br>    <br>&#125;<br><br><span class="hljs-comment">//判断队列是否为空</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isEmpty</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> rear == front;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wt1tvclbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-wt1tvclbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//判断队列是否满</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isFull</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> front == (rear + <span class="hljs-number">1</span>) % maxSize;<br>    <br>&#125;<br><br><span class="hljs-comment">//判断队列是否为空</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">isEmpty</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> rear == front;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="3-2-2-数据进队列"><a href="#3-2-2-数据进队列" class="headerlink" title="3.2.2 数据进队列"></a>3.2.2 数据进队列</h3><p>实现思路为：在 rear 处添加元素，然后 rear &#x3D; (rear + 1) % maxSize。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-x72egylbixkex7"></i><span>java</span><div class="collapse show" id="collapse-x72egylbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据进队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isFull()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列满，不能添加数据&quot;</span>);<br>    &#125;<br>    arr[rear] = n;<br>    rear = (rear + <span class="hljs-number">1</span>) % maxSize;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-823nq2lbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-823nq2lbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据进队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">addQueue</span><span class="hljs-params">(<span class="hljs-type">int</span> n)</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isFull()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列满，不能添加数据&quot;</span>);<br>    &#125;<br>    arr[rear] = n;<br>    rear = (rear + <span class="hljs-number">1</span>) % maxSize;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="3-2-3-数据出队列"><a href="#3-2-3-数据出队列" class="headerlink" title="3.2.3 数据出队列"></a>3.2.3 数据出队列</h3><p>实现思路为：输出 front 处元素，清除 front 处元素，最后 front &#x3D; (front + 1) % maxSize。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-2ua4dplbixkex7"></i><span>java</span><div class="collapse show" id="collapse-2ua4dplbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据出队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> arr[front];            <span class="hljs-comment">//获取数据</span><br>    arr[front] = <span class="hljs-number">0</span>;                    <span class="hljs-comment">//元素清空</span><br>    front = (front + <span class="hljs-number">1</span>) % maxSize;     <span class="hljs-comment">//尾指针后移</span><br>    <span class="hljs-keyword">return</span> value;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1zswbvlbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-1zswbvlbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//数据出队列</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-type">int</span> <span class="hljs-variable">value</span> <span class="hljs-operator">=</span> arr[front];            <span class="hljs-comment">//获取数据</span><br>    arr[front] = <span class="hljs-number">0</span>;                    <span class="hljs-comment">//元素清空</span><br>    front = (front + <span class="hljs-number">1</span>) % maxSize;     <span class="hljs-comment">//尾指针后移</span><br>    <span class="hljs-keyword">return</span> value;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="3-2-4-获取队列长度"><a href="#3-2-4-获取队列长度" class="headerlink" title="3.2.4 获取队列长度"></a>3.2.4 获取队列长度</h3><p>获取队列长度思路为：(rear - front + maxSize) % maxSize，加 maxSize 是为了防止负数。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1hqyk0lbixkex7"></i><span>java</span><div class="collapse show" id="collapse-1hqyk0lbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//获取当前队列元素个数</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getSize</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> (rear - front + maxSize) % maxSize;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-pckx1qlbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-pckx1qlbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//获取当前队列元素个数</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getSize</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">return</span> (rear - front + maxSize) % maxSize;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="3-2-4-显示队列"><a href="#3-2-4-显示队列" class="headerlink" title="3.2.4 显示队列"></a>3.2.4 显示队列</h3><p>显示队列头的思路为：输出 front 处元素。</p>
 <p>显示队列所有数据的思路为：从 front 至 front + getSize() - 1 遍历所有元素并输出，实际下标为 i % maxSize。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-to820hlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-to820hlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列所有数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> front; i &lt; front + getSize(); i++) &#123;<br>        System.out.printf(<span class="hljs-string">&quot;arr[%d] = %d\n&quot;</span>, i % maxSize, arr[i % maxSize]);<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-iin63hlbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-iin63hlbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列所有数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">showQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> front; i &lt; front + getSize(); i++) &#123;<br>        System.out.printf(<span class="hljs-string">&quot;arr[%d] = %d\n&quot;</span>, i % maxSize, arr[i % maxSize]);<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-066m96lbixkex7"></i><span>java</span><div class="collapse show" id="collapse-066m96lbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列头数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">headQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> arr[front];<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-fqz9fslbm4qcgf"></i><span>java</span><div class="collapse show" id="collapse-fqz9fslbm4qcgf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//显示队列头数据</span><br><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">headQueue</span><span class="hljs-params">()</span> &#123;<br>    <br>    <span class="hljs-keyword">if</span> (isEmpty()) &#123;<br>        <span class="hljs-keyword">throw</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">RuntimeException</span>(<span class="hljs-string">&quot;队列空，不能获取数据&quot;</span>);<br>    &#125;<br>    <span class="hljs-keyword">return</span> arr[front];<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="3-3-测试代码"><a href="#3-3-测试代码" class="headerlink" title="3.3 测试代码"></a>3.3 测试代码</h2><p>测试代码同<a href="#2-3-%E6%B5%8B%E8%AF%95%E4%BB%A3%E7%A0%81">单向队列测试代码</a>，仅需修改测试对象的队列类，不再单独列出。</p>
 
@@ -533,9 +553,7 @@
     </div>
 
     <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-<!-- 这部分全改成自己的侧边栏了 -->
+      <!-- 这部分全改成自己的侧边栏了 -->
 
 <!--主体-->
 <section id="mysidebar" class="mysidebar-right">
@@ -644,7 +662,6 @@
 </script>
 
 
-
     </div>
   </div>
 </div>
@@ -676,11 +693,7 @@
 
     
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+    <!-- 这里删除了向上的按钮 -->
 
     
       <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"

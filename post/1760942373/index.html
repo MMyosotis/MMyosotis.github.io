@@ -108,123 +108,148 @@
     
 
 <div class="header-inner" style="height: 60vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
+
+<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
+    <!-- 该栏只在移动端显示 -->
     <a class="navbar-brand" href="/">
-      <strong>Myosotis</strong>
+      <strong>MYOSOTIS</strong>
     </a>
+    
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/">
-                <span class="show"><i class="iconfont icon-home-fill"></i></span>
-                <span class="hidden">首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/archives/">
-                <span class="show"><i class="iconfont icon-archive-fill"></i></span>
-                <span class="hidden">归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/categories/">
-                <span class="show"><i class="iconfont icon-category-fill"></i></span>
-                <span class="hidden">分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/tags/">
-                <span class="show"><i class="iconfont icon-tags-fill"></i></span>
-                <span class="hidden">标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/civileng/">
-                <span class="show"><i class="fa fa-university"></i></span>
-                <span class="hidden">土木</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/artitalk/">
-                <span class="show"><i class="fa fa-commenting"></i></span>
-                <span class="hidden">嘀咕</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/about/">
-                <span class="show"><i class="iconfont icon-user-fill"></i></span>
-                <span class="hidden">关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <!-- 把搜索按钮仿照其他按钮做了 -->
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <span class="show"><i class="iconfont icon-search"></i>&nbsp;</span>
+
+        <!-- 返回主页按钮 -->
+        <div class="backhome">
+          <div class="nav-item">
+            <a class="navbar-brand" href="/">
+              <strong>
+                MYOSOTIS
+              </strong>
             </a>
-          </li>
+            <div class="homeicon">
+              <a class="nav-link" href="/">
+                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="barcenter">
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/archives/">
+                  <span class="icon"><i class="iconfont icon-archive-fill"></i></span>
+                  <span class="text">归 档</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/categories/">
+                  <span class="icon"><i class="iconfont icon-category-fill"></i></span>
+                  <span class="text">分 类</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/tags/">
+                  <span class="icon"><i class="iconfont icon-tags-fill"></i></span>
+                  <span class="text">标 签</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/civileng/">
+                  <span class="icon"><i class="fa fa-university"></i></span>
+                  <span class="text">专 栏</span>
+                </a>
+              </li>
+            
+          
+          <div class="nav-box"></div>
+        </div>
+
+        
+          <div class="iconbar">
+            <!-- 关于按钮 -->
+            <div class="myself">
+              <li class="nav-item">
+                <a class="nav-link" href="/about/">
+                  <div>
+                    <span class="icon"><i class="iconfont icon-user-fill"></i></span>
+                    <span class="text">关 于</span>
+                  </div>
+                </a>
+              </li>
+              <!-- 嘀咕按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/artitalk/">
+                  <div>
+                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="text">嘀 咕</span>
+                  </div>
+                </a>
+              </li>
+            </div>
+            <!-- 搜索按钮 -->
+            <li class="nav-item" id="search-btn">
+              <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
+                aria-label="Search">
+                <div>
+                  <span class="icon"><i class="iconfont icon-search"></i></span>
+                  <span class="text">搜 索</span>
+                </div>
+              </a>
+            </li>
+            <!-- 到顶按钮 -->
+            
+              <li class="nav-item" id="toTop">
+                <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+                  <div>
+                    <i class="fa-solid fa-circle-chevron-up"></i>
+                  </div>
+                </a>
+              </li>
+            
+          </div>
           
         
+
         
+
       </ul>
     </div>
   </div>
@@ -312,24 +337,19 @@
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
-      
+      <!-- 这一部分全改成自己的侧边栏了 -->
 
-    <!-- 这一部分全改成自己的侧边栏了 -->
-    
-    <section id="mysidebar" class="mysidebar-left">
-      <!--头部-->
-      <div class="content-header clearfix navbar-dark">
-        <div class="pack">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        </div>
-      </div>
-      <!-- 内容 -->
-        <!-- 位于sidebar-right文件中 -->
-    </section>
-
-
-
+<section id="mysidebar" class="mysidebar-left">
+  <!--头部-->
+  <div class="content-header clearfix navbar-dark">
+    <div class="barpack">
+      <a class="current"><i class="iconfont icon-list"></i></a>
+      <a class="current"><i class="iconfont icon-category-fill"></i></a>
+    </div>
+  </div>
+  <!-- 内容 -->
+  <!-- 位于sidebar-right文件中 -->
+</section>
     </div>
 
     <div class="col-lg-8 nopadding-x-md">
@@ -344,13 +364,13 @@
                 
                 <h1 id="1-土木页"><a href="#1-土木页" class="headerlink" title="1. 土木页"></a>1. 土木页</h1><h2 id="1-1-页面样式"><a href="#1-1-页面样式" class="headerlink" title="1.1 页面样式"></a>1.1 页面样式</h2><p>创建自定义的页面直接查看 <a target="_blank" rel="noopener" href="https://hexo.fluid-dev.com/docs/guide/">Fluid 官方文档</a>就好，如果希望自定义页面采用某些已有的样式，可以参考<a target="_blank" rel="noopener" href="https://tothefor.com/DragonOne/1718922556.html">墨水记忆</a>的文章。如果还想进行更细致的修改，可以复制或自己创建一个 layout 文件，并在里面添加想要的格式。</p>
 <p>由于我需要<a href="#2-%E4%BB%A3%E7%A0%81%E6%B3%A8%E5%85%A5%E5%99%A8">代码注入器</a>能单独为这一页添加标签，所以我将我自定义页的 layout 设置成了我指定的名字。</p>
-<figure class="highlight markdown"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-9jc6brlbixkex7"></i><span>markdown</span><div class="collapse show" id="collapse-9jc6brlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>layout: civileng<br>title: 土木<br><span class="hljs-section">subtitle: 你喜欢土木工程吗</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight markdown"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-dunjb7lbm4qcge"></i><span>markdown</span><div class="collapse show" id="collapse-dunjb7lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs markdown">---<br>layout: civileng<br>title: 土木<br><span class="hljs-section">subtitle: 你喜欢土木工程吗</span><br><span class="hljs-section">---</span><br></code></pre></td></tr></table></div></figure>
 
 <p>大部分元素的样式设置是跟着归档页一起设置了，详见<a href="/post/1689050393/#1-%E4%BA%A4%E4%BA%92%E5%8A%A8%E7%94%BB">归档页样式</a>。除此之外，我还将在手机上不需要显示的元素设置了 <code>display: none</code>，主要是一行确实放不下，分行又破坏美观了。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-b2367clbixkex7"></i><span>css</span><div class="collapse show" id="collapse-b2367clbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 笔记目录设置 */</span><br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.h5</span> <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;<br>&#125;<br><br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span> <span class="hljs-selector-tag">time</span> &#123;<br>    <span class="hljs-attribute">text-overflow</span>: ellipsis;<br>    <span class="hljs-attribute">white-space</span>: nowrap;<br>&#125;<br><br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span> <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1rem</span>;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;<br>&#125;<br><br><span class="hljs-comment">/* 土木分类下icon距离文字的距离 */</span><br><span class="hljs-selector-class">.nav-item</span> <span class="hljs-selector-class">.dropdown-menu</span><span class="hljs-selector-class">.dropdown-collapse</span> <span class="hljs-selector-class">.dropdown-item</span> <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.3rem</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-adb5a6lbm4qcge"></i><span>css</span><div class="collapse show" id="collapse-adb5a6lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 笔记目录设置 */</span><br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-tag">p</span><span class="hljs-selector-class">.h5</span> <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;<br>&#125;<br><br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span> <span class="hljs-selector-tag">time</span> &#123;<br>    <span class="hljs-attribute">text-overflow</span>: ellipsis;<br>    <span class="hljs-attribute">white-space</span>: nowrap;<br>&#125;<br><br><span class="hljs-selector-class">.civilEngineeringBody</span> <span class="hljs-selector-class">.list-group</span> <span class="hljs-selector-class">.list-group-item</span> <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">margin-left</span>: <span class="hljs-number">1rem</span>;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">1rem</span>;<br>&#125;<br><br><span class="hljs-comment">/* 土木分类下icon距离文字的距离 */</span><br><span class="hljs-selector-class">.nav-item</span> <span class="hljs-selector-class">.dropdown-menu</span><span class="hljs-selector-class">.dropdown-collapse</span> <span class="hljs-selector-class">.dropdown-item</span> <span class="hljs-selector-tag">i</span> &#123;<br>    <span class="hljs-attribute">margin-right</span>: <span class="hljs-number">0.3rem</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="1-2-修改页边距"><a href="#1-2-修改页边距" class="headerlink" title="1.2 修改页边距"></a>1.2 修改页边距</h2><p>这里主要修改了土木页手机端的页边距，代码如下。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-vs128tlbixkex7"></i><span>css</span><div class="collapse show" id="collapse-vs128tlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs css"><br><span class="hljs-comment">/*修改自定义页页边距*/</span><br><span class="hljs-selector-class">.markdown-body</span><span class="hljs-selector-class">.civil</span> &#123;<br>   <span class="hljs-attribute">box-sizing</span>: border-box;<br>   <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">15%</span>;<br>   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">15%</span>;<br>&#125;<br><br><span class="hljs-comment">/* 修改手机端页边距 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">767px</span>) &#123;<br>  <span class="hljs-selector-class">.container</span> <span class="hljs-selector-class">.col-12</span><span class="hljs-selector-class">.col-md-10</span><span class="hljs-selector-class">.m-auto</span> &#123;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-hytg4ylbm4qcge"></i><span>css</span><div class="collapse show" id="collapse-hytg4ylbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs css"><br><span class="hljs-comment">/*修改自定义页页边距*/</span><br><span class="hljs-selector-class">.markdown-body</span><span class="hljs-selector-class">.civil</span> &#123;<br>   <span class="hljs-attribute">box-sizing</span>: border-box;<br>   <span class="hljs-attribute">padding-left</span>: <span class="hljs-number">15%</span>;<br>   <span class="hljs-attribute">padding-right</span>: <span class="hljs-number">15%</span>;<br>&#125;<br><br><span class="hljs-comment">/* 修改手机端页边距 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>: <span class="hljs-number">767px</span>) &#123;<br>  <span class="hljs-selector-class">.container</span> <span class="hljs-selector-class">.col-12</span><span class="hljs-selector-class">.col-md-10</span><span class="hljs-selector-class">.m-auto</span> &#123;<br>    <span class="hljs-attribute">padding</span>: <span class="hljs-number">2rem</span>;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="1-3-交互动画"><a href="#1-3-交互动画" class="headerlink" title="1.3 交互动画"></a>1.3 交互动画</h2><p>自定义页并未再单独做动画，而是直接和<a href="/post/1689050393/#1-%E4%BA%A4%E4%BA%92%E5%8A%A8%E7%94%BB">归档页交互动画</a>一起设置，这主要还是为了风格统一。</p>
 
@@ -457,9 +477,7 @@
     </div>
 
     <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-<!-- 这部分全改成自己的侧边栏了 -->
+      <!-- 这部分全改成自己的侧边栏了 -->
 
 <!--主体-->
 <section id="mysidebar" class="mysidebar-right">
@@ -640,7 +658,6 @@
 </script>
 
 
-
     </div>
   </div>
 </div>
@@ -672,11 +689,7 @@
 
     
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+    <!-- 这里删除了向上的按钮 -->
 
     
       <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"

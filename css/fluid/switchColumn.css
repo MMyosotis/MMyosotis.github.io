@@ -22,7 +22,7 @@
   margin-top: 3rem;
 }
 
-.post #mysidebar .content-header .pack {
+.post #mysidebar .content-header .barpack {
   position: absolute;
   right: 0;
 }
@@ -36,8 +36,8 @@
   background-color: var(--board-bg-color);
   display: block;
   font-size: 1rem;
-  border-radius: 4px;
-  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 7px;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
 }
 
 
@@ -85,16 +85,7 @@
   animation: getright-post 1s ease;
   animation-fill-mode: both;
 }
-
-
-
-
-/* 按钮进入动画：随页面进入       该动画已弃用，替换成随鼠标出现的动画  */
-/* .post #mysidebar.mysidebar-left{
-  animation: getnotedown 1s ease, getsolid 0.4s ease-in;
-  animation-delay: 1s;
-  animation-fill-mode: both;
-} */
+ 
 
 /* 侧边栏整体进入动画 */
 .post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar.mysidebar-left {

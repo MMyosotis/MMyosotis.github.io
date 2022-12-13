@@ -78,8 +78,10 @@ Fluid.events = {
     });
   },
 
+  // ————————————————————此处重写了topArrow.css并添加了topArrowBG.css————————————————————
   registerScrollTopArrowEvent: function() {
     var topArrow = jQuery('#scroll-top-button');
+    var topArrowBG = jQuery('.nav-item#toTop');
     if (topArrow.length === 0) {
       return;
     }
@@ -96,8 +98,8 @@ Fluid.events = {
       var right = bodyWidth - boardRight;
       posDisplay = right >= 50;
       topArrow.css({
-        'bottom': posDisplay && scrollDisplay ? '20px' : '-60px',
-        'right' : right - 64 + 'px'
+        // 'bottom': posDisplay && scrollDisplay ? '20px' : '-60px',
+  
       });
     };
     setTopArrowPos();
@@ -108,7 +110,16 @@ Fluid.events = {
       var scrollHeight = document.body.scrollTop + document.documentElement.scrollTop;
       scrollDisplay = scrollHeight >= headerHeight;
       topArrow.css({
-        'bottom': posDisplay && scrollDisplay ? '20px' : '-60px'
+        // 'bottom': posDisplay && scrollDisplay ? '20px' : '-60px'
+        'max-width':posDisplay && scrollDisplay ? '34.49px' : '0',
+        'padding':posDisplay && scrollDisplay ? '9px 9px 7px 7px' : '9px 0px 7px 0px',
+        'transition-delay':posDisplay && scrollDisplay ? '0s' : '0.7s',
+        'opacity':posDisplay && scrollDisplay ? '1' : '0',
+        'transform':posDisplay && scrollDisplay ? 'scale(1)' : 'scale(0)',
+      });
+      topArrowBG.css({
+        'opacity':posDisplay && scrollDisplay ? '1' : '0',
+        'transition-delay':posDisplay && scrollDisplay ? '0s' : '0.7s',
       });
     });
     // Click
@@ -119,7 +130,7 @@ Fluid.events = {
       });
     });
   },
-
+// ————————————————————————————————————————————————————————————————————————————————————————————
   registerImageLoadedEvent: function() {
     if (!('NProgress' in window)) { return; }
 

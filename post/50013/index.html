@@ -110,123 +110,148 @@
     
 
 <div class="header-inner" style="height: 60vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
+
+<nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
   <div class="container">
+    <!-- 该栏只在移动端显示 -->
     <a class="navbar-brand" href="/">
-      <strong>Myosotis</strong>
+      <strong>MYOSOTIS</strong>
     </a>
+    
 
     <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+      aria-label="Toggle navigation">
       <div class="animated-icon"><span></span><span></span><span></span></div>
     </button>
 
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/">
-                <span class="show"><i class="iconfont icon-home-fill"></i></span>
-                <span class="hidden">首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/archives/">
-                <span class="show"><i class="iconfont icon-archive-fill"></i></span>
-                <span class="hidden">归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/categories/">
-                <span class="show"><i class="iconfont icon-category-fill"></i></span>
-                <span class="hidden">分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/tags/">
-                <span class="show"><i class="iconfont icon-tags-fill"></i></span>
-                <span class="hidden">标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/civileng/">
-                <span class="show"><i class="fa fa-university"></i></span>
-                <span class="hidden">土木</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/artitalk/">
-                <span class="show"><i class="fa fa-commenting"></i></span>
-                <span class="hidden">嘀咕</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <!-- 此处添加了middel类和span标签以及show和hidden两个类 -->
-              <a class="nav-link middle" href="/about/">
-                <span class="show"><i class="iconfont icon-user-fill"></i></span>
-                <span class="hidden">关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <!-- 把搜索按钮仿照其他按钮做了 -->
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <span class="show"><i class="iconfont icon-search"></i>&nbsp;</span>
+
+        <!-- 返回主页按钮 -->
+        <div class="backhome">
+          <div class="nav-item">
+            <a class="navbar-brand" href="/">
+              <strong>
+                MYOSOTIS
+              </strong>
             </a>
-          </li>
+            <div class="homeicon">
+              <a class="nav-link" href="/">
+                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        
+
+        <div class="barcenter">
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/archives/">
+                  <span class="icon"><i class="iconfont icon-archive-fill"></i></span>
+                  <span class="text">归 档</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/categories/">
+                  <span class="icon"><i class="iconfont icon-category-fill"></i></span>
+                  <span class="text">分 类</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/tags/">
+                  <span class="icon"><i class="iconfont icon-tags-fill"></i></span>
+                  <span class="text">标 签</span>
+                </a>
+              </li>
+            
+          
+            
+            
+            
+            
+              <!-- 中间栏按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/civileng/">
+                  <span class="icon"><i class="fa fa-university"></i></span>
+                  <span class="text">专 栏</span>
+                </a>
+              </li>
+            
+          
+          <div class="nav-box"></div>
+        </div>
+
+        
+          <div class="iconbar">
+            <!-- 关于按钮 -->
+            <div class="myself">
+              <li class="nav-item">
+                <a class="nav-link" href="/about/">
+                  <div>
+                    <span class="icon"><i class="iconfont icon-user-fill"></i></span>
+                    <span class="text">关 于</span>
+                  </div>
+                </a>
+              </li>
+              <!-- 嘀咕按钮 -->
+              <li class="nav-item">
+                <a class="nav-link" href="/artitalk/">
+                  <div>
+                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="text">嘀 咕</span>
+                  </div>
+                </a>
+              </li>
+            </div>
+            <!-- 搜索按钮 -->
+            <li class="nav-item" id="search-btn">
+              <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
+                aria-label="Search">
+                <div>
+                  <span class="icon"><i class="iconfont icon-search"></i></span>
+                  <span class="text">搜 索</span>
+                </div>
+              </a>
+            </li>
+            <!-- 到顶按钮 -->
+            
+              <li class="nav-item" id="toTop">
+                <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+                  <div>
+                    <i class="fa-solid fa-circle-chevron-up"></i>
+                  </div>
+                </a>
+              </li>
+            
+          </div>
           
         
+
         
+
       </ul>
     </div>
   </div>
@@ -314,24 +339,19 @@
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
-      
+      <!-- 这一部分全改成自己的侧边栏了 -->
 
-    <!-- 这一部分全改成自己的侧边栏了 -->
-    
-    <section id="mysidebar" class="mysidebar-left">
-      <!--头部-->
-      <div class="content-header clearfix navbar-dark">
-        <div class="pack">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        </div>
-      </div>
-      <!-- 内容 -->
-        <!-- 位于sidebar-right文件中 -->
-    </section>
-
-
-
+<section id="mysidebar" class="mysidebar-left">
+  <!--头部-->
+  <div class="content-header clearfix navbar-dark">
+    <div class="barpack">
+      <a class="current"><i class="iconfont icon-list"></i></a>
+      <a class="current"><i class="iconfont icon-category-fill"></i></a>
+    </div>
+  </div>
+  <!-- 内容 -->
+  <!-- 位于sidebar-right文件中 -->
+</section>
     </div>
 
     <div class="col-lg-8 nopadding-x-md">
@@ -351,7 +371,7 @@
 </ul>
 <h1 id="2-类和对象"><a href="#2-类和对象" class="headerlink" title="2. 类和对象"></a>2. 类和对象</h1><h2 id="2-1-类的定义"><a href="#2-1-类的定义" class="headerlink" title="2.1 类的定义"></a>2.1 类的定义</h2><p><strong>定义类</strong></p>
 <p>一个 Java 文件中可以定义多个 <font class="code-word"><code>class</code></font>  类，但只能一个类是 <font class="code-word"><code>public</code></font>  修饰，而且 <font class="word-stress">public 修饰的类名必须成为代码文件名</font>，实际建议一个 java 文件定义一个 class 类。类名通常采用<font class="word-stress">大驼峰命名法</font>。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-h7dzrplbixkex7"></i><span>java</span><div class="collapse show" id="collapse-h7dzrplbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animals</span> &#123;<br>    <br>    <span class="hljs-comment">//属性</span><br>    String name;<br>    <span class="hljs-type">int</span> age;<br>    <br>    <span class="hljs-comment">//方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">eat</span><span class="hljs-params">()</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">drink</span><span class="hljs-params">()</span> &#123;&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-yha4nflbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-yha4nflbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animals</span> &#123;<br>    <br>    <span class="hljs-comment">//属性</span><br>    String name;<br>    <span class="hljs-type">int</span> age;<br>    <br>    <span class="hljs-comment">//方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">eat</span><span class="hljs-params">()</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">drink</span><span class="hljs-params">()</span> &#123;&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>类的分类</strong></p>
 <ul>
@@ -364,29 +384,29 @@
 <p>对象变量 animal 存放于栈中为<font class="word-stress">引用数据类型</font>，存放的是指向堆中对象的地址：</p>
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/01-1.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 50%;" />
 
-  <figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wtq5mklbixkex7"></i><span>java</span><div class="collapse show" id="collapse-wtq5mklbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//创建对象</span><br><span class="hljs-type">Animals</span> <span class="hljs-variable">animal</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>();  <br></code></pre></td></tr></table></div></figure>
+  <figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-n1odm5lbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-n1odm5lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//创建对象</span><br><span class="hljs-type">Animals</span> <span class="hljs-variable">animal</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>();  <br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-hs86tnlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-hs86tnlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//访问对象</span><br><span class="hljs-type">String</span> <span class="hljs-variable">animalName</span> <span class="hljs-operator">=</span> animal.name;      <span class="hljs-comment">//调用类的属性</span><br>animal.eat();                         <span class="hljs-comment">//调用类的方法</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-w076cdlbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-w076cdlbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//访问对象</span><br><span class="hljs-type">String</span> <span class="hljs-variable">animalName</span> <span class="hljs-operator">=</span> animal.name;      <span class="hljs-comment">//调用类的属性</span><br>animal.eat();                         <span class="hljs-comment">//调用类的方法</span><br></code></pre></td></tr></table></div></figure>
 
 <p><strong>访问成员变量</strong></p>
 <ul>
 <li>静态变量访问：可以采用类名和对象名去访问静态成员变量。</li>
 <li>实例变量访问：只能创建对象并用对象名去访问。</li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-sa60yhlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-sa60yhlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//类名访问静态变量</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">teacher1</span> <span class="hljs-operator">=</span> Student.teacherName;<br>        <br>        <span class="hljs-comment">//对象访问静态变量（不推荐）</span><br>        <span class="hljs-type">Student</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>        <span class="hljs-type">String</span> <span class="hljs-variable">teacher2</span> <span class="hljs-operator">=</span> student.teacherName;<br>        <br>        <span class="hljs-comment">//对象访问实例变量</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">studentName</span> <span class="hljs-operator">=</span> student.name;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-72waa1lbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-72waa1lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//类名访问静态变量</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">teacher1</span> <span class="hljs-operator">=</span> Student.teacherName;<br>        <br>        <span class="hljs-comment">//对象访问静态变量（不推荐）</span><br>        <span class="hljs-type">Student</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>        <span class="hljs-type">String</span> <span class="hljs-variable">teacher2</span> <span class="hljs-operator">=</span> student.teacherName;<br>        <br>        <span class="hljs-comment">//对象访问实例变量</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">studentName</span> <span class="hljs-operator">=</span> student.name;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>访问成员方法</strong></p>
 <ul>
 <li>静态方法访问：可以采用类名和对象名去访问静态成员变量。</li>
 <li>实例方法访问：只能创建对象并用对象名去访问。</li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0mfyjnlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-0mfyjnlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//类名访问静态方法</span><br>        Student.study();<br>        <br>        <span class="hljs-comment">//对象访问静态方法（不推荐）</span><br>        <span class="hljs-type">Student</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>        student.study();<br>        <br>        <span class="hljs-comment">//对象访问实例方法</span><br>        student.showInfo();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-97ljf3lbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-97ljf3lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//类名访问静态方法</span><br>        Student.study();<br>        <br>        <span class="hljs-comment">//对象访问静态方法（不推荐）</span><br>        <span class="hljs-type">Student</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>        student.study();<br>        <br>        <span class="hljs-comment">//对象访问实例方法</span><br>        student.showInfo();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-3-this-关键字"><a href="#2-3-this-关键字" class="headerlink" title="2.3 this 关键字"></a>2.3 this 关键字</h2><p><font class="code-word"><code>this</code></font> 关键字用于方法和构造器中，代表<font class="word-stress">当前对象的地址值</font>，可以用于指定访问当前对象的成员和构造方法。</p>
 <p>当用 <font class="code-word"><code>this()</code></font>  访问构造方法时，必须要放在方法体内的第一行。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-dly8ielbixkex7"></i><span>java</span><div class="collapse show" id="collapse-dly8ielbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animals</span> &#123;<br>    <br>    String name;<br>    <span class="hljs-type">int</span> age;<br>    <br>    <span class="hljs-comment">//访问当前对象成员，this可省略</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-built_in">this</span>.age = <span class="hljs-number">2</span>;<br>    &#125;<br>    <br>    <span class="hljs-comment">//访问构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(String inputName)</span> &#123;<br>        <span class="hljs-built_in">this</span>();    <span class="hljs-comment">//调用有参构造方法则用this(参数)</span><br>    &#125;<br>    <br>    <span class="hljs-comment">//返回当前对象</span><br>    <span class="hljs-keyword">public</span> Animals <span class="hljs-title function_">grow</span><span class="hljs-params">()</span> &#123;<br>        age++;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-gsouanlbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-gsouanlbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animals</span> &#123;<br>    <br>    String name;<br>    <span class="hljs-type">int</span> age;<br>    <br>    <span class="hljs-comment">//访问当前对象成员，this可省略</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-built_in">this</span>.age = <span class="hljs-number">2</span>;<br>    &#125;<br>    <br>    <span class="hljs-comment">//访问构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(String inputName)</span> &#123;<br>        <span class="hljs-built_in">this</span>();    <span class="hljs-comment">//调用有参构造方法则用this(参数)</span><br>    &#125;<br>    <br>    <span class="hljs-comment">//返回当前对象</span><br>    <span class="hljs-keyword">public</span> Animals <span class="hljs-title function_">grow</span><span class="hljs-params">()</span> &#123;<br>        age++;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">this</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1y3pjxlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-1y3pjxlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-comment">//通过返回当前对象实现连续调用</span><br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>();<br>        animal.grow().grow();<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7g4jbulbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-7g4jbulbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-comment">//通过返回当前对象实现连续调用</span><br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>();<br>        animal.grow().grow();<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -394,9 +414,9 @@
 
 <h1 id="3-构造方法"><a href="#3-构造方法" class="headerlink" title="3. 构造方法"></a>3. 构造方法</h1><p><strong>定义构造方法</strong></p>
 <p>构造方法又名构造器，定义在类中，可以用于初始化一个类的对象，并返回对象的地址。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-dm9onflbixkex7"></i><span>java</span><div class="collapse show" id="collapse-dm9onflbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animals</span> &#123;<br>    <br>    String name;<br>    <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-comment">//构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">()</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(String name)</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(<span class="hljs-type">int</span> age)</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;&#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-rzp1vqlbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-rzp1vqlbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Animals</span> &#123;<br>    <br>    String name;<br>    <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-comment">//构造方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">()</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(String name)</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(<span class="hljs-type">int</span> age)</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;&#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-9janublbixkex7"></i><span>java</span><div class="collapse show" id="collapse-9janublbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//调用构造方法创建对象</span><br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>();  <br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>(<span class="hljs-string">&quot;猫猫&quot;</span>);<br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>(<span class="hljs-number">2</span>);<br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal4</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>(<span class="hljs-string">&quot;狗狗&quot;</span>, <span class="hljs-number">3</span>);<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wefimelbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-wefimelbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//调用构造方法创建对象</span><br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>();  <br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>(<span class="hljs-string">&quot;猫猫&quot;</span>);<br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal3</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>(<span class="hljs-number">2</span>);<br>        <span class="hljs-type">Animals</span> <span class="hljs-variable">animal4</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Animals</span>(<span class="hljs-string">&quot;狗狗&quot;</span>, <span class="hljs-number">3</span>);<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>构造方法的参数</strong></p>
 <p>构造方法分为有参数构造方法和无参数构造方法：</p>
@@ -404,7 +424,7 @@
 <li><strong>无参数构造方法</strong>：初始化对象时，成员变量均采用<font class="word-stress">数据类型的默认值</font>。若未定义任何构造方法，则存在一个<font class="word-stress">默认的无参数构造方法</font>。</li>
 <li><strong>有参数构造方法</strong>：初始化对象时，同时可以接受参数为对象赋值。</li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-d95qrxlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-d95qrxlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//默认构造方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">()</span> &#123;<br>    <br>    name = <span class="hljs-literal">null</span>;<br>    age = <span class="hljs-number">0</span>;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-qpfrhelbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-qpfrhelbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//默认构造方法</span><br><span class="hljs-keyword">public</span> <span class="hljs-title function_">Animals</span><span class="hljs-params">()</span> &#123;<br>    <br>    name = <span class="hljs-literal">null</span>;<br>    age = <span class="hljs-number">0</span>;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -413,7 +433,7 @@
 <h1 id="4-成员方法"><a href="#4-成员方法" class="headerlink" title="4. 成员方法"></a>4. 成员方法</h1><h2 id="4-1-方法定义"><a href="#4-1-方法定义" class="headerlink" title="4.1 方法定义"></a>4.1 方法定义</h2><p><strong>方法的格式</strong></p>
 <p>方法的完整格式包括<font class="word-stress">修饰符、返回值类型、方法名称、形参列表、执行代码</font>几个部分。方法名通常采用<font class="word-stress">大驼峰命名法</font>。</p>
 <p>对于不需要返回值的方法，返回值类型必须声明为 <font class="code-word"><code>void</code></font>，此时方法内部不可以用  <font class="code-word"><code>return</code></font>  返回数据。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3x2bswlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-3x2bswlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> &#123;<br>    <span class="hljs-keyword">return</span> a + <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> &#123;<br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-01veeplbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-01veeplbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> &#123;<br>    <span class="hljs-keyword">return</span> a + <span class="hljs-number">1</span>;<br>&#125;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> &#123;<br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>方法的内存图</strong></p>
 <p>方法在内存中存放于方法区，调用方法时，方法运行区域为栈内存。</p>
@@ -431,12 +451,12 @@
 <li>可变参数必须放在形参列表的最后面。</li>
 <li>可变参数传入方法后，在方法内部即是一个数组，可调用数组的方法。</li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-p6fbxvlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-p6fbxvlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Method</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        sum();<br>        sum(<span class="hljs-number">10</span>);<br>        sum(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);<br>        sum(<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[]&#123;<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>&#125;);<br>        <br>        sum2(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);    <span class="hljs-comment">//前一个参数视作num，后两个参数视作nums</span><br>        <br>    &#125;<br><br>    <span class="hljs-comment">//定义传可变参数的方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sum</span><span class="hljs-params">(<span class="hljs-type">int</span>... nums)</span> &#123;<br><br>        System.out.println(<span class="hljs-string">&quot;元素个数：&quot;</span> + nums.length);<br>        System.out.println(<span class="hljs-string">&quot;元素内容：&quot;</span> + Arrays.toString(nums));<br>    &#125;<br>    <br>    <span class="hljs-comment">//定义含有普通参数和可变参数的方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sum2</span><span class="hljs-params">(<span class="hljs-type">int</span> num, <span class="hljs-type">int</span>... nums)</span> &#123;&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-347acdlbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-347acdlbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Method</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        sum();<br>        sum(<span class="hljs-number">10</span>);<br>        sum(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);<br>        sum(<span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[]&#123;<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>&#125;);<br>        <br>        sum2(<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>);    <span class="hljs-comment">//前一个参数视作num，后两个参数视作nums</span><br>        <br>    &#125;<br><br>    <span class="hljs-comment">//定义传可变参数的方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sum</span><span class="hljs-params">(<span class="hljs-type">int</span>... nums)</span> &#123;<br><br>        System.out.println(<span class="hljs-string">&quot;元素个数：&quot;</span> + nums.length);<br>        System.out.println(<span class="hljs-string">&quot;元素内容：&quot;</span> + Arrays.toString(nums));<br>    &#125;<br>    <br>    <span class="hljs-comment">//定义含有普通参数和可变参数的方法</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">sum2</span><span class="hljs-params">(<span class="hljs-type">int</span> num, <span class="hljs-type">int</span>... nums)</span> &#123;&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-3-方法重载"><a href="#4-3-方法重载" class="headerlink" title="4.3 方法重载"></a>4.3 方法重载</h2><p>同一个类中出现多个方法名称相同，但是<font class="word-stress">形参列表</font>（类型、顺序、数量）是不同的，不论返回类型和修饰符，这些方法就是重载方法。</p>
 <p><strong>调用重载方法</strong></p>
 <p>调用方法的时候，会通过参数的不同来区分调用的是哪个方法。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-s5dprhlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-s5dprhlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">People</span> &#123;<br>    <br>    <span class="hljs-type">int</span> id;<br>    String name;<br>    <br>    <span class="hljs-comment">//构造方法重载</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">People</span><span class="hljs-params">()</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">People</span><span class="hljs-params">(<span class="hljs-type">int</span> id, String name)</span> &#123;&#125;<br>    <br>    <span class="hljs-comment">//方法重载</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getInfo</span><span class="hljs-params">(<span class="hljs-type">int</span> num)</span> &#123;<span class="hljs-keyword">return</span> id;&#125;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getInfo</span><span class="hljs-params">(String word)</span> &#123;<span class="hljs-keyword">return</span> name;&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-zsamiolbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-zsamiolbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">class</span> <span class="hljs-title class_">People</span> &#123;<br>    <br>    <span class="hljs-type">int</span> id;<br>    String name;<br>    <br>    <span class="hljs-comment">//构造方法重载</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">People</span><span class="hljs-params">()</span> &#123;&#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">People</span><span class="hljs-params">(<span class="hljs-type">int</span> id, String name)</span> &#123;&#125;<br>    <br>    <span class="hljs-comment">//方法重载</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">getInfo</span><span class="hljs-params">(<span class="hljs-type">int</span> num)</span> &#123;<span class="hljs-keyword">return</span> id;&#125;<br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getInfo</span><span class="hljs-params">(String word)</span> &#123;<span class="hljs-keyword">return</span> name;&#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-4-方法递归"><a href="#4-4-方法递归" class="headerlink" title="4.4 方法递归"></a>4.4 方法递归</h2><p>待学习。</p>
 <h1 id="5-封装与管理"><a href="#5-封装与管理" class="headerlink" title="5. 封装与管理"></a>5. 封装与管理</h1><h2 id="5-1-权限修饰符"><a href="#5-1-权限修饰符" class="headerlink" title="5.1 权限修饰符"></a>5.1 权限修饰符</h2><p>权限修饰符用于控制一个成员能够被访问的范围，可以修饰成员变量、方法、构造器、内部类：</p>
@@ -484,20 +504,20 @@
 </table>
 
 <h2 id="5-2-封装思想"><a href="#5-2-封装思想" class="headerlink" title="5.2 封装思想"></a>5.2 封装思想</h2><p>封装对应的数据，并提供数据对应的行为。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-h736jglbixkex7"></i><span>java</span><div class="collapse show" id="collapse-h736jglbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> &#123;<br>    <br>    <span class="hljs-comment">//封装数据</span><br>    <span class="hljs-keyword">private</span> String name;<br>    <br>    <span class="hljs-comment">//提供数据对应的方法</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> name;<br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String inputName)</span> &#123;<br>        name = inputName;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-2cchablbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-2cchablbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Student</span> &#123;<br>    <br>    <span class="hljs-comment">//封装数据</span><br>    <span class="hljs-keyword">private</span> String name;<br>    <br>    <span class="hljs-comment">//提供数据对应的方法</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">getName</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> name;<br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">setName</span><span class="hljs-params">(String inputName)</span> &#123;<br>        name = inputName;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="5-3-包的使用"><a href="#5-3-包的使用" class="headerlink" title="5.3 包的使用"></a>5.3 包的使用</h2><p><strong>创建包</strong></p>
 <p>包是用来分门别类的管理各种不同类的，类似于文件夹。</p>
 <p>建包语句必须放在第一行，包名格式建议：<font class="word-stress">公司域名倒写.技术名称</font>，建议全部小写。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-f5tzfglbixkex7"></i><span>java</span><div class="collapse show" id="collapse-f5tzfglbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//建包</span><br><span class="hljs-keyword">package</span> com.mycompany.test;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ahfwn9lbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-ahfwn9lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//建包</span><br><span class="hljs-keyword">package</span> com.mycompany.test;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>导入包</strong></p>
 <p>相同包下的类可以直接访问，不同包下的类必须导包才可以使用。但使用 <font class="code-word"><code>java.lang</code></font>  包中的类时不需要导包。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-vq2hs6lbixkex7"></i><span>java</span><div class="collapse show" id="collapse-vq2hs6lbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//导包：import 包名.类名;</span><br><span class="hljs-keyword">import</span> com.mycompany.test.Example;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-62yeqqlbm4qcge"></i><span>java</span><div class="collapse show" id="collapse-62yeqqlbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//导包：import 包名.类名;</span><br><span class="hljs-keyword">import</span> com.mycompany.test.Example;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>注意</strong></p>
 <p>不同包下的同名类：假如一个类中需要用到不同类，而这个两个类名称是一样的，则默认只能导入一个类，另一个类要带包名访问。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0e21urlbixkex7"></i><span>java</span><div class="collapse show" id="collapse-0e21urlbixkex7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.mycompany.test1.Student;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//包com.mycompany.test1中的Student类</span><br>        <span class="hljs-type">Student</span> <span class="hljs-variable">student1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>        <br>        <span class="hljs-comment">//包com.mycompany.test2中的Student类</span><br>        com.mycompany.test2.Student = <span class="hljs-keyword">new</span> <span class="hljs-title class_">com</span>.mycompany.test2.Student();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ozdg7albm4qcge"></i><span>java</span><div class="collapse show" id="collapse-ozdg7albm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> com.mycompany.test1.Student;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-comment">//包com.mycompany.test1中的Student类</span><br>        <span class="hljs-type">Student</span> <span class="hljs-variable">student1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Student</span>();<br>        <br>        <span class="hljs-comment">//包com.mycompany.test2中的Student类</span><br>        com.mycompany.test2.Student = <span class="hljs-keyword">new</span> <span class="hljs-title class_">com</span>.mycompany.test2.Student();<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -606,9 +626,7 @@
     </div>
 
     <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-<!-- 这部分全改成自己的侧边栏了 -->
+      <!-- 这部分全改成自己的侧边栏了 -->
 
 <!--主体-->
 <section id="mysidebar" class="mysidebar-right">
@@ -780,19 +798,19 @@
     
       
       
-        <a href="/post/53772/" title="反射 - Java SE"
+        <a href="/post/49545/" title="注解 - Java SE"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">反射 - Java SE</span>
+          <span class="category-post">注解 - Java SE</span>
         </a>
       
     
       
       
-        <a href="/post/49545/" title="注解 - Java SE"
+        <a href="/post/53772/" title="反射 - Java SE"
            class="list-group-item list-group-item-action
            ">
-          <span class="category-post">注解 - Java SE</span>
+          <span class="category-post">反射 - Java SE</span>
         </a>
       
     
@@ -834,7 +852,6 @@
 </script>
 
 
-
     </div>
   </div>
 </div>
@@ -866,11 +883,7 @@
 
     
 
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
+    <!-- 这里删除了向上的按钮 -->
 
     
       <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
