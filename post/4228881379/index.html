@@ -204,8 +204,7 @@
 
         
           <div class="iconbar">
-            <!-- 关于按钮 -->
-            <div class="myself">
+            <!-- 关于按钮 -->            
               <li class="nav-item">
                 <a class="nav-link" href="/about/">
                   <div>
@@ -223,24 +222,21 @@
                   </div>
                 </a>
               </li>
-            </div>
-            <!-- 搜索按钮 -->
-            <li class="nav-item" id="search-btn">
-              <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
-                aria-label="Search">
-                <div>
-                  <span class="icon"><i class="iconfont icon-search"></i></span>
-                  <span class="text">搜 索</span>
-                </div>
-              </a>
-            </li>
+              <!-- 搜索按钮 -->
+              <li class="nav-item" id="search-btn">
+                <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
+                  aria-label="Search">
+                  <div>
+                    <span class="icon"><i class="iconfont icon-search"></i></span>
+                    <span class="text">搜 索</span>
+                  </div>
+                </a>
+              </li>
             <!-- 到顶按钮 -->
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <div>
-                    <i class="fa-solid fa-circle-chevron-up"></i>
-                  </div>
+                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
                 </a>
               </li>
             
@@ -325,22 +321,28 @@
     
       
 
+<!-- 添加mysidebar-bar -->
+<div class="mysidebar-bar">
+  <div class="content-header clearfix navbar-dark">
+    <div class="barpack">
+      <div class="mytoolbox">
+        <a class="current"><i class="iconfont icon-list"></i></a>
+        <a class="current"><i class="iconfont icon-category-fill"></i></a>
+        <a class="happy"></a>
+      </div>
+    </div>
+  </div>
+  <div class="opentoolbox">
+    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
+  </div>
+</div>
+
+
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这一部分全改成自己的侧边栏了 -->
+      
 
-<section id="mysidebar" class="mysidebar-left">
-  <!--头部-->
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <a class="current"><i class="iconfont icon-list"></i></a>
-      <a class="current"><i class="iconfont icon-category-fill"></i></a>
-    </div>
-  </div>
-  <!-- 内容 -->
-  <!-- 位于sidebar-right文件中 -->
-</section>
     </div>
 
     <div class="col-lg-8 nopadding-x-md">
@@ -357,19 +359,19 @@
 <p>styl 文件都一律放在了 <code>Blog\source\css\fluid</code> 路径下，直接在主题中引入就行。</p>
 <p><font class="word-stress">现在深色模式已经关闭，仅留作备份！</font></p>
 <h1 id="2-文章页"><a href="#2-文章页" class="headerlink" title="2.  文章页"></a>2.  文章页</h1><h2 id="2-1-文字切换颜色"><a href="#2-1-文字切换颜色" class="headerlink" title="2.1 文字切换颜色"></a>2.1 文字切换颜色</h2><p> 为了适配 Fluid 主题的深浅色两种外观，自定一个 styl 文件加入以下内容来配置深浅两种外观下的不同代码块颜色。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ipwlselbm4qcge"></i><span>styl</span><div class="collapse show" id="collapse-ipwlselbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--code-word-color</span>: <span class="hljs-number">#C72541</span>;<br>  <span class="hljs-attr">--code-sentence-color</span>: green;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;     <br>    <span class="hljs-attr">--code-word-color</span>: <span class="hljs-number">#dd8888</span>;<br>    <span class="hljs-attr">--code-sentence-color</span>: <span class="hljs-number">#5be17b</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-af8449lbnj1jdx"></i><span>styl</span><div class="collapse show" id="collapse-af8449lbnj1jdx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--code-word-color</span>: <span class="hljs-number">#C72541</span>;<br>  <span class="hljs-attr">--code-sentence-color</span>: green;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;     <br>    <span class="hljs-attr">--code-word-color</span>: <span class="hljs-number">#dd8888</span>;<br>    <span class="hljs-attr">--code-sentence-color</span>: <span class="hljs-number">#5be17b</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-2-表格切换颜色"><a href="#2-2-表格切换颜色" class="headerlink" title="2.2 表格切换颜色"></a>2.2 表格切换颜色</h2><p>同样颜色在深浅两种模式下有如下设置，这些都根据自己喜好弄就可以了。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-z2eej4lbm4qcge"></i><span>styl</span><div class="collapse show" id="collapse-z2eej4lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--form-color</span>: <span class="hljs-number">#f6f8fa</span>;<br>  <span class="hljs-attr">--form-border-color</span>: <span class="hljs-number">#e6ebf1</span>;<br>  <br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;      <br>    <span class="hljs-attr">--form-color</span>: <span class="hljs-number">#2d333b</span>;<br>    <span class="hljs-attr">--form-border-color</span>: <span class="hljs-number">#4a5360</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-i3gikalbnj1jdx"></i><span>styl</span><div class="collapse show" id="collapse-i3gikalbnj1jdx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--form-color</span>: <span class="hljs-number">#f6f8fa</span>;<br>  <span class="hljs-attr">--form-border-color</span>: <span class="hljs-number">#e6ebf1</span>;<br>  <br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;      <br>    <span class="hljs-attr">--form-color</span>: <span class="hljs-number">#2d333b</span>;<br>    <span class="hljs-attr">--form-border-color</span>: <span class="hljs-number">#4a5360</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-3-文中折叠栏切换颜色"><a href="#2-3-文中折叠栏切换颜色" class="headerlink" title="2.3 文中折叠栏切换颜色"></a>2.3 文中折叠栏切换颜色</h2><p>为了适配深色模式，还要自己设定好颜色以及切换模式时动画的过度。这里颜色是直接用了和代码块一个颜色，就没有再单独加颜色了。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-zr6j0elbm4qcge"></i><span>styl</span><div class="collapse show" id="collapse-zr6j0elbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;   <br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.dropdown-divider</span> &#123;<br>        <span class="hljs-attribute">transition</span>: border-top <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;light&#x27;</span>]</span> &#123;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.dropdown-divider</span> &#123;<br>        <span class="hljs-attribute">transition</span>: border-top <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-8fx7g0lbnj1jdx"></i><span>styl</span><div class="collapse show" id="collapse-8fx7g0lbnj1jdx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;   <br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.dropdown-divider</span> &#123;<br>        <span class="hljs-attribute">transition</span>: border-top <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>&#125;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;light&#x27;</span>]</span> &#123;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>    <br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-tag">button</span> &#123;<br>        <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br><br>    <span class="hljs-selector-class">.categoryinpost</span> <span class="hljs-selector-class">.dropdown-divider</span> &#123;<br>        <span class="hljs-attribute">transition</span>: border-top <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-4-代码块切换颜色"><a href="#2-4-代码块切换颜色" class="headerlink" title="2.4 代码块切换颜色"></a>2.4 代码块切换颜色</h2><p>代码块切换大部分参考了 <a target="_blank" rel="noopener" href="https://kiyanyang.github.io/posts/c4dd4019/">Kiyan’s Blog</a> 的文章，设置好后从浅色切换到深色是平滑过度的，但是发现从深色到浅色动画不平滑，所以我自己又添了一小段，并修改了颜色。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-w7xf2rlbm4qcge"></i><span>styl</span><div class="collapse show" id="collapse-w7xf2rlbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--highlight-title-bg-color</span>: <span class="hljs-number">#eff3f8</span>;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;<br><br>  <span class="hljs-attr">--highlight-title-bg-color</span>: <span class="hljs-number">#343a43</span>;<br>  <span class="hljs-attr">--highlight-bg-color</span>: <span class="hljs-number">#2d333b</span>;<br><br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.highlight</span>,<br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.code-wrapper</span> &#123;<br><br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--highlight-title-bg-color);<br>    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br><br>    &gt; <span class="hljs-selector-tag">i</span> &#123;<br>      <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>    &#125;<br><br>    &gt; <span class="hljs-selector-tag">span</span> &#123;<br>      <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>      <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-selector-class">.copy-btn</span> &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>    <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>  &#125;<br>&#125;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;light&#x27;</span>]</span> &#123;<br><br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.highlight</span>,<br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.code-wrapper</span> &#123;<br><br>    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br><br>    &gt; <span class="hljs-selector-tag">span</span> &#123;<br>      <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-55t2bhlbnj1jdx"></i><span>styl</span><div class="collapse show" id="collapse-55t2bhlbnj1jdx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--highlight-title-bg-color</span>: <span class="hljs-number">#eff3f8</span>;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;<br><br>  <span class="hljs-attr">--highlight-title-bg-color</span>: <span class="hljs-number">#343a43</span>;<br>  <span class="hljs-attr">--highlight-bg-color</span>: <span class="hljs-number">#2d333b</span>;<br><br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.highlight</span>,<br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.code-wrapper</span> &#123;<br><br>    <span class="hljs-attribute">background-color</span>: <span class="hljs-built_in">var</span>(--highlight-title-bg-color);<br>    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br><br>    &gt; <span class="hljs-selector-tag">i</span> &#123;<br>      <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>    &#125;<br><br>    &gt; <span class="hljs-selector-tag">span</span> &#123;<br>      <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>      <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>  &#125;<br><br>  <span class="hljs-selector-class">.copy-btn</span> &#123;<br>    <span class="hljs-attribute">color</span>: <span class="hljs-number">#c4c6c9</span>;<br>    <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>  &#125;<br>&#125;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;light&#x27;</span>]</span> &#123;<br><br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.highlight</span>,<br>  <span class="hljs-selector-class">.markdown-body</span> <span class="hljs-selector-class">.code-wrapper</span> &#123;<br><br>    <span class="hljs-attribute">transition</span>: background-color <span class="hljs-number">0.2s</span> ease-in-out;<br><br>    &gt; <span class="hljs-selector-tag">span</span> &#123;<br>      <span class="hljs-attribute">transition</span>: color <span class="hljs-number">0.2s</span> ease-in-out;<br>    &#125;<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-5-tabs-标签切换颜色"><a href="#2-5-tabs-标签切换颜色" class="headerlink" title="2.5 tabs 标签切换颜色"></a>2.5 tabs 标签切换颜色</h2><p>这里是在引入了 tabs 标签后对他颜色进行了一些设置。</p>
-<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-uehjzvlbm4qcge"></i><span>styl</span><div class="collapse show" id="collapse-uehjzvlbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--tabs-color</span>: <span class="hljs-number">#0078e7</span>;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;     <br>    <span class="hljs-attr">--tabs-color</span>: <span class="hljs-number">#61a8ebd7</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight styl"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ezrcgylbnj1jdx"></i><span>styl</span><div class="collapse show" id="collapse-ezrcgylbnj1jdx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs styl"><span class="hljs-selector-pseudo">:root</span><br>  <span class="hljs-attr">--tabs-color</span>: <span class="hljs-number">#0078e7</span>;<br><br><span class="hljs-selector-attr">[data-user-color-scheme=<span class="hljs-string">&#x27;dark&#x27;</span>]</span> &#123;     <br>    <span class="hljs-attr">--tabs-color</span>: <span class="hljs-number">#61a8ebd7</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -473,28 +475,23 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       <!-- 这部分全改成自己的侧边栏了 -->
-
-<!--主体-->
-<section id="mysidebar" class="mysidebar-right">
-<!--头部-->
-  <!-- 在sidebar-left文件中 -->
-  
-<!--内容-->
-  <div class="content-body">
-      <div class="dom" style="display: block">
-        <aside class="sidebar" style="margin-left: -1rem">
-          <div id="toc">
+<section id="mysidebar">
+<!-- 目录/分类 -->
+  <div class="content-body" id="mysidebar-body">
+    <div class="dom" style="display: block">
+      <aside class="sidebar" style="margin-left: -1rem">
+        <div id="toc">
   <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
 
 
-        </aside>            
-      </div>
-        <div class="dom">
-          <aside class="sidebar category-bar" style="margin-right: -1rem">
-            
+      </aside>
+    </div>
+    <div class="dom" style="display: none;">
+      <aside class="sidebar category-bar" style="margin-right: -1rem">
+        
 
 
 
@@ -624,22 +621,24 @@
 </div>
 
 
-          </aside>            
-        </div>
-      </div>
-</section>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 切换栏:放在post.ejs中了 -->
+
 <!-- 点击切换 -->
 <script type="application/javascript" >
     window.onload=function () {
         let as=document.getElementsByClassName('content-header')[0].getElementsByTagName('a');
         let contents=document.getElementsByClassName("dom");
-        for (let i=0;i<as.length;i++){
+        for (let i=0;i<2;i++){
             let a=as[i];
             a.id=i;
             // 设置每个a标签的onclick事件
             a.onclick=function () {
                 // 清楚所有标签的css设置，隐藏dom标签
-                for(let j=0;j<as.length;j++){
+                for(let j=0;j<2;j++){
                     as[j].className="";
                     contents[j].style.display="none";
                 }
@@ -651,6 +650,8 @@
         }
     }
 </script>
+</section>
+
 
 
     </div>

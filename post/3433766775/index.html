@@ -206,8 +206,7 @@
 
         
           <div class="iconbar">
-            <!-- 关于按钮 -->
-            <div class="myself">
+            <!-- 关于按钮 -->            
               <li class="nav-item">
                 <a class="nav-link" href="/about/">
                   <div>
@@ -225,24 +224,21 @@
                   </div>
                 </a>
               </li>
-            </div>
-            <!-- 搜索按钮 -->
-            <li class="nav-item" id="search-btn">
-              <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
-                aria-label="Search">
-                <div>
-                  <span class="icon"><i class="iconfont icon-search"></i></span>
-                  <span class="text">搜 索</span>
-                </div>
-              </a>
-            </li>
+              <!-- 搜索按钮 -->
+              <li class="nav-item" id="search-btn">
+                <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
+                  aria-label="Search">
+                  <div>
+                    <span class="icon"><i class="iconfont icon-search"></i></span>
+                    <span class="text">搜 索</span>
+                  </div>
+                </a>
+              </li>
             <!-- 到顶按钮 -->
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <div>
-                    <i class="fa-solid fa-circle-chevron-up"></i>
-                  </div>
+                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
                 </a>
               </li>
             
@@ -336,22 +332,28 @@
     
       
 
+<!-- 添加mysidebar-bar -->
+<div class="mysidebar-bar">
+  <div class="content-header clearfix navbar-dark">
+    <div class="barpack">
+      <div class="mytoolbox">
+        <a class="current"><i class="iconfont icon-list"></i></a>
+        <a class="current"><i class="iconfont icon-category-fill"></i></a>
+        <a class="happy"></a>
+      </div>
+    </div>
+  </div>
+  <div class="opentoolbox">
+    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
+  </div>
+</div>
+
+
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这一部分全改成自己的侧边栏了 -->
+      
 
-<section id="mysidebar" class="mysidebar-left">
-  <!--头部-->
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <a class="current"><i class="iconfont icon-list"></i></a>
-      <a class="current"><i class="iconfont icon-category-fill"></i></a>
-    </div>
-  </div>
-  <!-- 内容 -->
-  <!-- 位于sidebar-right文件中 -->
-</section>
     </div>
 
     <div class="col-lg-8 nopadding-x-md">
@@ -371,7 +373,7 @@
 <h1 id="2-代码注入器"><a href="#2-代码注入器" class="headerlink" title="2. 代码注入器"></a>2. 代码注入器</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/zh-cn/api/injector.html">Hexo 注入器</a>是 Hexo 5 版本自身加入的一项新功能，Fluid 主题还提供了更细致的注入器，不过我用 Hexo 的注入器就已经能满足基本需求了。</p>
 <p>这里主要是给不同的页面的 <code>&lt;body&gt;</code> 标签内部又包上了一层标签，这样就可以通过标签来实现修改特定页面的元素 css 样式。</p>
 <p>代码如下，文件路径遵照官方使用文档放在了 <code>Blog\scripts</code> 。</p>
-<figure class="highlight js"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3a2lc0lbm4qcge"></i><span>js</span><div class="collapse show" id="collapse-3a2lc0lbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js">hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;civilEngineeringBody&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;categories&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;categories&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;category&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;archive&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;about&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;home&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;post&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;tag&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;thesisReading&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight js"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-f817tmlbnj1jdw"></i><span>js</span><div class="collapse show" id="collapse-f817tmlbnj1jdw"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><code class="hljs js">hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;civilEngineeringBody&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;civileng&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;categories&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;categories&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;category&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;category&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;archive&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;archive&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;about&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;about&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;home&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;home&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;post&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;post&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;tag&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;tag&#x27;</span>);<br><br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_begin&#x27;</span>,<span class="hljs-string">&#x27;&lt;div class=&quot;thesisReading&quot;&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br>hexo.<span class="hljs-property">extend</span>.<span class="hljs-property">injector</span>.<span class="hljs-title function_">register</span>(<span class="hljs-string">&#x27;body_end&#x27;</span>,<span class="hljs-string">&#x27;&lt;/div&gt;&#x27;</span>, <span class="hljs-string">&#x27;thesisReading&#x27;</span>);<br></code></pre></td></tr></table></div></figure>
 
 <p>像这样设置后，比如我之后只想针对文章页面的元素修改，只需要在 css 选择器的开头加上 <code>.post</code> 就可以了。</p>
 <h1 id="3-所有页样式"><a href="#3-所有页样式" class="headerlink" title="3. 所有页样式"></a>3. 所有页样式</h1><p>所有页样式修改：<a href="/post/2826041948">跳转</a></p>
@@ -508,28 +510,23 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       <!-- 这部分全改成自己的侧边栏了 -->
-
-<!--主体-->
-<section id="mysidebar" class="mysidebar-right">
-<!--头部-->
-  <!-- 在sidebar-left文件中 -->
-  
-<!--内容-->
-  <div class="content-body">
-      <div class="dom" style="display: block">
-        <aside class="sidebar" style="margin-left: -1rem">
-          <div id="toc">
+<section id="mysidebar">
+<!-- 目录/分类 -->
+  <div class="content-body" id="mysidebar-body">
+    <div class="dom" style="display: block">
+      <aside class="sidebar" style="margin-left: -1rem">
+        <div id="toc">
   <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
 
 
-        </aside>            
-      </div>
-        <div class="dom">
-          <aside class="sidebar category-bar" style="margin-right: -1rem">
-            
+      </aside>
+    </div>
+    <div class="dom" style="display: none;">
+      <aside class="sidebar category-bar" style="margin-right: -1rem">
+        
 
 
 
@@ -659,22 +656,24 @@
 </div>
 
 
-          </aside>            
-        </div>
-      </div>
-</section>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 切换栏:放在post.ejs中了 -->
+
 <!-- 点击切换 -->
 <script type="application/javascript" >
     window.onload=function () {
         let as=document.getElementsByClassName('content-header')[0].getElementsByTagName('a');
         let contents=document.getElementsByClassName("dom");
-        for (let i=0;i<as.length;i++){
+        for (let i=0;i<2;i++){
             let a=as[i];
             a.id=i;
             // 设置每个a标签的onclick事件
             a.onclick=function () {
                 // 清楚所有标签的css设置，隐藏dom标签
-                for(let j=0;j<as.length;j++){
+                for(let j=0;j<2;j++){
                     as[j].className="";
                     contents[j].style.display="none";
                 }
@@ -686,6 +685,8 @@
         }
     }
 </script>
+</section>
+
 
 
     </div>

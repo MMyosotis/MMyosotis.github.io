@@ -9,6 +9,9 @@ Fluid.boot.registerEvents = function() {
   Fluid.events.registerScrollDownArrowEvent();
   Fluid.events.registerScrollTopArrowEvent();
   Fluid.events.registerImageLoadedEvent();
+  // 添加如下两行
+  Fluid.events.registerScrollFnEvent();
+  Fluid.events.registerToggleShowToolsListEvent();
 };
 
 Fluid.boot.refresh = function() {

@@ -4,7 +4,7 @@
 
 
 /* 侧边栏样式设置 */
-.post #mysidebar {
+/* .post #mysidebar {
   width: 100%;
   position: sticky;
   position: -webkit-sticky;
@@ -38,13 +38,13 @@
   font-size: 1rem;
   border-radius: 7px;
   box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-}
+} */
 
 
 
 
 /* 鼠标悬浮动画 */
-.post #mysidebar .content-header i {
+/* .post #mysidebar .content-header i {
   display: flex;
 }
 
@@ -75,46 +75,46 @@
   100% {
     transform: translateY(0);
   }
-}
+} */
 
 
 
 
 /* 切换动画 */
-.post .container-fluid.nopadding-x aside.sidebar {
+/* .post .container-fluid.nopadding-x aside.sidebar {
   animation: getright-post 1s ease;
   animation-fill-mode: both;
-}
+} */
  
 
 /* 侧边栏整体进入动画 */
-.post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar.mysidebar-left {
+/* .post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar.mysidebar-left {
   animation: left-bar-come 0.5s;
   animation-fill-mode: both;
   animation-delay: 1s;
-}
+} */
 
 /* 按钮进入动画：页面触顶后弹出 */
-.post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar .content-header.navbar-dark {
+/* .post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar .content-header.navbar-dark {
   animation: left-bar-come 0.5s;
   animation-fill-mode: both;
-}
+} */
 
 /* 按钮进入动画：随鼠标移动出现 */
-.post .side-col.d-none.d-lg-block.col-lg-2:hover #mysidebar .content-header.mysidebar-collapse {
+/* .post .side-col.d-none.d-lg-block.col-lg-2:hover #mysidebar .content-header.mysidebar-collapse {
   animation: left-bar-come 0.5s;
   animation-fill-mode: both;
-}
+} */
 
 /* 按钮消失动画：鼠标移走或页面未触顶 */
-.post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar .content-header {
+/* .post .side-col.d-none.d-lg-block.col-lg-2 #mysidebar .content-header {
   animation: left-bar-out 0.5s;
   animation-fill-mode: both;
   animation-delay: 0.3s;
-}
+} */
 
 /* 进入动画 */
-@keyframes left-bar-come {
+/* @keyframes left-bar-come {
   from {
     transform: translate(14%, 0em);
     opacity: 0;
@@ -124,10 +124,10 @@
     transform: translate(0, 0);
     opacity: 100;
   }
-}
+} */
 
 /* 出场动画 */
-@keyframes left-bar-out {
+/* @keyframes left-bar-out {
   from {
     transform: translate(0, 0em);
     opacity: 100;
@@ -136,5 +136,132 @@
   to {
     transform: translate(14%, 0);
     opacity: 0;
+  }
+} */
+
+
+
+
+.post #mysidebar {
+  width: 100%;
+  position: sticky;
+  position: -webkit-sticky;
+  z-index: 99;
+  top: 2rem;
+  transition: background-color .2s ease-in-out, bottom .3s ease;
+
+}
+
+
+/* 切换动画:和目录进入动画的标签区分开来 */
+.post .container-fluid.nopadding-x aside.sidebar {
+  animation: getright-post 1s ease;
+  animation-fill-mode: both;
+}
+
+.mysidebar-bar {
+  position: fixed;
+  bottom: 40px;
+  right: 4px;
+  z-index: 98;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateX(100%);
+  width: auto;
+}
+
+.mysidebar-bar.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+.mysidebar-bar .mytoolbox,
+.mysidebar-bar .opentoolbox{
+  display: flex;
+  flex-direction: column;
+  width: auto;
+}
+
+
+.mysidebar-bar .mytoolbox a,
+.mysidebar-bar .opentoolbox a {
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+  margin-bottom: 0.25rem;
+  color: var(--sec-text-color);
+  background: var(--board-bg-color);
+  box-shadow: 0px 2px 5px 2px rgb(0 0 0 / 15%);
+  border-radius: 2px;
+}
+
+
+.mysidebar-bar .opentoolbox a {
+  margin-top: 0.8rem;
+}
+
+
+.mysidebar-bar .mytoolbox a i,
+.mysidebar-bar .opentoolbox a i{
+  line-height: 2rem;
+}
+
+.mysidebar-bar .mytoolbox a i{
+  display: flex;
+  justify-content: center;
+}
+
+.mysidebar-bar .mytoolbox {
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+.mysidebar-bar .mytoolbox.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+
+
+
+.mysidebar-bar .mytoolbox a:hover i {
+  animation-name: bar-icon;
+  animation-duration: 0.7s;
+  animation-delay: .1s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  animation-direction: alternate;
+
+}
+
+.mysidebar-bar .mytoolbox i {
+  margin: auto;
+  display: flex;
+
+}
+
+
+
+@keyframes bar-icon {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-0.3rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+@media (max-width:992px) {
+  .mysidebar-bar{
+    display: none;
   }
 }

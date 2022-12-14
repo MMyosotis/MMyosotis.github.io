@@ -177,7 +177,7 @@ figure.highlight table td.code {
 
 
 /*目录进入动画 */
-.container-fluid.nopadding-x #mysidebar.mysidebar-right {
+.container-fluid.nopadding-x #mysidebar #mysidebar-body {
     animation: getright-post 1s ease;
     animation-delay: 0.5s;
     animation-fill-mode: both;

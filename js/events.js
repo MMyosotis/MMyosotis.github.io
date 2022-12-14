@@ -80,7 +80,7 @@ Fluid.events = {
 
   // ————————————————————此处重写了topArrow.css并添加了topArrowBG.css————————————————————
   registerScrollTopArrowEvent: function() {
-    var topArrow = jQuery('#scroll-top-button');
+    var topArrow = jQuery('.nav-item#toTop a');
     var topArrowBG = jQuery('.nav-item#toTop');
     if (topArrow.length === 0) {
       return;
@@ -111,15 +111,16 @@ Fluid.events = {
       scrollDisplay = scrollHeight >= headerHeight;
       topArrow.css({
         // 'bottom': posDisplay && scrollDisplay ? '20px' : '-60px'
-        'max-width':posDisplay && scrollDisplay ? '34.49px' : '0',
-        'padding':posDisplay && scrollDisplay ? '9px 9px 7px 7px' : '9px 0px 7px 0px',
+        'width':posDisplay && scrollDisplay ? '22px' : '0',
         'transition-delay':posDisplay && scrollDisplay ? '0s' : '0.7s',
         'opacity':posDisplay && scrollDisplay ? '1' : '0',
         'transform':posDisplay && scrollDisplay ? 'scale(1)' : 'scale(0)',
       });
       topArrowBG.css({
         'opacity':posDisplay && scrollDisplay ? '1' : '0',
-        'transition-delay':posDisplay && scrollDisplay ? '0s' : '0.7s',
+        'transition-delay':posDisplay && scrollDisplay ? '0.1s' : '0.7s',
+        'width':posDisplay && scrollDisplay ? '36px' : '0',
+        'transform':posDisplay && scrollDisplay ? 'scale(1)' : 'scale(0)',
       });
     });
     // Click
@@ -195,5 +196,40 @@ Fluid.events = {
 |                                              |
 ------------------------------------------------
     `);
-  }
+  },
+
+
+// ——————————————————————————————————添加事件——————————————————————————————————————
+  // Sroll Auto Hide
+  registerScrollFnEvent: function () {
+    var sidetools = document.querySelector('.mysidebar-bar');
+    const innerHeight = window.innerHeight + 270;
+
+    // scroll < 270 scrollHeight
+    if (document.body.scrollHeight <= innerHeight) {
+      sidetools.classList.remove('show');
+    }
+
+    Fluid.utils.listenScroll(function() {
+      const currentTop = window.scrollY || document.documentElement.scrollTop;
+      if (currentTop > 270) {
+        sidetools.classList.add('show');
+      } 
+      else {
+        sidetools.classList.remove('show');
+      }
+      if (document.body.scrollHeight <= innerHeight) {
+        sidetools.classList.remove('show');
+      }
+    });
+  },
+
+  registerToggleShowToolsListEvent: function() {
+    document.querySelector('.tool-toggle-show').addEventListener('click', () => {
+      document.querySelector('.mytoolbox').classList.toggle('show');
+    });
+  },
 };
+
+
+

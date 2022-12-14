@@ -142,34 +142,38 @@
     .navbar-nav .iconbar .nav-item {
         position: relative;
         white-space: nowrap;
-        margin: 0 0.2rem;
     }
+
+    .navbar-nav .iconbar .nav-item:not(#toTop)  {
+        width: 36px;
+    }
+
 
     .navbar-nav .iconbar .nav-item .text {
         display: none;
     }
 
-    .navbar-nav .iconbar .nav-item a {
+    .navbar-nav .iconbar .nav-item:not(#toTop) a {
         transition: 0.2s;
         overflow: hidden;
     }
 
-    .navbar-nav .iconbar .nav-item a i {
+    .navbar-nav .iconbar .nav-item:not(#toTop) a i {
         transition: 0.2s;
     }
 
     /* 右侧栏鼠标悬浮动画 */
-    .navbar-nav .iconbar .nav-item:hover a i {
+    .navbar-nav .iconbar .nav-item:not(#toTop):hover a i {
         color: black;
     }
 
-    .navbar-nav .iconbar .nav-item:after {
+    .navbar-nav .iconbar .nav-item:not(#toTop):after {
         opacity: 0;
         z-index: -1;
         border-radius: 100px;
         position: absolute;
         bottom: -2px;
-        left: -5px;
+        left: -2px;
         filter: blur(2px);
         background: rgb(255,255,255,0.95);
         content: '';
@@ -178,15 +182,12 @@
         height: 40px;
     }
 
-    .navbar-nav .iconbar .nav-item:nth-last-child(1):after {
-        display: none;
-    }
 
-    .navbar-nav .iconbar .nav-item:hover:after {
+    .navbar-nav .iconbar .nav-item:not(#toTop):hover:after {
         width: 30px;
         height: 30px;
         bottom: 3px;
-        left: 0;
+        left: 3px;
         filter: blur(0px);
         opacity: 1;
     }
@@ -196,43 +197,64 @@
     .navbar-nav .iconbar .nav-item#toTop {
         opacity: 0;
         transition: 0.5s ease;
-        transition-delay: 0s;
+        transform: scale(0);
     }
 
-    .navbar-nav .iconbar .nav-item #scroll-top-button {
-        position: relative;
-        bottom: 0 !important;
+    .navbar-nav .iconbar .nav-item#toTop a {
         min-width: 0 !important;
         min-height: 0 !important;
+        position: relative;
+        bottom: 0 !important;
         background-color: transparent;
         box-shadow: none;
         display: block;
-        max-width: 0px;
         overflow: hidden;
         white-space: nowrap;
         transition: 0.5s ease;
         transition-delay: 0s;
         opacity: 0;
         transform: scale(0);
+        background-color: white;
+        margin: 7px 7.5px;
+        border-radius: 100px;
+        height: 22px;
     }
 
-    .navbar-nav .iconbar .nav-item #scroll-top-button i {
-        font-size: 17px !important;
-        justify-content: center;
-        color: white;
+    .navbar-nav .iconbar .nav-item#toTop a i {
+        font-size: 16px !important;
+        color: var(--sec-text-color);
         transition: 0.2s;
-        
+        line-height: 22px;
+        animation: none;
     }
 
-    .navbar-nav .iconbar .nav-item #scroll-top-button span {
-        width: 18.48px;
-        height: 18.4px;
 
+    /* 搜索栏 */
+    .navbar-nav .iconbar .nav-item#toTop:after {
+        opacity: 1;
+        z-index: -1;
+        border-radius: 100px;
+        position: absolute;
+        bottom: 7.5px;
+        left: 7.5px;
+        background: white;
+        content: '';
+        transition: 0.4s ease;
+        width: 22px;
+        height: 22px;
     }
 
-    .navbar-nav .iconbar .nav-item:hover #scroll-top-button i {
-        transform: scale(1.4);
-        animation:none;
+
+    .navbar-nav .iconbar .nav-item#toTop:hover:after {
+        opacity: 1;
+        width:30px;
+        height: 30px;
+        bottom: 3px;
+        left: 3.5px;
+    }
+
+    .navbar-nav .iconbar .nav-item#toTop:hover a i {
+        color: black;
     }
 
 
@@ -321,74 +343,100 @@
 
 
 
-    /* 右侧栏展开 */
-    .navbar-nav .iconbar .myself {
+    /* 右侧栏展开：该功能弃用，仅留作备份 */
+    /* .navbar-nav .iconbar .myself {
         display: flex;
         flex-direction: row;
         position: relative;
     }
 
-    .navbar-nav .iconbar .myself .nav-item:nth-child(2) {
-        max-width: 0px;
-        overflow: hidden;
-        white-space: nowrap;
+    .navbar-nav .iconbar .myself .substance {
+        flex-direction: row;
+        display: flex;
+    }
+
+    .navbar-nav .iconbar .myself .title {
+        width: 36px;
+    }
+
+
+    .navbar-nav .iconbar .myself .title a{
+        transition: 0s ;
+    }
+
+    .navbar-nav .iconbar .myself .title a i{
+        transition: 0.4s ease;
+        
+    }
+
+    .navbar-nav .iconbar .myself .substance .nav-item{
         margin: 0;
+        max-width: 0px;
+        white-space: nowrap;
         transition: 0.4s ease;
         opacity: 0;
         transform: scale(0);
+        overflow: hidden;
     }
+    
 
-    .navbar-nav .iconbar .myself .nav-item:nth-child(2) a {
+    .navbar-nav .iconbar .myself .substance .nav-item a{
         color: black !important;
     }
 
-    .navbar-nav .iconbar .myself:hover .nav-item:nth-child(2) {
+
+
+    .navbar-nav .iconbar .myself:hover .title a{
+        color: black;
+        padding-bottom: 8.5px;
+        padding-top: 7.5px;
+    }
+
+    .navbar-nav .iconbar .myself:hover .title a i{
+     transform: rotateZ(10deg);
+    }
+
+
+    .navbar-nav .iconbar .myself:hover .substance .nav-item {
+        width: 36px;
         max-width: 2rem;
         margin: 0 0.2rem;
         opacity: 1;
         transform: scale(1);
     }
 
-    .navbar-nav .iconbar .myself.nav-item:nth-child(1):after {
+    .navbar-nav .iconbar .myself  .title:after {
         opacity: 0;
         z-index: -1;
         border-radius: 100px;
         position: absolute;
         bottom: -2px;
-        left: -5px;
+        left: -2px;
         filter: blur(2px);
         background: rgb(255,255,255,0.95);
         content: '';
-        transition: all 0.4s;
-        width: 80px;
+        transition: 0.4s ease !important;
+        width: 40px;
         height: 40px;
     }
 
-    .navbar-nav .iconbar .myself .nav-item:nth-child(2):after {
-        display: none;
-    }
+ 
 
-    .navbar-nav .iconbar .myself:hover .nav-item:nth-child(1):after {
+    .navbar-nav .iconbar .myself:hover .title:after {
         opacity: 1;
-        width: 245%;
-        bottom: 7%;
-        height: 80%;
-        left: -10%;
+        width: 111px;
+        bottom: 3px;
+        height: 30px;
+        left:0px;
         filter: blur(0px);
-    }
-
-
-    .navbar-nav .iconbar .myself:hover .nav-item a {
-        color: black;
-    }
+    } */
 
 
 
     /* 触顶颜色修改 */
     .navbar-dark .navbar-nav .barcenter .nav-box,
     .navbar-dark .navbar-nav .iconbar .nav-item:after,
-    .navbar-dark .navbar-nav .backhome .nav-item:after,
-    .navbar-dark .navbar-nav .iconbar .myself.nav-item:nth-child(1):after
+    .navbar-dark .navbar-nav .backhome .nav-item:after
     {
         background: rgb(255,255,255,0.6);
     }
@@ -439,7 +487,10 @@
 
     /* 个人栏 */
 
-    .navbar-nav .iconbar .myself {
+    .navbar-nav .iconbar .myself .title{
+        display:none;
+    }
+    .navbar-nav .iconbar .myself .substance {
         display: flex;
         flex-direction: row;
         position: relative;

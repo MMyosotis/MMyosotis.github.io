@@ -204,8 +204,7 @@
 
         
           <div class="iconbar">
-            <!-- 关于按钮 -->
-            <div class="myself">
+            <!-- 关于按钮 -->            
               <li class="nav-item">
                 <a class="nav-link" href="/about/">
                   <div>
@@ -223,24 +222,21 @@
                   </div>
                 </a>
               </li>
-            </div>
-            <!-- 搜索按钮 -->
-            <li class="nav-item" id="search-btn">
-              <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
-                aria-label="Search">
-                <div>
-                  <span class="icon"><i class="iconfont icon-search"></i></span>
-                  <span class="text">搜 索</span>
-                </div>
-              </a>
-            </li>
+              <!-- 搜索按钮 -->
+              <li class="nav-item" id="search-btn">
+                <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch"
+                  aria-label="Search">
+                  <div>
+                    <span class="icon"><i class="iconfont icon-search"></i></span>
+                    <span class="text">搜 索</span>
+                  </div>
+                </a>
+              </li>
             <!-- 到顶按钮 -->
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <div>
-                    <i class="fa-solid fa-circle-chevron-up"></i>
-                  </div>
+                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
                 </a>
               </li>
             
@@ -334,22 +330,28 @@
     
       
 
+<!-- 添加mysidebar-bar -->
+<div class="mysidebar-bar">
+  <div class="content-header clearfix navbar-dark">
+    <div class="barpack">
+      <div class="mytoolbox">
+        <a class="current"><i class="iconfont icon-list"></i></a>
+        <a class="current"><i class="iconfont icon-category-fill"></i></a>
+        <a class="happy"></a>
+      </div>
+    </div>
+  </div>
+  <div class="opentoolbox">
+    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
+  </div>
+</div>
+
+
 <div class="container-fluid nopadding-x">
   <div class="row nomargin-x">
     <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这一部分全改成自己的侧边栏了 -->
+      
 
-<section id="mysidebar" class="mysidebar-left">
-  <!--头部-->
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <a class="current"><i class="iconfont icon-list"></i></a>
-      <a class="current"><i class="iconfont icon-category-fill"></i></a>
-    </div>
-  </div>
-  <!-- 内容 -->
-  <!-- 位于sidebar-right文件中 -->
-</section>
     </div>
 
     <div class="col-lg-8 nopadding-x-md">
@@ -363,7 +365,7 @@
               <div class="markdown-body">
                 
                 <h1 id="1-进场动画"><a href="#1-进场动画" class="headerlink" title="1. 进场动画"></a>1. 进场动画</h1><p>除了基本的页面进入动画以外，关于页因为有头像，所以额外设置了一个头像的入场动画，这样显得比较有层次感。</p>
-<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-cyhslelbm4qcge"></i><span>css</span><div class="collapse show" id="collapse-cyhslelbm4qcge"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 关于页图标动画 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">424px</span>) &#123;<br>    <span class="hljs-selector-class">.about</span> <span class="hljs-selector-class">.container</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-tag">img</span><span class="hljs-selector-class">.img-fluid</span> &#123;<br>        <span class="hljs-attribute">animation</span>: getdown-about <span class="hljs-number">0.5s</span> ease, getsolid-about <span class="hljs-number">0.4s</span> ease;<br>        <span class="hljs-attribute">animation-delay</span>: <span class="hljs-number">0.5s</span>;<br>        <span class="hljs-attribute">animation-fill-mode</span>: both;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 头像下移动画 */</span><br><span class="hljs-keyword">@keyframes</span> getdown-about &#123;<br>    <span class="hljs-selector-tag">from</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0rem</span>, -<span class="hljs-number">2rem</span>);<br>    &#125;<br><br>    <span class="hljs-selector-tag">to</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 渐入动画 */</span><br><span class="hljs-keyword">@keyframes</span> getsolid-about &#123;<br>    <span class="hljs-selector-tag">from</span> &#123;<br>        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">to</span> &#123;<br>        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">100</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 手机端入场动画和字体修改 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">424px</span>) &#123;<br>    <span class="hljs-selector-class">.about</span> <span class="hljs-selector-class">.container</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-class">.container</span> &#123;<br>        <span class="hljs-attribute">animation</span>: getnote-about <span class="hljs-number">1s</span> ease, getsolid-about <span class="hljs-number">0.4s</span> ease-in;<br>        <span class="hljs-attribute">animation-fill-mode</span>: both;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 文字上移动画 */</span><br><span class="hljs-keyword">@keyframes</span> getnote-about &#123;<br>    <span class="hljs-selector-tag">from</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0rem</span>, <span class="hljs-number">3rem</span>);<br>    &#125;<br><br>    <span class="hljs-selector-tag">to</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight css"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3gpl11lbnj1jdx"></i><span>css</span><div class="collapse show" id="collapse-3gpl11lbnj1jdx"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs css"><span class="hljs-comment">/* 关于页图标动画 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">min-width</span>:<span class="hljs-number">424px</span>) &#123;<br>    <span class="hljs-selector-class">.about</span> <span class="hljs-selector-class">.container</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-tag">img</span><span class="hljs-selector-class">.img-fluid</span> &#123;<br>        <span class="hljs-attribute">animation</span>: getdown-about <span class="hljs-number">0.5s</span> ease, getsolid-about <span class="hljs-number">0.4s</span> ease;<br>        <span class="hljs-attribute">animation-delay</span>: <span class="hljs-number">0.5s</span>;<br>        <span class="hljs-attribute">animation-fill-mode</span>: both;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 头像下移动画 */</span><br><span class="hljs-keyword">@keyframes</span> getdown-about &#123;<br>    <span class="hljs-selector-tag">from</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0rem</span>, -<span class="hljs-number">2rem</span>);<br>    &#125;<br><br>    <span class="hljs-selector-tag">to</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 渐入动画 */</span><br><span class="hljs-keyword">@keyframes</span> getsolid-about &#123;<br>    <span class="hljs-selector-tag">from</span> &#123;<br>        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">0</span>;<br>    &#125;<br><br>    <span class="hljs-selector-tag">to</span> &#123;<br>        <span class="hljs-attribute">opacity</span>: <span class="hljs-number">100</span>;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 手机端入场动画和字体修改 */</span><br><span class="hljs-keyword">@media</span> (<span class="hljs-attribute">max-width</span>:<span class="hljs-number">424px</span>) &#123;<br>    <span class="hljs-selector-class">.about</span> <span class="hljs-selector-class">.container</span><span class="hljs-selector-class">.nopadding-x-md</span> <span class="hljs-selector-class">.container</span> &#123;<br>        <span class="hljs-attribute">animation</span>: getnote-about <span class="hljs-number">1s</span> ease, getsolid-about <span class="hljs-number">0.4s</span> ease-in;<br>        <span class="hljs-attribute">animation-fill-mode</span>: both;<br>    &#125;<br>&#125;<br><br><span class="hljs-comment">/* 文字上移动画 */</span><br><span class="hljs-keyword">@keyframes</span> getnote-about &#123;<br>    <span class="hljs-selector-tag">from</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0rem</span>, <span class="hljs-number">3rem</span>);<br>    &#125;<br><br>    <span class="hljs-selector-tag">to</span> &#123;<br>        <span class="hljs-attribute">transform</span>: <span class="hljs-built_in">translate</span>(<span class="hljs-number">0</span>, <span class="hljs-number">0</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
                 
@@ -470,28 +472,23 @@
 
     <div class="side-col d-none d-lg-block col-lg-2">
       <!-- 这部分全改成自己的侧边栏了 -->
-
-<!--主体-->
-<section id="mysidebar" class="mysidebar-right">
-<!--头部-->
-  <!-- 在sidebar-left文件中 -->
-  
-<!--内容-->
-  <div class="content-body">
-      <div class="dom" style="display: block">
-        <aside class="sidebar" style="margin-left: -1rem">
-          <div id="toc">
+<section id="mysidebar">
+<!-- 目录/分类 -->
+  <div class="content-body" id="mysidebar-body">
+    <div class="dom" style="display: block">
+      <aside class="sidebar" style="margin-left: -1rem">
+        <div id="toc">
   <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
 
 
-        </aside>            
-      </div>
-        <div class="dom">
-          <aside class="sidebar category-bar" style="margin-right: -1rem">
-            
+      </aside>
+    </div>
+    <div class="dom" style="display: none;">
+      <aside class="sidebar category-bar" style="margin-right: -1rem">
+        
 
 
 
@@ -621,22 +618,24 @@
 </div>
 
 
-          </aside>            
-        </div>
-      </div>
-</section>
+      </aside>
+    </div>
+  </div>
+
+  <!-- 切换栏:放在post.ejs中了 -->
+
 <!-- 点击切换 -->
 <script type="application/javascript" >
     window.onload=function () {
         let as=document.getElementsByClassName('content-header')[0].getElementsByTagName('a');
         let contents=document.getElementsByClassName("dom");
-        for (let i=0;i<as.length;i++){
+        for (let i=0;i<2;i++){
             let a=as[i];
             a.id=i;
             // 设置每个a标签的onclick事件
             a.onclick=function () {
                 // 清楚所有标签的css设置，隐藏dom标签
-                for(let j=0;j<as.length;j++){
+                for(let j=0;j<2;j++){
                     as[j].className="";
                     contents[j].style.display="none";
                 }
@@ -648,6 +647,8 @@
         }
     }
 </script>
+</section>
+
 
 
     </div>
