@@ -149,7 +149,7 @@
   z-index: 99;
   top: 2rem;
   transition: background-color .2s ease-in-out, bottom .3s ease;
-
+  margin-left: 1rem;
 }
 
 

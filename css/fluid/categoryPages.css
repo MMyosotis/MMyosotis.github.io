@@ -11,9 +11,8 @@
 
 
 
-/* 分类页悬停动画和字体修改 */
+/* 分类页字体修改 */
 .categories #board .category-post-list .list-group-item {
-    transition: 0.3s ease-out;
     font-size: 1.1rem;
 }
 
@@ -26,23 +25,8 @@
     font-size: 1rem;
 }
 
-@media (min-width:424px) {
-    .categories .category-post-list .list-group-item:hover {
-        transform: scale(1.02);
-    }
-}
-
-
-
-
-/* 手机端入场动画和字体修改 */
+/* 手机端字体修改 */
 @media (max-width:424px) {
-
-    .categories .category-item,
-    .categories .category-count {
-        animation: getnote-category 1s ease, getsolid-category 0.4s ease-in;
-        animation-fill-mode: both;
-    }
 
     .categories #board .category-post-list .list-group-item {
         font-size: 1rem;
@@ -55,6 +39,33 @@
 
     .categories .category-count {
         font-size: 0.9rem;
+    }
+}
+
+
+
+
+/* 分类页悬停动画 */
+.categories #board .category-post-list .list-group-item {
+    transition: 0.3s ease-out;
+}
+
+@media (min-width:424px) {
+    .categories .category-post-list .list-group-item:hover {
+        transform: scale(1.02);
+    }
+}
+
+
+
+
+/* 手机端入场动画 */
+@media (max-width:424px) {
+
+    .categories .category-item,
+    .categories .category-count {
+        animation: getnote-category 1s ease, getsolid-category 0.4s ease-in;
+        animation-fill-mode: both;
     }
 }
 
