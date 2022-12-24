@@ -261,7 +261,24 @@
       
     </div>
   </div>
+  
 </div>
+<!-- 此处添加波浪 -->
+<section class="main-hero-waves-area waves-area" style="transform:translate3d(0,0,0)">
+  <svg class="waves-svg" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+    <defs>
+      <path id="gentle-wave" d="M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z"></path>
+    </defs>
+    <g class="parallax">
+      <use href="#gentle-wave" x="48" y="0"></use>
+      <use href="#gentle-wave" x="48" y="3"></use>
+      <use href="#gentle-wave" x="48" y="5"></use>
+      <use href="#gentle-wave" x="48" y="7"></use>
+    </g>
+  </svg>
+</section>
+
+
 
 </div>
 
@@ -279,16 +296,255 @@
                 
 
 
-  <div class="row mx-auto index-card">
+<div class="swiper-bar">
+  <div class="swiper-title">
+    <i class="fa-regular fa-bell fa-shake"></i>
+    <div><span>公告</span></div>
+  </div>
+  <div class="swiper-content">
+    <div><span>欢迎来到植物园！好记性不如烂笔头，多记录多收获。</span></div>
+    <div><span>博客基于 HEXO 框架搭建，使用 FLUID 主题，部分魔改已有教程。</span></div>
+    <div><span>阅读文章时，提供了侧边栏功能，可以切换显示目录和分类列表。</span></div>
+    <div><span>你喜欢土木工程吗？(秒答</span></div>
+    <div><span>欢迎来到植物园！好记性不如烂笔头，多记录多收获。</span></div>
+  </div>
+  <div class="swiper-sth"></div>
+</div>
+
+<div class="recent-top-post-group" id="recent-top-post-group">
+	<div class="recent-post-top" id="recent-post-top">
+		<div id="bannerGroup">
+			<div id="banner">
+				<div class="banner-title">
+					<div class="banners-title-big">勿忘草</div>
+					<div class="banners-title-big">植物种植指南</div>
+					<div class="banners-title-small">MMYOSOTIS.CN</div>
+				</div>
+        <div class="tags-group-all">
+          <div class="tags-group-wrapper">
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-rainbow"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-umbrella"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-regular fa-sun"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+              </div>  
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-snowflake"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair"> 
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-wind"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-cloud"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-rainbow"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-umbrella"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-regular fa-sun"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-cloud-showers-heavy"></i>
+              </div>  
+            </div>
+            <div class="tags-group-icon-pair">
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-snowflake"></i>
+              </div>
+            </div>
+            <div class="tags-group-icon-pair"> 
+              <div class="tags-group-icon" style="background:#ffffff">
+                <i class="fa-solid fa-wind"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+				<a id="banner-hover" onclick="toRandomPost()">
+					<span class="bannerText">随便逛逛</span>
+					<i class="fa-solid fa-paper-plane"></i>
+				</a>
+			</div>
+			<div class="categoryGroup">
+				<div class="categoryItem">
+					<a class="categoryButton" href="/categories/01-博客搭建/">
+						<span class="categoryButtonText">博客教程</span>
+						<i class="fas fa-book"></i>
+					</a>
+				</div>
+				<div class="categoryItem">
+					<a class="categoryButton" href="/artitalk/">
+						<span class="categoryButtonText">嘀嘀咕咕</span>
+						<i class="fa-solid fa-comment-dots"></i>
+					</a>
+				</div>
+				<div class="categoryItem">
+					<a class="categoryButton" href="/about/">
+						<span class="categoryButtonText">关于本站</span>
+						<i class="fa-solid fa-face-smile"></i>
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="card-content">
+      <div class="card-info-avatar">
+        <div class="author-info__hello" id="author-info__hello"></div>
+        <div class="author-info__name">MQY</div>
+        <div class="author-info__description">喜欢吃葡萄、草莓、黄桃</div>
+        <div class="author-info__description">to be continue...</div>
+      </div>
+      <div class="card-info-data">
+        <div class="card-info-data-item">
+          <a href="/archives/">
+            <div class="headline">文章</div>
+            <div class="author-info__name">35</div>
+          </a>
+        </div>
+        <div class="card-info-data-item">
+          <a href="/tags/">
+            <div class="headline">标签</div>
+            <div class="length-num">18</div>
+          </a>
+        </div>
+        <div class="card-info-data-item">
+          <a href="/categories/">
+            <div class="headline">分类</div>
+            <div class="length-num">8</div>
+          </a>
+        </div>
+      </div>
+      <div class="card-info-goto">
+        <a href="/about/">
+          <div class="goto_about">了解更多</div>
+          <div class="goto_icon"><i class="fa-solid fa-circle-right"></i></div>
+        </a>
+      </div>
+      <!-- <div class="card-webinfo">
+        <div class="post-count">114.9k</div>
+      </div> -->
+    </div>
+	</div>
+</div>
+
+
+
+
+<div class="myindex-card">
+
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
+        <a href="/post/983349234/" target="_self">
+          <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/17.png" alt="MyBatis - SSM 框架">
+        </a>
+      </div>
+    
+    <article class="index-info">
+      <h1 class="index-header">
+        
+        <a href="/post/983349234/" target="_self">
+          MyBatis - SSM 框架
+        </a>
+      </h1>
+
+      
+      <a class="index-excerpt " href="/post/983349234/" target="_self">
+        <div>
+          基本概述、Mapper 代理、配置文件
+        </div>
+      </a>
+
+      <div class="index-btm post-metas">
+        
+          <div class="post-meta postDate">
+            <i class="iconfont icon-date"></i>
+            <time datetime="2022-12-15 20:00" pubdate>
+              2022-12-15
+            </time>
+          </div>
+        
+        
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
+            
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/07-SSM-%E6%A1%86%E6%9E%B6/" class="category-chain-item">07 SSM 框架</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+          </div>
+        
+        
+          <div class="post-meta postTags">
+            
+              <a href="/tags/Java/">#Java</a>
+            
+              <a href="/tags/SSM-%E6%A1%86%E6%9E%B6/">#SSM 框架</a>
+            
+              <a href="/tags/MyBatis/">#MyBatis</a>
+            
+          </div>
+        
+      </div>
+    </article>
+  </div>
+
+  <div class="row index-card">
+    
+    
+      <div class="index-img">
         <a href="/post/4096320407/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/15.png" alt="Spring (二) - SSM 框架">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/4096320407/" target="_self">
@@ -305,7 +561,7 @@
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-12-07 20:00" pubdate>
               2022-12-07
@@ -313,8 +569,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -335,8 +591,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/Java/">#Java</a>
             
@@ -350,16 +605,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/914190096/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/14.png" alt="Spring (一) - SSM 框架">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/914190096/" target="_self">
@@ -376,7 +631,7 @@
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-12-06 20:00" pubdate>
               2022-12-06
@@ -384,8 +639,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -406,8 +661,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/Java/">#Java</a>
             
@@ -421,16 +675,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/4002719321/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/11.png" alt="JDBC - MySQL">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/4002719321/" target="_self">
@@ -441,13 +695,13 @@
       
       <a class="index-excerpt " href="/post/4002719321/" target="_self">
         <div>
-          基本概述、DriverManager、Connection、Statement、ResultSet、PreparedStatement、数据库连接池
+          基本概述、驱动管理、数据库连接、执行语句、结果集、数据库连接池
         </div>
       </a>
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-12-02 20:00" pubdate>
               2022-12-02
@@ -455,8 +709,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -477,8 +731,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/Java/">#Java</a>
             
@@ -494,16 +747,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/2655733482/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/12.png" alt="Maven - 软件配置">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/2655733482/" target="_self">
@@ -520,7 +773,7 @@
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-11-30 20:00" pubdate>
               2022-11-30
@@ -528,8 +781,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -550,8 +803,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/Java/">#Java</a>
             
@@ -565,16 +817,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/2450791866/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/13.png" alt="Maven - 项目管理">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/2450791866/" target="_self">
@@ -585,13 +837,13 @@
       
       <a class="index-excerpt " href="/post/2450791866/" target="_self">
         <div>
-          概述
+          基本概述、依赖配置、生命周期、插件
         </div>
       </a>
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-11-30 20:00" pubdate>
               2022-11-30
@@ -599,8 +851,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -621,8 +873,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/Java/">#Java</a>
             
@@ -636,16 +887,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/3462126909/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/8.png" alt="存储引擎 - MySQL">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/3462126909/" target="_self">
@@ -662,7 +913,7 @@
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-11-28 20:00" pubdate>
               2022-11-28
@@ -670,8 +921,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -692,8 +943,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/MySQL/">#MySQL</a>
             
@@ -705,16 +955,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/1273908976/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/10.png" alt="事务和锁 - MySQL">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/1273908976/" target="_self">
@@ -731,7 +981,7 @@
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-11-26 20:00" pubdate>
               2022-11-26
@@ -739,8 +989,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -761,8 +1011,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/MySQL/">#MySQL</a>
             
@@ -774,16 +1023,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/1589765459/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/9.png" alt="索引 - MySQL">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/1589765459/" target="_self">
@@ -800,7 +1049,7 @@
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-11-25 20:00" pubdate>
               2022-11-25
@@ -808,8 +1057,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -830,8 +1079,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/MySQL/">#MySQL</a>
             
@@ -843,16 +1091,16 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
+  <div class="row index-card">
     
     
-      <div class="col-12 col-md-4 m-auto index-img">
+      <div class="index-img">
         <a href="/post/453331741/" target="_self">
           <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/7.png" alt="多表查询 - MySQL">
         </a>
       </div>
     
-    <article class="col-12 col-md-8 mx-auto index-info">
+    <article class="index-info">
       <h1 class="index-header">
         
         <a href="/post/453331741/" target="_self">
@@ -869,7 +1117,7 @@
 
       <div class="index-btm post-metas">
         
-          <div class="post-meta mr-3">
+          <div class="post-meta postDate">
             <i class="iconfont icon-date"></i>
             <time datetime="2022-11-23 20:00" pubdate>
               2022-11-23
@@ -877,8 +1125,8 @@
           </div>
         
         
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
+          <div class="post-meta mr-3 d-flex align-items-center postCate">
+           
             
 
 <span class="category-chains">
@@ -899,8 +1147,7 @@
           </div>
         
         
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
+          <div class="post-meta postTags">
             
               <a href="/tags/MySQL/">#MySQL</a>
             
@@ -912,75 +1159,7 @@
     </article>
   </div>
 
-  <div class="row mx-auto index-card">
-    
-    
-      <div class="col-12 col-md-4 m-auto index-img">
-        <a href="/post/192042733/" target="_self">
-          <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/post_banner/6.png" alt="约束 - MySQL">
-        </a>
-      </div>
-    
-    <article class="col-12 col-md-8 mx-auto index-info">
-      <h1 class="index-header">
-        
-        <a href="/post/192042733/" target="_self">
-          约束 - MySQL
-        </a>
-      </h1>
-
-      
-      <a class="index-excerpt " href="/post/192042733/" target="_self">
-        <div>
-          常见约束、主键约束、自增长约束、外键约束
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2022-11-21 20:00" pubdate>
-              2022-11-21
-            </time>
-          </div>
-        
-        
-          <div class="post-meta mr-3 d-flex align-items-center">
-            <i class="iconfont icon-category"></i>
-            
-
-<span class="category-chains">
-  
-  
-    
-      <span class="category-chain">
-        
-  <a href="/categories/04-MySQL/" class="category-chain-item">04 MySQL</a>
-  
-  
-
-      </span>
-    
-  
-</span>
-
-          </div>
-        
-        
-          <div class="post-meta">
-            <i class="iconfont icon-tags"></i>
-            
-              <a href="/tags/MySQL/">#MySQL</a>
-            
-              <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/">#数据库</a>
-            
-          </div>
-        
-      </div>
-    </article>
-  </div>
-
+</div>
 
 
   <nav aria-label="navigation">
@@ -988,6 +1167,7 @@
       <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><a class="page-number" href="/page/4/#board">4</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
     </span>
   </nav>
+
 
 
 
@@ -1100,6 +1280,11 @@
   <script  src="/js/local-search.js" ></script>
 
 
+
+
+  
+<script src="/js/random.js"></script>
+<script src="/js/myo.js"></script>
 
 
 

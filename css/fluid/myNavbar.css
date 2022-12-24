@@ -288,12 +288,12 @@
         opacity: 0;
         filter: blur(2px);
         transition: all 0.4s ease;
-        bottom: 0rem;
+        bottom: -0.1rem;
         margin: auto;
     }
 
     .navbar-nav .backhome .nav-item .homeicon i {
-        font-size: 16px;
+        font-size: 18px;
         transition: all 0.4s ease;
     }
 

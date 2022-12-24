@@ -41,6 +41,7 @@ Fluid.events = {
 //————————————————————————————————————————————————————————————————————
   registerParallaxEvent: function() {
     var ph = jQuery('#banner[parallax="true"]');
+    var ph2 = jQuery('.main-hero-waves-area');       //自加代码
     if (ph.length === 0) {
       return;
     }
@@ -56,6 +57,9 @@ Fluid.events = {
         pxv = max;
       }
       ph.css({
+        transform: 'translate3d(0,' + pxv + 'px,0)'
+      });
+      ph2.css({                                        //自加代码
         transform: 'translate3d(0,' + pxv + 'px,0)'
       });
       var sideCol = jQuery('.side-col');
@@ -229,7 +233,10 @@ Fluid.events = {
       document.querySelector('.mytoolbox').classList.toggle('show');
     });
   },
+
 };
+
+
 
 
 

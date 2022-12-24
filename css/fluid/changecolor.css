@@ -71,3 +71,7 @@
 [data-user-color-scheme='dark'] {
   --tabs-color: rgba(97,168,235,0.843);
 }
+:root {
+  --focus-border-color: #81a4c5;
+  --unfocus-border-color: #e3e8f7;
+}
