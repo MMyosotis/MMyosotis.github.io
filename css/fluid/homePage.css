@@ -94,34 +94,43 @@
 
 
 /* ----勿忘草栏---- */
+
 .recent-post-top #banner {
-    background: #eeeef6;
-    background-size: 100%;
+    transform-style: preserve-3d;
+    perspective: 1000px;
     height: 15rem;
-    margin-bottom: 10px;
-    display: flex;
     border-radius: 15px;
     position: relative;
-    box-shadow: 0 8px 12px -3px rgba(110, 138, 190, 0.2);
-    overflow: hidden;
     margin-right: 0.5rem;
+    width: 100%;
+}
+.recent-post-top #banner #myosotis-bar{
+    background: #eeeef6;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    border-radius: 15px;
+    overflow: hidden;
+    backface-visibility: hidden;
+    box-shadow: 0 8px 12px -3px rgba(110, 138, 190, 0.2);
+    transition: 0.4s ease;
 }
 
-.recent-post-top #banner .banner-title {
+.recent-post-top #banner #myosotis-bar .banner-title {
     position: absolute;
 }
 
-.recent-post-top #banner .banner-title {
+.recent-post-top #banner #myosotis-bar .banner-title {
     margin: 20px 0 0 30px;
 }
 
-.recent-post-top #banner .banners-title-big {
+.recent-post-top #banner #myosotis-bar .banners-title-big {
     font-size: 40px;
     font-weight: bold;
     height: 50px;
 }
 
-.recent-post-top #banner .banners-title-small {
+.recent-post-top #banner #myosotis-bar .banners-title-small {
     margin-top: 15px;
     font-size: 14px;
     color: rgb(0, 0, 0, 0.4);
@@ -129,35 +138,59 @@
 
 /* 随便逛逛栏 */
 .recent-post-top #banner #banner-hover {
+    transform: rotateX(180deg);
     position: absolute;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    opacity: 0;
-    background: rgba(230, 233, 240, 0.7);
-    backdrop-filter: blur(10px);
+    background: #eeeef6;
     border-radius: 15px;
     transition: 0.4s ease;
-    padding: 30px 20px 0 10px;
-    border:1px solid var(--focus-border-color);
+    backface-visibility: hidden;
+    box-shadow: 0 8px 12px -3px rgba(110, 138, 190, 0.2);
+    overflow: hidden;
 }
 
 .recent-post-top #banner #banner-hover .bannerText {
     font-size: 60px;
     font-weight: bold;
+    position: absolute;
+    right: 80px;
+    bottom: 30px;
+    white-space: nowrap;
 }
 
-.recent-post-top #banner #banner-hover i {
-    font-size: 40px;
-    font-weight: bold;
-    margin-left: 20px;
+.recent-post-top #banner #banner-hover .bannerText span {
+    position: relative;
+    z-index: 1;
+}
+
+.recent-post-top #banner #banner-hover i{
+    position: relative;
+    font-size: 400%;
+    color: white;
+    filter: blur(2px);
+    opacity: 0.6;
+    z-index: 0;
+    margin-right: 30px;
+}
+
+.recent-post-top #banner #banner-hover .bannerText2 {
+    font-size: 20px;
+    position: absolute;
+    right: 80px;
+    bottom: 125px;
+    font-weight: 400;
 }
 
 /* 随便逛逛栏：鼠标悬浮 */
 .recent-post-top #banner:hover #banner-hover {
-    opacity: 1;
-    padding: 30px 20px 0 30px;
+    transform: rotateX(0deg);
+}
+
+.recent-post-top #banner:hover #myosotis-bar {
+    transform: rotateX(-180deg);
 }
 
 
@@ -168,7 +201,6 @@
     transform: rotate(-30deg);
     margin-top: -1rem;
     height: 150px;
-
 }
 
 .tags-group-all:after {
@@ -439,6 +471,12 @@
     .tags-group-all {
         margin-top: -4rem;
     }
+
+    /* 调整随便逛逛栏 */
+    .recent-post-top #banner #banner-hover i{
+        font-size: 400%;
+        margin-right: -100px;
+    }
 }
 
 
@@ -467,6 +505,11 @@
     /* 调整天气滚动栏位置 */
     .tags-group-all {
         margin-top: -3rem;
+    }
+
+    /* 调整随便逛逛栏 */
+    .recent-post-top #banner #banner-hover i{
+        margin-right: -50px;
     }
 }
 
@@ -538,38 +581,39 @@
         height: 180px;
     }
 
-    .recent-post-top #banner .banner-title {
+    .recent-post-top #banner #myosotis-bar .banner-title {
         margin: 15px 0 0 20px;
     }
 
-    .recent-post-top #banner .banners-title-big {
+    .recent-post-top #banner #myosotis-bar .banners-title-big {
         font-size: 30px;
         font-weight: bold;
         height: 40px;
     }
 
-    .recent-post-top #banner .banners-title-small {
+    .recent-post-top #banner #myosotis-bar .banners-title-small {
         margin-top: 15px;
         font-size: 14px;
         color: rgb(0, 0, 0, 0.4);
     }
 
     /* 随便逛逛栏大小 */
-    .recent-post-top #banner #banner-hover {
-        padding: 30px 20px 0 10px;
-    }
-    
-    .recent-post-top #banner:hover #banner-hover {
-        opacity: 1;
-        padding: 30px 20px 0 25px;
-    }
-    
     .recent-post-top #banner #banner-hover .bannerText {
         font-size: 40px;
-        font-weight: bold;
+        right: 40px;
+        bottom: 20px;
     }
-    .recent-post-top #banner #banner-hover i {
-        font-size: 30px;
+
+    .recent-post-top #banner #banner-hover i{
+        font-size: 500%;
+        margin-right: 20px;
+    }
+
+    .recent-post-top #banner #banner-hover .bannerText2 {
+        font-size: 16px;
+        position: absolute;
+        right: 40px;
+        bottom: 90px;
     }
 }
 
@@ -577,6 +621,16 @@
 
 
 @media (max-width:424px) {
+    
+    /* 调整随便逛逛栏 */
+    .recent-post-top #banner #banner-hover i{
+        margin-right: -75px;
+    }
+
+    .recent-post-top #banner #banner-hover .bannerText2 {
+        font-size: 14px;
+        bottom: 90px;
+    }
 
     /* 调整总栏的下间距 */
     .recent-top-post-group{
@@ -678,7 +732,9 @@
 .myindex-card .index-card .index-img img {
     height: 180px;
     border-radius: 0;
+    transition: 0.4s ease;
 }
+
 
 
 /* 卡片信息栏整体 */
@@ -694,9 +750,11 @@
 
 /* 文章简介 */
 .myindex-card .index-card .index-info .index-excerpt {
-    max-height: 0;
+    position: absolute;
     transition: 0.4s ease;
     opacity: 0;
+    top:-100px;
+    width: calc(100% - 3rem);
 }
 
 
@@ -719,25 +777,12 @@
 
 
 /* 文章卡片: 鼠标悬浮效果 */
-.myindex-card .index-card:hover .index-info .index-excerpt {
-    height: 70px;
-    max-height: 70px;
-    opacity: 1;
-}
-
-.myindex-card .index-card:hover .index-img{
-    max-height: 110px;
-    height: 110px;
-}
-
-.myindex-card .index-card:hover .index-info .postCate {
-    top:-95px;
-    left: 17px;
+.myindex-card .index-card:hover .index-img img{
+    transform: scale(1.1);
 }
 
 .myindex-card .index-card:hover .index-info{
-    box-shadow: 0 -12px 12px -4px #2c2d300c;
-    height: 190px;
+
     border-top:1px solid var(--unfocus-border-color);
 }
 
