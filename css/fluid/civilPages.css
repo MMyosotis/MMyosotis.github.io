@@ -1,46 +1,148 @@
-/* ----------自定页(土木)样式---------- */
 
 
 
 
-/*修改自定义页页边距*/
-.markdown-body.civil {
-    box-sizing: border-box;
-    padding-left: 15%;
-    padding-right: 15%;
+/* ————————————————左栏属性———————————————— */
+
+/* ---------------左栏总属性--------------- */
+.civileng .body-content #coloum-left{
+    width: 100%;
+    margin: auto;
+    max-width: 1000px;
+    margin-top: 0;
 }
 
-/* 修改手机端页边距 */
-@media (max-width: 767px) {
-    .container .col-12.col-md-10.m-auto {
-        padding: 2rem;
+
+/* ---------------分类快属性--------------- */
+.civileng #board .civil{
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    box-shadow: var(--box-shadow-unfocus);
+    transition:0.4s ease;
+    margin-bottom: 20px;
+}
+
+.civileng .civil-title {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.civileng .civil-title .civil-item {
+    font-size: 1.4rem;
+    padding: 6px 10px;
+    color: var(--text-color);
+    letter-spacing: 5px;
+    width: 100%;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.civileng .civil-title .civil-count {
+    margin: auto;
+    margin-right: 5px;
+}
+
+.civileng .civil-title .civil-count span {
+    background: #f8f9fc;
+    box-shadow: var(--box-shadow-unfocus);
+    height: 40px;
+    font-size: 1.1rem;
+    width: 40px;
+    margin: 2.5px;
+    border-radius: 8px;
+    color: var(--text-color);
+    border: 1px solid var(--unfocus-border-color);
+    transition: 0.4s ease;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+}
+
+.civileng .civil-post-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 5px 40px 20px;
+}
+
+.civileng .civil-post-list .list-group-item-title{
+    font-size: 1.1rem;
+    padding: 8px 16px;
+    margin: 10px;
+    background: #f8f9fc;
+    box-shadow: var(--box-shadow-unfocus);
+    border-radius: 8px;
+    color: var(--text-color);
+    border: 1px solid var(--unfocus-border-color);
+    transition: 0.4s ease;
+}
+
+.civileng .civil-post-list .list-group-item-title i {
+    margin-right: 10px;
+}
+
+
+/* 字体大小适配 */
+@media (max-width:424px) {
+
+    .civileng .civil-post-list{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 5px 20px 20px;
+    }
+
+    .civileng #board .civil{
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .civileng .civil-title{
+        height: 55px;
+        padding: 5px 10px;
+    }
+
+    .civileng .civil-title .civil-item{
+        font-size: 1.2rem;
+    }
+
+    .civileng .civil-title .civil-count span{
+        height: 32px;
+        font-size: 1rem;
+        width: 32px;
+        border-radius: 5px;
+        line-height: 32px;
+    }
+
+    .civileng .civil-post-list .list-group-item-title{
+        font-size: 0.95rem;
+        padding: 4px 8px;
+        margin: 8px;
+        border-radius: 5px;
     }
 }
 
 
 
+/* --------------鼠标悬浮交互-------------- */
+@media (min-width:424px){
 
-/* 笔记目录设置 */
-.civilEngineeringBody .list-group p.h5 i {
-    margin-right: 1rem;
+    .civileng .civil:hover{
+        transform: scale(1.02);
+        border: 1px solid var(--focus-border-color) !important;
+        box-shadow: var(--box-shadow-focus) !important;
+    }
+
+    .civileng .civil-post-list .list-group-item-title:hover{
+        background-color: var(--block-bg-focus-color);
+        transform: scale(1.1);
+        color: white !important;
+        box-shadow: var(--box-shadow-focus);
+    }
 }
-
-.civilEngineeringBody .list-group .list-group-item time {
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.civilEngineeringBody .list-group .list-group-item i {
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
-/* 土木分类下icon距离文字的距离 */
-.nav-item .dropdown-menu.dropdown-collapse .dropdown-item i {
-    margin-right: 0.3rem;
-}
-
-
-
-
-/* 自定页入场动画和归档页合并写了 */

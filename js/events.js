@@ -40,8 +40,8 @@ Fluid.events = {
   },
 //————————————————————————————————————————————————————————————————————
   registerParallaxEvent: function() {
-    var ph = jQuery('#banner[parallax="true"]');
-    var ph2 = jQuery('.main-hero-waves-area');       //自加代码
+    var ph = jQuery('.post #banner[parallax="true"]');
+
     if (ph.length === 0) {
       return;
     }
@@ -57,9 +57,6 @@ Fluid.events = {
         pxv = max;
       }
       ph.css({
-        transform: 'translate3d(0,' + pxv + 'px,0)'
-      });
-      ph2.css({                                        //自加代码
         transform: 'translate3d(0,' + pxv + 'px,0)'
       });
       var sideCol = jQuery('.side-col');
@@ -93,14 +90,14 @@ Fluid.events = {
     if (board.length === 0) {
       return;
     }
-    var posDisplay = false;
+    var posDisplay = true;           //直接换成 true，不判断了
     var scrollDisplay = false;
     // Position
     var setTopArrowPos = function() {
       var boardRight = board[0].getClientRects()[0].right;
       var bodyWidth = document.body.offsetWidth;
       var right = bodyWidth - boardRight;
-      posDisplay = right >= 50;
+      // posDisplay = right >= 50;
       topArrow.css({
         // 'bottom': posDisplay && scrollDisplay ? '20px' : '-60px',
   
@@ -122,7 +119,7 @@ Fluid.events = {
       });
       topArrowBG.css({
         'opacity':posDisplay && scrollDisplay ? '1' : '0',
-        'transition-delay':posDisplay && scrollDisplay ? '0.1s' : '0.7s',
+        'transition-delay':posDisplay && scrollDisplay ? '0s' : '0.7s',
         'width':posDisplay && scrollDisplay ? '36px' : '0',
         'transform':posDisplay && scrollDisplay ? 'scale(1)' : 'scale(0)',
       });
@@ -202,37 +199,6 @@ Fluid.events = {
     `);
   },
 
-
-// ——————————————————————————————————添加事件——————————————————————————————————————
-  // Sroll Auto Hide
-  registerScrollFnEvent: function () {
-    var sidetools = document.querySelector('.mysidebar-bar');
-    const innerHeight = window.innerHeight + 270;
-
-    // scroll < 270 scrollHeight
-    if (document.body.scrollHeight <= innerHeight) {
-      sidetools.classList.remove('show');
-    }
-
-    Fluid.utils.listenScroll(function() {
-      const currentTop = window.scrollY || document.documentElement.scrollTop;
-      if (currentTop > 270) {
-        sidetools.classList.add('show');
-      } 
-      else {
-        sidetools.classList.remove('show');
-      }
-      if (document.body.scrollHeight <= innerHeight) {
-        sidetools.classList.remove('show');
-      }
-    });
-  },
-
-  registerToggleShowToolsListEvent: function() {
-    document.querySelector('.tool-toggle-show').addEventListener('click', () => {
-      document.querySelector('.mytoolbox').classList.toggle('show');
-    });
-  },
 
 };
 

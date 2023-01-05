@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -80,13 +81,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -102,13 +107,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="post" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -139,7 +144,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -218,7 +223,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -237,7 +242,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -269,30 +275,38 @@
           
   <div class="mt-3">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        MQY
-      </span>
-    
-    
-      <span class="post-meta">
+      <span class="post-meta postDate">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2022-11-14 20:00" pubdate>
           2022年11月14日
         </time>
       </span>
     
-  </div>
-
-  <div class="mt-1">
     
-      <span class="post-meta mr-2">
+      <span class="post-meta wordCount">
         <i class="iconfont icon-chart"></i>
         
           9.1k 字
         
       </span>
     
+  </div>
+
+  <div class="mt-1">
+    
+    <!-- 自己加入的代码！！ -->
+    <span class="myupdated">
+      
+        <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
+        <span class="post-meta ">
+          
+            
+              2022年11月29日
+            
+          
+        </span>
+      
+    </span>
 
     
 
@@ -300,19 +314,7 @@
     
   </div>
 
-  <!-- 自己加入的代码！！ -->
-  <span class="myupdated">
-    
-      <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
-      <span class="post-meta ">
-        
-          
-            2022年11月29日
-          
-        
-      </span>
-    
-  </span>
+
 
 
         
@@ -346,43 +348,27 @@
 
   <main>
     
-      
-
-<!-- 添加mysidebar-bar -->
-<div class="mysidebar-bar">
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <div class="mytoolbox">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        <a class="happy"></a>
-      </div>
-    </div>
-  </div>
-  <div class="opentoolbox">
-    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
-  </div>
-</div>
-
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">基础语法 - MySQL</h1>
-            
-            
-              <div class="markdown-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                <h1 id="1-通用语法"><a href="#1-通用语法" class="headerlink" title="1. 通用语法"></a>1. 通用语法</h1><p>SQL 语句可以分为以下四类：</p>
+
+
+
+
+
+
+<div class="body-content mx-auto" id="board-ctn">
+  <div id="coloum-left">
+    <!-- SEO header -->
+    <h1 style="display: none">基础语法 - MySQL</h1>
+    
+    
+      <div class="markdown-body">
+        
+        <h1 id="1-通用语法"><a href="#1-通用语法" class="headerlink" title="1. 通用语法"></a>1. 通用语法</h1><p>SQL 语句可以分为以下四类：</p>
 <table class="myform">
     <head>
         <tr>
@@ -823,7 +809,7 @@
 </table>
 **案例**
 
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7j43btlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-7j43btlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 直接使用函数</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">trim</span>(<span class="hljs-string">&#x27; Hello MySQL &#x27;</span>);<br><span class="hljs-keyword">select</span> substr(<span class="hljs-string">&#x27;Hello MySQL&#x27;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>);<br><br><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id   <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age  <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, age) <br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">23</span>), <br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">22</span>), <br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">24</span>);<br><br><span class="hljs-comment">-- 对工号不足五位的统一补充0</span><br><span class="hljs-keyword">update</span> emp <span class="hljs-keyword">set</span> id <span class="hljs-operator">=</span> lpad(id, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>);<br><span class="hljs-operator">+</span><span class="hljs-comment">-------+------+------+</span><br><span class="hljs-operator">|</span> id    <span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-------+------+------+</span><br><span class="hljs-operator">|</span> <span class="hljs-number">00001</span> <span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span>   <span class="hljs-number">23</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> <span class="hljs-number">00002</span> <span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span>   <span class="hljs-number">22</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> <span class="hljs-number">00003</span> <span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span>   <span class="hljs-number">24</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-------+------+------+</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-gfc70elcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-gfc70elcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 直接使用函数</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">trim</span>(<span class="hljs-string">&#x27; Hello MySQL &#x27;</span>);<br><span class="hljs-keyword">select</span> substr(<span class="hljs-string">&#x27;Hello MySQL&#x27;</span>, <span class="hljs-number">2</span>, <span class="hljs-number">6</span>);<br><br><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id   <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age  <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, age) <br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">23</span>), <br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">22</span>), <br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">24</span>);<br><br><span class="hljs-comment">-- 对工号不足五位的统一补充0</span><br><span class="hljs-keyword">update</span> emp <span class="hljs-keyword">set</span> id <span class="hljs-operator">=</span> lpad(id, <span class="hljs-number">5</span>, <span class="hljs-number">0</span>);<br><span class="hljs-operator">+</span><span class="hljs-comment">-------+------+------+</span><br><span class="hljs-operator">|</span> id    <span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-------+------+------+</span><br><span class="hljs-operator">|</span> <span class="hljs-number">00001</span> <span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span>   <span class="hljs-number">23</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> <span class="hljs-number">00002</span> <span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span>   <span class="hljs-number">22</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> <span class="hljs-number">00003</span> <span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span>   <span class="hljs-number">24</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-------+------+------+</span><br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-2-数值函数"><a href="#4-2-数值函数" class="headerlink" title="4.2 数值函数"></a>4.2 数值函数</h2><p><strong>函数</strong></p>
 <table class="myform">
@@ -859,7 +845,7 @@
 </table>
 **案例**
 
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3rb7o1lc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-3rb7o1lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 生成一个六位数的随机验证码</span><br><span class="hljs-keyword">select</span> lpad(round(rand() <span class="hljs-operator">*</span> <span class="hljs-number">1000000</span>, <span class="hljs-number">0</span>), <span class="hljs-number">6</span>, <span class="hljs-string">&#x27;0&#x27;</span>);<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-iripjylcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-iripjylcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 生成一个六位数的随机验证码</span><br><span class="hljs-keyword">select</span> lpad(round(rand() <span class="hljs-operator">*</span> <span class="hljs-number">1000000</span>, <span class="hljs-number">0</span>), <span class="hljs-number">6</span>, <span class="hljs-string">&#x27;0&#x27;</span>);<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-3-日期函数"><a href="#4-3-日期函数" class="headerlink" title="4.3 日期函数"></a>4.3 日期函数</h2><p><strong>函数</strong></p>
 <table class="myform">
@@ -907,7 +893,7 @@
 </table>
 **案例**
 
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-95d1ivlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-95d1ivlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 计算从当前往后推70个月的时间</span><br><span class="hljs-keyword">select</span> date_add(now(), <span class="hljs-type">interval</span> <span class="hljs-number">70</span> <span class="hljs-keyword">month</span>);<br><br><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id        <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name      <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    entryDate <span class="hljs-type">date</span> comment <span class="hljs-string">&#x27;入职时间&#x27;</span>,<br>    idCard    <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, entryDate, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-string">&#x27;2006-10-12&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-string">&#x27;2000-01-02&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-string">&#x27;2012-03-02&#x27;</span>, <span class="hljs-string">&#x27;12345674971234567X&#x27;</span>);<br>       <br><span class="hljs-comment">-- 查询所有员工的入职天数，并根据入职天数倒序排序</span><br><span class="hljs-keyword">select</span> name, datediff(curdate(), entryDate) <span class="hljs-keyword">as</span> entryDays <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> entryDays <span class="hljs-keyword">desc</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-lsp6p8lcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-lsp6p8lcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 计算从当前往后推70个月的时间</span><br><span class="hljs-keyword">select</span> date_add(now(), <span class="hljs-type">interval</span> <span class="hljs-number">70</span> <span class="hljs-keyword">month</span>);<br><br><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id        <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name      <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    entryDate <span class="hljs-type">date</span> comment <span class="hljs-string">&#x27;入职时间&#x27;</span>,<br>    idCard    <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, entryDate, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-string">&#x27;2006-10-12&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-string">&#x27;2000-01-02&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-string">&#x27;2012-03-02&#x27;</span>, <span class="hljs-string">&#x27;12345674971234567X&#x27;</span>);<br>       <br><span class="hljs-comment">-- 查询所有员工的入职天数，并根据入职天数倒序排序</span><br><span class="hljs-keyword">select</span> name, datediff(curdate(), entryDate) <span class="hljs-keyword">as</span> entryDays <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">order</span> <span class="hljs-keyword">by</span> entryDays <span class="hljs-keyword">desc</span>;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-4-流程函数"><a href="#4-4-流程函数" class="headerlink" title="4.4 流程函数"></a>4.4 流程函数</h2><p><strong>函数</strong></p>
 <p>流程函数可以在 SQL 语句中实现条件筛选，从而提高语句的效率</p>
@@ -919,12 +905,12 @@
 <p><font class="code-sentence"><code>ifnull(value1, value2)</code></font></p>
 </li>
 <li><p>分支选择函数 case when</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-frnhzklc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-frnhzklc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 如果条件1为true，返回值1；...否则返回默认值</span><br><span class="hljs-keyword">case</span> <br><span class="hljs-keyword">when</span> 条件<span class="hljs-number">1</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">1</span><br><span class="hljs-keyword">when</span> 条件<span class="hljs-number">2</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">2</span> <br>... <br><span class="hljs-keyword">else</span> 默认值<br><span class="hljs-keyword">end</span> <br> <br><span class="hljs-comment">-- 如果判断标准=判断值1，返回值1；...否则返回默认值 </span><br><span class="hljs-keyword">case</span> 判断标准 <br><span class="hljs-keyword">when</span> 判断值<span class="hljs-number">1</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">1</span> <br><span class="hljs-keyword">when</span> 判断值<span class="hljs-number">2</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">2</span> <br>... <br><span class="hljs-keyword">else</span> 默认值<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></div></figure></li>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-luve3hlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-luve3hlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 如果条件1为true，返回值1；...否则返回默认值</span><br><span class="hljs-keyword">case</span> <br><span class="hljs-keyword">when</span> 条件<span class="hljs-number">1</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">1</span><br><span class="hljs-keyword">when</span> 条件<span class="hljs-number">2</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">2</span> <br>... <br><span class="hljs-keyword">else</span> 默认值<br><span class="hljs-keyword">end</span> <br> <br><span class="hljs-comment">-- 如果判断标准=判断值1，返回值1；...否则返回默认值 </span><br><span class="hljs-keyword">case</span> 判断标准 <br><span class="hljs-keyword">when</span> 判断值<span class="hljs-number">1</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">1</span> <br><span class="hljs-keyword">when</span> 判断值<span class="hljs-number">2</span> <span class="hljs-keyword">then</span> 值<span class="hljs-number">2</span> <br>... <br><span class="hljs-keyword">else</span> 默认值<br><span class="hljs-keyword">end</span><br></code></pre></td></tr></table></div></figure></li>
 </ul>
 <p><strong>注意</strong></p>
 <p>分支选择函数 case when 当一个条件满足，就返回对应的结果，不会继续下一条件判断。</p>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7ubbh0lc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-7ubbh0lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id          <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name        <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age         <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    workAddress <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;工作地点&#x27;</span>,<br>    idCard      <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, age, workAddress, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">16</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-string">&#x27;西安&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-string">&#x27;上海&#x27;</span>, <span class="hljs-string">&#x27;123156789066345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">34</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-keyword">null</span>);<br><br><span class="hljs-comment">-- 查询员工姓名和工作地址，并区分一二线城市</span><br><span class="hljs-keyword">select</span><br>    name,<br>    (<span class="hljs-keyword">case</span> workAddress <span class="hljs-keyword">when</span> <span class="hljs-string">&#x27;北京&#x27;</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;一线城市&#x27;</span> <span class="hljs-keyword">when</span> <span class="hljs-string">&#x27;上海&#x27;</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;一线城市&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;二线城市&#x27;</span> <span class="hljs-keyword">end</span>) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;工作地址&#x27;</span><br><span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+----------+</span><br><span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> 工作地址 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+----------+</span><br><span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span> 一线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span> 二线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 洪六 <span class="hljs-operator">|</span> 一线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span> 一线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+----------+</span><br><br><span class="hljs-comment">-- 查询员工成年情况</span><br><span class="hljs-keyword">select</span><br>    name,<br>    (<span class="hljs-keyword">case</span> <span class="hljs-keyword">when</span> age <span class="hljs-operator">&lt;=</span> <span class="hljs-number">18</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;未成年&#x27;</span> <span class="hljs-keyword">when</span> age <span class="hljs-operator">&lt;</span> <span class="hljs-number">30</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;30以下成年人&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;30以上&#x27;</span> <span class="hljs-keyword">end</span>) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;成年情况&#x27;</span><br><span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+--------------+</span><br><span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> 成年情况     <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+--------------+</span><br><span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span> 未成年       <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span> <span class="hljs-number">30</span>以下成年人 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 洪六 <span class="hljs-operator">|</span> <span class="hljs-number">30</span>以下成年人 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span> <span class="hljs-number">30</span>以上       <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+--------------+</span><br><br><span class="hljs-comment">-- 查询员工身份证情况</span><br><span class="hljs-keyword">select</span><br>    name,<br>    (if (idCard <span class="hljs-keyword">is</span> <span class="hljs-keyword">null</span>,<span class="hljs-string">&#x27;无身份证&#x27;</span>,<span class="hljs-string">&#x27;有身份证&#x27;</span>)) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;身份证情况&#x27;</span><br><span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+</span><br><span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> 身份证情况 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+</span><br><span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span> 有身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span> 有身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 洪六 <span class="hljs-operator">|</span> 有身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span> 无身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-2x85fflcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-2x85fflcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id          <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name        <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age         <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    workAddress <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;工作地点&#x27;</span>,<br>    idCard      <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, age, workAddress, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">16</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-string">&#x27;西安&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-string">&#x27;上海&#x27;</span>, <span class="hljs-string">&#x27;123156789066345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">34</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-keyword">null</span>);<br><br><span class="hljs-comment">-- 查询员工姓名和工作地址，并区分一二线城市</span><br><span class="hljs-keyword">select</span><br>    name,<br>    (<span class="hljs-keyword">case</span> workAddress <span class="hljs-keyword">when</span> <span class="hljs-string">&#x27;北京&#x27;</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;一线城市&#x27;</span> <span class="hljs-keyword">when</span> <span class="hljs-string">&#x27;上海&#x27;</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;一线城市&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;二线城市&#x27;</span> <span class="hljs-keyword">end</span>) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;工作地址&#x27;</span><br><span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+----------+</span><br><span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> 工作地址 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+----------+</span><br><span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span> 一线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span> 二线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 洪六 <span class="hljs-operator">|</span> 一线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span> 一线城市 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+----------+</span><br><br><span class="hljs-comment">-- 查询员工成年情况</span><br><span class="hljs-keyword">select</span><br>    name,<br>    (<span class="hljs-keyword">case</span> <span class="hljs-keyword">when</span> age <span class="hljs-operator">&lt;=</span> <span class="hljs-number">18</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;未成年&#x27;</span> <span class="hljs-keyword">when</span> age <span class="hljs-operator">&lt;</span> <span class="hljs-number">30</span> <span class="hljs-keyword">then</span> <span class="hljs-string">&#x27;30以下成年人&#x27;</span> <span class="hljs-keyword">else</span> <span class="hljs-string">&#x27;30以上&#x27;</span> <span class="hljs-keyword">end</span>) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;成年情况&#x27;</span><br><span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+--------------+</span><br><span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> 成年情况     <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+--------------+</span><br><span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span> 未成年       <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span> <span class="hljs-number">30</span>以下成年人 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 洪六 <span class="hljs-operator">|</span> <span class="hljs-number">30</span>以下成年人 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span> <span class="hljs-number">30</span>以上       <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+--------------+</span><br><br><span class="hljs-comment">-- 查询员工身份证情况</span><br><span class="hljs-keyword">select</span><br>    name,<br>    (if (idCard <span class="hljs-keyword">is</span> <span class="hljs-keyword">null</span>,<span class="hljs-string">&#x27;无身份证&#x27;</span>,<span class="hljs-string">&#x27;有身份证&#x27;</span>)) <span class="hljs-keyword">as</span> <span class="hljs-string">&#x27;身份证情况&#x27;</span><br><span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+</span><br><span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> 身份证情况 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+</span><br><span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span> 有身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span> 有身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 洪六 <span class="hljs-operator">|</span> 有身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span> 王五 <span class="hljs-operator">|</span> 无身份证   <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+</span><br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-5-聚合函数"><a href="#4-5-聚合函数" class="headerlink" title="4.5 聚合函数"></a>4.5 聚合函数</h2><p><strong>函数</strong></p>
 <p>聚合函数是将一列数据作为一个整体，进行纵向统计（所有的 null 值不参与统计）：</p>
@@ -965,7 +951,7 @@
 </table>
 
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-54pc9jlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-54pc9jlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id          <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name        <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age         <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    workAddress <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;工作地点&#x27;</span>,<br>    idCard      <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, age, workAddress, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">23</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-string">&#x27;西安&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">34</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-keyword">null</span>);<br><br><span class="hljs-comment">-- 统计企业员工数量</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">from</span> emp;<br><br><span class="hljs-comment">-- 统计有身份证的员工数量</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">count</span>(idCard) <span class="hljs-keyword">from</span> emp;<br><br><span class="hljs-comment">-- 统计企业员工的平均年龄</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">avg</span>(age) <span class="hljs-keyword">from</span> emp;<br><br><span class="hljs-comment">-- 统计北京的员工的年龄和</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">sum</span>(age) <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> workAddress <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;北京&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-8p30kzlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-8p30kzlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id          <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name        <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age         <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    workAddress <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;工作地点&#x27;</span>,<br>    idCard      <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, age, workAddress, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">23</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-string">&#x27;西安&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">34</span>, <span class="hljs-string">&#x27;北京&#x27;</span>, <span class="hljs-keyword">null</span>);<br><br><span class="hljs-comment">-- 统计企业员工数量</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">count</span>(<span class="hljs-operator">*</span>) <span class="hljs-keyword">from</span> emp;<br><br><span class="hljs-comment">-- 统计有身份证的员工数量</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">count</span>(idCard) <span class="hljs-keyword">from</span> emp;<br><br><span class="hljs-comment">-- 统计企业员工的平均年龄</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">avg</span>(age) <span class="hljs-keyword">from</span> emp;<br><br><span class="hljs-comment">-- 统计北京的员工的年龄和</span><br><span class="hljs-keyword">select</span> <span class="hljs-built_in">sum</span>(age) <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> workAddress <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;北京&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -1039,7 +1025,7 @@
 <li>字符串中输出 \ 符号本身必须使用 <font class="code-word"><code>\\</code></font>，正则表示中输出 \ 符号本身必须使用 <font class="code-word"><code>\\\\</code></font></li>
 </ul>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-q48ji5lc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-q48ji5lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id        <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name      <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    entryDate <span class="hljs-type">date</span> comment <span class="hljs-string">&#x27;入职时间&#x27;</span>,<br>    idCard    <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, entryDate, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-string">&#x27;2006-10-12&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-string">&#x27;2000-01-02&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-string">&#x27;2024-03-02&#x27;</span>, <span class="hljs-string">&#x27;12345674971234567X&#x27;</span>);<br><br><span class="hljs-comment">-- 查询2006年入职的员工</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> entryDate regexp <span class="hljs-string">&#x27;2006&#x27;</span>;<br><br><span class="hljs-comment">-- 查询身份证号最后一位是X的员工信息</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> idCard regexp <span class="hljs-string">&#x27;X&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-l5vmeplcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-l5vmeplcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建案例表格</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp<br>(<br>    id        <span class="hljs-type">varchar</span>(<span class="hljs-number">5</span>) comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name      <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    entryDate <span class="hljs-type">date</span> comment <span class="hljs-string">&#x27;入职时间&#x27;</span>,<br>    idCard    <span class="hljs-type">char</span>(<span class="hljs-number">18</span>) comment <span class="hljs-string">&#x27;身份证号&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加表格数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp(id, name, entryDate, idCard)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;1&#x27;</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-string">&#x27;2006-10-12&#x27;</span>, <span class="hljs-string">&#x27;123456789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;2&#x27;</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-string">&#x27;2000-01-02&#x27;</span>, <span class="hljs-string">&#x27;123156789012345678&#x27;</span>),<br>       (<span class="hljs-string">&#x27;3&#x27;</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-string">&#x27;2024-03-02&#x27;</span>, <span class="hljs-string">&#x27;12345674971234567X&#x27;</span>);<br><br><span class="hljs-comment">-- 查询2006年入职的员工</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> entryDate regexp <span class="hljs-string">&#x27;2006&#x27;</span>;<br><br><span class="hljs-comment">-- 查询身份证号最后一位是X的员工信息</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> idCard regexp <span class="hljs-string">&#x27;X&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -1057,7 +1043,7 @@
 <p><strong>慢查询日志</strong></p>
 <p>慢查询日志（文件：主机名-slow.log）记录了所有执行时间超过指定参数（<font class="code-word"><code>long_query_time</code></font>，单位：秒，默认10秒）的所有 SQL 语句的日志。</p>
 <p>MySQL 的慢查询日志默认没有开启，需要在 MySQL 的配置文件（&#x2F;MySQL Server 8.0&#x2F;my.ini）中配置如下信息：</p>
-<figure class="highlight ini"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-dl5zmjlc38hmdi"></i><span>ini</span><div class="collapse show" id="collapse-dl5zmjlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 开启MySQL慢查询日志开关</span><br><span class="hljs-attr">show_query_log</span>=<span class="hljs-number">1</span><br><br><span class="hljs-comment"># 设置慢日志的时间为n秒，SQL语句执行时间超过n秒，就会视为慢查询，记录慢查询日志</span><br><span class="hljs-attr">long_query_time</span>=n<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight ini"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-v1pb2klcjcfpi3"></i><span>ini</span><div class="collapse show" id="collapse-v1pb2klcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-comment"># 开启MySQL慢查询日志开关</span><br><span class="hljs-attr">show_query_log</span>=<span class="hljs-number">1</span><br><br><span class="hljs-comment"># 设置慢日志的时间为n秒，SQL语句执行时间超过n秒，就会视为慢查询，记录慢查询日志</span><br><span class="hljs-attr">long_query_time</span>=n<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>profile 详情</strong></p>
 <p>show profiles 能够在做 SQL 优化时帮助我们了解时间都耗费到哪里去了。</p>
@@ -1083,7 +1069,7 @@
 </ul>
 <p><strong>explain 执行计划</strong></p>
 <p>直接在 select 语句前加上关键字 <font class="code-word"><code>explain</code></font> 或者 <font class="code-word"><code>desc</code></font> ，可以获取 MySQL 如何执行 select 语句的信息。</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-60mgu3lc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-60mgu3lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">explain <span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> account <span class="hljs-keyword">where</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;李四&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-tjwd91lcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-tjwd91lcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs sql">explain <span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> account <span class="hljs-keyword">where</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;李四&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 
 <p>获得的执行计划各字段含义：</p>
 <ul>
@@ -1097,12 +1083,12 @@
 <li>filtered：表示返回结果的行数占需读取行数的百分比，该值越大越好</li>
 </ul>
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
+        
+      </div>
+    
+    <hr/>
+    <div>
+      <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -1138,7 +1124,7 @@
 </div>
 
 
-              
+      
   
 
   <div class="license-box my-3">
@@ -1188,24 +1174,32 @@
 
 
 
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+      
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这部分全改成自己的侧边栏了 -->
+    
+  </div>
+  
+
+  <div class="side-col d-none d-lg-block col-lg-2">
+
+    <!-- 这部分全改成自己的侧边栏了 -->
 <section id="mysidebar">
+  <!--头部-->
+  <div class="content-header clearfix">
+    <a href="javaScript:;" class="current">目录</a>
+    <a href="javaScript:;" >分类</a>
+</div>
+<!--内容-->
 <!-- 目录/分类 -->
   <div class="content-body" id="mysidebar-body">
     <div class="dom" style="display: block">
-      <aside class="sidebar" style="margin-left: -1rem">
+      <aside class="bar toc-bar" >
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -1214,7 +1208,7 @@
       </aside>
     </div>
     <div class="dom" style="display: none;">
-      <aside class="sidebar category-bar" style="margin-right: -1rem">
+      <aside class="bar category-bar" >
         
 
 
@@ -1228,16 +1222,19 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="04 MySQL"
+          list-group-item category-item-action " title="04 MySQL"
         id="heading-496f669120bacf521daa31b619a4e1c9" role="tab" data-toggle="collapse" href="#collapse-496f669120bacf521daa31b619a4e1c9"
         aria-expanded="true"
       >
-        04 MySQL
+      <!-- 字符串删掉前面的数字 -->
+        MySQL
         <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
+    </div>
       <div class="category-collapse collapse show" id="collapse-496f669120bacf521daa31b619a4e1c9"
            role="tabpanel" aria-labelledby="heading-496f669120bacf521daa31b619a4e1c9">
         
@@ -1252,6 +1249,7 @@
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">基础语法 - MySQL</span>
+          <time>11-14</time>
         </a>
       
     
@@ -1261,6 +1259,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语句 - MySQL</span>
+          <time>11-18</time>
         </a>
       
     
@@ -1270,6 +1269,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">约束 - MySQL</span>
+          <time>11-21</time>
         </a>
       
     
@@ -1279,6 +1279,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">多表查询 - MySQL</span>
+          <time>11-23</time>
         </a>
       
     
@@ -1288,6 +1289,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">存储引擎 - MySQL</span>
+          <time>11-28</time>
         </a>
       
     
@@ -1297,6 +1299,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">索引 - MySQL</span>
+          <time>11-25</time>
         </a>
       
     
@@ -1306,6 +1309,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">事务和锁 - MySQL</span>
+          <time>11-26</time>
         </a>
       
     
@@ -1315,6 +1319,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">JDBC - MySQL</span>
+          <time>12-02</time>
         </a>
       
     
@@ -1356,11 +1361,18 @@
         }
     }
 </script>
+
 </section>
 
 
 
-    </div>
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+      $(function(){
+          $('.toc-body').wrap('<div></div>');
+      });
+   </script> -->
   </div>
 </div>
 
@@ -1368,14 +1380,6 @@
 
 
 
-  
-
-
-
-  
-
-
-
 
   
 
@@ -1386,9 +1390,23 @@
 
 
 
+  
 
 
 
+  
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- post页格式和下面统一 -->
     
 
     <!-- 这里删除了向上的按钮 -->
@@ -1420,14 +1438,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -1440,6 +1462,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -1463,6 +1486,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
 
@@ -1497,6 +1523,8 @@
       includeTitleTags: true,
       headingsOffset  : -boardTop,
     }, CONFIG.toc));
+    //添加这一句
+    toc.find('.tocbot-link').wrapInner('<div class="text"></div>');
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }

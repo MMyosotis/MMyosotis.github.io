@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -66,13 +67,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,13 +93,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="categories"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="categories" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -125,7 +130,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -204,7 +209,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -223,7 +228,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -282,7 +288,7 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board"
           >
           
@@ -291,7 +297,9 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-
+<div class="body-content">
+  <div id="coloum-left">
+    
 
 
 
@@ -302,21 +310,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="01 博客搭建"
+          list-group-item category-item-action " title="01 博客搭建"
         id="heading-b158fd3758ab996dc4ae4d8bfaf5a4b2" role="tab" data-toggle="collapse" href="#collapse-b158fd3758ab996dc4ae4d8bfaf5a4b2"
         aria-expanded="false"
       >
-        01 博客搭建
+      <!-- 字符串删掉前面的数字 -->
+        博客搭建
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/01-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/01-%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/" class="category-count">
           <span>4</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-b158fd3758ab996dc4ae4d8bfaf5a4b2"
            role="tabpanel" aria-labelledby="heading-b158fd3758ab996dc4ae4d8bfaf5a4b2">
         
@@ -331,6 +343,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基于 fluid 主题基础样式修改</span>
+          <time>10-02</time>
         </a>
       
     
@@ -340,6 +353,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基于 Fluid 主题添加基础动画</span>
+          <time>10-05</time>
         </a>
       
     
@@ -349,6 +363,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基于 Fluid 主题适配深浅两色</span>
+          <time>11-08</time>
         </a>
       
     
@@ -358,6 +373,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基于 Fluid 主题添加侧边栏切换</span>
+          <time>11-04</time>
         </a>
       
     
@@ -371,21 +387,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="02 Java SE"
+          list-group-item category-item-action " title="02 Java SE"
         id="heading-d38f32cc8472004d980caddd508b0093" role="tab" data-toggle="collapse" href="#collapse-d38f32cc8472004d980caddd508b0093"
         aria-expanded="false"
       >
-        02 Java SE
+      <!-- 字符串删掉前面的数字 -->
+        Java SE
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/02-Java-SE/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/02-Java-SE/" class="category-count">
           <span>15</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-d38f32cc8472004d980caddd508b0093"
            role="tabpanel" aria-labelledby="heading-d38f32cc8472004d980caddd508b0093">
         
@@ -400,6 +420,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 (一) - Java SE</span>
+          <time>08-25</time>
         </a>
       
     
@@ -409,6 +430,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 (二) - Java SE</span>
+          <time>09-20</time>
         </a>
       
     
@@ -418,6 +440,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (一) - Java SE</span>
+          <time>08-27</time>
         </a>
       
     
@@ -427,6 +450,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (二) - Java SE</span>
+          <time>08-29</time>
         </a>
       
     
@@ -436,6 +460,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (三) - Java SE</span>
+          <time>08-30</time>
         </a>
       
     
@@ -445,6 +470,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">常用 API - Java SE</span>
+          <time>09-23</time>
         </a>
       
     
@@ -454,6 +480,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">泛型 - Java SE</span>
+          <time>09-01</time>
         </a>
       
     
@@ -463,6 +490,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (一) - Java SE</span>
+          <time>09-03</time>
         </a>
       
     
@@ -472,6 +500,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (二) - Java SE</span>
+          <time>09-05</time>
         </a>
       
     
@@ -481,6 +510,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">异常 - Java SE</span>
+          <time>09-07</time>
         </a>
       
     
@@ -490,6 +520,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (一) - Java SE</span>
+          <time>09-17</time>
         </a>
       
     
@@ -499,6 +530,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (二) - Java SE</span>
+          <time>09-19</time>
         </a>
       
     
@@ -508,15 +540,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">并发 - Java SE</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/49545/" title="注解 - Java SE"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">注解 - Java SE</span>
+          <time>09-26</time>
         </a>
       
     
@@ -526,6 +550,17 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">反射 - Java SE</span>
+          <time>09-27</time>
+        </a>
+      
+    
+      
+      
+        <a href="/post/49545/" title="注解 - Java SE"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">注解 - Java SE</span>
+          <time>09-27</time>
         </a>
       
     
@@ -539,21 +574,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="03 数据结构与算法"
+          list-group-item category-item-action " title="03 数据结构与算法"
         id="heading-7e6982a6dcfb2b243b50f8102b18d8ae" role="tab" data-toggle="collapse" href="#collapse-7e6982a6dcfb2b243b50f8102b18d8ae"
         aria-expanded="false"
       >
-        03 数据结构与算法
+      <!-- 字符串删掉前面的数字 -->
+        数据结构与算法
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/03-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/03-%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/" class="category-count">
           <span>2</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-7e6982a6dcfb2b243b50f8102b18d8ae"
            role="tabpanel" aria-labelledby="heading-7e6982a6dcfb2b243b50f8102b18d8ae">
         
@@ -568,6 +607,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">队列</span>
+          <time>09-08</time>
         </a>
       
     
@@ -577,6 +617,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">链表</span>
+          <time>09-11</time>
         </a>
       
     
@@ -590,21 +631,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="04 MySQL"
+          list-group-item category-item-action " title="04 MySQL"
         id="heading-496f669120bacf521daa31b619a4e1c9" role="tab" data-toggle="collapse" href="#collapse-496f669120bacf521daa31b619a4e1c9"
         aria-expanded="false"
       >
-        04 MySQL
+      <!-- 字符串删掉前面的数字 -->
+        MySQL
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/04-MySQL/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/04-MySQL/" class="category-count">
           <span>8</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-496f669120bacf521daa31b619a4e1c9"
            role="tabpanel" aria-labelledby="heading-496f669120bacf521daa31b619a4e1c9">
         
@@ -619,6 +664,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 - MySQL</span>
+          <time>11-14</time>
         </a>
       
     
@@ -628,6 +674,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语句 - MySQL</span>
+          <time>11-18</time>
         </a>
       
     
@@ -637,6 +684,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">约束 - MySQL</span>
+          <time>11-21</time>
         </a>
       
     
@@ -646,6 +694,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">多表查询 - MySQL</span>
+          <time>11-23</time>
         </a>
       
     
@@ -655,6 +704,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">存储引擎 - MySQL</span>
+          <time>11-28</time>
         </a>
       
     
@@ -664,6 +714,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">索引 - MySQL</span>
+          <time>11-25</time>
         </a>
       
     
@@ -673,6 +724,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">事务和锁 - MySQL</span>
+          <time>11-26</time>
         </a>
       
     
@@ -682,6 +734,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">JDBC - MySQL</span>
+          <time>12-02</time>
         </a>
       
     
@@ -695,21 +748,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="05 软件配置"
+          list-group-item category-item-action " title="05 软件配置"
         id="heading-e78e4030a67755094336db6a1f8b128a" role="tab" data-toggle="collapse" href="#collapse-e78e4030a67755094336db6a1f8b128a"
         aria-expanded="false"
       >
-        05 软件配置
+      <!-- 字符串删掉前面的数字 -->
+        软件配置
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/05-%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/05-%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" class="category-count">
           <span>1</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-e78e4030a67755094336db6a1f8b128a"
            role="tabpanel" aria-labelledby="heading-e78e4030a67755094336db6a1f8b128a">
         
@@ -724,6 +781,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Maven - 软件配置</span>
+          <time>11-30</time>
         </a>
       
     
@@ -737,21 +795,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="06 项目管理"
+          list-group-item category-item-action " title="06 项目管理"
         id="heading-cb0de809490acc4a67b6bf4954c46539" role="tab" data-toggle="collapse" href="#collapse-cb0de809490acc4a67b6bf4954c46539"
         aria-expanded="false"
       >
-        06 项目管理
+      <!-- 字符串删掉前面的数字 -->
+        项目管理
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/06-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/06-%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" class="category-count">
           <span>1</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-cb0de809490acc4a67b6bf4954c46539"
            role="tabpanel" aria-labelledby="heading-cb0de809490acc4a67b6bf4954c46539">
         
@@ -766,6 +828,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Maven - 项目管理</span>
+          <time>11-30</time>
         </a>
       
     
@@ -779,21 +842,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="07 SSM 框架"
+          list-group-item category-item-action " title="07 SSM 框架"
         id="heading-397140512bf5bc64e3a211faea75dda9" role="tab" data-toggle="collapse" href="#collapse-397140512bf5bc64e3a211faea75dda9"
         aria-expanded="false"
       >
-        07 SSM 框架
+      <!-- 字符串删掉前面的数字 -->
+        SSM 框架
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/07-SSM-%E6%A1%86%E6%9E%B6/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/07-SSM-%E6%A1%86%E6%9E%B6/" class="category-count">
           <span>3</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-397140512bf5bc64e3a211faea75dda9"
            role="tabpanel" aria-labelledby="heading-397140512bf5bc64e3a211faea75dda9">
         
@@ -808,6 +875,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Spring (一) - SSM 框架</span>
+          <time>12-06</time>
         </a>
       
     
@@ -817,6 +885,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Spring (二) - SSM 框架</span>
+          <time>12-07</time>
         </a>
       
     
@@ -826,6 +895,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">MyBatis - SSM 框架</span>
+          <time>12-15</time>
         </a>
       
     
@@ -839,21 +909,25 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item collapsed
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="08 单元测试"
+          list-group-item category-item-action " title="08 单元测试"
         id="heading-6a04dcaec57603e788fa67d039531b62" role="tab" data-toggle="collapse" href="#collapse-6a04dcaec57603e788fa67d039531b62"
         aria-expanded="false"
       >
-        08 单元测试
+      <!-- 字符串删掉前面的数字 -->
+        单元测试
         <span class="list-group-count"></span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
-        <a href="/categories/08-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" class="category-count col-2 col-md-1 col-xm-1">
-          <i class="iconfont icon-articles"></i>
+        <div class="cate-count">
+        <a href="/categories/08-%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" class="category-count">
           <span>1</span>
         </a>
+      </div>
       
+    </div>
       <div class="category-collapse collapse " id="collapse-6a04dcaec57603e788fa67d039531b62"
            role="tabpanel" aria-labelledby="heading-6a04dcaec57603e788fa67d039531b62">
         
@@ -868,6 +942,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">Junit - 单元测试</span>
+          <time>09-27</time>
         </a>
       
     
@@ -879,7 +954,9 @@
   
 </div>
 
+</div>
 
+</div>
               </div>
             </div>
           </div>
@@ -916,14 +993,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -936,6 +1017,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -959,6 +1041,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>

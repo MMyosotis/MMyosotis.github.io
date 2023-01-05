@@ -1,0 +1,68 @@
+
+
+/* ———————————————页脚总属性——————————————— */
+footer {
+    background: #f1f3f8;
+}
+
+.post footer {
+    background: #e8ecf6;
+}
+
+footer .footer-inner {
+    margin: auto;
+    width: 100%;
+    max-width: 1400px;
+    padding: 16px 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* ————————————————页脚内容———————————————— */
+
+footer .footer-inner .footer-content{
+    margin: 0.25rem 0;
+}
+
+footer .footer-inner .footer-content div{
+    font-size: 14px !important;
+}
+
+footer .footer-inner .footer-left {
+    margin-right: 1rem;
+}
+
+footer .footer-inner .footer-right .beian{
+    margin-left: auto;
+    width: fit-content;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+footer .footer-inner .footer-right span{
+    margin: 0;
+}
+
+footer .footer-inner .copyright{
+    margin: 0.25rem 0;
+    margin-right: auto;
+    width: fit-content;
+    font-size: 14px;
+}
+
+/* 字体大小适配 */
+@media(max-width:424px) {
+    footer .footer-inner .footer-content div span{
+        font-size: 13px !important;
+    }
+
+    footer .footer-inner .copyright{
+        font-size: 13px;
+    }
+
+    footer .footer-inner .footer-right .beian{
+        font-size: 13px;
+    }
+}

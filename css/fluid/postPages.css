@@ -1,241 +1,167 @@
-/* ----------文章页样式---------- */
+
+
+/* ———————————————页面总属性——————————————— */
+
+/* ----------------字体属性---------------- */
+.markdown-body blockquote,
+.markdown-body details,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body table,
+.markdown-body ul {
+    font-size: 17px;
+}
+
+.markdown-body pre {
+    font-size: 14px !important;
+}
+
+
+code.hljs{
+    font-family: "JetBrainsMono-Regular" !important;
+}
+
+@media(max-width: 424px) {
+
+    .markdown-body {
+        font-size: 85%;
+    }
+
+    .markdown-body blockquote,
+    .markdown-body details,
+    .markdown-body dl,
+    .markdown-body ol,
+    .markdown-body p,
+    .markdown-body table,
+    .markdown-body ul 
+    .markdown-body h3 {
+        font-size: 16px;
+    }
+
+
+    .markdown-body pre {
+        font-size: 13px !important;
+    }
+}
 
 
 
+/* ----------------页面大小---------------- */
+.post .container.nopadding-x-md #board {
+    padding-top: 48px;
+  }
 
 /*修改文章页页边距*/
-.post-content {
+/* .post-content {
     box-sizing: border-box;
-    padding-left: 8%;
-    padding-right: 8%;
+    padding: 0 50px;
 }
+
+@media(max-width:767px) {
+    .post-content {
+        padding: 0 40px;
+    }
+}
+
+@media(max-width:424px) {
+    .post-content {
+        padding: 0 20px;
+    }
+} */
 
 /* 修改页面宽度 */
-.col-lg-8.nopadding-x-md .container.nopadding-x-md #board {
-    width: 120%;
-    left: -18%;
+
+/* .post .container #board {
+    box-shadow: 0 12px 15px 0 rgba(44, 45, 48, 0.15);
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    margin-top: 0 !important;
 }
 
-@media (max-width: 993px) {
-    .col-lg-8.nopadding-x-md .container.nopadding-x-md #board {
-        width: 100%;
-        left: 0%;
-    }
-}
-
-/* 解决高分屏下元素过宽的问题 */
-.post .row.nomargin-x {
-    max-width: 100rem;
+.container-fluid.nopadding-x > .row{
+    max-width: 1500px;
     margin-right: auto !important;
     margin-left: auto !important;
+    width: 100%;
+    padding: 0 30px 0 100px;
+} */
+
+
+.post .container.nopadding-x-md .container {
+    max-width: 1500px;
 }
-
-
-
-
-/*设置图片居中*/
-img.img-center {
-    display: block;
+.post .container.nopadding-x-md #board .container > .row {
+    max-width: 100%;
     margin: auto;
-    text-align: center;
-}
-
-
-
-
-/* 设置特殊文字样式 */
-font.code-word {
-    color: var(--code-word-color);
-}
-
-font.code-sentence {
-    color: var(--code-sentence-color);
-}
-
-font.word-stress {
-    color: #008B8B;
-}
-
-
-
-
-/* 设置表格样式 */
-table.myform tbody {
-    border-spacing: 0;
-    border-collapse: collapse;
-    text-overflow: ellipsis;
-    word-break: keep-all;
-    white-space: nowrap;
-    width: 100%;
-}
-
-/* 表格边框样式：有内框 */
-table.myform tbody td {
-    /* 无内框设置 
-    border-left-width: 0;
-    border-right-width :0; */
-    border-color: var(--form-border-color);
-}
-
-table.myform tbody th {
-    border-color: var(--form-border-color);
-}
-
-table.myform tr:nth-child(2n+1) {
-    background-color: var(--form-color);
-}
-
-table.myform th:last-child {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
-
-/* table.myform td:first-child {
-    border-left-width: 1px;
   }
-  table.myform th:first-child {
-    border-left-width: 1px;
-  }
-  table.myform td:last-child {
-    border-right-width: 1px;
-  } */
 
 
-
-
-/* 文中分类折叠栏：现在已关闭 */
-.categoryinpost {
-    display: none;
-    margin-bottom: 0.15em;
-    background-color: var(--highlight-bg-color);
-    border-radius: 18px;
-    padding: 0.15em;
+/* 修改文章栏宽度 */
+.container#board-ctn{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    max-width: 100% !important;
 }
 
-.categoryinpost button {
-    text-align: left;
-    width: 100%;
-    border: none;
-    font-size: 1.2em;
-    color: var(--text-color);
-    background-color: var(--highlight-bg-color);
-    border-radius: 20px;
+.post .body-content #coloum-left{
+    max-width: calc(100% - 300px) ;
+    flex: 0 0 calc(100% - 300px) ;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    padding: 60px 50px;
+    box-shadow: var(--box-shadow-dark);
 }
 
-.categoryinpost button>i {
-    margin-left: 0.75rem;
-    margin-right: 0.5rem;
-    transition: transform 0.35s ease;
-    -o-transition: transform 0.35s ease;
-    -moz-transition: transform 0.35s ease;
-    -webkit-transition: transform 0.35s ease;
-    font-size: 1.2em;
+/* 页面大小适配 */
+@media (max-width: 1410px) {
+
+    .post .body-content #coloum-left{
+        padding: 40px;
+    }
+    
 }
 
-.categoryinpost button.collapsed>i {
-    transform: rotate(-90deg);
-}
+@media (max-width: 992px) {
 
-.categoryinpost .titleblock {
-    margin-left: 0.75em;
-    margin-right: 0.75em;
-}
-
-.categoryinpost .title {
-    color: var(--text-color);
-}
-
-.categoryinpost .dropdown-divider {
-    border-top: 1px solid var(--form-color);
-    margin-top: 0.15em;
+    .post .body-content #coloum-left{
+        max-width: calc(100%) ;
+        flex: 0 0 calc(100%) ;
+    }
 }
 
 
-
-
-/* 代码块样式修改 */
-figure.highlight table {
-    background-color: var(--highlight-bg-color) !important;
-    transition: background-color 0.2s ease-in-out;
-    -o-transition: background-color 0.2s ease-in-out;
-    -moz-transition: background-color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out;
-    border-radius: 0 0 10px 10px;
-}
-
-figure.highlight table td.gutter {
-    position: static;
-    border-bottom-left-radius: 14px;
-}
-
-figure.highlight table td.code {
-    border-radius: 0 0 10px 10px;
-}
-
-
-
-
-/*目录进入动画 */
-.container-fluid.nopadding-x #mysidebar #mysidebar-body {
-    animation: getright-post 1s ease;
-    animation-delay: 0.5s;
-    animation-fill-mode: both;
-
-}
-
-.container-fluid.nopadding-x aside.sidebar .category-list {
-    margin-left: -1rem;
-}
-
-/* 右移渐入动画 */
-@keyframes getright-post {
-    from {
-        transform: translate(-1.5em, 0em);
-        opacity: 0;
+@media (max-width: 424px) {
+    .post .body-content #coloum-left{
+        margin-top: -40px;
+        padding: 40px 20px 20px;
     }
 
-    to {
-        transform: translate(0, 0);
-        opacity: 100;
+    .post .container>#board>.container{
+        padding: 0 !important;
+    }
+
+
+    .post .container.nopadding-x-md #board .container>.row .col-md-10 {
+        padding: 0 !important;
+    }
+    .post .container #board {
+        margin-top: -1rem !important;
     }
 }
 
 
 
 
-/* 手机端文字进入 */
-@media (max-width:424px) {
-    .post .container-fluid.nopadding-x .post-content {
-        animation: getnote-post 1s ease, getsolid-post 0.4s ease-in;
-        animation-fill-mode: both;
-    }
+
+/* ————————————————顶栏属性———————————————— */
+header #banner .banner-text .mt-3>span {
+    margin-left: 1rem;
 }
-
-/* 文字上移动画 */
-@keyframes getnote-post {
-    from {
-        transform: translate(0rem, 3rem);
-    }
-
-    to {
-        transform: translate(0, 0);
-    }
+header #banner .banner-text .mt-3>span:nth-child(1) {
+    margin-left: 0;
 }
-
-/* 渐入动画 */
-@keyframes getsolid-post {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 100;
-    }
-}
-
-
-
 
 /* 文章页标题进入 */
 .post .banner-text.text-center.fade-in-up {
@@ -256,6 +182,103 @@ figure.highlight table td.code {
 
 
 
+
+/* ————————————————文章内容———————————————— */
+
+
+/* ----------------图片样式---------------- */
+img.img-center {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+
+
+
+/* --------------特殊文字样式-------------- */
+font.code-word {
+    color: var(--code-word-color);
+}
+
+font.code-sentence {
+    color: var(--code-sentence-color);
+}
+
+font.word-stress {
+    color: #008B8B;
+}
+
+
+
+
+/* ----------------表格样式---------------- */
+.markdown-body table {
+    overflow-x:scroll;
+    scrollbar-width: none; /* firefox */
+    -ms-overflow-style: none; /* IE 10+ */
+}
+
+.markdown-body table::-webkit-scrollbar { 
+    display: none; /* Chrome Safari */
+}
+
+table.myform tbody {
+    border-spacing: 0;
+    border-collapse: collapse;
+    /* text-overflow: ellipsis; */
+    /* word-break: keep-all; */
+    white-space: nowrap;
+    width: 100%;
+}
+
+
+/* 表格边框样式：有内框 */
+table.myform tbody td {
+    border-color: var(--form-border-color);
+}
+
+table.myform tbody th {
+    border-color: var(--form-border-color);
+}
+
+table.myform tr:nth-child(2n+1) {
+    background-color: var(--form-color);
+}
+
+table.myform th:last-child {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* ----------------代码样式---------------- */
+
+figure.highlight table {
+    background-color: var(--highlight-bg-color) !important;
+    transition: background-color 0.2s ease-in-out;
+    -o-transition: background-color 0.2s ease-in-out;
+    -moz-transition: background-color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out;
+    border-radius: 0 0 10px 10px;
+}
+
+figure.highlight table td.gutter {
+    /* position: static; */
+    border-bottom-left-radius: 14px;
+}
+
+
+figure.highlight table td.code {
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+/* ----------------Tabs样式---------------- */
 
 /* 修改tabs标签内边距 */
 .post .tag-common.tabs .tab-content .tab-pane,
@@ -290,4 +313,276 @@ figure.highlight table td.code {
 .tag-common.tabs ul.nav-tabs,
 .tabs-comment ul.nav-tabs {
     border: none;
+}
+
+
+
+
+
+
+
+
+/* ———————————————侧边栏属性——————————————— */
+
+/* ----------------目录样式---------------- */
+
+/*目录进入动画 */
+.container-fluid.nopadding-x #mysidebar #mysidebar-body {
+    animation: getright-post 1s ease;
+    animation-delay: 0.9s;
+    animation-fill-mode: both;
+
+}
+
+.container-fluid.nopadding-x aside.sidebar .category-list {
+    margin-left: -1rem;
+}
+
+/* 右移渐入动画 */
+@keyframes getright-post {
+    from {
+        transform: translate(-1.5em, 0em);
+        opacity: 0;
+    }
+
+    to {
+        transform: translate(0, 0);
+        opacity: 100;
+    }
+}
+
+/* ----------------目录字体---------------- */
+
+#mysidebar .sidebar a {
+    font-size: 16px;
+    font-family: "pingFangSC-Regular", sans-serif;
+}
+
+#mysidebar .toc-list-item.is-active-li > a{
+    font-family: "pingFangSC-Semibold", sans-serif;
+}
+
+#mysidebar .toc-list-item {
+    margin-bottom: 8px;
+}
+
+#mysidebar .toc-list-item:first-child{
+    margin-top: 8px;
+}
+
+#mysidebar .toc-list-item:last-child{
+    margin-bottom: 0px;
+}
+
+.tocbot-list .tocbot-list{
+    border-left: 1px solid rgb(0, 0, 0,0.2) ;
+}
+
+
+
+.post #mysidebar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 70px;
+    margin-left: 20px;
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    padding: 25px 20px 20px 10px;
+    box-shadow: var(--box-shadow-dark);
+    font-family: "pingFangSC-Regular", sans-serif;
+  
+  }
+
+  /* 修改目录栏宽度 */
+.post .side-col{
+    width: 300px !important;
+    max-width: 300px !important;
+    flex: 0 0 300px;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    padding-top: 0 !important;
+}
+
+.toc-header {
+    display: none;
+}
+
+#mysidebar .content-header{
+    height: 35px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 15px;
+    margin-left: 10px;
+}
+
+#mysidebar .content-header a{
+    margin: auto;
+    display: block;
+    width: calc((100% - 40px) / 2);
+    text-align: center;
+    font-weight: bold;
+    line-height: 35px;
+    font-size: 16px;
+    color: rgb(0, 0, 0,0.65);
+    transition: 0.4s ease;
+    position: relative;
+}
+
+
+
+
+
+#mysidebar .content-header a:after{
+    position: absolute;
+    width: 90%;
+    height: 2px;
+    background: var(--block-bg-focus-color);
+    left: 5%;
+    bottom: 0;
+    content: "";
+    z-index: -1;
+    max-width: 0;
+    transition: 0.4s;
+}
+
+#mysidebar .content-header a:hover{
+    color: var(--text-color);
+}
+
+
+
+#mysidebar .content-header a.current:after{
+    max-width: 100%;
+}
+
+#mysidebar .content-header a.current{
+    color: var(--text-color);
+}
+
+.tocbot-list {
+    padding-left: 12px !important;
+    margin-left: 8px !important;
+} 
+
+
+
+.toc-list-item,
+.toc-list-item :not(.tocbot-is-collapsed){
+    overflow: visible;
+}
+
+.toc-list-item:before{
+    display: none;
+} 
+.toc-list-item a {
+    position: relative;
+    display: block;
+    width: 100%;
+    color: rgb(0, 0, 0,0.65);
+    transition: 0.4s ease !important;
+    letter-spacing: 0px;
+}
+
+.toc-list-item a div.text{
+    width: 100%;
+    overflow: hidden !important;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.toc-list-item a:hover{
+    color: var(--text-color);
+} 
+
+.toc-list-item a:after{
+    position: absolute;
+    width: calc(100% + 2px);
+    height: 28px;
+    top: -3px;
+    left: -6px;
+    background: var(--block-bg-focus-color);
+    box-shadow: var(--box-shadow-focus);
+    border-radius: 6px;
+    content: "";
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: 0.4s ease;
+} 
+
+
+
+.toc-list-item.is-active-li>a:after{
+    transform: scale(1);
+    opacity: 1;
+} 
+
+.toc-list-item.is-active-li>a{
+    color: white;
+    font-weight: normal;
+}
+
+
+/* .toc-body {
+    overflow: hidden;
+} */
+
+
+
+.category-bar .category-title {
+    display: none;
+}
+
+.category-bar .list-group-item {
+    margin: 8px 0;
+}
+
+.category-bar .list-group-item time{
+    display: none;
+}
+
+.category-bar .list-group-item span {
+    font-size: 0.95rem;
+    color:rgb(0, 0, 0,0.65);
+}
+
+.category-bar .list-group-item::before{
+    display: none;
+}
+
+
+.category-bar .list-group-item:after{
+    position: absolute;
+    width: calc(100% + 2px);
+    height: 28px;
+    top: -2px;
+    left: -9.5px;
+    background: var(--block-bg-focus-color);
+    box-shadow: var(--box-shadow-focus);
+    border-radius: 6px;
+    content: "";
+    z-index: -1;
+    opacity: 0;
+    transform: scale(0.95);
+    transition: 0.4s ease;
+} 
+
+.category-bar .list-group-item.active:after{
+    transform: scale(1);
+    opacity: 1;
+} 
+
+.category-bar .list-group-item.active span{
+    color: white;
+    font-weight: normal;
+    font-family: "pingFangSC-Regular", sans-serif;
+}
+
+.category-bar .category-list  {
+    overflow: visible;
+}
+
+.category-bar .category-collapse {
+    padding-left: 25px;
 }

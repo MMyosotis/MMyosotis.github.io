@@ -1,24 +1,24 @@
-/* ----------所有页样式---------- */
+/* ——————————————页面通用动画—————————————— */
 
-
-
-
-/* 页面进入动画 */
-@media (min-width:424px) {
-    .container #board {
-        animation: getup-all 1s ease, getsolid-all 0.4s ease-in-out;
-        animation-fill-mode: both;
-    }
-}
+/* --------------页面进入动画-------------- */
+/* main>.container {
+  animation: getsolid-all 0.8s ease;
+  animation-fill-mode: both;
+} */
+/* body > :not(.home) #coloum-left,
+article.page-content {
+  animation: getup-all 0.8s ease;
+  animation-fill-mode: both;
+} */
 
 /* 上移动画 */
 @keyframes getup-all {
     from {
-        transform: translate(0, 4rem);
+        transform: scaleX(0.8);
     }
 
     to {
-        transform: translate(0, 0);
+        transform: scale(1);
     }
 }
 
@@ -34,66 +34,321 @@
 }
 
 
-
-
-/* 文章顶部波浪效果 */
-/* 波浪css */
+/* ------------文章顶部波浪效果------------ */
 .main-hero-waves-area {
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: -11px;
-    z-index: 0;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: -11px;;
+  z-index: 0;
+}
+
+.waves-area .waves-svg {
+  width: 100%;
+  height: 60px;
+}
+
+.parallax > use {
+  animation: move-forever 30s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+  fill: var(--body-newbg-color);
+  opacity: 0.5;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+  fill: var(--body-newbg-color);
+  opacity: 0.6;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+  fill: var(--body-newbg-color);
+  opacity: 0.7;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+  fill: var(--body-newbg-color);
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
   }
-  .waves-area .waves-svg {
-    width: 100%;
-    height: 60px;
+  100% {
+    transform: translate3d(85px, 0, 0);
   }
-  /* Animation */
-  
-  .parallax > use {
-    animation: move-forever 30s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+/*移动端不显示*/
+@media (max-width: 424px) {
+  .main-hero-waves-area {
+    display: none;
   }
-  .parallax > use:nth-child(1) {
-    animation-delay: -2s;
-    animation-duration: 7s;
-    fill: var(--body-bg-color);
-    opacity: 0.5;
+}
+
+
+
+
+/* ———————————————页面总属性——————————————— */
+
+
+/* ----------------页面大小---------------- */
+body main {
+  min-height: calc(60vh - 30px);
+}
+
+.container.nopadding-x-md{
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+}
+
+.container.nopadding-x-md .container {
+  margin: 0;
+  max-width: 1400px;
+  margin: auto;
+}
+
+/* 和主题配置统一 */
+.container.nopadding-x-md #board,
+.container.nopadding-x-md #post-board {
+  margin-top: 0 !important;
+  position: relative;
+}
+
+/*修改页边距*/
+.container.nopadding-x-md #board .container > .row {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.container.nopadding-x-md #board .container > .row .col-md-10,
+.container.nopadding-x-md #post-board .container > .row .col-md-10 {
+  max-width: 100% !important;
+  flex: 0 0 100%;
+}
+
+.container.nopadding-x-md #board {
+    box-shadow: none !important;
+    background: none !important;
+}
+
+.body-content,
+.page-content {
+  padding-top: 0 !important;
+}
+
+/* 手机端固定位置 */
+@media(max-width:424px){
+  body > :not(.post) main {
+    position: relative;
   }
-  .parallax > use:nth-child(2) {
-    animation-delay: -3s;
-    animation-duration: 10s;
-    fill: var(--body-bg-color);
-    opacity: 0.6;
+}
+
+/* 调整侧边间距 */
+@media (max-width:767px) {
+  .container.nopadding-x-md #board .container>.row .col-md-10,
+  .container.nopadding-x-md #post-board .container>.row .col-md-10{
+    padding: 0 5px;
   }
-  .parallax > use:nth-child(3) {
-    animation-delay: -4s;
-    animation-duration: 13s;
-    fill: var(--body-bg-color);
-    opacity: 0.7;
+}
+
+/* 调整顶部间距 */
+@media (max-width:424px) {
+  .container.nopadding-x-md:not(#board-ctn) #board{
+      padding-top: 2rem;
   }
-  .parallax > use:nth-child(4) {
-    animation-delay: -5s;
-    animation-duration: 20s;
-    fill: var(--body-bg-color);
+}
+
+/* ----------------头部内容---------------- */
+header .header-inner{
+  position: relative;
+}
+
+header #banner{
+  background: linear-gradient(60deg, rgb(51, 130, 219) 0%,rgb(0, 172, 210) 100%) !important;
+}
+
+header .mask.flex-center{
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}
+
+header #banner .h2{
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+header .header-inner #subtitle{
+  font-size: 35px;
+}
+
+/* 取消移位 */
+.main-hero-waves-area,
+#banner {
+    transform: none !important;
+}
+
+/* 字体大小适配 */
+@media(max-width:424px){
+  header .header-inner #subtitle{
+    font-size: 22px;
   }
-  
-  @keyframes move-forever {
-    0% {
-      transform: translate3d(-90px, 0, 0);
-    }
-    100% {
-      transform: translate3d(85px, 0, 0);
-    }
+}
+
+
+/* ----------------背景修改---------------- */
+body{
+  background-color: #f1f3f8;
+}
+
+.container #board {
+    box-shadow: none !important;
+    background: none !important;
+}
+
+main{
+    background-color: var(--body-newbg-color);
+}
+
+
+
+
+
+
+/* ———————————————左右栏属性——————————————— */
+
+.body-content{
+  padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.body-content #coloum-left{
+  width: calc(100% - 300px);
+  position: relative;
+}
+
+.body-content #coloum-right{
+  width: 300px;
+  padding-left: 20px;
+}
+
+/* 右栏适配不同大小 */
+@media(max-width:1410px){
+  .home .body-content {
+    padding-top: 0 !important;
   }
-  /*Shrinking for mobile*/
-  @media (max-width: 768px) {
-    .main-hero-waves-area {
+}
+
+@media (max-width: 1050px){
+  .body-content #coloum-right {
       display: none;
-    }
+  }
+  .body-content #coloum-left {
+      width: 100%;
+  }
+}
+
+@media(max-width:424px){
+  .body-content {
+    padding-top: 0 !important;
+  }
+}
+
+
+
+/* ————————————————左栏属性———————————————— */
+
+/* -----------------分页栏----------------- */
+.pagination .page-number{
+  background-color: white;
+  border-radius: 8px;
+  margin: 0px 6px;
+  box-shadow: var(--box-shadow-dark);
+  border: 1px solid var(--unfocus-border-color);
+  color: var(--text-color);
+  transition: 0.4s ease !important;
+}
+
+.pagination .page-number.current{
+  background: var(--block-bg-focus-color);
+  color: white;
+}
+
+/* 调整移动端大小 */
+@media (max-width:424px) {
+  .pagination{
+    transform: scale(0.9);
+  }
+}
+
+/* 始终置于底端 */
+nav[aria-label="navigation"] {
+  margin-bottom: 1rem;
+}
+
+/* 鼠标悬浮交互 */
+@media(min-width:424px) {
+
+  .pagination .page-number:hover {
+    background-color: white;
+    border: 1px solid var(--focus-border-color);
+    box-shadow: var(--box-shadow-focus);
   }
 
+  .pagination .page-number:hover {
+    transform: scale(1.1) !important;
+  }
+
+  .pagination .page-number:hover.current {
+    background: var(--block-bg-focus-color);
+    cursor: pointer;
+  }
+}
 
 
 
+
+/* ———————————————搜索栏属性——————————————— */
+
+/* ---------------搜索栏外观--------------- */
+.modal-content {
+  border-radius: 12px !important;
+}
+
+.modal-content .list-group{
+  border-radius: 0 !important;
+}
+
+.modal-content .list-group a{
+  background: #f8f9fc;
+  border-radius: 0px 8px 8px 0px;
+  border-left: 3px solid var(--block-bg-focus-color) !important;
+  transition: 0.4s ease;
+  color: var(--text-color);
+}
+
+/* --------------鼠标悬浮交互-------------- */
+@media(min-width:424px) {
+  .modal-content .list-group a:hover{
+    transform: scale(1.02);
+    background: var(--block-bg-focus-color);
+    color: white;
+    border-radius: 8px 8px 8px 8px;
+  }
+}
+
+.modal-content .list-group p{
+  margin-top: 10px;
+}
 

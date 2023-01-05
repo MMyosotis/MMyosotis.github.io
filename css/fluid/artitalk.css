@@ -1,0 +1,239 @@
+
+/* ————————————————左栏属性———————————————— */
+
+/* ----------------左栏整体---------------- */
+.artitalk .page-content{
+    padding-top: 20px;
+}
+
+.artitalk .page-content #shuoshuo_content{
+    padding:0 !important;
+}
+
+/* 图标间距 */
+#artitalk_main #shuoshuo_edit {
+    margin-top: 1rem;
+}
+
+
+/* --------------单条说说整体-------------- */
+#artitalk_main #shuoshuo_content li {
+    padding-top: 30px;
+    background: white;
+    border-radius: 12px;
+    margin: auto;
+    margin-bottom: 20px;
+    border: 1px solid var(--unfocus-border-color);
+    box-shadow: var(--box-shadow-unfocus);
+    padding: 25px 20px 5px;
+    max-width: 1000px;
+    transition: 0.4s ease;
+}
+
+#artitalk_main .power{
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* 鼠标悬浮交互 */
+@media(min-width:424px){
+    #artitalk_main #shuoshuo_content li:hover{
+        transform: scale(1.02);
+        box-shadow: var(--box-shadow-foucs);
+        border: 1px solid var(--focus-border-color);
+    }
+    
+}
+
+
+/* --------------单条说说内容-------------- */
+#artitalk_main #shuoshuo_content .cbp_tmlabel{
+    background: none;
+    box-shadow: none;
+    border-radius: 10px;
+    padding: 20px 10px 16px 20px;
+    transition: 0.4s ease;
+    margin-bottom: 0;
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmlabel:after{
+    display: none;
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmlabel:hover{
+    transform:none;
+}
+
+/* 说说日期和端口 */
+#artitalk_main #shuoshuo_content .cbp_tmlabel .shuoshuo_time {
+    margin: 0;
+    border-top: none;
+    bottom: 0;
+    left: 0;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-left: -74px;
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmlabel .shuoshuo_time > span:nth-child(2) {
+    margin-left: -6px;
+    position: absolute;
+    top:2px;
+    left: 10px;
+    font-size: 13px;
+}
+
+/* 说说内容 */
+#artitalk_main #shuoshuo_content .cbp_tmlabel > div:nth-child(2){
+    padding: 15px;
+    margin: 10px 0 0px -75px;
+}
+#artitalk_main #shuoshuo_content .cbp_tmlabel > div p{ 
+    padding-right: 10px;
+    color: var(--text-color);
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family: 'STXihei';
+    margin-bottom: 0;
+}
+
+/* 说说删除键 */
+#artitalk_main #shuoshuo_content .cbp_tmlabel .delete_right {
+    width: 20px;
+    height: 20px;
+    right: 10px;
+    top:-30px;
+}
+
+/* 取消间隔显示 */
+#artitalk_main #shuoshuo_content .cbp_tmlabel .shuoshuo_time ~ p{
+    display: none;
+}
+
+/* 说说头像 */
+#artitalk_main #shuoshuo_content .shuoshuo_author_img{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#artitalk_main #shuoshuo_content .shuoshuo_author_img img{
+    transform: scale(1.1);
+    margin-left: 0.5rem;
+}
+
+#artitalk_main #shuoshuo_content .shuoshuo_author_img::after {
+    width: 20px;
+    content: "MQY";
+    margin-left: 20px;
+}
+
+
+/* ---------------评论区说说--------------- */
+#artitalk_main #shuoshuo_content .cbp_tmtimeline li[style="margin: 0 0 0 48px"] {
+    padding-bottom: 10px;
+    margin: auto !important;
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmtimeline li[style="margin: 0 0 0 48px"] .shuoshuo_author_img::after {
+    content: "";
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmtimeline li[style="margin: 0 0 0 48px"] .shuoshuo_time > span:nth-child(1) {
+    font-size: 20px;
+    font-weight: bold;
+    position: absolute;
+    top:-30px;
+    left: 13px;
+    color: var(--text-color);
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmtimeline li[style="margin: 0 0 0 48px"] .shuoshuo_time > span:nth-child(2) span {
+    display: none;
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmtimeline li[style="margin: 0 0 0 48px"] .cbp_tmlabel {
+    padding: 40px 15px 15px 0px;
+}
+
+#artitalk_main #shuoshuo_content .cbp_tmtimeline li[style="margin: 0 0 0 48px"] .cbp_tmlabel div {
+    margin-left: -45px;
+}
+
+
+
+/* ----------------说说按钮---------------- */
+#artitalk_main #shuoshuo_content #readmore {
+    margin-top: 2rem;
+}
+
+#artitalk_main #shuoshuo_content #readmore,
+#artitalk_main #shuoshuo_input .shuoshuo_row .at_button,
+#operare_artitalk #userinfo .at_button,
+#operare_artitalk #shanchur .at_button {
+    background: white;
+    border:1px solid var(--unfocus-border-color);
+    transition: 0.4s ease;
+    overflow: hidden;
+    box-shadow: var(--box-shadow-dark);
+    border-radius: 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#operare_artitalk #shanchur {
+    padding-top :1rem;
+}
+
+/* 鼠标悬浮交互 */
+@media(min-width:424px) {
+
+    #artitalk_main #shuoshuo_content #readmore:hover,
+    #artitalk_main #shuoshuo_input .shuoshuo_row .at_button:hover,
+    #operare_artitalk #userinfo .at_button:hover,
+    #operare_artitalk #shanchur .at_button:hover {
+        box-shadow: var(--box-shadow-foucs);
+        background: var(--block-bg-focus-color);
+        color: white;
+        transform: scale(1.05);
+    }
+}
+
+
+/* --------------适配不同大小-------------- */
+@media (max-width:767px){
+
+    /* 调整内容字体 */
+    #artitalk_main #shuoshuo_content .cbp_tmlabel > div p{ 
+        padding-right: 0px;
+        font-size: 15px;
+    }
+
+    #artitalk_main #shuoshuo_content .cbp_tmlabel > div:nth-child(2){ 
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    #artitalk_main #shuoshuo_content .cbp_tmlabel .shuoshuo_time {
+        font-size: 13px;
+    }
+    
+    #artitalk_main #shuoshuo_content .cbp_tmlabel .shuoshuo_time > span:nth-child(2) {
+        font-size: 12px;
+    }
+}
+
+@media (max-width:424px) {
+
+    /* 调整顶部间距 */
+    .artitalk .container #board {
+        padding-top: 48px;
+    }
+
+    .artitalk .page-content{
+        padding-top: 0px !important;
+    }
+}
+
+
+
+

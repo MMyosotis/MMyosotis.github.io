@@ -1,0 +1,66 @@
+/* *****************************单标签页***************************** */
+/* 备注：部分属性在归档页中设置 */
+
+
+
+/* ————————————————左栏属性———————————————— */
+
+.tag #category-bar{
+    margin-bottom: 0;
+}
+
+.tag .body-content #coloum-left{
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    padding: 20px 40px;
+    box-shadow: var(--box-shadow-dark);
+}
+
+
+
+/* *****************************总标签页***************************** */
+
+
+/* ————————————————左栏属性———————————————— */
+
+/* ---------------左栏总属性--------------- */
+.tags .body-content #coloum-left{
+    margin: auto;
+    max-width: 1200px;
+    margin-top: 0;
+}
+
+.tags .body-content #coloum-left .tagcloud{
+    padding: 0;
+}
+
+.tags .body-content #coloum-left .tagcloud a{
+    margin: 10px;
+    background-color: white;
+    box-shadow: var(--box-shadow-dark);
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    padding: 8px 16px;
+    transition: 0.4s ease;
+}
+
+/* 字体大小适配 */
+@media(max-width:424px){
+    .tags .body-content #coloum-left .tagcloud a{
+        transform: scale(0.8);
+        margin: 5px;
+    }
+}
+
+
+/* --------------鼠标悬浮交互-------------- */
+@media(min-width:424px) {
+
+    .tags .body-content #coloum-left .tagcloud a:hover {
+        background-color: var(--block-bg-focus-color);
+        transform: scale(1.1);
+        color: white !important;
+        box-shadow: var(--box-shadow-focus);
+    }
+}

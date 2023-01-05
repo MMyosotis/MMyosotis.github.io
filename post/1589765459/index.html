@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -80,13 +81,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -102,13 +107,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="post" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -139,7 +144,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -218,7 +223,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -237,7 +242,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -269,30 +275,38 @@
           
   <div class="mt-3">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        MQY
-      </span>
-    
-    
-      <span class="post-meta">
+      <span class="post-meta postDate">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2022-11-25 20:00" pubdate>
           2022年11月25日
         </time>
       </span>
     
-  </div>
-
-  <div class="mt-1">
     
-      <span class="post-meta mr-2">
+      <span class="post-meta wordCount">
         <i class="iconfont icon-chart"></i>
         
           7.9k 字
         
       </span>
     
+  </div>
+
+  <div class="mt-1">
+    
+    <!-- 自己加入的代码！！ -->
+    <span class="myupdated">
+      
+        <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
+        <span class="post-meta ">
+          
+            
+              2022年11月29日
+            
+          
+        </span>
+      
+    </span>
 
     
 
@@ -300,19 +314,7 @@
     
   </div>
 
-  <!-- 自己加入的代码！！ -->
-  <span class="myupdated">
-    
-      <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
-      <span class="post-meta ">
-        
-          
-            2022年11月29日
-          
-        
-      </span>
-    
-  </span>
+
 
 
         
@@ -346,43 +348,27 @@
 
   <main>
     
-      
-
-<!-- 添加mysidebar-bar -->
-<div class="mysidebar-bar">
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <div class="mytoolbox">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        <a class="happy"></a>
-      </div>
-    </div>
-  </div>
-  <div class="opentoolbox">
-    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
-  </div>
-</div>
-
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">索引 - MySQL</h1>
-            
-            
-              <div class="markdown-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                <h1 id="1-索引概述"><a href="#1-索引概述" class="headerlink" title="1. 索引概述"></a>1. 索引概述</h1><p>索引是存储引擎用来快速查找记录的一种有序<font class="word-stress">数据结构</font>，不使用索引的情况下，查找是通过全表扫描。</p>
+
+
+
+
+
+
+<div class="body-content mx-auto" id="board-ctn">
+  <div id="coloum-left">
+    <!-- SEO header -->
+    <h1 style="display: none">索引 - MySQL</h1>
+    
+    
+      <div class="markdown-body">
+        
+        <h1 id="1-索引概述"><a href="#1-索引概述" class="headerlink" title="1. 索引概述"></a>1. 索引概述</h1><p>索引是存储引擎用来快速查找记录的一种有序<font class="word-stress">数据结构</font>，不使用索引的情况下，查找是通过全表扫描。</p>
 <p>索引优点：</p>
 <ul>
 <li>提高数据检索的效率，降低数据库的 IO 成本</li>
@@ -580,11 +566,11 @@
 <h1 id="4-索引使用"><a href="#4-索引使用" class="headerlink" title="4. 索引使用"></a>4. 索引使用</h1><h2 id="4-1-索引语法"><a href="#4-1-索引语法" class="headerlink" title="4.1 索引语法"></a>4.1 索引语法</h2><p><strong>语法</strong></p>
 <ul>
 <li><p>创建索引</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-sijq0nlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-sijq0nlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 方式1：直接创建索引</span><br><span class="hljs-keyword">create</span> [<span class="hljs-keyword">unique</span><span class="hljs-operator">|</span>fulltext] index 索引名 <span class="hljs-keyword">on</span> 表名 (字段列表);<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0kktrolcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-0kktrolcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 方式1：直接创建索引</span><br><span class="hljs-keyword">create</span> [<span class="hljs-keyword">unique</span><span class="hljs-operator">|</span>fulltext] index 索引名 <span class="hljs-keyword">on</span> 表名 (字段列表);<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-z7wn3clc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-z7wn3clc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 方式2：在创建表时创建索引</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> 表名 (<br>	定义字段...<br>    [<span class="hljs-keyword">unique</span><span class="hljs-operator">|</span>fulltext] index 索引名(字段列表)<br>)<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-iav0knlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-iav0knlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 方式2：在创建表时创建索引</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> 表名 (<br>	定义字段...<br>    [<span class="hljs-keyword">unique</span><span class="hljs-operator">|</span>fulltext] index 索引名(字段列表)<br>)<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0uimg8lc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-0uimg8lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 方式3：在修改表时创建索引</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> 表名 <span class="hljs-keyword">add</span> [<span class="hljs-keyword">unique</span><span class="hljs-operator">|</span>fulltext] index 索引名(字段列表);<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-vph1c8lcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-vph1c8lcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 方式3：在修改表时创建索引</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> 表名 <span class="hljs-keyword">add</span> [<span class="hljs-keyword">unique</span><span class="hljs-operator">|</span>fulltext] index 索引名(字段列表);<br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p>查看索引</p>
 <p><font class="code-sentence"><code>show index from 表名;</code></font></p>
@@ -594,7 +580,7 @@
 </li>
 </ul>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-moc5qjlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-moc5qjlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 准备数据</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> tb_user(<br>    id         <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;主键ID&#x27;</span>,<br>    name       <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>),<br>    phone      <span class="hljs-type">char</span>(<span class="hljs-number">11</span>),<br>    email      <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>),<br>    profession <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>),<br>    age        <span class="hljs-type">char</span>(<span class="hljs-number">5</span>),<br>    gender     <span class="hljs-type">int</span>,<br>    status     <span class="hljs-type">int</span>,<br>    createTime datetime<br>) comment <span class="hljs-string">&#x27;用户表&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> tb_user(name, phone, email, profession, age, gender, status, createTime)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">18012345678</span>, <span class="hljs-string">&#x27;saljdsaiodjoife@126.com&#x27;</span>, <span class="hljs-string">&#x27;土木工程&#x27;</span>, <span class="hljs-number">23</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-string">&#x27;2001-02-02 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">18013895678</span>, <span class="hljs-string">&#x27;asdfasdaa@163.com&#x27;</span>, <span class="hljs-string">&#x27;软件工程&#x27;</span>, <span class="hljs-number">25</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;2001-03-05 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">18912309008</span>, <span class="hljs-string">&#x27;asasdaoAjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2001-04-22 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-number">18924204008</span>, <span class="hljs-string">&#x27;asjsdgaoAjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">26</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;2001-06-28 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;越七&#x27;</span>, <span class="hljs-number">18932552847</span>, <span class="hljs-string">&#x27;sdadAjdo@163.com&#x27;</span>, <span class="hljs-string">&#x27;舞蹈&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2001-09-01 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;11&#x27;</span>, <span class="hljs-number">18932552848</span>, <span class="hljs-string">&#x27;aasdffjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;工程造价&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2002-08-01 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;22&#x27;</span>, <span class="hljs-number">18932552849</span>, <span class="hljs-string">&#x27;asjas213o@126.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2002-01-12 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;33&#x27;</span>, <span class="hljs-number">18932552850</span>, <span class="hljs-string">&#x27;asjagasddsaAjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;土木工程&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2001-02-04 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;44&#x27;</span>, <span class="hljs-number">18932552852</span>, <span class="hljs-string">&#x27;q1234wajdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;土木工程&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2002-03-15 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;55&#x27;</span>, <span class="hljs-number">18932552853</span>, <span class="hljs-string">&#x27;aa22Ajdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;风景园林&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2003-04-23 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;66&#x27;</span>, <span class="hljs-number">18932552854</span>, <span class="hljs-string">&#x27;asd24@qq.com&#x27;</span>, <span class="hljs-string">&#x27;工程造价&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2003-08-31 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;77&#x27;</span>, <span class="hljs-number">18932552855</span>, <span class="hljs-string">&#x27;dfgd324@qq.com&#x27;</span>, <span class="hljs-string">&#x27;结构风工程&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2004-07-08 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;88&#x27;</span>, <span class="hljs-number">18932552856</span>, <span class="hljs-string">&#x27;gdfeaa@qq.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2004-09-23 00:00:00&#x27;</span>);<br><br><span class="hljs-comment">-- 创建普通索引</span><br><span class="hljs-keyword">create</span> index idx_name <span class="hljs-keyword">on</span> tb_user(name);<br><br><span class="hljs-comment">-- 创建唯一索引</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">unique</span> index idx_phone <span class="hljs-keyword">on</span> tb_user(phone);<br><br><span class="hljs-comment">-- 创建联合索引</span><br><span class="hljs-keyword">create</span> index idx_pro_age_sta <span class="hljs-keyword">on</span> tb_user(profession, age, status);<br><br><span class="hljs-comment">-- 查看索引</span><br><span class="hljs-keyword">show</span> index <span class="hljs-keyword">from</span> tb_user;<br><br><span class="hljs-comment">-- 删除索引</span><br><span class="hljs-keyword">drop</span> index idx_name <span class="hljs-keyword">on</span> tb_user;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-405o7vlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-405o7vlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 准备数据</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> tb_user(<br>    id         <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;主键ID&#x27;</span>,<br>    name       <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>),<br>    phone      <span class="hljs-type">char</span>(<span class="hljs-number">11</span>),<br>    email      <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>),<br>    profession <span class="hljs-type">varchar</span>(<span class="hljs-number">20</span>),<br>    age        <span class="hljs-type">char</span>(<span class="hljs-number">5</span>),<br>    gender     <span class="hljs-type">int</span>,<br>    status     <span class="hljs-type">int</span>,<br>    createTime datetime<br>) comment <span class="hljs-string">&#x27;用户表&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> tb_user(name, phone, email, profession, age, gender, status, createTime)<br><span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">18012345678</span>, <span class="hljs-string">&#x27;saljdsaiodjoife@126.com&#x27;</span>, <span class="hljs-string">&#x27;土木工程&#x27;</span>, <span class="hljs-number">23</span>, <span class="hljs-number">1</span>, <span class="hljs-number">6</span>, <span class="hljs-string">&#x27;2001-02-02 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">18013895678</span>, <span class="hljs-string">&#x27;asdfasdaa@163.com&#x27;</span>, <span class="hljs-string">&#x27;软件工程&#x27;</span>, <span class="hljs-number">25</span>, <span class="hljs-number">2</span>, <span class="hljs-number">0</span>, <span class="hljs-string">&#x27;2001-03-05 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">18912309008</span>, <span class="hljs-string">&#x27;asasdaoAjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">22</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2001-04-22 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-number">18924204008</span>, <span class="hljs-string">&#x27;asjsdgaoAjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">26</span>, <span class="hljs-number">1</span>, <span class="hljs-number">1</span>, <span class="hljs-string">&#x27;2001-06-28 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;越七&#x27;</span>, <span class="hljs-number">18932552847</span>, <span class="hljs-string">&#x27;sdadAjdo@163.com&#x27;</span>, <span class="hljs-string">&#x27;舞蹈&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2001-09-01 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;11&#x27;</span>, <span class="hljs-number">18932552848</span>, <span class="hljs-string">&#x27;aasdffjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;工程造价&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2002-08-01 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;22&#x27;</span>, <span class="hljs-number">18932552849</span>, <span class="hljs-string">&#x27;asjas213o@126.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2002-01-12 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;33&#x27;</span>, <span class="hljs-number">18932552850</span>, <span class="hljs-string">&#x27;asjagasddsaAjdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;土木工程&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2001-02-04 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;44&#x27;</span>, <span class="hljs-number">18932552852</span>, <span class="hljs-string">&#x27;q1234wajdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;土木工程&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2002-03-15 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;55&#x27;</span>, <span class="hljs-number">18932552853</span>, <span class="hljs-string">&#x27;aa22Ajdo@qq.com&#x27;</span>, <span class="hljs-string">&#x27;风景园林&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2003-04-23 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;66&#x27;</span>, <span class="hljs-number">18932552854</span>, <span class="hljs-string">&#x27;asd24@qq.com&#x27;</span>, <span class="hljs-string">&#x27;工程造价&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2003-08-31 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;77&#x27;</span>, <span class="hljs-number">18932552855</span>, <span class="hljs-string">&#x27;dfgd324@qq.com&#x27;</span>, <span class="hljs-string">&#x27;结构风工程&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2004-07-08 00:00:00&#x27;</span>),<br>       (<span class="hljs-string">&#x27;88&#x27;</span>, <span class="hljs-number">18932552856</span>, <span class="hljs-string">&#x27;gdfeaa@qq.com&#x27;</span>, <span class="hljs-string">&#x27;会计&#x27;</span>, <span class="hljs-number">33</span>, <span class="hljs-number">2</span>, <span class="hljs-number">2</span>, <span class="hljs-string">&#x27;2004-09-23 00:00:00&#x27;</span>);<br><br><span class="hljs-comment">-- 创建普通索引</span><br><span class="hljs-keyword">create</span> index idx_name <span class="hljs-keyword">on</span> tb_user(name);<br><br><span class="hljs-comment">-- 创建唯一索引</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">unique</span> index idx_phone <span class="hljs-keyword">on</span> tb_user(phone);<br><br><span class="hljs-comment">-- 创建联合索引</span><br><span class="hljs-keyword">create</span> index idx_pro_age_sta <span class="hljs-keyword">on</span> tb_user(profession, age, status);<br><br><span class="hljs-comment">-- 查看索引</span><br><span class="hljs-keyword">show</span> index <span class="hljs-keyword">from</span> tb_user;<br><br><span class="hljs-comment">-- 删除索引</span><br><span class="hljs-keyword">drop</span> index idx_name <span class="hljs-keyword">on</span> tb_user;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-2-联合索引"><a href="#4-2-联合索引" class="headerlink" title="4.2 联合索引"></a>4.2 联合索引</h2><p>索引包含了多个列，多个列的信息同时存储在索引键值中。</p>
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/03-20.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:40%;" />
@@ -605,11 +591,11 @@
 <li>如果跳跃某一列，索引将部分失效（后面的字段索引失效）。</li>
 <li>如果某一列采用范围查询（&gt; 或 &lt;），则该列之后的字段索引也将失效。改用 &gt;&#x3D;  &lt;&#x3D; between 则不存在该问题</li>
 </ul>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-99ups6lc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-99ups6lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- pro、age、sta索引均生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br><br><span class="hljs-comment">-- pro、age索引均生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span>;<br><br><span class="hljs-comment">-- 跳过了age列：pro索引生效，sta索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br><br><span class="hljs-comment">-- 未从最左列开始：索引全部失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span>;<br><br><span class="hljs-comment">-- age采用了范围查询：pro、age索引生效，sta索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">&gt;</span> <span class="hljs-string">&#x27;22&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-9i0ia3lcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-9i0ia3lcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- pro、age、sta索引均生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br><br><span class="hljs-comment">-- pro、age索引均生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span>;<br><br><span class="hljs-comment">-- 跳过了age列：pro索引生效，sta索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br><br><span class="hljs-comment">-- 未从最左列开始：索引全部失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span>;<br><br><span class="hljs-comment">-- age采用了范围查询：pro、age索引生效，sta索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">&gt;</span> <span class="hljs-string">&#x27;22&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-3-前缀索引"><a href="#4-3-前缀索引" class="headerlink" title="4.3 前缀索引"></a>4.3 前缀索引</h2><p>当字段类型为字符串时，有时需要索引很长的字符串，浪费磁盘 IO。可只取字符串的一部分前缀建立索引，提高查询效率。</p>
 <p>在建立索引时，通过在字段后面加上括号限定字符个数：<font class="code-word"><code>字段名(字符个数)</code></font></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-dduc9tlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-dduc9tlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 创建前缀索引，取前5个字符</span><br><span class="hljs-keyword">create</span> index idx_emi_5 <span class="hljs-keyword">on</span> tb_user(email(<span class="hljs-number">5</span>));<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-uah6oslcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-uah6oslcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 创建前缀索引，取前5个字符</span><br><span class="hljs-keyword">create</span> index idx_emi_5 <span class="hljs-keyword">on</span> tb_user(email(<span class="hljs-number">5</span>));<br></code></pre></td></tr></table></div></figure>
 
 <p>前缀查询会在二级索引中查询到符合条件的前缀，获取对应主键后再<font class="word-stress">回表查询获得完整行信息</font>，然后再通过行信息中完整的字符串去比对。</p>
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/03-22.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:50%;" />
@@ -628,24 +614,24 @@
 </li>
 </ul>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-omrcqolc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-omrcqolc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 建议使用phone的索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user force index(idx_phone) <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&gt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br><br><span class="hljs-comment">-- 忽略pro_age_sta索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user ignore index(idx_pro_age_sta) <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br><br><span class="hljs-comment">-- 强制使用phone的索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user force index(idx_phone) <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&gt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-hoe90qlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-hoe90qlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 建议使用phone的索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user force index(idx_phone) <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&gt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br><br><span class="hljs-comment">-- 忽略pro_age_sta索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user ignore index(idx_pro_age_sta) <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br><br><span class="hljs-comment">-- 强制使用phone的索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user force index(idx_phone) <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&gt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-5-索引失效"><a href="#4-5-索引失效" class="headerlink" title="4.5 索引失效"></a>4.5 索引失效</h2><p>使用索引时部分操作将导致索引失效：</p>
 <ul>
 <li><p>在索引上进行列运算，索引将失效</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-etf6fqlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-etf6fqlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 进行函数运算，索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> <span class="hljs-built_in">substring</span>(phone, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>) <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;78&#x27;</span>;<br><br><span class="hljs-comment">-- 进行算数运算，索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> id <span class="hljs-operator">+</span> <span class="hljs-number">2</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-pf2bedlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-pf2bedlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 进行函数运算，索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> <span class="hljs-built_in">substring</span>(phone, <span class="hljs-number">10</span>, <span class="hljs-number">2</span>) <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;78&#x27;</span>;<br><br><span class="hljs-comment">-- 进行算数运算，索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> id <span class="hljs-operator">+</span> <span class="hljs-number">2</span> <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;<br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p>字符串类型字段使用时不加引号，索引将失效</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-in07oilc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-in07oilc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;18012345678&#x27;</span>;<br><br><span class="hljs-comment">-- 字符串类型字段不加引号，搜索成功，但索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">=</span> <span class="hljs-number">18012345678</span>;<br><br><span class="hljs-comment">-- age字符串类型未加引号：pro索引生效，age、sta索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-number">23</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-9jwgsslcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-9jwgsslcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;18012345678&#x27;</span>;<br><br><span class="hljs-comment">-- 字符串类型字段不加引号，搜索成功，但索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">=</span> <span class="hljs-number">18012345678</span>;<br><br><span class="hljs-comment">-- age字符串类型未加引号：pro索引生效，age、sta索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-number">23</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p>模糊匹配中，头部模糊匹配索引将失效，尾部模糊匹配索引不会失效。</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-hom0nylc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-hom0nylc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 尾部模糊匹配，索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;土木%&#x27;</span>;<br><br><span class="hljs-comment">-- 头部模糊匹配，索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%工程&#x27;</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%工%&#x27;</span>;<br><br><span class="hljs-comment">-- pro模糊匹配：pro、age、sta索引全部失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-tea6yalcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-tea6yalcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 尾部模糊匹配，索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;土木%&#x27;</span>;<br><br><span class="hljs-comment">-- 头部模糊匹配，索引失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%工程&#x27;</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%工%&#x27;</span>;<br><br><span class="hljs-comment">-- pro模糊匹配：pro、age、sta索引全部失效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-keyword">like</span> <span class="hljs-string">&#x27;%工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p>对于 <font class="code-word"><code>or</code></font> 连接的条件，只要有一个条件没有索引，则索引均不会生效</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-lba0fslc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-lba0fslc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 条件均有索引，索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span>;<br><br><span class="hljs-comment">-- gender没有索引，索引全部失效（包括name的索引）</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> gender <span class="hljs-operator">=</span> <span class="hljs-number">1</span> <span class="hljs-keyword">or</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-nsd6f6lcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-nsd6f6lcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 条件均有索引，索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span>;<br><br><span class="hljs-comment">-- gender没有索引，索引全部失效（包括name的索引）</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> gender <span class="hljs-operator">=</span> <span class="hljs-number">1</span> <span class="hljs-keyword">or</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p>如果 MySQL 评估使用索引比使用全表查找还慢，则不使用索引</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-w0nmoflc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-w0nmoflc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 使用索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&lt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br><br><span class="hljs-comment">-- 未使用索引，而使用全表扫描，因为绝大多数据都满足条件</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&gt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br></code></pre></td></tr></table></div></figure></li>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-2kd7wclcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-2kd7wclcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 使用索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&lt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br><br><span class="hljs-comment">-- 未使用索引，而使用全表扫描，因为绝大多数据都满足条件</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> phone <span class="hljs-operator">&gt;=</span> <span class="hljs-string">&#x27;18900000000&#x27;</span>;<br></code></pre></td></tr></table></div></figure></li>
 </ul>
 <h2 id="4-6-覆盖和回表"><a href="#4-6-覆盖和回表" class="headerlink" title="4.6 覆盖和回表"></a>4.6 覆盖和回表</h2><p><strong>覆盖查询</strong></p>
 <p>覆盖查询即查询的字段在索引中能够全部找到：</p>
@@ -660,7 +646,7 @@
 <p>回表查询即查询的字段在索引中不能够全部找到，只能通过二级索引先查到主键，在根据主键在聚集索引中查到行数据。</p>
 <img src="D:\Study\编程\Java\图片\03 MySQL\03-21.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:40%;" />
 
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wxbojnlc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-wxbojnlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 覆盖查询</span><br><span class="hljs-keyword">select</span> id, profession, age, status <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">23</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br><br><span class="hljs-comment">-- 回表查询</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">23</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-z27ov5lcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-z27ov5lcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- 覆盖查询</span><br><span class="hljs-keyword">select</span> id, profession, age, status <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">23</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br><br><span class="hljs-comment">-- 回表查询</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> age <span class="hljs-operator">=</span> <span class="hljs-number">23</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;6&#x27;</span> <span class="hljs-keyword">and</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-7-单列和联合"><a href="#4-7-单列和联合" class="headerlink" title="4.7 单列和联合"></a>4.7 单列和联合</h2><p><strong>单列索引</strong></p>
 <p>对于多列联合查询，每个列均为单列索引的情况下：</p>
@@ -668,11 +654,11 @@
 <li>条件之间用 and 连接：仅其中一个索引生效，MySQL 优化器会评估一个效率最高的索引字段，其他字段的查询则会<font class="word-stress">涉及回表查询</font></li>
 <li>条件之间用 or 连接：每个索引均会生效</li>
 </ul>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-vun6v7lc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-vun6v7lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- name和phone均为单列索引，该语句仅使用了phone的索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span> <span class="hljs-keyword">and</span> phone <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;18012345678&#x27;</span>;<br><br><span class="hljs-comment">-- id和name均为单列索引，该语句同时使用了id和name的索引</span><br>explain <span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-bb6mxtlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-bb6mxtlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- name和phone均为单列索引，该语句仅使用了phone的索引</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span> <span class="hljs-keyword">and</span> phone <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;18012345678&#x27;</span>;<br><br><span class="hljs-comment">-- id和name均为单列索引，该语句同时使用了id和name的索引</span><br>explain <span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">2</span> <span class="hljs-keyword">or</span> name <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;张三&#x27;</span>;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>联合索引</strong></p>
 <p>对于多列联合查询，在遵循最左前缀法则的情况下索引生效，不会涉及回表查询，优于使用多个单列查询。</p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1980pclc38hmdi"></i><span>sql</span><div class="collapse show" id="collapse-1980pclc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- pro、age、sta的联合索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-rv3mcilcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-rv3mcilcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 案例表格见索引语法</span><br><br><span class="hljs-comment">-- pro、age、sta的联合索引生效</span><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> tb_user <span class="hljs-keyword">where</span> profession <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;土木工程&#x27;</span> <span class="hljs-keyword">and</span> age <span class="hljs-operator">=</span> <span class="hljs-string">&#x27;23&#x27;</span> <span class="hljs-keyword">and</span> status <span class="hljs-operator">=</span> <span class="hljs-number">6</span>;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -688,12 +674,12 @@
 <li>如果索引列不能存储 NULL 值，建议在创建表时使用 NOT NULL 约束它。当优化器直到每列是否包含 NULL 值时，它可以更好地确定哪个索引最有效地用于查询。</li>
 </ul>
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
+        
+      </div>
+    
+    <hr/>
+    <div>
+      <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -729,7 +715,7 @@
 </div>
 
 
-              
+      
   
 
   <div class="license-box my-3">
@@ -779,24 +765,32 @@
 
 
 
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+      
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这部分全改成自己的侧边栏了 -->
+    
+  </div>
+  
+
+  <div class="side-col d-none d-lg-block col-lg-2">
+
+    <!-- 这部分全改成自己的侧边栏了 -->
 <section id="mysidebar">
+  <!--头部-->
+  <div class="content-header clearfix">
+    <a href="javaScript:;" class="current">目录</a>
+    <a href="javaScript:;" >分类</a>
+</div>
+<!--内容-->
 <!-- 目录/分类 -->
   <div class="content-body" id="mysidebar-body">
     <div class="dom" style="display: block">
-      <aside class="sidebar" style="margin-left: -1rem">
+      <aside class="bar toc-bar" >
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -805,7 +799,7 @@
       </aside>
     </div>
     <div class="dom" style="display: none;">
-      <aside class="sidebar category-bar" style="margin-right: -1rem">
+      <aside class="bar category-bar" >
         
 
 
@@ -819,16 +813,19 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="04 MySQL"
+          list-group-item category-item-action " title="04 MySQL"
         id="heading-496f669120bacf521daa31b619a4e1c9" role="tab" data-toggle="collapse" href="#collapse-496f669120bacf521daa31b619a4e1c9"
         aria-expanded="true"
       >
-        04 MySQL
+      <!-- 字符串删掉前面的数字 -->
+        MySQL
         <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
+    </div>
       <div class="category-collapse collapse show" id="collapse-496f669120bacf521daa31b619a4e1c9"
            role="tabpanel" aria-labelledby="heading-496f669120bacf521daa31b619a4e1c9">
         
@@ -843,6 +840,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 - MySQL</span>
+          <time>11-14</time>
         </a>
       
     
@@ -852,6 +850,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语句 - MySQL</span>
+          <time>11-18</time>
         </a>
       
     
@@ -861,6 +860,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">约束 - MySQL</span>
+          <time>11-21</time>
         </a>
       
     
@@ -870,6 +870,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">多表查询 - MySQL</span>
+          <time>11-23</time>
         </a>
       
     
@@ -879,6 +880,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">存储引擎 - MySQL</span>
+          <time>11-28</time>
         </a>
       
     
@@ -888,6 +890,7 @@
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">索引 - MySQL</span>
+          <time>11-25</time>
         </a>
       
     
@@ -897,6 +900,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">事务和锁 - MySQL</span>
+          <time>11-26</time>
         </a>
       
     
@@ -906,6 +910,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">JDBC - MySQL</span>
+          <time>12-02</time>
         </a>
       
     
@@ -947,11 +952,18 @@
         }
     }
 </script>
+
 </section>
 
 
 
-    </div>
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+      $(function(){
+          $('.toc-body').wrap('<div></div>');
+      });
+   </script> -->
   </div>
 </div>
 
@@ -959,14 +971,6 @@
 
 
 
-  
-
-
-
-  
-
-
-
 
   
 
@@ -977,9 +981,23 @@
 
 
 
+  
 
 
 
+  
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- post页格式和下面统一 -->
     
 
     <!-- 这里删除了向上的按钮 -->
@@ -1011,14 +1029,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -1031,6 +1053,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -1054,6 +1077,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
 
@@ -1088,6 +1114,8 @@
       includeTitleTags: true,
       headingsOffset  : -boardTop,
     }, CONFIG.toc));
+    //添加这一句
+    toc.find('.tocbot-link').wrapInner('<div class="text"></div>');
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }

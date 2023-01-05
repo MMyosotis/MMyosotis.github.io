@@ -1,7 +1,7 @@
-/* ----------关于页样式---------- */
 
 
 
+/* —————————————————头像栏————————————————— */
 
 /* 关于页图标动画 */
 @media (min-width:424px) {
@@ -34,23 +34,54 @@
     }
 }
 
-/* 手机端入场动画和字体修改 */
-@media (max-width:424px) {
-    .about .container.nopadding-x-md .container {
-        animation: getnote-about 1s ease, getsolid-about 0.4s ease-in;
-        animation-fill-mode: both;
-    }
+
+/* —————————————————内容快————————————————— */
+
+/* 第一栏 */
+.about .author-content:nth-child(1){
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1400px;
+    justify-content: space-between;
 }
 
-/* 文字上移动画 */
-@keyframes getnote-about {
-    from {
-        transform: translate(0rem, 3rem);
-    }
+.about #posts-chart {
+    height: 100% !important;
+    width: calc(50% - 10px);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-unfocus);
+    border: 1px solid var(--unfocus-border-color) !important;
+    background: white;
+    padding: 30px 20px 0 !important;
+    height: 400px !important;
+}
 
-    to {
-        transform: translate(0, 0);
-    }
+.about #categories-chart {
+    height: 100% !important;
+    width: calc(50% - 10px);
+    border-radius: 12px;
+    box-shadow: var(--box-shadow-unfocus);
+    border: 1px solid var(--unfocus-border-color) !important;
+    background: white;
+    padding: 30px 20px !important;
+    height: 400px !important;
 }
 
 
+/* ———————————————响应式布局——————————————— */
+@media(max-width:767px) {
+
+    .about .author-content:nth-child(1){
+        display: block;
+    }
+    
+    .about #posts-chart {
+        width: 100%;
+    }
+    
+    .about #categories-chart {
+        margin-top: 20px;
+        width: 100%;
+    }
+}

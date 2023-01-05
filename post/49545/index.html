@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -80,13 +81,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -102,13 +107,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="post" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -139,7 +144,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -218,7 +223,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -237,7 +242,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -269,30 +275,29 @@
           
   <div class="mt-3">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        MQY
-      </span>
-    
-    
-      <span class="post-meta">
+      <span class="post-meta postDate">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2022-09-27 20:00" pubdate>
           2022年9月27日
         </time>
       </span>
     
-  </div>
-
-  <div class="mt-1">
     
-      <span class="post-meta mr-2">
+      <span class="post-meta wordCount">
         <i class="iconfont icon-chart"></i>
         
           3.8k 字
         
       </span>
     
+  </div>
+
+  <div class="mt-1">
+    
+    <!-- 自己加入的代码！！ -->
+    <span class="myupdated">
+      
+    </span>
 
     
 
@@ -300,10 +305,7 @@
     
   </div>
 
-  <!-- 自己加入的代码！！ -->
-  <span class="myupdated">
-    
-  </span>
+
 
 
         
@@ -337,43 +339,27 @@
 
   <main>
     
-      
-
-<!-- 添加mysidebar-bar -->
-<div class="mysidebar-bar">
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <div class="mytoolbox">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        <a class="happy"></a>
-      </div>
-    </div>
-  </div>
-  <div class="opentoolbox">
-    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
-  </div>
-</div>
-
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">注解 - Java SE</h1>
-            
-            
-              <div class="markdown-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                <h1 id="1-注解概述"><a href="#1-注解概述" class="headerlink" title="1. 注解概述"></a>1. 注解概述</h1><p>Java 注解又称 Java 标注，是 JDK5.0 引入的一种注释机制。Java 语言中的类、构造器、方法、成员变量、参数等都可以被注解进行标注，然后进行特殊处理。</p>
+
+
+
+
+
+
+<div class="body-content mx-auto" id="board-ctn">
+  <div id="coloum-left">
+    <!-- SEO header -->
+    <h1 style="display: none">注解 - Java SE</h1>
+    
+    
+      <div class="markdown-body">
+        
+        <h1 id="1-注解概述"><a href="#1-注解概述" class="headerlink" title="1. 注解概述"></a>1. 注解概述</h1><p>Java 注解又称 Java 标注，是 JDK5.0 引入的一种注释机制。Java 语言中的类、构造器、方法、成员变量、参数等都可以被注解进行标注，然后进行特殊处理。</p>
 <h1 id="2-自带注解"><a href="#2-自带注解" class="headerlink" title="2. 自带注解"></a>2. 自带注解</h1><p>Java 中自带了一些注解，其中作用在代码中的常见注解有：</p>
 <ul>
 <li><font class="code-word"><code>@Override</code></font>：重写标记，一般在子类继承父类后，标注在重写过后的子类方法上。如果发现其父类，或者是引用的接口中并没有该方法时，会报编译错误。</li>
@@ -384,15 +370,15 @@
 <h1 id="3-自定义注解"><a href="#3-自定义注解" class="headerlink" title="3. 自定义注解"></a>3. 自定义注解</h1><p><strong>自定义注解格式</strong></p>
 <p>自定义注解就是自己做一个注解来使用，注解使用 <font class="code-word"><code>@interface</code></font> 关键字来定义。注解内的属性定义格式如下：<font class="code-sentence"><code>public 属性类型 属性名() default 默认值;</code></font> </p>
 <p>在使用自定义注解时，括号内必须采用 <font class="code-word"><code>名称=值</code></font> 的形式，对于有默认值的属性，可以不写出来而直接取默认值。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-mwh4qplc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-mwh4qplc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义注解</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">name</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-string">&quot;默认书本&quot;</span>;  <br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span>;                            <br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7fvvwllcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-7fvvwllcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义注解</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">name</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-string">&quot;默认书本&quot;</span>;  <br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span>;                            <br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-i47759lc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-i47759lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br><br>    <span class="hljs-comment">//使用注解标记方法</span><br>    <span class="hljs-meta">@MyBook(price = 500)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//使用注解标记变量</span><br>        <span class="hljs-meta">@MyBook(name = &quot;书本&quot;, price = 128)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第一本书&quot;</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-v9epxqlcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-v9epxqlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br><br>    <span class="hljs-comment">//使用注解标记方法</span><br>    <span class="hljs-meta">@MyBook(price = 500)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <span class="hljs-comment">//使用注解标记变量</span><br>        <span class="hljs-meta">@MyBook(name = &quot;书本&quot;, price = 128)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第一本书&quot;</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>注解类的特殊属性</strong></p>
 <p><font class="code-word"><code>value</code></font> 属性：如果只有一个 value 属性或有多个属性但除了 value 均有默认值的情况下，若只设定 value 属性的值，可以省略 value 的名称不写。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-l5n9nslc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-l5n9nslc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;                  <span class="hljs-comment">//value属性</span><br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-x3nsvwlcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-x3nsvwlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;                  <span class="hljs-comment">//value属性</span><br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-kye00ilc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-kye00ilc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-meta">@MyBook(&quot;书本&quot;)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第一本书&quot;</span>;<br>       <br>        <span class="hljs-meta">@MyBook(value = &quot;书本&quot;, price = 100)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第二本书&quot;</span>;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-vimqaflcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-vimqaflcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-meta">@MyBook(&quot;书本&quot;)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第一本书&quot;</span>;<br>       <br>        <span class="hljs-meta">@MyBook(value = &quot;书本&quot;, price = 100)</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">book2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;第二本书&quot;</span>;<br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -437,7 +423,7 @@
     <!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script></div><!-- hexo injector body_end end --></body>
 </table>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-5lsdsdlc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-5lsdsdlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;<br><span class="hljs-keyword">import</span> java.lang.annotation.Target;<br><br><span class="hljs-meta">@Target(ElementType.METHOD)</span>    <span class="hljs-comment">//设定MyBook注解只可以在方法中使用</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-od4xgrlcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-od4xgrlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;<br><span class="hljs-keyword">import</span> java.lang.annotation.Target;<br><br><span class="hljs-meta">@Target(ElementType.METHOD)</span>    <span class="hljs-comment">//设定MyBook注解只可以在方法中使用</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p><font class="code-word"><code>@Retention</code></font>：声明注解的生命周期。其中使用的值定义在 <font class="code-word"><code>RetentionPolicy</code></font> 枚举类中，常用值如下：</p>
 <table class="myform">
@@ -464,7 +450,7 @@
     </body>
 </table>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-qwfym0lc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-qwfym0lc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.Retention;<br><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;<br><br><span class="hljs-meta">@Retention(RetentionPolicy.RUNTIME)</span>   <span class="hljs-comment">//设定MyBook注解在源码阶段、字节码文件阶段、运行阶段均存在</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure></li>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ugi7wslcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-ugi7wslcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.Retention;<br><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;<br><br><span class="hljs-meta">@Retention(RetentionPolicy.RUNTIME)</span>   <span class="hljs-comment">//设定MyBook注解在源码阶段、字节码文件阶段、运行阶段均存在</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">value</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure></li>
 </ul>
 <h1 id="5-注解解析"><a href="#5-注解解析" class="headerlink" title="5. 注解解析"></a>5. 注解解析</h1><p>注解的操作中经常需要进行解析，注解的解析就是判断是否存在注解，存在注解就解析出内容。</p>
 <p>与注解解析相关的接口如下：</p>
@@ -508,19 +494,19 @@
 <li>注解作用在类上，则要该类的 Class 对象，再来拿上面的注解。</li>
 <li>注解作用在成员变量上，则要获得该成员变量对应的 Field 对象，再来拿上面的注解。</li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-kxhplylc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-kxhplylc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;<br><span class="hljs-keyword">import</span> java.lang.annotation.Retention;<br><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;<br><span class="hljs-keyword">import</span> java.lang.annotation.Target;<br><br><span class="hljs-comment">//定义注解</span><br><span class="hljs-meta">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span><br><span class="hljs-meta">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">name</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ls5j7flcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-ls5j7flcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.lang.annotation.ElementType;<br><span class="hljs-keyword">import</span> java.lang.annotation.Retention;<br><span class="hljs-keyword">import</span> java.lang.annotation.RetentionPolicy;<br><span class="hljs-keyword">import</span> java.lang.annotation.Target;<br><br><span class="hljs-comment">//定义注解</span><br><span class="hljs-meta">@Target(&#123;ElementType.TYPE,ElementType.METHOD&#125;)</span><br><span class="hljs-meta">@Retention(RetentionPolicy.RUNTIME)</span><br><span class="hljs-keyword">public</span> <span class="hljs-meta">@interface</span> MyBook &#123;<br><br>    String <span class="hljs-title function_">name</span><span class="hljs-params">()</span>;<br>    <span class="hljs-type">double</span> <span class="hljs-title function_">price</span><span class="hljs-params">()</span> <span class="hljs-keyword">default</span> <span class="hljs-number">100</span>;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-j4kjfilc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-j4kjfilc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义类并使用注解</span><br><span class="hljs-meta">@MyBook(name = &quot;书库&quot;, price = 500)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BookStore</span> &#123;<br><br>    <span class="hljs-meta">@MyBook(name = &quot;第一本书&quot;, price = 128)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-12f9tjlcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-12f9tjlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//定义类并使用注解</span><br><span class="hljs-meta">@MyBook(name = &quot;书库&quot;, price = 500)</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">BookStore</span> &#123;<br><br>    <span class="hljs-meta">@MyBook(name = &quot;第一本书&quot;, price = 128)</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">test</span><span class="hljs-params">()</span> &#123;<br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-5c2klmlc38hmdi"></i><span>java</span><div class="collapse show" id="collapse-5c2klmlc38hmdi"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;<br><span class="hljs-keyword">import</span> java.lang.reflect.Method;<br><br><span class="hljs-comment">//测试类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Demo</span> &#123;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">parseClass</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> NoSuchMethodException &#123;<br><br>        <span class="hljs-comment">//获取类对象</span><br>        <span class="hljs-type">Class</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> BookStore.class;<br><br>        <span class="hljs-comment">//判断类上是否存在注解</span><br>        <span class="hljs-keyword">if</span> (c.isAnnotationPresent(MyBook.class)) &#123;<br>            <span class="hljs-comment">//获取类的注解对象</span><br>            <span class="hljs-type">MyBook</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> (MyBook) c.getAnnotation(MyBook.class);<br>            System.out.println(book.name());         <span class="hljs-comment">//输出：书库</span><br>            System.out.println(book.price());        <span class="hljs-comment">//输出：500.0</span><br>        &#125;<br><br>        <span class="hljs-comment">//获取方法对象</span><br>        <span class="hljs-type">Method</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> c.getDeclaredMethod(<span class="hljs-string">&quot;test&quot;</span>);<br><br>        <span class="hljs-comment">//判断方法上是都存在注解</span><br>        <span class="hljs-keyword">if</span> (m.isAnnotationPresent(MyBook.class)) &#123;<br>            <span class="hljs-comment">//获取方法的注解对象</span><br>            <span class="hljs-type">MyBook</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> (MyBook) m.getAnnotation(MyBook.class);<br>            System.out.println(book.name());         <span class="hljs-comment">//输出：第一本书</span><br>            System.out.println(book.price());        <span class="hljs-comment">//输出：128.0</span><br>        &#125;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-as1idjlcjcfpi3"></i><span>java</span><div class="collapse show" id="collapse-as1idjlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> org.junit.Test;<br><span class="hljs-keyword">import</span> java.lang.reflect.Method;<br><br><span class="hljs-comment">//测试类</span><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Demo</span> &#123;<br><br>    <span class="hljs-meta">@Test</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">parseClass</span><span class="hljs-params">()</span> <span class="hljs-keyword">throws</span> NoSuchMethodException &#123;<br><br>        <span class="hljs-comment">//获取类对象</span><br>        <span class="hljs-type">Class</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> BookStore.class;<br><br>        <span class="hljs-comment">//判断类上是否存在注解</span><br>        <span class="hljs-keyword">if</span> (c.isAnnotationPresent(MyBook.class)) &#123;<br>            <span class="hljs-comment">//获取类的注解对象</span><br>            <span class="hljs-type">MyBook</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> (MyBook) c.getAnnotation(MyBook.class);<br>            System.out.println(book.name());         <span class="hljs-comment">//输出：书库</span><br>            System.out.println(book.price());        <span class="hljs-comment">//输出：500.0</span><br>        &#125;<br><br>        <span class="hljs-comment">//获取方法对象</span><br>        <span class="hljs-type">Method</span> <span class="hljs-variable">m</span> <span class="hljs-operator">=</span> c.getDeclaredMethod(<span class="hljs-string">&quot;test&quot;</span>);<br><br>        <span class="hljs-comment">//判断方法上是都存在注解</span><br>        <span class="hljs-keyword">if</span> (m.isAnnotationPresent(MyBook.class)) &#123;<br>            <span class="hljs-comment">//获取方法的注解对象</span><br>            <span class="hljs-type">MyBook</span> <span class="hljs-variable">book</span> <span class="hljs-operator">=</span> (MyBook) m.getAnnotation(MyBook.class);<br>            System.out.println(book.name());         <span class="hljs-comment">//输出：第一本书</span><br>            System.out.println(book.price());        <span class="hljs-comment">//输出：128.0</span><br>        &#125;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
+        
+      </div>
+    
+    <hr/>
+    <div>
+      <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -556,7 +542,7 @@
 </div>
 
 
-              
+      
   
 
   <div class="license-box my-3">
@@ -601,24 +587,32 @@
 
 
 
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+      
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这部分全改成自己的侧边栏了 -->
+    
+  </div>
+  
+
+  <div class="side-col d-none d-lg-block col-lg-2">
+
+    <!-- 这部分全改成自己的侧边栏了 -->
 <section id="mysidebar">
+  <!--头部-->
+  <div class="content-header clearfix">
+    <a href="javaScript:;" class="current">目录</a>
+    <a href="javaScript:;" >分类</a>
+</div>
+<!--内容-->
 <!-- 目录/分类 -->
   <div class="content-body" id="mysidebar-body">
     <div class="dom" style="display: block">
-      <aside class="sidebar" style="margin-left: -1rem">
+      <aside class="bar toc-bar" >
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -627,7 +621,7 @@
       </aside>
     </div>
     <div class="dom" style="display: none;">
-      <aside class="sidebar category-bar" style="margin-right: -1rem">
+      <aside class="bar category-bar" >
         
 
 
@@ -641,16 +635,19 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="02 Java SE"
+          list-group-item category-item-action " title="02 Java SE"
         id="heading-d38f32cc8472004d980caddd508b0093" role="tab" data-toggle="collapse" href="#collapse-d38f32cc8472004d980caddd508b0093"
         aria-expanded="true"
       >
-        02 Java SE
+      <!-- 字符串删掉前面的数字 -->
+        Java SE
         <span class="list-group-count">(15)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
+    </div>
       <div class="category-collapse collapse show" id="collapse-d38f32cc8472004d980caddd508b0093"
            role="tabpanel" aria-labelledby="heading-d38f32cc8472004d980caddd508b0093">
         
@@ -665,6 +662,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 (一) - Java SE</span>
+          <time>08-25</time>
         </a>
       
     
@@ -674,6 +672,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 (二) - Java SE</span>
+          <time>09-20</time>
         </a>
       
     
@@ -683,6 +682,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (一) - Java SE</span>
+          <time>08-27</time>
         </a>
       
     
@@ -692,6 +692,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (二) - Java SE</span>
+          <time>08-29</time>
         </a>
       
     
@@ -701,6 +702,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (三) - Java SE</span>
+          <time>08-30</time>
         </a>
       
     
@@ -710,6 +712,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">常用 API - Java SE</span>
+          <time>09-23</time>
         </a>
       
     
@@ -719,6 +722,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">泛型 - Java SE</span>
+          <time>09-01</time>
         </a>
       
     
@@ -728,6 +732,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (一) - Java SE</span>
+          <time>09-03</time>
         </a>
       
     
@@ -737,6 +742,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (二) - Java SE</span>
+          <time>09-05</time>
         </a>
       
     
@@ -746,6 +752,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">异常 - Java SE</span>
+          <time>09-07</time>
         </a>
       
     
@@ -755,6 +762,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (一) - Java SE</span>
+          <time>09-17</time>
         </a>
       
     
@@ -764,6 +772,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (二) - Java SE</span>
+          <time>09-19</time>
         </a>
       
     
@@ -773,15 +782,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">并发 - Java SE</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/49545/" title="注解 - Java SE"
-           class="list-group-item list-group-item-action
-           active">
-          <span class="category-post">注解 - Java SE</span>
+          <time>09-26</time>
         </a>
       
     
@@ -791,6 +792,17 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">反射 - Java SE</span>
+          <time>09-27</time>
+        </a>
+      
+    
+      
+      
+        <a href="/post/49545/" title="注解 - Java SE"
+           class="list-group-item list-group-item-action
+           active">
+          <span class="category-post">注解 - Java SE</span>
+          <time>09-27</time>
         </a>
       
     
@@ -832,11 +844,18 @@
         }
     }
 </script>
+
 </section>
 
 
 
-    </div>
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+      $(function(){
+          $('.toc-body').wrap('<div></div>');
+      });
+   </script> -->
   </div>
 </div>
 
@@ -844,14 +863,6 @@
 
 
 
-  
-
-
-
-  
-
-
-
 
   
 
@@ -862,9 +873,23 @@
 
 
 
+  
 
 
 
+  
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- post页格式和下面统一 -->
     
 
     <!-- 这里删除了向上的按钮 -->
@@ -896,14 +921,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -916,6 +945,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -939,6 +969,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
 
@@ -973,6 +1006,8 @@
       includeTitleTags: true,
       headingsOffset  : -boardTop,
     }, CONFIG.toc));
+    //添加这一句
+    toc.find('.tocbot-link').wrapInner('<div class="text"></div>');
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }

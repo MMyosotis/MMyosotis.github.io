@@ -1,92 +1,211 @@
-/* ----------分类页样式---------- */
 
 
 
 
-/* 不显示文献阅读笔记（该功能已停用）
-.categories .category-list div.category.row.nomargin-x:last-child{
-  display: none;
-} */
+/* *****************************单分类页***************************** */
+/* 备注：部分属性在归档页中设置 */
+
+
+
+/* ————————————————左栏属性———————————————— */
+
+/* ----------------左栏整体---------------- */
+.category .body-content #coloum-left{
+    background-color: white;
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    padding: 20px 40px;
+    box-shadow: var(--box-shadow-dark);
+}
+
+.category #coloum-left .list-group hr {
+    margin-top: 0;
+}
+
+/* ----------------分类导航---------------- */
+.category #category-bar {
+    box-shadow: none;
+    padding-left: 0;
+    padding-right: 0px;
+    background: white;
+    border-radius: 0px;
+    margin-bottom: 0;
+    border: none;
+    border-bottom: 1px solid var(--unfocus-border-color);
+    width: 100%;
+}
+
+.category #category-bar .category-bar-items #category-bar-home a{
+    padding-left: 10px;
+}
+
+.category #category-bar .category-bar-items:before {
+    content: "分类";
+    height: 32px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--block-bg-focus-color);
+    margin-right: 10px;
+    line-height: 32px;
+}
+
+/* --------------字体大小适配-------------- */
+@media(max-width:424px) {
+
+    .category #category-bar .category-bar-items:before {
+        font-size: 15px;
+        margin-right: 5px;
+    }
+
+    .category #coloum-left .list-group hr {
+        margin-bottom: 10px;
+    }
+
+    .category .body-content #coloum-left {
+        padding: 10px 20px 10px;
+    }
+}
 
 
 
 
-/* 分类页字体修改 */
-.categories #board .category-post-list .list-group-item {
+
+/* *****************************总分类页***************************** */
+/* 备注：部分属性在归档页中设置 */
+
+
+/* ————————————————左栏属性———————————————— */
+
+.categories .body-content{
+    padding-top: 20px;
+}
+
+
+/* ---------------左栏总属性--------------- */
+.categories .body-content #coloum-left{
+    width: 100%;
+    margin: auto;
+    max-width: 1000px;
+    margin-top: 0;
+}
+
+
+/* ---------------分类快属性--------------- */
+.categories #board .category{
+    background: white;
+    border-radius: 12px;
+    border: 1px solid var(--unfocus-border-color);
+    box-shadow: var(--box-shadow-unfocus);
+    transition:0.4s ease;
+    margin-bottom: 20px;
+}
+
+/* 标题栏 */
+.categories .category-title .category-item i {
+    display: none;
+}
+
+.categories .category-title {
+    width: 100%;
+    height: 65px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+
+.categories .category-title .category-item {
+    font-size: 1.4rem;
+    padding: 6px 10px;
+    color: var(--text-color);
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+.categories .category-title .cate-count {
+    margin: auto;
+    margin-right: 5px;
+}
+
+.categories .category-title .cate-count a {
+    background: #f8f9fc;
+    box-shadow: var(--box-shadow-unfocus);
+    height: 40px;
     font-size: 1.1rem;
+    width: 40px;
+    margin: 2.5px;
+    border-radius: 8px;
+    color: var(--text-color);
+    border: 1px solid var(--unfocus-border-color);
+    transition: 0.4s ease;
 }
 
-.categories #board .category-item,
-.categories #board .category-subitem {
-    font-size: 1.5rem;
+.categories .category-title .cate-count a span {
+    text-align: center;
+    width: 40px;
 }
 
-.categories .category-count {
-    font-size: 1rem;
+/* 下拉菜单 */
+.categories .category-post-list .list-group-item:first-child {
+    margin-top: 0.1rem;
+}
+
+.categories .category-post-list .list-group-item:last-child {
+    margin-bottom: 0.8rem;
+}
+
+.categories .category-collapse {
+    padding-right: 20px;
 }
 
 /* 手机端字体修改 */
 @media (max-width:424px) {
 
-    .categories #board .category-post-list .list-group-item {
+    .categories #board .category{
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .categories .category-title{
+        height: 55px;
+        padding: 5px 10px;
+    }
+
+    .categories .category-title .category-item{
+        font-size: 1.2rem;
+    }
+
+    .categories .category-title .cate-count a{
+        height: 32px;
         font-size: 1rem;
-    }
-
-    .categories #board .category-item,
-    .categories #board .category-subitem {
-        font-size: 1.3rem;
-    }
-
-    .categories .category-count {
-        font-size: 0.9rem;
+        width: 32px;
+        border-radius: 5px;
     }
 }
 
 
+/* --------------鼠标悬浮交互-------------- */
+@media (min-width:424px){
 
-
-/* 分类页悬停动画 */
-.categories #board .category-post-list .list-group-item {
-    transition: 0.3s ease-out;
-}
-
-@media (min-width:424px) {
-    .categories .category-post-list .list-group-item:hover {
+    .categories .category:hover{
         transform: scale(1.02);
+        border: 1px solid var(--focus-border-color) !important;
+        box-shadow: var(--box-shadow-focus) !important;
+    }
+
+    .categories .category-title .cate-count a:hover {
+        background: var(--block-bg-focus-color);
+        color: white;
+        box-shadow: var(--box-shadow-focus);
+        transform: scale(1.1);
     }
 }
 
 
 
 
-/* 手机端入场动画 */
-@media (max-width:424px) {
 
-    .categories .category-item,
-    .categories .category-count {
-        animation: getnote-category 1s ease, getsolid-category 0.4s ease-in;
-        animation-fill-mode: both;
-    }
-}
 
-/* 文字上移动画 */
-@keyframes getnote-category {
-    from {
-        transform: translate(0rem, 3rem);
-    }
 
-    to {
-        transform: translate(0, 0);
-    }
-}
 
-/* 渐入动画 */
-@keyframes getsolid-category {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 100;
-    }
-}

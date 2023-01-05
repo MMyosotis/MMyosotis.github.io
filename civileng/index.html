@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -16,15 +17,13 @@
   <meta name="author" content="MQY">
   <meta name="keywords" content="">
   
-    <meta name="description" content="笔记整理        数学                    高等数学 1       2017-12-20                      高等数学 2       2018-05-20                      线性代数       2018-05-20                      概率论与数理统计       2018-12-20">
-<meta property="og:type" content="website">
+    <meta property="og:type" content="website">
 <meta property="og:title" content="土木">
 <meta property="og:url" content="http://example.com/civileng/">
 <meta property="og:site_name" content="Myosotis">
-<meta property="og:description" content="笔记整理        数学                    高等数学 1       2017-12-20                      高等数学 2       2018-05-20                      线性代数       2018-05-20                      概率论与数理统计       2018-12-20">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2022-09-21T06:10:51.000Z">
-<meta property="article:modified_time" content="2022-12-22T13:48:22.976Z">
+<meta property="article:modified_time" content="2023-01-02T10:04:26.585Z">
 <meta property="article:author" content="MQY">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -70,13 +69,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -92,13 +95,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="civilEngineeringBody"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="civileng" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -129,7 +132,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -208,7 +211,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -227,7 +230,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -286,7 +290,7 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board"
           >
           
@@ -295,107 +299,137 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<article class="page-content">
-  <div class="list-group">
-  <p class="h4">笔记整理</p>
-  <hr>
-    <p class="h5"><i class="fa fa-book" aria-hidden="true"></i>数学</p>   
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%201.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>高等数学 1</div>
-      <time>2017-12-20</time>
-    </a>
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%202.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>高等数学 2</div>
-      <time>2018-05-20</time>
-    </a>
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>线性代数</div>
-      <time>2018-05-20</time>
-    </a>
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>概率论与数理统计</div>
-      <time>2018-12-20</time>
-    </a>
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>数值分析</div>
-      <time>2021-12-20</time>
-    </a> 
-    <p class="h5"><i class="fa fa-book" aria-hidden="true"></i>物理</p>   
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%201.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>普通物理 1</div>
-      <time>2018-05-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%202.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>普通物理 2</div>
-      <time>2018-12-20</time>
-    </a> 
-    <p class="h5"><i class="fa fa-book" aria-hidden="true"></i>力学</p>   
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>理论力学</div>
-      <time>2018-05-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>材料力学</div>
-      <time>2018-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BB%93%E6%9E%84%E5%8A%9B%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>结构力学</div>
-      <time>2019-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>流体力学</div>
-      <time>2019-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%9C%9F%E5%8A%9B%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>土力学</div>
-      <time>2019-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>弹性力学</div>
-      <time>2020-05-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BB%93%E6%9E%84%E5%8A%A8%E5%8A%9B%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>结构动力学</div>
-      <time>2021-12-20</time>
-    </a> 
-    <p class="h5"><i class="fa fa-book" aria-hidden="true"></i>设计</p>   
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%B7%A5%E7%A8%8B%E5%9B%BE%E5%AD%A6.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>工程图学</div>
-      <time>2017-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%B7%B7%E5%87%9D%E5%9C%9F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>混凝土结构设计原理</div>
-      <time>2019-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%92%A2%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>钢结构设计原理</div>
-      <time>2019-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%9F%BA%E7%A1%80%E5%B7%A5%E7%A8%8B.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>基础工程</div>
-      <time>2020-05-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%AF%95%E9%AA%8C%E4%B8%8E%E6%A3%80%E6%B5%8B.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>土木工程试验与检测</div>
-      <time>2020-05-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%A3%8E%E7%89%B9%E6%80%A7%E4%B8%8E%E9%92%9D%E4%BD%93%E7%A9%BA%E6%B0%94%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%80.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>风特性与钝体空气动力学基础</div>
-      <time>2021-12-20</time>
-    </a> 
-    <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BB%93%E6%9E%84%E6%8A%97%E9%A3%8E%E7%90%86%E8%AE%BA%E4%B8%8E%E8%BF%90%E7%94%A8.pdf" class="list-group-item list-group-item-action">     
-      <div class="list-group-item-title"><i class="fa-solid fa-file-pdf" aria-hidden="true"></i>结构抗风理论与运用</div>
-      <time>2021-12-20</time>
-    </a> 
-    <hr>
+<div class="body-content">
+  <div id="coloum-left">
+    <div class="civil-list">
+
+      <div class="civil">
+        <div class="civil-title">
+          <a class="civil-item" id="heading-1" data-toggle="collapse" href="#collapse-1">
+            数学
+          </a>
+          <div class="civil-count">
+              <span>5</span>
+          </div>
+        </div>
+        <div class="civil-collapse collapse" id="collapse-1" aria-labelledby="heading-1">
+          <div class="civil-post-list">
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%201.pdf">
+              <div class="list-group-item-title">高等数学 1</div>
+            </a>
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%AB%98%E7%AD%89%E6%95%B0%E5%AD%A6%202.pdf">
+              <div class="list-group-item-title">高等数学 2</div>
+            </a>
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0.pdf">
+              <div class="list-group-item-title">线性代数</div>
+            </a>
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%A6%82%E7%8E%87%E8%AE%BA%E4%B8%8E%E6%95%B0%E7%90%86%E7%BB%9F%E8%AE%A1.pdf">
+              <div class="list-group-item-title">概率论与数理统计</div>
+            </a>
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%95%B0%E5%80%BC%E5%88%86%E6%9E%90.pdf">
+              <div class="list-group-item-title">数值分析</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="civil">
+        <div class="civil-title">
+          <a class="civil-item" id="heading-2" data-toggle="collapse" href="#collapse-2">
+            物理
+          </a>
+          <div class="civil-count">
+            <span>2</span>
+          </div>
+        </div>
+        <div class="civil-collapse collapse" id="collapse-2" aria-labelledby="heading-2">
+          <div class="civil-post-list">
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%201.pdf">
+              <div class="list-group-item-title">普通物理 1</div>
+            </a>
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%99%AE%E9%80%9A%E7%89%A9%E7%90%86%202.pdf">
+              <div class="list-group-item-title">普通物理 2</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="civil">
+        <div class="civil-title">
+          <a class="civil-item" id="heading-3" data-toggle="collapse" href="#collapse-3">
+            力学
+          </a>
+          <div class="civil-count">
+            <span>7</span>
+        </div>
+        </div>
+        <div class="civil-collapse collapse" id="collapse-3" aria-labelledby="heading-3">
+          <div class="civil-post-list">
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%90%86%E8%AE%BA%E5%8A%9B%E5%AD%A6.pdf">     
+              <div class="list-group-item-title">理论力学</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%9D%90%E6%96%99%E5%8A%9B%E5%AD%A6.pdf">     
+              <div class="list-group-item-title">材料力学</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BB%93%E6%9E%84%E5%8A%9B%E5%AD%A6.pdf">     
+              <div class="list-group-item-title">结构力学</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6.pdf">     
+              <div class="list-group-item-title">流体力学</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%9C%9F%E5%8A%9B%E5%AD%A6.pdf">     
+              <div class="list-group-item-title">土力学</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%BC%B9%E6%80%A7%E5%8A%9B%E5%AD%A6.pdf" >     
+              <div class="list-group-item-title">弹性力学</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BB%93%E6%9E%84%E5%8A%A8%E5%8A%9B%E5%AD%A6.pdf">     
+              <div class="list-group-item-title">结构动力学</div>
+            </a> 
+          </div>
+        </div>
+      </div>
+
+      <div class="civil">
+        <div class="civil-title">
+          <a class="civil-item" id="heading-4" data-toggle="collapse" href="#collapse-4">
+            设计
+          </a>
+          <div class="civil-count">
+            <span>7</span>
+        </div>
+        </div>
+        <div class="civil-collapse collapse" id="collapse-4" aria-labelledby="heading-4">
+          <div class="civil-post-list">
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%B7%A5%E7%A8%8B%E5%9B%BE%E5%AD%A6.pdf">     
+              <div class="list-group-item-title">工程图学</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E6%B7%B7%E5%87%9D%E5%9C%9F%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86.pdf">     
+              <div class="list-group-item-title">混凝土结构设计原理</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%92%A2%E7%BB%93%E6%9E%84%E8%AE%BE%E8%AE%A1%E5%8E%9F%E7%90%86.pdf" >     
+              <div class="list-group-item-title">钢结构设计原理</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%9F%BA%E7%A1%80%E5%B7%A5%E7%A8%8B.pdf">     
+              <div class="list-group-item-title">基础工程</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E5%9C%9F%E6%9C%A8%E5%B7%A5%E7%A8%8B%E8%AF%95%E9%AA%8C%E4%B8%8E%E6%A3%80%E6%B5%8B.pdf">     
+              <div class="list-group-item-title">土木工程试验与检测</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E9%A3%8E%E7%89%B9%E6%80%A7%E4%B8%8E%E9%92%9D%E4%BD%93%E7%A9%BA%E6%B0%94%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%80.pdf">     
+              <div class="list-group-item-title">风特性与钝体空气动力学基础</div>
+            </a> 
+            <a target="_blank" rel="noopener" href="https://mmimages.oss-cn-chengdu.aliyuncs.com/civil_engineering/%E7%BB%93%E6%9E%84%E6%8A%97%E9%A3%8E%E7%90%86%E8%AE%BA%E4%B8%8E%E8%BF%90%E7%94%A8.pdf">     
+              <div class="list-group-item-title">结构抗风理论与运用</div>
+            </a> 
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
 </div>
-
-
-  
-
-</article>
-
-
 
               </div>
             </div>
@@ -433,14 +467,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -453,6 +491,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -476,6 +515,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>

@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -80,13 +81,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -102,13 +107,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="post" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -139,7 +144,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -218,7 +223,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -237,7 +242,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -269,30 +275,38 @@
           
   <div class="mt-3">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        MQY
-      </span>
-    
-    
-      <span class="post-meta">
+      <span class="post-meta postDate">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2022-08-25 20:00" pubdate>
           2022年8月25日
         </time>
       </span>
     
-  </div>
-
-  <div class="mt-1">
     
-      <span class="post-meta mr-2">
+      <span class="post-meta wordCount">
         <i class="iconfont icon-chart"></i>
         
           6.4k 字
         
       </span>
     
+  </div>
+
+  <div class="mt-1">
+    
+    <!-- 自己加入的代码！！ -->
+    <span class="myupdated">
+      
+        <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
+        <span class="post-meta ">
+          
+            
+              2022年11月3日
+            
+          
+        </span>
+      
+    </span>
 
     
 
@@ -300,19 +314,7 @@
     
   </div>
 
-  <!-- 自己加入的代码！！ -->
-  <span class="myupdated">
-    
-      <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
-      <span class="post-meta ">
-        
-          
-            2022年11月3日
-          
-        
-      </span>
-    
-  </span>
+
 
 
         
@@ -346,59 +348,27 @@
 
   <main>
     
-      
-
-<!-- 添加mysidebar-bar -->
-<div class="mysidebar-bar">
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <div class="mytoolbox">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        <a class="happy"></a>
-      </div>
-    </div>
-  </div>
-  <div class="opentoolbox">
-    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
-  </div>
-</div>
-
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">基础语法 (一) - Java SE</h1>
-            
-            
-              <div class="markdown-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                <div class="categoryinpost">
-    <button class="collapsed" type="button" data-toggle="collapse" data-target="#content">
-        <i class="fa fa-angle-down"></i><b>Java SE</b>
-    </button>
-    <div class="collapse titleblock" id="content">
-        <div class="dropdown-divider"></div>
-        <div class="titleblock">
-            <ul>
-                <li><a href="/post/101/" class="title">Java 基础</a></li>
-             </ul>
-         </div>
-    </div>
-</div>
 
 
 
-<h1 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1. 数据类型"></a>1. 数据类型</h1><h2 id="1-1-二进制存储"><a href="#1-1-二进制存储" class="headerlink" title="1.1 二进制存储"></a>1.1 二进制存储</h2><p><strong>计算机的数据单位</strong></p>
+
+
+
+<div class="body-content mx-auto" id="board-ctn">
+  <div id="coloum-left">
+    <!-- SEO header -->
+    <h1 style="display: none">基础语法 (一) - Java SE</h1>
+    
+    
+      <div class="markdown-body">
+        
+        <h1 id="1-数据类型"><a href="#1-数据类型" class="headerlink" title="1. 数据类型"></a>1. 数据类型</h1><h2 id="1-1-二进制存储"><a href="#1-1-二进制存储" class="headerlink" title="1.1 二进制存储"></a>1.1 二进制存储</h2><p><strong>计算机的数据单位</strong></p>
 <p>计算机在底层都是采用<font class="word-stress">二进制</font>，使用0和1来存储，其数据单元如下：</p>
 <ul>
 <li>位：字节中的每个二进制位就称为位 <font class="code-word"><code>bit</code></font>，简称 b。二进制使用最高位表示符号位，用1表示负数，用0表示正数。</li>
@@ -585,7 +555,7 @@
 <ul>
 <li><p><strong>变量自动类型转换</strong>：</p>
 <p>类型范围小的变量，可以直接赋值给类型范围大的变量，反之则不能自动转换。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-83p9i8lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-83p9i8lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">byte</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">12</span>;<br><span class="hljs-comment">//自动类型转换</span><br><span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> a;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-atavx3lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-atavx3lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">byte</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">12</span>;<br><span class="hljs-comment">//自动类型转换</span><br><span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> a;<br></code></pre></td></tr></table></div></figure>
 
 <p>其类型自动转换的底层原理如下图：</p>
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/01-23.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 60%;" />
@@ -600,13 +570,13 @@
 </ul>
 <p><strong>强制类型转换</strong></p>
 <p>可以强制将类型范围大的变量、数据赋值给类型范围小的变量。只需要<font class="word-stress">在转换的变量前加上括号</font>，括号内为想要转换的类型。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3gk98hlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-3gk98hlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br><span class="hljs-comment">//强制类型转换</span><br><span class="hljs-type">byte</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span>  (<span class="hljs-type">byte</span>)a; <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-fq8fyolcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-fq8fyolcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br><span class="hljs-comment">//强制类型转换</span><br><span class="hljs-type">byte</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span>  (<span class="hljs-type">byte</span>)a; <br></code></pre></td></tr></table></div></figure>
 
 <p>强制类型转换底层原理如下图所示：</p>
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/01-24.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom: 80%;" />
 
 <p>强制类型转换可能造成<font class="word-stress">数据(丢失)溢出</font>。浮点型强转成整型，直接丢掉小数部分，保留整数部分返回。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3ts38qlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-3ts38qlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1500</span>;<br><span class="hljs-comment">//强制类型转换造成数据丢失，j = 36</span><br><span class="hljs-type">byte</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span>  (<span class="hljs-type">byte</span>)i;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-77dyrmlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-77dyrmlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">1500</span>;<br><span class="hljs-comment">//强制类型转换造成数据丢失，j = 36</span><br><span class="hljs-type">byte</span> <span class="hljs-variable">j</span> <span class="hljs-operator">=</span>  (<span class="hljs-type">byte</span>)i;<br></code></pre></td></tr></table></div></figure>
 
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/01-25.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:80%;" />
 
@@ -649,7 +619,7 @@
 <li><p>如果是整型数据进行除法运算，其结果必然是整型数据，<font class="word-stress">小数部分会自动抹掉</font>（是抹掉不是四舍五入）。</p>
 </li>
 <li><p>多个字符串允许用 <font class="code-word"><code>+</code></font> 号拼接，在遇到字符前的 + 负责相加数字，对于其后紧跟字符、以及这之后的 + 均表示拼接字符。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-gooiiulc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-gooiiulc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.println(<span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-number">3</span>);   <span class="hljs-comment">//输出：3 4，第一个加号是数字相加，后两个都是拼接字符</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-6tsmrqlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-6tsmrqlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.println(<span class="hljs-number">1</span> + <span class="hljs-number">2</span> + <span class="hljs-string">&quot; &quot;</span> + <span class="hljs-number">3</span>);   <span class="hljs-comment">//输出：3 4，第一个加号是数字相加，后两个都是拼接字符</span><br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p>整数数字直接用运算符计算时，默认是 <font class="code-word"><code>int</code></font> 类型，如果运算过程中出现结果过大超过 int 存储范围，则会导致结果失真，要注意手动将数字定为 <font class="code-word"><code>long</code></font> 类型。</p>
 </li>
@@ -816,7 +786,7 @@
 
 <h2 id="2-7-三元运算符"><a href="#2-7-三元运算符" class="headerlink" title="2.7 三元运算符"></a>2.7 三元运算符</h2><p>三元运算符语法为：<font class="code-sentence"><code>条件表达式? 表达式1: 表达式2</code> </font></p>
 <p>首先计算关系表达式的返回值，如果值为 <font class="code-word"><code>true</code></font> 则调用表达式1，如果为 <font class="code-word"><code>false</code></font> 则调用表达式2。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-oz2rktlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-oz2rktlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a &gt; b ? a : b;<br>System.out.println(c);      <span class="hljs-comment">//输出：20</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-h9bw3zlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-h9bw3zlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">20</span>;<br><span class="hljs-type">int</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a &gt; b ? a : b;<br>System.out.println(c);      <span class="hljs-comment">//输出：20</span><br></code></pre></td></tr></table></div></figure>
 
 <h2 id="2-8-运算符优先级"><a href="#2-8-运算符优先级" class="headerlink" title="2.8 运算符优先级"></a>2.8 运算符优先级</h2><table class="myform">
     <head>
@@ -906,7 +876,7 @@
 
 
 <h1 id="3-输入与输出"><a href="#3-输入与输出" class="headerlink" title="3. 输入与输出"></a>3. 输入与输出</h1><h2 id="3-1-控制台输入"><a href="#3-1-控制台输入" class="headerlink" title="3.1 控制台输入"></a>3.1 控制台输入</h2><p>输入使用 <font class="code-word"><code>Scanner</code></font> 类。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-s1awbrlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-s1awbrlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//构造标准输入流对象</span><br><span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><br><span class="hljs-comment">//调用方法</span><br><span class="hljs-type">int</span> <span class="hljs-variable">name</span> <span class="hljs-operator">=</span> in.nextInt();<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3eluoklcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-3eluoklcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//构造标准输入流对象</span><br><span class="hljs-type">Scanner</span> <span class="hljs-variable">in</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Scanner</span>(System.in);<br><br><span class="hljs-comment">//调用方法</span><br><span class="hljs-type">int</span> <span class="hljs-variable">name</span> <span class="hljs-operator">=</span> in.nextInt();<br></code></pre></td></tr></table></div></figure>
 
 <p>标准输入流  Scanner 类常用的方法如下：</p>
 <table class="myform">
@@ -1031,20 +1001,20 @@
         </tr>
     </body>
 </table>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wy7etzlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-wy7etzlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.printf(<span class="hljs-string">&quot;第一个%d第二个%%3.2f&quot;</span>, <span class="hljs-number">34</span>, <span class="hljs-number">88.2</span>);   <span class="hljs-comment">//输出：第一个34第二个%3.2f</span><br>System.out.println(<span class="hljs-string">&quot;第一个\t第二个&quot;</span>);                  <span class="hljs-comment">//输出：第一个	第二个</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-mz83bulcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-mz83bulcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.printf(<span class="hljs-string">&quot;第一个%d第二个%%3.2f&quot;</span>, <span class="hljs-number">34</span>, <span class="hljs-number">88.2</span>);   <span class="hljs-comment">//输出：第一个34第二个%3.2f</span><br>System.out.println(<span class="hljs-string">&quot;第一个\t第二个&quot;</span>);                  <span class="hljs-comment">//输出：第一个	第二个</span><br></code></pre></td></tr></table></div></figure>
 
 <p><font class="code-sentence"><code>System.out</code></font> 实际返回的是一个 <font class="code-word"><code>PrintStream</code></font> 默认指向控制台的<a href="/post/54804/#4-2-%E8%BE%93%E5%87%BA%E9%87%8D%E5%AE%9A%E5%90%91">打印流</a>。</p>
 <h1 id="4-Java-控制流程"><a href="#4-Java-控制流程" class="headerlink" title="4. Java 控制流程"></a>4. Java 控制流程</h1><h2 id="4-1-条件语句"><a href="#4-1-条件语句" class="headerlink" title="4.1 条件语句"></a>4.1 条件语句</h2><h3 id="4-1-1-if-else-语句"><a href="#4-1-1-if-else-语句" class="headerlink" title="4.1.1 if else 语句"></a>4.1.1 if else 语句</h3><p><strong>if 语句</strong></p>
 <p><font class="code-word"><code>if</code></font> 语句可以单独使用，当 if 后条件语句为真则执行大括号里的内容。若大括号内只有一条语句，则大括号可以不写。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-2ftk0mlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-2ftk0mlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                         <br><span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">9</span>) &#123;                        <br>    System.out.println(<span class="hljs-string">&quot;大于9&quot;</span>);      <br>&#125;                                   <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-tugc8vlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-tugc8vlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                         <br><span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">9</span>) &#123;                        <br>    System.out.println(<span class="hljs-string">&quot;大于9&quot;</span>);      <br>&#125;                                   <br></code></pre></td></tr></table></div></figure>
 
 <p><strong>if..else 语句</strong></p>
 <p><font class="code-word"><code>if</code></font> 语句也可以和 <font class="code-word"><code>else</code></font> 语句连用，if 语句执行了就不会再执行 else 语句了。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-j0r0ezlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-j0r0ezlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                           <br><span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">9</span>) &#123;                          <br>    System.out.println(<span class="hljs-string">&quot;大于9&quot;</span>);        <br>&#125; <span class="hljs-keyword">else</span> &#123;                              <br>    System.out.println(<span class="hljs-string">&quot;小于9&quot;</span>);        <br>&#125;                                     <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-tryzuzlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-tryzuzlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                           <br><span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">9</span>) &#123;                          <br>    System.out.println(<span class="hljs-string">&quot;大于9&quot;</span>);        <br>&#125; <span class="hljs-keyword">else</span> &#123;                              <br>    System.out.println(<span class="hljs-string">&quot;小于9&quot;</span>);        <br>&#125;                                     <br></code></pre></td></tr></table></div></figure>
 
 <p><strong>if…elseif 语句</strong></p>
 <p>存在多个选择分支时，可以用用 <font class="code-sentence"><code>if...elseif</code></font> 语句，按顺序从上往下匹配，其中任意一句执行后都不会再执行其他的分支。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-3zufyylc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-3zufyylc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                          <br><span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">9</span>) &#123;                         <br>    System.out.println(<span class="hljs-string">&quot;大于9&quot;</span>);       <br>&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">9</span> &amp;&amp; a &gt; <span class="hljs-number">5</span>) &#123;         <br>    System.out.println(<span class="hljs-string">&quot;小于9大于5&quot;</span>);    <br>&#125; <span class="hljs-keyword">else</span> &#123;                             <br>    System.out.println(<span class="hljs-string">&quot;小于5&quot;</span>);       <br>&#125;                                    <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-mdymezlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-mdymezlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                          <br><span class="hljs-keyword">if</span> (a &gt; <span class="hljs-number">9</span>) &#123;                         <br>    System.out.println(<span class="hljs-string">&quot;大于9&quot;</span>);       <br>&#125; <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">9</span> &amp;&amp; a &gt; <span class="hljs-number">5</span>) &#123;         <br>    System.out.println(<span class="hljs-string">&quot;小于9大于5&quot;</span>);    <br>&#125; <span class="hljs-keyword">else</span> &#123;                             <br>    System.out.println(<span class="hljs-string">&quot;小于5&quot;</span>);       <br>&#125;                                    <br></code></pre></td></tr></table></div></figure>
 
 <h3 id="4-1-2-switch-语句"><a href="#4-1-2-switch-语句" class="headerlink" title="4.1.2 switch 语句"></a>4.1.2 switch 语句</h3><p><font class="code-word"><code>switch</code></font> 语句根据执行条件去匹配不同分支，<font class="code-word"><code>switch</code></font> 语句书写的注意事项如下：</p>
 <ul>
@@ -1052,43 +1022,43 @@
 <li>switch 后跟的表达式类型只能是 byte、short、int、char、枚举 ( JDK5后)、String ( JDK7后)，不支持 double、float、long。</li>
 <li><font class="code-word"><code>case</code></font> 给出的值不允许重复，且只能是字面量，不能是变量。</li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-nbcojylc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-nbcojylc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;  <br><span class="hljs-keyword">switch</span> (a) &#123;                                             <br>    <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:                                             <br>        System.out.println(<span class="hljs-string">&quot;a = 10&quot;</span>);                    <br>        <span class="hljs-keyword">break</span>;                                           <br>    <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:                                              <br>        System.out.println(<span class="hljs-string">&quot;a = 9&quot;</span>);                     <br>        <span class="hljs-keyword">break</span>;                                           <br>    <span class="hljs-keyword">default</span>:                                             <br>        System.out.println(<span class="hljs-string">&quot;a 为其他数字&quot;</span>);                   <br>        <span class="hljs-keyword">break</span>;                                           <br>&#125;                                                        <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-pzq6rqlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-pzq6rqlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;  <br><span class="hljs-keyword">switch</span> (a) &#123;                                             <br>    <span class="hljs-keyword">case</span> <span class="hljs-number">10</span>:                                             <br>        System.out.println(<span class="hljs-string">&quot;a = 10&quot;</span>);                    <br>        <span class="hljs-keyword">break</span>;                                           <br>    <span class="hljs-keyword">case</span> <span class="hljs-number">9</span>:                                              <br>        System.out.println(<span class="hljs-string">&quot;a = 9&quot;</span>);                     <br>        <span class="hljs-keyword">break</span>;                                           <br>    <span class="hljs-keyword">default</span>:                                             <br>        System.out.println(<span class="hljs-string">&quot;a 为其他数字&quot;</span>);                   <br>        <span class="hljs-keyword">break</span>;                                           <br>&#125;                                                        <br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-2-循环语句"><a href="#4-2-循环语句" class="headerlink" title="4.2 循环语句"></a>4.2 循环语句</h2><h3 id="4-2-1-while-循环"><a href="#4-2-1-while-循环" class="headerlink" title="4.2.1 while 循环"></a>4.2.1 while 循环</h3><p><strong>while 循环</strong></p>
 <p><font class="code-word"><code>while</code></font> 语句会在括号中表达式为真时一直反复执行大括号内的语句。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-zvyor6lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-zvyor6lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;            <br><span class="hljs-keyword">while</span> (a &gt; <span class="hljs-number">8</span>) &#123;       <br>    a--;               <br>&#125;                     <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7rprojlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-7rprojlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;            <br><span class="hljs-keyword">while</span> (a &gt; <span class="hljs-number">8</span>) &#123;       <br>    a--;               <br>&#125;                     <br></code></pre></td></tr></table></div></figure>
 
 <p>可以通过 <font class="code-sentence"><code>while (true)</code></font> 这种写法来一直执行循环。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-83rryvlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-83rryvlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                 <br><span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;             <br>    <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">8</span>) &#123;           <br>        <span class="hljs-keyword">break</span>;             <br>    &#125;                      <br>    a--;                    <br>&#125;                          <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-gs9s9xlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-gs9s9xlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                 <br><span class="hljs-keyword">while</span> (<span class="hljs-literal">true</span>) &#123;             <br>    <span class="hljs-keyword">if</span> (a &lt; <span class="hljs-number">8</span>) &#123;           <br>        <span class="hljs-keyword">break</span>;             <br>    &#125;                      <br>    a--;                    <br>&#125;                          <br></code></pre></td></tr></table></div></figure>
 
 <p><strong>do while 循环</strong></p>
 <p><font class="code-word"><code>do while</code></font> 循环与 <font class="code-word"><code>while</code></font> 循环的区别在于，do while 是先执行再判断，大括号内的语句至少会执行一次。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-qaz9bolc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-qaz9bolc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                         <br><span class="hljs-keyword">do</span> &#123;                                <br>     System.out.println(<span class="hljs-string">&quot;执行一次&quot;</span>);    <br> &#125; <span class="hljs-keyword">while</span> (a == <span class="hljs-number">1</span>);                  <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-i5f6tplcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-i5f6tplcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">10</span>;                         <br><span class="hljs-keyword">do</span> &#123;                                <br>     System.out.println(<span class="hljs-string">&quot;执行一次&quot;</span>);    <br> &#125; <span class="hljs-keyword">while</span> (a == <span class="hljs-number">1</span>);                  <br></code></pre></td></tr></table></div></figure>
 
 <h3 id="4-2-2-for-循环"><a href="#4-2-2-for-循环" class="headerlink" title="4.2.2 for 循环"></a>4.2.2 for 循环</h3><p><strong>for 循环</strong></p>
 <p><font class="code-word"><code>for</code></font> 循环的语法为：<font class="code-sentence"><code>for (初始化; 布尔表达式; 步进) &#123;&#125;</code></font> ，每次判断表达式为真后就会指定代码块，然后执行一次步进的语句。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-x2erc6lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-x2erc6lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;            <br>    System.out.println(i);               <br>&#125;                                        <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-yzgi8plcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-yzgi8plcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;            <br>    System.out.println(i);               <br>&#125;                                        <br></code></pre></td></tr></table></div></figure>
 
 <p><strong>for each 循环</strong></p>
 <p><font class="code-word"><code>for each</code></font> 循环的语法为：<font class="code-sentence"><code>for (变量 : 集合) &#123;&#125;</code></font> ，变量用于挨个接受元素，可以用来依次遍历数组或者集合这种结构。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-2u5dkflc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-2u5dkflc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] a = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> ele : a) &#123;<br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ztwu08lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-ztwu08lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">int</span>[] a = &#123;<span class="hljs-number">1</span>, <span class="hljs-number">2</span>, <span class="hljs-number">3</span>&#125;;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> ele : a) &#123;<br>    System.out.println(a);<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-3-跳转语句"><a href="#4-3-跳转语句" class="headerlink" title="4.3 跳转语句"></a>4.3 跳转语句</h2><h3 id="4-3-1-break-语句"><a href="#4-3-1-break-语句" class="headerlink" title="4.3.1 break 语句"></a>4.3.1 break 语句</h3><p><font class="code-word"><code>break</code></font> 用于跳出并结束当前所在循环。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-f92niflc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-f92niflc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;                     <br>    <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">3</span>) &#123;                                  <br>        <span class="hljs-keyword">break</span>;                                    <br>    &#125;                                             <br>&#125;                                                 <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-he1retlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-he1retlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;                     <br>    <span class="hljs-keyword">if</span> (i &gt; <span class="hljs-number">3</span>) &#123;                                  <br>        <span class="hljs-keyword">break</span>;                                    <br>    &#125;                                             <br>&#125;                                                 <br></code></pre></td></tr></table></div></figure>
 
 <h3 id="4-3-2-continue-语句"><a href="#4-3-2-continue-语句" class="headerlink" title="4.3.2 continue 语句"></a>4.3.2 continue 语句</h3><p><font class="code-word"><code>continue</code></font> 用于当次循环的执行，并开始下一次循环。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ohe7brlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-ohe7brlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;                <br>    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">3</span>) &#123;                            <br>        <span class="hljs-keyword">continue</span>;                            <br>    &#125;                                        <br>&#125;                                            <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-cm62udlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-cm62udlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> <span class="hljs-variable">i</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">5</span>; i++) &#123;                <br>    <span class="hljs-keyword">if</span> (i == <span class="hljs-number">3</span>) &#123;                            <br>        <span class="hljs-keyword">continue</span>;                            <br>    &#125;                                        <br>&#125;                                            <br></code></pre></td></tr></table></div></figure>
 
 <h3 id="4-3-3-return-语句"><a href="#4-3-3-return-语句" class="headerlink" title="4.3.3 return 语句"></a>4.3.3 return 语句</h3><p><font class="code-word"><code>return</code></font> 语句可以从一个方法返回，并把控制权交给调用它的语句。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-y1aqw3lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-y1aqw3lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">check</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> &#123;<br>    <span class="hljs-keyword">return</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-xom42nlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-xom42nlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">check</span><span class="hljs-params">(<span class="hljs-type">int</span> a)</span> &#123;<br>    <span class="hljs-keyword">return</span>;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
+        
+      </div>
+    
+    <hr/>
+    <div>
+      <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -1124,7 +1094,7 @@
 </div>
 
 
-              
+      
   
 
   <div class="license-box my-3">
@@ -1174,24 +1144,32 @@
 
 
 
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+      
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这部分全改成自己的侧边栏了 -->
+    
+  </div>
+  
+
+  <div class="side-col d-none d-lg-block col-lg-2">
+
+    <!-- 这部分全改成自己的侧边栏了 -->
 <section id="mysidebar">
+  <!--头部-->
+  <div class="content-header clearfix">
+    <a href="javaScript:;" class="current">目录</a>
+    <a href="javaScript:;" >分类</a>
+</div>
+<!--内容-->
 <!-- 目录/分类 -->
   <div class="content-body" id="mysidebar-body">
     <div class="dom" style="display: block">
-      <aside class="sidebar" style="margin-left: -1rem">
+      <aside class="bar toc-bar" >
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -1200,7 +1178,7 @@
       </aside>
     </div>
     <div class="dom" style="display: none;">
-      <aside class="sidebar category-bar" style="margin-right: -1rem">
+      <aside class="bar category-bar" >
         
 
 
@@ -1214,16 +1192,19 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="02 Java SE"
+          list-group-item category-item-action " title="02 Java SE"
         id="heading-d38f32cc8472004d980caddd508b0093" role="tab" data-toggle="collapse" href="#collapse-d38f32cc8472004d980caddd508b0093"
         aria-expanded="true"
       >
-        02 Java SE
+      <!-- 字符串删掉前面的数字 -->
+        Java SE
         <span class="list-group-count">(15)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
+    </div>
       <div class="category-collapse collapse show" id="collapse-d38f32cc8472004d980caddd508b0093"
            role="tabpanel" aria-labelledby="heading-d38f32cc8472004d980caddd508b0093">
         
@@ -1238,6 +1219,7 @@
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">基础语法 (一) - Java SE</span>
+          <time>08-25</time>
         </a>
       
     
@@ -1247,6 +1229,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 (二) - Java SE</span>
+          <time>09-20</time>
         </a>
       
     
@@ -1256,6 +1239,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (一) - Java SE</span>
+          <time>08-27</time>
         </a>
       
     
@@ -1265,6 +1249,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (二) - Java SE</span>
+          <time>08-29</time>
         </a>
       
     
@@ -1274,6 +1259,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (三) - Java SE</span>
+          <time>08-30</time>
         </a>
       
     
@@ -1283,6 +1269,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">常用 API - Java SE</span>
+          <time>09-23</time>
         </a>
       
     
@@ -1292,6 +1279,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">泛型 - Java SE</span>
+          <time>09-01</time>
         </a>
       
     
@@ -1301,6 +1289,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (一) - Java SE</span>
+          <time>09-03</time>
         </a>
       
     
@@ -1310,6 +1299,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (二) - Java SE</span>
+          <time>09-05</time>
         </a>
       
     
@@ -1319,6 +1309,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">异常 - Java SE</span>
+          <time>09-07</time>
         </a>
       
     
@@ -1328,6 +1319,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (一) - Java SE</span>
+          <time>09-17</time>
         </a>
       
     
@@ -1337,6 +1329,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (二) - Java SE</span>
+          <time>09-19</time>
         </a>
       
     
@@ -1346,15 +1339,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">并发 - Java SE</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/49545/" title="注解 - Java SE"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">注解 - Java SE</span>
+          <time>09-26</time>
         </a>
       
     
@@ -1364,6 +1349,17 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">反射 - Java SE</span>
+          <time>09-27</time>
+        </a>
+      
+    
+      
+      
+        <a href="/post/49545/" title="注解 - Java SE"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">注解 - Java SE</span>
+          <time>09-27</time>
         </a>
       
     
@@ -1405,11 +1401,18 @@
         }
     }
 </script>
+
 </section>
 
 
 
-    </div>
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+      $(function(){
+          $('.toc-body').wrap('<div></div>');
+      });
+   </script> -->
   </div>
 </div>
 
@@ -1417,14 +1420,6 @@
 
 
 
-  
-
-
-
-  
-
-
-
 
   
 
@@ -1435,9 +1430,23 @@
 
 
 
+  
 
 
 
+  
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- post页格式和下面统一 -->
     
 
     <!-- 这里删除了向上的按钮 -->
@@ -1469,14 +1478,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -1489,6 +1502,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -1512,6 +1526,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
 
@@ -1546,6 +1563,8 @@
       includeTitleTags: true,
       headingsOffset  : -boardTop,
     }, CONFIG.toc));
+    //添加这一句
+    toc.find('.tocbot-link').wrapInner('<div class="text"></div>');
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }

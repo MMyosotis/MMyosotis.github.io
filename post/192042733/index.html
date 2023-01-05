@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -80,13 +81,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -102,13 +107,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="post" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -139,7 +144,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -218,7 +223,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -237,7 +242,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -269,30 +275,38 @@
           
   <div class="mt-3">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        MQY
-      </span>
-    
-    
-      <span class="post-meta">
+      <span class="post-meta postDate">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2022-11-21 20:00" pubdate>
           2022年11月21日
         </time>
       </span>
     
-  </div>
-
-  <div class="mt-1">
     
-      <span class="post-meta mr-2">
+      <span class="post-meta wordCount">
         <i class="iconfont icon-chart"></i>
         
           7.4k 字
         
       </span>
     
+  </div>
+
+  <div class="mt-1">
+    
+    <!-- 自己加入的代码！！ -->
+    <span class="myupdated">
+      
+        <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
+        <span class="post-meta ">
+          
+            
+              2022年11月26日
+            
+          
+        </span>
+      
+    </span>
 
     
 
@@ -300,19 +314,7 @@
     
   </div>
 
-  <!-- 自己加入的代码！！ -->
-  <span class="myupdated">
-    
-      <i class="fa fa-repeat" aria-hidden="true" style="margin-right: 0.3rem;"></i>
-      <span class="post-meta ">
-        
-          
-            2022年11月26日
-          
-        
-      </span>
-    
-  </span>
+
 
 
         
@@ -346,43 +348,27 @@
 
   <main>
     
-      
-
-<!-- 添加mysidebar-bar -->
-<div class="mysidebar-bar">
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <div class="mytoolbox">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        <a class="happy"></a>
-      </div>
-    </div>
-  </div>
-  <div class="opentoolbox">
-    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
-  </div>
-</div>
-
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">约束 - MySQL</h1>
-            
-            
-              <div class="markdown-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                <h1 id="1-常见约束"><a href="#1-常见约束" class="headerlink" title="1. 常见约束"></a>1. 常见约束</h1><p><strong>关键字</strong></p>
+
+
+
+
+
+
+<div class="body-content mx-auto" id="board-ctn">
+  <div id="coloum-left">
+    <!-- SEO header -->
+    <h1 style="display: none">约束 - MySQL</h1>
+    
+    
+      <div class="markdown-body">
+        
+        <h1 id="1-常见约束"><a href="#1-常见约束" class="headerlink" title="1. 常见约束"></a>1. 常见约束</h1><p><strong>关键字</strong></p>
 <p>约束是作用于表中字段上的规则，用于限制存储在表中的数据，可以在创建表或修改表的时候添加约束。</p>
 <ul>
 <li><p>非空约束：<font class="code-word"><code>not null</code></font></p>
@@ -408,7 +394,7 @@
 <li>当使用 zerofill 时，默认会自动加 <font class="code-word"><code>unsigned</code></font> 属性，数值范围是原值的2倍</li>
 </ul>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-g76x1tlc38hmdj"></i><span>sql</span><div class="collapse show" id="collapse-g76x1tlc38hmdj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 在创建表时添加约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">unique</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span> comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> <span class="hljs-keyword">check</span> ( age <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span> <span class="hljs-operator">&amp;&amp;</span> age <span class="hljs-operator">&lt;=</span> <span class="hljs-number">120</span> ) comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">default</span> <span class="hljs-string">&#x27;1&#x27;</span> comment <span class="hljs-string">&#x27;状态&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user1(id, name, age) <span class="hljs-keyword">values</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;李华&#x27;</span>, <span class="hljs-number">23</span>);<br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user1(id, name, age, status) <span class="hljs-keyword">values</span> (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">44</span>, <span class="hljs-number">0</span>);<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> user1;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+------+------+--------+</span><br><span class="hljs-operator">|</span> id   <span class="hljs-operator">|</span> idCard     <span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span> status <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+------+------+--------+</span><br><span class="hljs-operator">|</span>    <span class="hljs-number">1</span> <span class="hljs-operator">|</span> <span class="hljs-number">0000000001</span> <span class="hljs-operator">|</span> 李华 <span class="hljs-operator">|</span>   <span class="hljs-number">23</span> <span class="hljs-operator">|</span> <span class="hljs-number">1</span>      <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span> <span class="hljs-number">0000000002</span> <span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span>   <span class="hljs-number">44</span> <span class="hljs-operator">|</span> <span class="hljs-number">0</span>      <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+------+------+--------+</span><br><br><span class="hljs-comment">-- 在修改表时添加约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>) comment <span class="hljs-string">&#x27;状态&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify id <span class="hljs-type">int</span> <span class="hljs-keyword">unique</span>;<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>;<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify age <span class="hljs-type">int</span> <span class="hljs-keyword">check</span> ( age <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span> <span class="hljs-operator">&amp;&amp;</span> age <span class="hljs-operator">&lt;=</span> <span class="hljs-number">120</span> );<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">default</span> <span class="hljs-string">&#x27;1&#x27;</span>;<br><br><span class="hljs-comment">-- 删除非空约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>);<br><br><span class="hljs-comment">-- 删除唯一约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 <span class="hljs-keyword">drop</span> index id;<br><br><span class="hljs-comment">-- 删除检查约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 <span class="hljs-keyword">drop</span> <span class="hljs-keyword">check</span> user2_chk_1;  <span class="hljs-comment">-- user2_chk_1为默认取的约束名，也可以自己取</span><br><br><span class="hljs-comment">-- 删除默认约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>);<br><br><span class="hljs-comment">-- 删除零填充约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">user</span> modify id <span class="hljs-type">int</span>;  <br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-rycb9alcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-rycb9alcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 在创建表时添加约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">unique</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span> comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> <span class="hljs-keyword">check</span> ( age <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span> <span class="hljs-operator">&amp;&amp;</span> age <span class="hljs-operator">&lt;=</span> <span class="hljs-number">120</span> ) comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">default</span> <span class="hljs-string">&#x27;1&#x27;</span> comment <span class="hljs-string">&#x27;状态&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user1(id, name, age) <span class="hljs-keyword">values</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;李华&#x27;</span>, <span class="hljs-number">23</span>);<br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user1(id, name, age, status) <span class="hljs-keyword">values</span> (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">44</span>, <span class="hljs-number">0</span>);<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> user1;<br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+------+------+--------+</span><br><span class="hljs-operator">|</span> id   <span class="hljs-operator">|</span> idCard     <span class="hljs-operator">|</span> name <span class="hljs-operator">|</span> age  <span class="hljs-operator">|</span> status <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+------+------+--------+</span><br><span class="hljs-operator">|</span>    <span class="hljs-number">1</span> <span class="hljs-operator">|</span> <span class="hljs-number">0000000001</span> <span class="hljs-operator">|</span> 李华 <span class="hljs-operator">|</span>   <span class="hljs-number">23</span> <span class="hljs-operator">|</span> <span class="hljs-number">1</span>      <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span> <span class="hljs-number">0000000002</span> <span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span>   <span class="hljs-number">44</span> <span class="hljs-operator">|</span> <span class="hljs-number">0</span>      <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">------+------------+------+------+--------+</span><br><br><span class="hljs-comment">-- 在修改表时添加约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>) comment <span class="hljs-string">&#x27;状态&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify id <span class="hljs-type">int</span> <span class="hljs-keyword">unique</span>;<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">not</span> <span class="hljs-keyword">null</span>;<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify age <span class="hljs-type">int</span> <span class="hljs-keyword">check</span> ( age <span class="hljs-operator">&gt;=</span> <span class="hljs-number">0</span> <span class="hljs-operator">&amp;&amp;</span> age <span class="hljs-operator">&lt;=</span> <span class="hljs-number">120</span> );<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>) <span class="hljs-keyword">default</span> <span class="hljs-string">&#x27;1&#x27;</span>;<br><br><span class="hljs-comment">-- 删除非空约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>);<br><br><span class="hljs-comment">-- 删除唯一约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 <span class="hljs-keyword">drop</span> index id;<br><br><span class="hljs-comment">-- 删除检查约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 <span class="hljs-keyword">drop</span> <span class="hljs-keyword">check</span> user2_chk_1;  <span class="hljs-comment">-- user2_chk_1为默认取的约束名，也可以自己取</span><br><br><span class="hljs-comment">-- 删除默认约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 modify status <span class="hljs-type">char</span>(<span class="hljs-number">1</span>);<br><br><span class="hljs-comment">-- 删除零填充约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> <span class="hljs-keyword">user</span> modify id <span class="hljs-type">int</span>;  <br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -427,10 +413,10 @@
 <li>对于多列主键，各列数据不能全部重复（唯一性），允许部分重复</li>
 </ul>
 <p><strong>单列主键</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-bycx3qlc38hmdj"></i><span>sql</span><div class="collapse show" id="collapse-bycx3qlc38hmdj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 在建表定义字段时添加主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-comment">-- 在建表定义字段后指定主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    <span class="hljs-keyword">primary</span> key (id)<br>) comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-comment">-- 在修改表时添加主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user3(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表3&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user3 modify id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key;<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user3 <span class="hljs-keyword">add</span> <span class="hljs-keyword">primary</span> key(id);            <span class="hljs-comment">-- 与上一句等效</span><br><br><span class="hljs-comment">-- 删除主键约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user1 <span class="hljs-keyword">drop</span> <span class="hljs-keyword">primary</span> key;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-stf3e5lcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-stf3e5lcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 在建表定义字段时添加主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-comment">-- 在建表定义字段后指定主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    <span class="hljs-keyword">primary</span> key (id)<br>) comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-comment">-- 在修改表时添加主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user3(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表3&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user3 modify id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key;<br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user3 <span class="hljs-keyword">add</span> <span class="hljs-keyword">primary</span> key(id);            <span class="hljs-comment">-- 与上一句等效</span><br><br><span class="hljs-comment">-- 删除主键约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user1 <span class="hljs-keyword">drop</span> <span class="hljs-keyword">primary</span> key;<br></code></pre></td></tr></table></div></figure>
 
 <p><strong>多列主键</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ohoypalc38hmdj"></i><span>sql</span><div class="collapse show" id="collapse-ohoypalc38hmdj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 在建表定义字段后添加多列主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    <span class="hljs-keyword">primary</span> key (id, name)<br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-comment">-- 在修改表时添加多列主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 <span class="hljs-keyword">add</span> <span class="hljs-keyword">primary</span> key (id, name);<br><br><span class="hljs-comment">-- 删除多列主键约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user1 <span class="hljs-keyword">drop</span> <span class="hljs-keyword">primary</span> key;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-s7ag8blcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-s7ag8blcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 在建表定义字段后添加多列主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span>,<br>    <span class="hljs-keyword">primary</span> key (id, name)<br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-comment">-- 在修改表时添加多列主键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;工号&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span>,<br>    age <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;年龄&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user2 <span class="hljs-keyword">add</span> <span class="hljs-keyword">primary</span> key (id, name);<br><br><span class="hljs-comment">-- 删除多列主键约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user1 <span class="hljs-keyword">drop</span> <span class="hljs-keyword">primary</span> key;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -475,7 +461,7 @@
 </li>
 </ul>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-21hfellc38hmdj"></i><span>sql</span><div class="collapse show" id="collapse-21hfellc38hmdj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 添加自增长约束，不设置初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-comment">-- 添加自增长约束，在建表时并指定初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) auto_increment <span class="hljs-operator">=</span> <span class="hljs-number">100</span> comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-comment">-- 添加自增长约束，在修改表时并指定初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user3(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表3&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user3 auto_increment <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;<br><br><span class="hljs-comment">-- 添加自增长约束，在添加数据时指定初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user4(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表4&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user4(id, name) <span class="hljs-keyword">values</span> (<span class="hljs-number">10</span>, <span class="hljs-string">&#x27;张三&#x27;</span>);<br><br><span class="hljs-comment">-- auto_increment 执行在 unique 的判定前</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user5(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">unique</span> comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表5&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user5(name) <span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;张三&#x27;</span>);<br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user5(name) <span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;张三&#x27;</span>);   <span class="hljs-comment">-- 报错，无法添加该数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user5(name) <span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;李四&#x27;</span>);<br><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> user5;<br><span class="hljs-operator">+</span><span class="hljs-comment">----+------+</span><br><span class="hljs-operator">|</span> id <span class="hljs-operator">|</span> name <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">----+------+</span><br><span class="hljs-operator">|</span>  <span class="hljs-number">1</span> <span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>  <span class="hljs-number">3</span> <span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">----+------+</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-nbl1dclcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-nbl1dclcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 添加自增长约束，不设置初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user1(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表1&#x27;</span>;<br><br><span class="hljs-comment">-- 添加自增长约束，在建表时并指定初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user2(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) auto_increment <span class="hljs-operator">=</span> <span class="hljs-number">100</span> comment <span class="hljs-string">&#x27;用户表2&#x27;</span>;<br><br><span class="hljs-comment">-- 添加自增长约束，在修改表时并指定初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user3(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表3&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> user3 auto_increment <span class="hljs-operator">=</span> <span class="hljs-number">100</span>;<br><br><span class="hljs-comment">-- 添加自增长约束，在添加数据时指定初始值</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user4(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表4&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user4(id, name) <span class="hljs-keyword">values</span> (<span class="hljs-number">10</span>, <span class="hljs-string">&#x27;张三&#x27;</span>);<br><br><span class="hljs-comment">-- auto_increment 执行在 unique 的判定前</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> user5(<br>    id <span class="hljs-type">int</span> <span class="hljs-keyword">primary</span> key auto_increment comment <span class="hljs-string">&#x27;主键&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">10</span>) <span class="hljs-keyword">unique</span> comment <span class="hljs-string">&#x27;姓名&#x27;</span><br>) comment <span class="hljs-string">&#x27;用户表5&#x27;</span>;<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user5(name) <span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;张三&#x27;</span>);<br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user5(name) <span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;张三&#x27;</span>);   <span class="hljs-comment">-- 报错，无法添加该数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> user5(name) <span class="hljs-keyword">values</span> (<span class="hljs-string">&#x27;李四&#x27;</span>);<br><br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> user5;<br><span class="hljs-operator">+</span><span class="hljs-comment">----+------+</span><br><span class="hljs-operator">|</span> id <span class="hljs-operator">|</span> name <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">----+------+</span><br><span class="hljs-operator">|</span>  <span class="hljs-number">1</span> <span class="hljs-operator">|</span> 张三 <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>  <span class="hljs-number">3</span> <span class="hljs-operator">|</span> 李四 <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">----+------+</span><br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -507,7 +493,7 @@
 </li>
 </ul>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-z5gn8clc38hmdj"></i><span>sql</span><div class="collapse show" id="collapse-z5gn8clc38hmdj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建主表</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> dept(<br>    id <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;部门ID&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;部门名称&#x27;</span><br>) comment <span class="hljs-string">&#x27;部门表&#x27;</span>;<br><br><span class="hljs-comment">-- 在创建表时添加外键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp(<br>    eId <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;员工ID&#x27;</span>,<br>    eName <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;员工姓名&#x27;</span>,<br>    dId <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;部门ID&#x27;</span><br>    <span class="hljs-keyword">constraint</span> fk_dept_emp_id <span class="hljs-keyword">foreign</span> key (dId) <span class="hljs-keyword">references</span> dept (id)        <span class="hljs-comment">-- 指定约束名</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 在修改表时添加外键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp2(<br>    eId <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;员工ID&#x27;</span>,<br>    eName <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;员工姓名&#x27;</span>,<br>    dId <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;部门ID&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> emp2 <span class="hljs-keyword">add</span> <span class="hljs-keyword">constraint</span> fk_dept_emp_id <span class="hljs-keyword">foreign</span> key (dId) <span class="hljs-keyword">references</span> dept (id);<br><br><span class="hljs-comment">-- 添加数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> dept (id, name) <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;研发部&#x27;</span>), (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;市场部&#x27;</span>), (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;财务部&#x27;</span>);<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp (eId, eName, dId)<br><span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">1</span>),<br>       (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-keyword">null</span>);  <span class="hljs-comment">-- 设置了外键的字段数据可以为空，但不允许出现指定主表列以外的数据</span><br>       <br><span class="hljs-comment">-- 删除数据</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> dept <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;    <span class="hljs-comment">-- 删除失败</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> dept <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;    <span class="hljs-comment">-- 删除成功</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> eId <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;    <span class="hljs-comment">-- 删除成功</span><br>       <br><span class="hljs-comment">-- 删除外键约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> emp <span class="hljs-keyword">drop</span> <span class="hljs-keyword">foreign</span> key fk_dept_emp_id;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-vhp2amlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-vhp2amlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建主表</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> dept(<br>    id <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;部门ID&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;部门名称&#x27;</span><br>) comment <span class="hljs-string">&#x27;部门表&#x27;</span>;<br><br><span class="hljs-comment">-- 在创建表时添加外键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp(<br>    eId <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;员工ID&#x27;</span>,<br>    eName <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;员工姓名&#x27;</span>,<br>    dId <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;部门ID&#x27;</span><br>    <span class="hljs-keyword">constraint</span> fk_dept_emp_id <span class="hljs-keyword">foreign</span> key (dId) <span class="hljs-keyword">references</span> dept (id)        <span class="hljs-comment">-- 指定约束名</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 在修改表时添加外键约束</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp2(<br>    eId <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;员工ID&#x27;</span>,<br>    eName <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;员工姓名&#x27;</span>,<br>    dId <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;部门ID&#x27;</span><br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> emp2 <span class="hljs-keyword">add</span> <span class="hljs-keyword">constraint</span> fk_dept_emp_id <span class="hljs-keyword">foreign</span> key (dId) <span class="hljs-keyword">references</span> dept (id);<br><br><span class="hljs-comment">-- 添加数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> dept (id, name) <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;研发部&#x27;</span>), (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;市场部&#x27;</span>), (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;财务部&#x27;</span>);<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp (eId, eName, dId)<br><span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">1</span>),<br>       (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-keyword">null</span>);  <span class="hljs-comment">-- 设置了外键的字段数据可以为空，但不允许出现指定主表列以外的数据</span><br>       <br><span class="hljs-comment">-- 删除数据</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> dept <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;    <span class="hljs-comment">-- 删除失败</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> dept <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">3</span>;    <span class="hljs-comment">-- 删除成功</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> emp <span class="hljs-keyword">where</span> eId <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;    <span class="hljs-comment">-- 删除成功</span><br>       <br><span class="hljs-comment">-- 删除外键约束</span><br><span class="hljs-keyword">alter</span> <span class="hljs-keyword">table</span> emp <span class="hljs-keyword">drop</span> <span class="hljs-keyword">foreign</span> key fk_dept_emp_id;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="4-2-删除更新行为"><a href="#4-2-删除更新行为" class="headerlink" title="4.2 删除更新行为"></a>4.2 删除更新行为</h2><p><strong>关键字</strong></p>
 <table class="myform">
@@ -549,15 +535,15 @@
 </li>
 </ul>
 <p><strong>案例</strong></p>
-<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-dirrp2lc38hmdj"></i><span>sql</span><div class="collapse show" id="collapse-dirrp2lc38hmdj"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建主表</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> dept(<br>    id <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;部门ID&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;部门名称&#x27;</span><br>) comment <span class="hljs-string">&#x27;部门表&#x27;</span>;<br><br><span class="hljs-comment">-- 创建从表，指定外键的删除更新行为</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp(<br>    eId <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;员工ID&#x27;</span>,<br>    eName <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;员工姓名&#x27;</span>,<br>    dId <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;部门ID&#x27;</span>,<br>    <span class="hljs-keyword">constraint</span> fk_dept_emp_id <span class="hljs-keyword">foreign</span> key (dId) <span class="hljs-keyword">references</span> dept (id) <span class="hljs-keyword">on</span> <span class="hljs-keyword">update</span> cascade <span class="hljs-keyword">on</span> <span class="hljs-keyword">delete</span> cascade<br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> dept (id, name) <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;研发部&#x27;</span>), (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;市场部&#x27;</span>), (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;财务部&#x27;</span>);<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp (eId, eName, dId)<br><span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">1</span>),<br>       (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-keyword">null</span>);<br><br><span class="hljs-comment">-- 修改与从表有关联的主表数据</span><br><span class="hljs-keyword">update</span> dept <span class="hljs-keyword">set</span> id <span class="hljs-operator">=</span> <span class="hljs-number">4</span> <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span> eId <span class="hljs-operator">|</span> eName <span class="hljs-operator">|</span> dId  <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">1</span> <span class="hljs-operator">|</span> 张三  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">2</span> <span class="hljs-operator">|</span> 李四  <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>    <span class="hljs-comment">-- cascade：从表数据随主表更改</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">3</span> <span class="hljs-operator">|</span> 王五  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">4</span> <span class="hljs-operator">|</span> 洪六  <span class="hljs-operator">|</span> <span class="hljs-keyword">NULL</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><br><span class="hljs-comment">-- 删除与从表有关联的主表数据</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> dept <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">4</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span> eId <span class="hljs-operator">|</span> eName <span class="hljs-operator">|</span> dId  <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">1</span> <span class="hljs-operator">|</span> 张三  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">3</span> <span class="hljs-operator">|</span> 王五  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">4</span> <span class="hljs-operator">|</span> 洪六  <span class="hljs-operator">|</span> <span class="hljs-keyword">NULL</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight sql"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-cqu0prlcjcfpi3"></i><span>sql</span><div class="collapse show" id="collapse-cqu0prlcjcfpi3"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><code class="hljs sql"><span class="hljs-comment">-- 创建主表</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> dept(<br>    id <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;部门ID&#x27;</span>,<br>    name <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;部门名称&#x27;</span><br>) comment <span class="hljs-string">&#x27;部门表&#x27;</span>;<br><br><span class="hljs-comment">-- 创建从表，指定外键的删除更新行为</span><br><span class="hljs-keyword">create</span> <span class="hljs-keyword">table</span> emp(<br>    eId <span class="hljs-type">int</span> auto_increment <span class="hljs-keyword">primary</span> key comment <span class="hljs-string">&#x27;员工ID&#x27;</span>,<br>    eName <span class="hljs-type">varchar</span>(<span class="hljs-number">50</span>) comment <span class="hljs-string">&#x27;员工姓名&#x27;</span>,<br>    dId <span class="hljs-type">int</span> comment <span class="hljs-string">&#x27;部门ID&#x27;</span>,<br>    <span class="hljs-keyword">constraint</span> fk_dept_emp_id <span class="hljs-keyword">foreign</span> key (dId) <span class="hljs-keyword">references</span> dept (id) <span class="hljs-keyword">on</span> <span class="hljs-keyword">update</span> cascade <span class="hljs-keyword">on</span> <span class="hljs-keyword">delete</span> cascade<br>) comment <span class="hljs-string">&#x27;员工表&#x27;</span>;<br><br><span class="hljs-comment">-- 添加数据</span><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> dept (id, name) <span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;研发部&#x27;</span>), (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;市场部&#x27;</span>), (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;财务部&#x27;</span>);<br><br><span class="hljs-keyword">insert</span> <span class="hljs-keyword">into</span> emp (eId, eName, dId)<br><span class="hljs-keyword">VALUES</span> (<span class="hljs-number">1</span>, <span class="hljs-string">&#x27;张三&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">2</span>, <span class="hljs-string">&#x27;李四&#x27;</span>, <span class="hljs-number">1</span>),<br>       (<span class="hljs-number">3</span>, <span class="hljs-string">&#x27;王五&#x27;</span>, <span class="hljs-number">2</span>),<br>       (<span class="hljs-number">4</span>, <span class="hljs-string">&#x27;洪六&#x27;</span>, <span class="hljs-keyword">null</span>);<br><br><span class="hljs-comment">-- 修改与从表有关联的主表数据</span><br><span class="hljs-keyword">update</span> dept <span class="hljs-keyword">set</span> id <span class="hljs-operator">=</span> <span class="hljs-number">4</span> <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">1</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span> eId <span class="hljs-operator">|</span> eName <span class="hljs-operator">|</span> dId  <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">1</span> <span class="hljs-operator">|</span> 张三  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">2</span> <span class="hljs-operator">|</span> 李四  <span class="hljs-operator">|</span>    <span class="hljs-number">4</span> <span class="hljs-operator">|</span>    <span class="hljs-comment">-- cascade：从表数据随主表更改</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">3</span> <span class="hljs-operator">|</span> 王五  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">4</span> <span class="hljs-operator">|</span> 洪六  <span class="hljs-operator">|</span> <span class="hljs-keyword">NULL</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><br><span class="hljs-comment">-- 删除与从表有关联的主表数据</span><br><span class="hljs-keyword">delete</span> <span class="hljs-keyword">from</span> dept <span class="hljs-keyword">where</span> id <span class="hljs-operator">=</span> <span class="hljs-number">4</span>;<br><span class="hljs-keyword">select</span> <span class="hljs-operator">*</span> <span class="hljs-keyword">from</span> emp;<br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span> eId <span class="hljs-operator">|</span> eName <span class="hljs-operator">|</span> dId  <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">1</span> <span class="hljs-operator">|</span> 张三  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">3</span> <span class="hljs-operator">|</span> 王五  <span class="hljs-operator">|</span>    <span class="hljs-number">2</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">|</span>   <span class="hljs-number">4</span> <span class="hljs-operator">|</span> 洪六  <span class="hljs-operator">|</span> <span class="hljs-keyword">NULL</span> <span class="hljs-operator">|</span><br><span class="hljs-operator">+</span><span class="hljs-comment">-----+-------+------+</span><br></code></pre></td></tr></table></div></figure>
 
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
+        
+      </div>
+    
+    <hr/>
+    <div>
+      <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -593,7 +579,7 @@
 </div>
 
 
-              
+      
   
 
   <div class="license-box my-3">
@@ -643,24 +629,32 @@
 
 
 
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+      
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这部分全改成自己的侧边栏了 -->
+    
+  </div>
+  
+
+  <div class="side-col d-none d-lg-block col-lg-2">
+
+    <!-- 这部分全改成自己的侧边栏了 -->
 <section id="mysidebar">
+  <!--头部-->
+  <div class="content-header clearfix">
+    <a href="javaScript:;" class="current">目录</a>
+    <a href="javaScript:;" >分类</a>
+</div>
+<!--内容-->
 <!-- 目录/分类 -->
   <div class="content-body" id="mysidebar-body">
     <div class="dom" style="display: block">
-      <aside class="sidebar" style="margin-left: -1rem">
+      <aside class="bar toc-bar" >
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -669,7 +663,7 @@
       </aside>
     </div>
     <div class="dom" style="display: none;">
-      <aside class="sidebar category-bar" style="margin-right: -1rem">
+      <aside class="bar category-bar" >
         
 
 
@@ -683,16 +677,19 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="04 MySQL"
+          list-group-item category-item-action " title="04 MySQL"
         id="heading-496f669120bacf521daa31b619a4e1c9" role="tab" data-toggle="collapse" href="#collapse-496f669120bacf521daa31b619a4e1c9"
         aria-expanded="true"
       >
-        04 MySQL
+      <!-- 字符串删掉前面的数字 -->
+        MySQL
         <span class="list-group-count">(8)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
+    </div>
       <div class="category-collapse collapse show" id="collapse-496f669120bacf521daa31b619a4e1c9"
            role="tabpanel" aria-labelledby="heading-496f669120bacf521daa31b619a4e1c9">
         
@@ -707,6 +704,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 - MySQL</span>
+          <time>11-14</time>
         </a>
       
     
@@ -716,6 +714,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语句 - MySQL</span>
+          <time>11-18</time>
         </a>
       
     
@@ -725,6 +724,7 @@
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">约束 - MySQL</span>
+          <time>11-21</time>
         </a>
       
     
@@ -734,6 +734,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">多表查询 - MySQL</span>
+          <time>11-23</time>
         </a>
       
     
@@ -743,6 +744,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">存储引擎 - MySQL</span>
+          <time>11-28</time>
         </a>
       
     
@@ -752,6 +754,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">索引 - MySQL</span>
+          <time>11-25</time>
         </a>
       
     
@@ -761,6 +764,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">事务和锁 - MySQL</span>
+          <time>11-26</time>
         </a>
       
     
@@ -770,6 +774,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">JDBC - MySQL</span>
+          <time>12-02</time>
         </a>
       
     
@@ -811,11 +816,18 @@
         }
     }
 </script>
+
 </section>
 
 
 
-    </div>
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+      $(function(){
+          $('.toc-body').wrap('<div></div>');
+      });
+   </script> -->
   </div>
 </div>
 
@@ -823,14 +835,6 @@
 
 
 
-  
-
-
-
-  
-
-
-
 
   
 
@@ -841,9 +845,23 @@
 
 
 
+  
 
 
 
+  
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- post页格式和下面统一 -->
     
 
     <!-- 这里删除了向上的按钮 -->
@@ -875,14 +893,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -895,6 +917,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -918,6 +941,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
 
@@ -952,6 +978,8 @@
       includeTitleTags: true,
       headingsOffset  : -boardTop,
     }, CONFIG.toc));
+    //添加这一句
+    toc.find('.tocbot-link').wrapInner('<div class="text"></div>');
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }

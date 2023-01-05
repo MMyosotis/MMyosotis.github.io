@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -66,13 +67,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -88,13 +93,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="tag"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="tag" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -125,7 +130,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -204,7 +209,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -223,7 +228,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -282,7 +288,7 @@
 
   <main>
     
-      <div class="container nopadding-x-md">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board"
           >
           
@@ -291,36 +297,114 @@
               <div class="col-12 col-md-10 m-auto">
                 
 
-<div class="list-group">
-  <p class="h4">共计 3 篇文章</p>
-  <hr>
-  
-  
-    
+<div class="body-content">
+  <div id="coloum-left">
+    <div class="list-group">
+      <p class="h4">共计 3 篇文章</p>
+      <hr>
       
-      <p class="h5">2022</p>
-    
-    <a href="/post/983349234/" class="list-group-item list-group-item-action">     
-      <!-- 此处自己修改了显示顺序 -->
-      <div class="list-group-item-title">MyBatis - SSM 框架</div>
-      <time>12-15</time>
-    </a>
-  
-    
-    <a href="/post/4096320407/" class="list-group-item list-group-item-action">     
-      <!-- 此处自己修改了显示顺序 -->
-      <div class="list-group-item-title">Spring (二) - SSM 框架</div>
-      <time>12-07</time>
-    </a>
-  
-    
-    <a href="/post/914190096/" class="list-group-item list-group-item-action">     
-      <!-- 此处自己修改了显示顺序 -->
-      <div class="list-group-item-title">Spring (一) - SSM 框架</div>
-      <time>12-06</time>
-    </a>
-  
+      
+        
+          
+          <p class="h5">2022</p>
+       
+        <a href="/post/983349234/" class="list-group-item list-group-item-action">     
+          <!-- 此处自己修改了显示顺序 -->
+          <div class="list-group-item-title">MyBatis - SSM 框架</div>
+          <time>12-15</time>
+        </a>
+     
+        
+        <a href="/post/4096320407/" class="list-group-item list-group-item-action">     
+          <!-- 此处自己修改了显示顺序 -->
+          <div class="list-group-item-title">Spring (二) - SSM 框架</div>
+          <time>12-07</time>
+        </a>
+     
+        
+        <a href="/post/914190096/" class="list-group-item list-group-item-action">     
+          <!-- 此处自己修改了显示顺序 -->
+          <div class="list-group-item-title">Spring (一) - SSM 框架</div>
+          <time>12-06</time>
+        </a>
+     
+     
+
+  </div>
 </div>
+<div id="coloum-right">
+
+    <div class="card-content">
+      <div class="card-info-avatar">
+        <div class="author-info__sayhi" id="author-info__sayhi"></div>
+        <div class="author-info__name">MQY</div>
+        <div class="author-info__description">这里记录学过的<b>知识</b>，以及相关的<b>总结</b>，并对其进行了<b>分类</b>。</div>
+        <div class="author-info__description">还有<b>专栏</b>的内容，和日常的小声<b>嘀咕</b>。</div>
+      </div>
+      <div class="card-info-icon">
+        <a class="social-icon" href="" target="_blank" title="Github">
+          <i class="fa-brands fa-github"></i>
+        </a>
+      </div>
+      <div class="card-info-goto">
+        <a href="/about/">
+          <i class="fa-solid fa-circle-chevron-right"></i>
+          <span class="goto_about">了解更多</span>
+        </a>
+      </div>
+    </div>
+    <div class="to-civil" onclick="window.open('/civileng/','_self')" >
+      <div id="civil-content">
+        <div>土木工程</div>
+        <div>开启梦幻的土木之旅<i class="fa-solid fa-caret-right"></i></div>
+        <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+        <div>笔记</div>
+      </div>
+      <div id="civil-back">
+        <div>王牌专业</div>
+        <div>快速获取土木工程笔记<i class="fa-solid fa-caret-right"></i></div>
+        <div class="icon"><i class="fa-solid fa-landmark"></i></div>
+      </div>
+    </div>
+
+    <div class="blog-info">
+      <div class="tag-bar">
+        
+        <div class="text-center tagcloud">
+        <a href="/tags/CSS/" style="font-size: 16px; color: #3c4858">CSS</a> <a href="/tags/Fluid/" style="font-size: 16px; color: #3c4858">Fluid</a> <a href="/tags/HTML/" style="font-size: 16px; color: #3c4858">HTML</a> <a href="/tags/Hexo/" style="font-size: 16px; color: #3c4858">Hexo</a> <a href="/tags/JDBC/" style="font-size: 16px; color: #3c4858">JDBC</a> <a href="/tags/JUnit/" style="font-size: 16px; color: #3c4858">JUnit</a> <a href="/tags/Java/" style="font-size: 16px; color: #3c4858">Java</a> <a href="/tags/Java-SE/" style="font-size: 16px; color: #3c4858">Java SE</a> <a href="/tags/JavaScript/" style="font-size: 16px; color: #3c4858">JavaScript</a> <a href="/tags/Maven/" style="font-size: 16px; color: #3c4858">Maven</a> <a href="/tags/MyBatis/" style="font-size: 16px; color: #3c4858">MyBatis</a> <a href="/tags/MySQL/" style="font-size: 16px; color: #3c4858">MySQL</a> <a href="/tags/SSM-%E6%A1%86%E6%9E%B6/" style="font-size: 16px; color: #3c4858">SSM 框架</a> <a href="/tags/Spring/" style="font-size: 16px; color: #3c4858">Spring</a> <a href="/tags/%E5%8D%95%E5%85%83%E6%B5%8B%E8%AF%95/" style="font-size: 16px; color: #3c4858">单元测试</a> <a href="/tags/%E6%95%B0%E6%8D%AE%E5%BA%93/" style="font-size: 16px; color: #3c4858">数据库</a> <a href="/tags/%E8%BD%AF%E4%BB%B6%E9%85%8D%E7%BD%AE/" style="font-size: 16px; color: #3c4858">软件配置</a> <a href="/tags/%E9%A1%B9%E7%9B%AE%E7%AE%A1%E7%90%86/" style="font-size: 16px; color: #3c4858">项目管理</a>
+        </div>
+      </div>
+      
+      <hr>
+
+      <div class="blog-count">
+        <div class="count-item">
+          <div><i class="fa-solid fa-file-lines"></i>文章总数：</div>
+          <div>35</div>
+        </div>
+        <div class="count-item">
+          <div><i class="fa-solid fa-bookmark"></i>标签总数：</div>
+          <div>18</div>
+        </div>
+        <div class="count-item">
+          <div><i class="fa-solid fa-bars"></i>分类总数：</div>
+          <div>8</div>
+        </div>
+        <div class="count-item">
+          <div><i class="fa-solid fa-font"></i>全站字数：</div>
+          <div>115.5k</div>
+        </div>
+      </div>
+
+    </div>
+
+</div>
+</div>
+
+
+
+
+
 
 
 
@@ -362,14 +446,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -382,6 +470,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -405,6 +494,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>

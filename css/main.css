@@ -310,6 +310,9 @@ sup > a::before,
 .navbar .nav-item .nav-link i {
   font-size: 0.875rem;
 }
+.navbar .nav-item .nav-link i:only-child {
+  margin: 0 0.2rem;
+}
 .navbar .navbar-toggler {
   border-width: 0;
   outline: 0;
@@ -454,6 +457,9 @@ sup > a::before,
   width: 80%;
   overflow-wrap: break-word;
 }
+.banner-text .typed-cursor {
+  margin: 0 0.2rem;
+}
 @media (max-width: 767px) {
   #subtitle,
   .typed-cursor {
@@ -562,9 +568,6 @@ sup > a::before,
 .modal-open[style] {
   padding-right: 0 !important;
   overflow: auto;
-}
-.modal-open[style] #navbar[style] {
-  padding-right: 1rem !important;
 }
 #nprogress .bar {
   height: 3px !important;

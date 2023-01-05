@@ -1,5 +1,6 @@
 
 
+
 <!DOCTYPE html>
 <html lang="zh-CN" >
 
@@ -80,13 +81,17 @@
 <link rel="stylesheet" href="/css/fluid/switchColumn.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.css">
 <link rel="stylesheet" href="/css/fontawesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/css/fluid/artitalk.css">
+<link rel="stylesheet" href="/css/fluid/tagsPage.css">
+<link rel="stylesheet" href="/css/fluid/footer.css">
+<link rel="stylesheet" href="/css/ziti/ziti.css">
 
 
 
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":["home","tag","category","about","page","archive"]},"anchorjs":{"enable":false,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":false,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":2},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":true,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -102,13 +107,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="post"><!-- hexo injector body_begin end -->
+<body><!-- hexo injector body_begin start --><div class="post" id="pageName"><!-- hexo injector body_begin end -->
   
 
   <header>
     
 
-<div class="header-inner" style="height: 60vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -139,7 +144,7 @@
             </a>
             <div class="homeicon">
               <a class="nav-link" href="/">
-                <span class="icon"><i class="iconfont icon-home-fill"></i>&nbsp;</span>
+                <span class="icon">首 页</span>
               </a>
             </div>
           </div>
@@ -218,7 +223,7 @@
               <li class="nav-item">
                 <a class="nav-link" href="/artitalk/">
                   <div>
-                    <span class="icon"><i class="fa fa-commenting"></i></span>
+                    <span class="icon"><i class="iconfont icon-comment"></i></span>
                     <span class="text">嘀 咕</span>
                   </div>
                 </a>
@@ -237,7 +242,8 @@
             
               <li class="nav-item" id="toTop">
                 <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-                  <i class="fa fa-arrow-up" aria-hidden="true"></i>
+                  <i class="fa-solid fa-arrow-up"></i>
+                  <span id="percent"></span>
                 </a>
               </li>
             
@@ -269,30 +275,29 @@
           
   <div class="mt-3">
     
-      <span class="post-meta mr-2">
-        <i class="iconfont icon-author" aria-hidden="true"></i>
-        MQY
-      </span>
-    
-    
-      <span class="post-meta">
+      <span class="post-meta postDate">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
         <time datetime="2022-09-23 20:00" pubdate>
           2022年9月23日
         </time>
       </span>
     
-  </div>
-
-  <div class="mt-1">
     
-      <span class="post-meta mr-2">
+      <span class="post-meta wordCount">
         <i class="iconfont icon-chart"></i>
         
           14k 字
         
       </span>
     
+  </div>
+
+  <div class="mt-1">
+    
+    <!-- 自己加入的代码！！ -->
+    <span class="myupdated">
+      
+    </span>
 
     
 
@@ -300,10 +305,7 @@
     
   </div>
 
-  <!-- 自己加入的代码！！ -->
-  <span class="myupdated">
-    
-  </span>
+
 
 
         
@@ -337,43 +339,27 @@
 
   <main>
     
-      
-
-<!-- 添加mysidebar-bar -->
-<div class="mysidebar-bar">
-  <div class="content-header clearfix navbar-dark">
-    <div class="barpack">
-      <div class="mytoolbox">
-        <a class="current"><i class="iconfont icon-list"></i></a>
-        <a class="current"><i class="iconfont icon-category-fill"></i></a>
-        <a class="happy"></a>
-      </div>
-    </div>
-  </div>
-  <div class="opentoolbox">
-    <a class="tool-toggle-show"><i class="fa fa-cog fa-spin fa-fw"></i></a>
-  </div>
-</div>
-
-
-<div class="container-fluid nopadding-x">
-  <div class="row nomargin-x">
-    <div class="side-col d-none d-lg-block col-lg-2">
-      
-
-    </div>
-
-    <div class="col-lg-8 nopadding-x-md">
-      <div class="container nopadding-x-md" id="board-ctn">
+      <div class="container nopadding-x-md" id="#pjax-container">
         <div id="board">
-          <article class="post-content mx-auto">
-            <!-- SEO header -->
-            <h1 style="display: none">常用 API - Java SE</h1>
-            
-            
-              <div class="markdown-body">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
                 
-                <h1 id="1-Object-类"><a href="#1-Object-类" class="headerlink" title="1. Object 类"></a>1. Object 类</h1><p>Java 中一个类要么默认继承了 Object 类，要么间接继承了 Object 类。</p>
+
+
+
+
+
+
+<div class="body-content mx-auto" id="board-ctn">
+  <div id="coloum-left">
+    <!-- SEO header -->
+    <h1 style="display: none">常用 API - Java SE</h1>
+    
+    
+      <div class="markdown-body">
+        
+        <h1 id="1-Object-类"><a href="#1-Object-类" class="headerlink" title="1. Object 类"></a>1. Object 类</h1><p>Java 中一个类要么默认继承了 Object 类，要么间接继承了 Object 类。</p>
 <p><font class="code-word"><code>Object</code></font> 作为所有类的父类，提供了很多常用的方法给每个子类对象拿来使用，其中常用的两个方法：</p>
 <table class="myform">
     <head>
@@ -397,14 +383,14 @@
 
 <h2 id="1-1-toString-重写"><a href="#1-1-toString-重写" class="headerlink" title="1.1 toString 重写"></a>1.1 toString 重写</h2><p>Object 中 <font class="code-word"><code>toString()</code></font> 方法<font class="word-stress">默认返回地址</font>，但通过被子类重写，则可以返回对象的内容信息。</p>
 <p>在用 <font class="code-sentence"><code>System.out</code></font> 打印对象时，会默认调用对象的 toString() 方法，所以此时可以省略该方法，只写对象。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-382b8klc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-382b8klc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Objects;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br><br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//重写toString()方法</span><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">toString</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Students&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;name=&#x27;&quot;</span> + name + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&quot;, age=&quot;</span> + age +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-qf5sc1lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-qf5sc1lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Objects;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br><br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//重写toString()方法</span><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> String <span class="hljs-title function_">toString</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;Students&#123;&quot;</span> +<br>                <span class="hljs-string">&quot;name=&#x27;&quot;</span> + name + <span class="hljs-string">&#x27;\&#x27;&#x27;</span> +<br>                <span class="hljs-string">&quot;, age=&quot;</span> + age +<br>                <span class="hljs-string">&#x27;&#125;&#x27;</span>;<br>    &#125;<br>    <br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ukb8s9lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-ukb8s9lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br>        <br>        System.out.println(student.toString());        <span class="hljs-comment">//输出：Students&#123;name=&#x27;张三&#x27;, age=23&#125;</span><br>        <span class="hljs-comment">//toString()可不写，会默认调用</span><br>        System.out.println(student);                   <span class="hljs-comment">//输出：Students&#123;name=&#x27;张三&#x27;, age=23&#125;</span><br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-uyeobelcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-uyeobelcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br>        <br>        System.out.println(student.toString());        <span class="hljs-comment">//输出：Students&#123;name=&#x27;张三&#x27;, age=23&#125;</span><br>        <span class="hljs-comment">//toString()可不写，会默认调用</span><br>        System.out.println(student);                   <span class="hljs-comment">//输出：Students&#123;name=&#x27;张三&#x27;, age=23&#125;</span><br>        <br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="1-2-equals-重写"><a href="#1-2-equals-重写" class="headerlink" title="1.2 equals 重写"></a>1.2 equals 重写</h2><p>Object 中 <font class="code-word"><code>equals</code></font> 方法<font class="word-stress">默认比较地址</font>，比较地址时与 <font class="code-word"><code>==</code></font> 效果相同。但通过被子类重写，则可以比较对象的内容信息是否一致。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-vm49gglc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-vm49gglc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Objects;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br><br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//重写equals方法</span><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">equals</span><span class="hljs-params">(Object o)</span> &#123;<br>        <span class="hljs-comment">//若地址相同则直接认为相同</span><br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span> == o) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;                                         <br>        <span class="hljs-comment">//若比较对象为空指针或类型不同则直接认为不同</span><br>        <span class="hljs-keyword">if</span> (o == <span class="hljs-literal">null</span> || getClass() != o.getClass()) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;  <br>        <span class="hljs-comment">//不属于上面两种情况时，所有信息相同则认为相同</span><br>        <span class="hljs-type">Students</span> <span class="hljs-variable">students</span> <span class="hljs-operator">=</span> (Students) o;<br>        <span class="hljs-keyword">return</span> age == students.age &amp;&amp; Objects.equals(name, students.name);  <br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-1rt8iwlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-1rt8iwlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Objects;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Students</span> &#123;<br><br>    <span class="hljs-keyword">public</span> String name;<br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> age;<br><br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Students</span><span class="hljs-params">(String name, <span class="hljs-type">int</span> age)</span> &#123;<br>        <span class="hljs-built_in">this</span>.name = name;<br>        <span class="hljs-built_in">this</span>.age = age;<br>    &#125;<br><br>    <span class="hljs-comment">//重写equals方法</span><br>    <span class="hljs-meta">@Override</span><br>    <span class="hljs-keyword">public</span> <span class="hljs-type">boolean</span> <span class="hljs-title function_">equals</span><span class="hljs-params">(Object o)</span> &#123;<br>        <span class="hljs-comment">//若地址相同则直接认为相同</span><br>        <span class="hljs-keyword">if</span> (<span class="hljs-built_in">this</span> == o) <span class="hljs-keyword">return</span> <span class="hljs-literal">true</span>;                                         <br>        <span class="hljs-comment">//若比较对象为空指针或类型不同则直接认为不同</span><br>        <span class="hljs-keyword">if</span> (o == <span class="hljs-literal">null</span> || getClass() != o.getClass()) <span class="hljs-keyword">return</span> <span class="hljs-literal">false</span>;  <br>        <span class="hljs-comment">//不属于上面两种情况时，所有信息相同则认为相同</span><br>        <span class="hljs-type">Students</span> <span class="hljs-variable">students</span> <span class="hljs-operator">=</span> (Students) o;<br>        <span class="hljs-keyword">return</span> age == students.age &amp;&amp; Objects.equals(name, students.name);  <br>    &#125;<br><br>&#125;<br></code></pre></td></tr></table></div></figure>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-gn4omllc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-gn4omllc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br><br>        System.out.println(student1 == student2);          <span class="hljs-comment">//输出：false</span><br>        System.out.println(student1.equals(student2));   <span class="hljs-comment">//输出：true</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-atj2b3lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-atj2b3lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        <br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br><br>        System.out.println(student1 == student2);          <span class="hljs-comment">//输出：false</span><br>        System.out.println(student1.equals(student2));   <span class="hljs-comment">//输出：true</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -432,7 +418,7 @@
 </table>
 
 <p>Objects 中 <font class="code-word"><code>equals</code></font> 其内部仍然是调用了类自身的 equals 方法，但在调用前会先进行非空判断，<font class="word-stress">避免了空指针异常</font>。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-fayc51lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-fayc51lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Objects;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Objects的equals的源代码：</span><br><span class="hljs-comment"> * public static boolean equals(Object a, Object b) &#123;</span><br><span class="hljs-comment"> *     return (a == b) || (a != null &amp;&amp; a.equals(b));</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student1</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br><br>        System.out.println(Objects.equals(student1,student2));   <span class="hljs-comment">//输出：false</span><br>        System.out.println(student1.equals(student2));           <span class="hljs-comment">//空指针异常：NullPointerException</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-id8xbflcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-id8xbflcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Objects;<br><br><span class="hljs-comment">/**</span><br><span class="hljs-comment"> * Objects的equals的源代码：</span><br><span class="hljs-comment"> * public static boolean equals(Object a, Object b) &#123;</span><br><span class="hljs-comment"> *     return (a == b) || (a != null &amp;&amp; a.equals(b));</span><br><span class="hljs-comment"> * &#125;</span><br><span class="hljs-comment"> */</span><br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student1</span> <span class="hljs-operator">=</span> <span class="hljs-literal">null</span>;<br>        <span class="hljs-type">Students</span> <span class="hljs-variable">student2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Students</span>(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-number">23</span>);<br><br>        System.out.println(Objects.equals(student1,student2));   <span class="hljs-comment">//输出：false</span><br>        System.out.println(student1.equals(student2));           <span class="hljs-comment">//空指针异常：NullPointerException</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -444,7 +430,7 @@
 <p><strong>创建类对象</strong></p>
 <ul>
 <li><p>可以通过直接赋值来创建 String 对象：</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ygt13xlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-ygt13xlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">s1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;abc&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">s2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;abc&quot;</span>;<br>System.out.println(s1 == s2);   <span class="hljs-comment">//true</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-w0i0oflcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-w0i0oflcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">String</span> <span class="hljs-variable">s1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;abc&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">s2</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;abc&quot;</span>;<br>System.out.println(s1 == s2);   <span class="hljs-comment">//true</span><br></code></pre></td></tr></table></div></figure>
 
 <p>直接定义字符串对象，在字符串常量池中存储，而且相同内容只会在其中存储一份。</p>
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/01-27.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:50%;" />
@@ -478,7 +464,7 @@
     </body>
 </table>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ndxpxklc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-ndxpxklc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">char</span>[] chs = &#123;<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>&#125;;<br><span class="hljs-type">String</span> <span class="hljs-variable">s1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(chs);<br><span class="hljs-type">String</span> <span class="hljs-variable">s2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(chs);<br>System.out.println(s1 == s2);     <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-n7d5fhlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-n7d5fhlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">char</span>[] chs = &#123;<span class="hljs-string">&#x27;a&#x27;</span>, <span class="hljs-string">&#x27;b&#x27;</span>, <span class="hljs-string">&#x27;c&#x27;</span>&#125;;<br><span class="hljs-type">String</span> <span class="hljs-variable">s1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(chs);<br><span class="hljs-type">String</span> <span class="hljs-variable">s2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">String</span>(chs);<br>System.out.println(s1 == s2);     <span class="hljs-comment">//false</span><br></code></pre></td></tr></table></div></figure>
 
 <p>通过构造方法创建对象，每一次都会产生一个新对象，放在堆内存中。</p>
 <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/img/01-28.png" srcset="/img/loading.gif" lazyload class="img-center" style="zoom:50%;" /></li>
@@ -588,7 +574,7 @@
 </table>
 
 <p>字符串指定规则切割可以参照<a href="/post/3799/#2-2-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E5%BA%94%E7%94%A8">正则表达式</a>。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-rw490xlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-rw490xlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//字符串替换</span><br><span class="hljs-type">String</span> <span class="hljs-variable">rs1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;张三最棒！&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">rs2</span> <span class="hljs-operator">=</span> rs1.replace(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);   <span class="hljs-comment">//输出：&quot;李四最棒！&quot;</span><br><br><span class="hljs-comment">//字符串指定规则切割</span><br><span class="hljs-type">String</span> <span class="hljs-variable">names</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;张三。李四。王五&quot;</span>;                          <br>String[] arr = names.split(<span class="hljs-string">&quot;。&quot;</span>);                           <br>System.out.println(Arrays.toString(arr));    <span class="hljs-comment">//输出：[张三, 李四, 王五]      </span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-6myqdtlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-6myqdtlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//字符串替换</span><br><span class="hljs-type">String</span> <span class="hljs-variable">rs1</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;张三最棒！&quot;</span>;<br><span class="hljs-type">String</span> <span class="hljs-variable">rs2</span> <span class="hljs-operator">=</span> rs1.replace(<span class="hljs-string">&quot;张三&quot;</span>, <span class="hljs-string">&quot;李四&quot;</span>);   <span class="hljs-comment">//输出：&quot;李四最棒！&quot;</span><br><br><span class="hljs-comment">//字符串指定规则切割</span><br><span class="hljs-type">String</span> <span class="hljs-variable">names</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;张三。李四。王五&quot;</span>;                          <br>String[] arr = names.split(<span class="hljs-string">&quot;。&quot;</span>);                           <br>System.out.println(Arrays.toString(arr));    <span class="hljs-comment">//输出：[张三, 李四, 王五]      </span><br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -647,7 +633,7 @@
 </table>
 
 <p>对于 <font class="code-word"><code>append</code></font> 方法和 <font class="code-word"><code>reverse</code></font> 方法支持链式编程。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-u2v6vmlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-u2v6vmlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>sb.append(<span class="hljs-string">&quot;你&quot;</span>).append(<span class="hljs-number">23</span>).append(<span class="hljs-string">&#x27;4&#x27;</span>);<br><br>System.out.println(sb);              <span class="hljs-comment">//输出：你234</span><br>System.out.println(sb.reverse());    <span class="hljs-comment">//输出：432你</span><br>System.out.println(sb.length());     <span class="hljs-comment">//输出：4</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-rnu0p7lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-rnu0p7lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">StringBuilder</span> <span class="hljs-variable">sb</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">StringBuilder</span>();<br>sb.append(<span class="hljs-string">&quot;你&quot;</span>).append(<span class="hljs-number">23</span>).append(<span class="hljs-string">&#x27;4&#x27;</span>);<br><br>System.out.println(sb);              <span class="hljs-comment">//输出：你234</span><br>System.out.println(sb.reverse());    <span class="hljs-comment">//输出：432你</span><br>System.out.println(sb.length());     <span class="hljs-comment">//输出：4</span><br></code></pre></td></tr></table></div></figure>
 
 <p><strong>类的拼接性能</strong></p>
 <p><font class="code-word"><code>StringBuilder</code></font> 拼接字符串时性能要优于 <font class="code-word"><code>String</code></font>，可以通过内存来具体解释：</p>
@@ -807,11 +793,11 @@
 <li><p>时间毫秒值：指的是从1970年1月1日 00:00:00（C语言诞生时间）走到此刻的总的毫秒数。1s &#x3D; 1000ms。</p>
 </li>
 <li><p>数组拷贝演示如下。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-qx5k6blc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-qx5k6blc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">int</span>[] arr1 = &#123;<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>, <span class="hljs-number">50</span>, <span class="hljs-number">60</span>&#125;;<br>        <span class="hljs-type">int</span>[] arr2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">5</span>];<br>        <br>        <span class="hljs-comment">//执行数组拷贝</span><br>        System.arraycopy(arr1, <span class="hljs-number">2</span>, arr2, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);<br>        System.out.println(Arrays.toString(arr2));    <span class="hljs-comment">//输出：[0, 30, 40, 50, 0]</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure></li>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-98mucrlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-98mucrlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.util.Arrays;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br><br>        <span class="hljs-type">int</span>[] arr1 = &#123;<span class="hljs-number">10</span>, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>, <span class="hljs-number">50</span>, <span class="hljs-number">60</span>&#125;;<br>        <span class="hljs-type">int</span>[] arr2 = <span class="hljs-keyword">new</span> <span class="hljs-title class_">int</span>[<span class="hljs-number">5</span>];<br>        <br>        <span class="hljs-comment">//执行数组拷贝</span><br>        System.arraycopy(arr1, <span class="hljs-number">2</span>, arr2, <span class="hljs-number">1</span>, <span class="hljs-number">3</span>);<br>        System.out.println(Arrays.toString(arr2));    <span class="hljs-comment">//输出：[0, 30, 40, 50, 0]</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure></li>
 </ul>
 <h1 id="8-BigDecimal-类"><a href="#8-BigDecimal-类" class="headerlink" title="8. BigDecimal 类"></a>8. BigDecimal 类</h1><p><strong>类的概述</strong></p>
 <p><font class="code-word"><code>BigDecimal</code></font> 类提供了用于解决浮点型<font class="word-stress">运算精度失真</font>的问题，浮点型四则运算均可存在精度失真。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-230i4mlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-230i4mlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.println(<span class="hljs-number">0.09</span> + <span class="hljs-number">0.01</span>);    <span class="hljs-comment">//0.09999999999999999</span><br>System.out.println(<span class="hljs-number">1.00</span> - <span class="hljs-number">0.32</span>);    <span class="hljs-comment">//0.6799999999999999</span><br>System.out.println(<span class="hljs-number">1.015</span> * <span class="hljs-number">100</span>);    <span class="hljs-comment">//101.49999999999999</span><br>System.out.println(<span class="hljs-number">1.301</span> / <span class="hljs-number">100</span>);    <span class="hljs-comment">//0.013009999999999999</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-4g1m29lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-4g1m29lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java">System.out.println(<span class="hljs-number">0.09</span> + <span class="hljs-number">0.01</span>);    <span class="hljs-comment">//0.09999999999999999</span><br>System.out.println(<span class="hljs-number">1.00</span> - <span class="hljs-number">0.32</span>);    <span class="hljs-comment">//0.6799999999999999</span><br>System.out.println(<span class="hljs-number">1.015</span> * <span class="hljs-number">100</span>);    <span class="hljs-comment">//101.49999999999999</span><br>System.out.println(<span class="hljs-number">1.301</span> / <span class="hljs-number">100</span>);    <span class="hljs-comment">//0.013009999999999999</span><br></code></pre></td></tr></table></div></figure>
 
 <p>BigDecimal 虽然存在构造方法 <font class="code-word"><code>BigDecimal(double)</code></font>，但是存在<font class="word-stress">精度损失</font>风险，不推荐使用。</p>
 <p>创建 BigDecimal 对象推荐使用 <font class="code-word"><code>valueOf</code></font> 方法：</p>
@@ -868,11 +854,11 @@
     </body>
 </table>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-uija1jlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-uija1jlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">double</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">0.1</span>;<br><span class="hljs-type">double</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">0.2</span>;<br><span class="hljs-type">double</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a + b;<br>System.out.println(c);         <span class="hljs-comment">//0.30000000000000004</span><br><br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">a1</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(a);<br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">b1</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(b);<br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">c1</span> <span class="hljs-operator">=</span> a1.add(b1);<br>System.out.println(c1);        <span class="hljs-comment">//0.3</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-zdpgjklcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-zdpgjklcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">double</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> <span class="hljs-number">0.1</span>;<br><span class="hljs-type">double</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> <span class="hljs-number">0.2</span>;<br><span class="hljs-type">double</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a + b;<br>System.out.println(c);         <span class="hljs-comment">//0.30000000000000004</span><br><br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">a1</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(a);<br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">b1</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(b);<br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">c1</span> <span class="hljs-operator">=</span> a1.add(b1);<br>System.out.println(c1);        <span class="hljs-comment">//0.3</span><br></code></pre></td></tr></table></div></figure>
 
 <p><strong>类的注意事项</strong></p>
 <p>特别注意 BigDecimal 类型只能进行精度运算，对于无法取到精确值的运算会直接抛出异常 <font class="code-word"><code>ArithmeticException</code></font>。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-ozr9ojlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-ozr9ojlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(<span class="hljs-number">10.0</span>);<br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(<span class="hljs-number">3.0</span>);<br><span class="hljs-comment">//BigDecimal c = a.divide(b);      //无法取到精确值，直接抛出异常</span><br><br><span class="hljs-comment">//除法精度为2位小数，HALF_UP为四舍五入</span><br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a.divide(b,<span class="hljs-number">2</span>, RoundingMode.HALF_UP);<br>System.out.println(c);             <span class="hljs-comment">//3.3</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-kmx71jlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-kmx71jlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">a</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(<span class="hljs-number">10.0</span>);<br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">b</span> <span class="hljs-operator">=</span> BigDecimal.valueOf(<span class="hljs-number">3.0</span>);<br><span class="hljs-comment">//BigDecimal c = a.divide(b);      //无法取到精确值，直接抛出异常</span><br><br><span class="hljs-comment">//除法精度为2位小数，HALF_UP为四舍五入</span><br><span class="hljs-type">BigDecimal</span> <span class="hljs-variable">c</span> <span class="hljs-operator">=</span> a.divide(b,<span class="hljs-number">2</span>, RoundingMode.HALF_UP);<br>System.out.println(c);             <span class="hljs-comment">//3.3</span><br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -971,7 +957,7 @@
 
 <p>常用的对应字符包括：y（年）、M（月）、d（日）、H（时）、m（分）、s（秒）、E（星期几）、a（上&#x2F;下午）。</p>
 <p>的在解析字符串时，字符串必须与 SimpleDataFormat 中形式信息统一，否则会抛出异常无法解析。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-wbvvsllc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-wbvvsllc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.text.ParseException;<br><span class="hljs-keyword">import</span> java.text.SimpleDateFormat;<br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> ParseException &#123;<br><br>        <span class="hljs-comment">//将日期信息格式化成字符串</span><br>        <span class="hljs-type">Date</span> <span class="hljs-variable">d1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br>        <span class="hljs-type">long</span> <span class="hljs-variable">time</span> <span class="hljs-operator">=</span> System.currentTimeMillis();<br>        <span class="hljs-type">SimpleDateFormat</span> <span class="hljs-variable">sdf1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleDateFormat</span>(<span class="hljs-string">&quot;yyyy年MM月dd日 HH:mm:ss EEE a&quot;</span>);<br>        System.out.println(sdf1.format(d1));       <span class="hljs-comment">//2022年09月22日 23:02:22 周四 下午</span><br>        System.out.println(sdf1.format(time));     <span class="hljs-comment">//2022年09月22日 23:02:22 周四 下午</span><br><br>        <span class="hljs-comment">//解析字符串获取日期信息</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;2022-09-22 23:02:22&quot;</span>;<br>        <span class="hljs-type">SimpleDateFormat</span> <span class="hljs-variable">sdf2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleDateFormat</span>(<span class="hljs-string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);<br>        <span class="hljs-type">Date</span> <span class="hljs-variable">d2</span> <span class="hljs-operator">=</span> sdf2.parse(str);<br>        System.out.println(d2);                   <span class="hljs-comment">//Thu Sep 22 23:02:22 CST 2022</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-cg4a9mlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-cg4a9mlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">import</span> java.text.ParseException;<br><span class="hljs-keyword">import</span> java.text.SimpleDateFormat;<br><span class="hljs-keyword">import</span> java.util.Date;<br><br><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Test</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> <span class="hljs-keyword">throws</span> ParseException &#123;<br><br>        <span class="hljs-comment">//将日期信息格式化成字符串</span><br>        <span class="hljs-type">Date</span> <span class="hljs-variable">d1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Date</span>();<br>        <span class="hljs-type">long</span> <span class="hljs-variable">time</span> <span class="hljs-operator">=</span> System.currentTimeMillis();<br>        <span class="hljs-type">SimpleDateFormat</span> <span class="hljs-variable">sdf1</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleDateFormat</span>(<span class="hljs-string">&quot;yyyy年MM月dd日 HH:mm:ss EEE a&quot;</span>);<br>        System.out.println(sdf1.format(d1));       <span class="hljs-comment">//2022年09月22日 23:02:22 周四 下午</span><br>        System.out.println(sdf1.format(time));     <span class="hljs-comment">//2022年09月22日 23:02:22 周四 下午</span><br><br>        <span class="hljs-comment">//解析字符串获取日期信息</span><br>        <span class="hljs-type">String</span> <span class="hljs-variable">str</span> <span class="hljs-operator">=</span> <span class="hljs-string">&quot;2022-09-22 23:02:22&quot;</span>;<br>        <span class="hljs-type">SimpleDateFormat</span> <span class="hljs-variable">sdf2</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">SimpleDateFormat</span>(<span class="hljs-string">&quot;yyyy-MM-dd HH:mm:ss&quot;</span>);<br>        <span class="hljs-type">Date</span> <span class="hljs-variable">d2</span> <span class="hljs-operator">=</span> sdf2.parse(str);<br>        System.out.println(d2);                   <span class="hljs-comment">//Thu Sep 22 23:02:22 CST 2022</span><br><br>    &#125;<br>&#125;<br></code></pre></td></tr></table></div></figure>
 
 <h2 id="9-3-Calendar-类"><a href="#9-3-Calendar-类" class="headerlink" title="9.3 Calendar 类"></a>9.3 Calendar 类</h2><p><strong>类的概念</strong></p>
 <p><font class="code-word"><code>Calendar</code></font> 是 <font class="code-word"><code>java.util.Calendar</code></font> 包下的代表了系统此刻日期对应的日历的类。Calendar 是一个抽象类，<font class="word-stress">不能直接创建对象</font>。calendar是可变日期对象，一旦修改后其对象本身表示的时间将产生变化。</p>
@@ -1027,7 +1013,7 @@
 </table>
 
 <p>参数 <font class="code-word"><code>int field</code></font> 不同数字对应了日历中不同字段，也可以直接通过 <font class="code-sentence"><code>Calendar.字段名</code></font> 来获取字段对应的数字。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-mzsclelc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-mzsclelc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//获取日历对象</span><br><span class="hljs-type">Calendar</span> <span class="hljs-variable">cal</span> <span class="hljs-operator">=</span> Calendar.getInstance();                                                                                                                                                                           <span class="hljs-comment">//获取日历中某个字段的信息                                                                        </span><br><span class="hljs-type">int</span> <span class="hljs-variable">year</span> <span class="hljs-operator">=</span> cal.get(Calendar.YEAR);                                                    <br>System.out.println(year + <span class="hljs-number">1</span>);                 <span class="hljs-comment">//输出：2023                               </span><br>                                                                                      <br><span class="hljs-comment">//修改日历的某个字段信息                                                                         </span><br>cal.set(Calendar.YEAR, <span class="hljs-number">2022</span>);                                                         <br>System.out.println(cal.get(Calendar.YEAR));   <span class="hljs-comment">//输出：2022                               </span><br>                                                                                      <br><span class="hljs-comment">//为某个字段增加/减少指定的值                                                                      </span><br>cal.add(Calendar.YEAR, -<span class="hljs-number">2</span>);                                                           <br>System.out.println(cal.get(Calendar.YEAR));   <span class="hljs-comment">//输出：2020                               </span><br><br><span class="hljs-comment">//从日历对象中获取日期对象</span><br><span class="hljs-type">Date</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> cal.getTime();                                                               <br>System.out.println(d);                        <span class="hljs-comment">//输出：Tue Sep 22 23:56:39 CST 2020       </span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-mz0ijvlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-mz0ijvlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//获取日历对象</span><br><span class="hljs-type">Calendar</span> <span class="hljs-variable">cal</span> <span class="hljs-operator">=</span> Calendar.getInstance();                                                                                                                                                                           <span class="hljs-comment">//获取日历中某个字段的信息                                                                        </span><br><span class="hljs-type">int</span> <span class="hljs-variable">year</span> <span class="hljs-operator">=</span> cal.get(Calendar.YEAR);                                                    <br>System.out.println(year + <span class="hljs-number">1</span>);                 <span class="hljs-comment">//输出：2023                               </span><br>                                                                                      <br><span class="hljs-comment">//修改日历的某个字段信息                                                                         </span><br>cal.set(Calendar.YEAR, <span class="hljs-number">2022</span>);                                                         <br>System.out.println(cal.get(Calendar.YEAR));   <span class="hljs-comment">//输出：2022                               </span><br>                                                                                      <br><span class="hljs-comment">//为某个字段增加/减少指定的值                                                                      </span><br>cal.add(Calendar.YEAR, -<span class="hljs-number">2</span>);                                                           <br>System.out.println(cal.get(Calendar.YEAR));   <span class="hljs-comment">//输出：2020                               </span><br><br><span class="hljs-comment">//从日历对象中获取日期对象</span><br><span class="hljs-type">Date</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> cal.getTime();                                                               <br>System.out.println(d);                        <span class="hljs-comment">//输出：Tue Sep 22 23:56:39 CST 2020       </span><br></code></pre></td></tr></table></div></figure>
 
 <h2 id="9-4-JDK8-新增类"><a href="#9-4-JDK8-新增类" class="headerlink" title="9.4 JDK8 新增类"></a>9.4 JDK8 新增类</h2><p>从 JDK8 开始，<font class="code-word"><code>java.time</code></font> 包提供了新的日期和时间 API，新增的类有如下特点：</p>
 <ul>
@@ -1235,7 +1221,7 @@
 <li>在不指定时区时，返回的是世界标准时间。若要指定时区，需要调用类中的 <font class="code-word"><code>atZone()</code></font> 方法。</li>
 <li><font class="code-word"><code>Instant</code></font> 和 <font class="code-word"><code>Date</code></font> 这两个类可以进行转换。</li>
 </ul>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-hqxfs8lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-hqxfs8lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//得到一个Instant时间戳对象</span><br><span class="hljs-type">Instant</span> <span class="hljs-variable">instant</span> <span class="hljs-operator">=</span> Instant.now();<br>System.out.println(instant);     <span class="hljs-comment">//输出：2022-09-23T06:34:13.659774300Z</span><br><br><span class="hljs-comment">//得到当前系统时区时间</span><br><span class="hljs-type">ZonedDateTime</span> <span class="hljs-variable">myinstant</span> <span class="hljs-operator">=</span> instant.atZone(ZoneId.systemDefault());<br>System.out.println(myinstant);   <span class="hljs-comment">//输出：2022-09-23T14:34:13.659774300+08:00[Asia/Shanghai]</span><br><br><span class="hljs-comment">//Instant和Date类型相互转换</span><br><span class="hljs-type">Date</span> <span class="hljs-variable">date</span> <span class="hljs-operator">=</span> Date.from(instant);<br>instant = date.toInstant();<br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-y9bre8lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-y9bre8lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//得到一个Instant时间戳对象</span><br><span class="hljs-type">Instant</span> <span class="hljs-variable">instant</span> <span class="hljs-operator">=</span> Instant.now();<br>System.out.println(instant);     <span class="hljs-comment">//输出：2022-09-23T06:34:13.659774300Z</span><br><br><span class="hljs-comment">//得到当前系统时区时间</span><br><span class="hljs-type">ZonedDateTime</span> <span class="hljs-variable">myinstant</span> <span class="hljs-operator">=</span> instant.atZone(ZoneId.systemDefault());<br>System.out.println(myinstant);   <span class="hljs-comment">//输出：2022-09-23T14:34:13.659774300+08:00[Asia/Shanghai]</span><br><br><span class="hljs-comment">//Instant和Date类型相互转换</span><br><span class="hljs-type">Date</span> <span class="hljs-variable">date</span> <span class="hljs-operator">=</span> Date.from(instant);<br>instant = date.toInstant();<br></code></pre></td></tr></table></div></figure>
 
 <h3 id="9-4-3-DateTimeFormatter-类"><a href="#9-4-3-DateTimeFormatter-类" class="headerlink" title="9.4.3 DateTimeFormatter 类"></a>9.4.3 DateTimeFormatter 类</h3><p>在 JDK8 中，引入了一个全新的日期与时间格式器 <font class="code-word"><code>DateTimeFormatter</code></font> 。该类与 <font class="code-word"><code>SimpleDateFormat</code></font> 类的最大区别在于，其正反均可调用 <font class="code-word"><code>format</code></font> 方法，但无法格式化 <font class="code-word"><code>Date</code></font> 类的日期时间，只能格式化实现了 <font class="code-word"><code>TemporalAccessor</code></font> 接口的对象。</p>
 <p>DateTimeFormatter 无法使用构造方法创建对象，应当使用 <font class="code-word"><code>ofPattern</code></font> 方法：</p>
@@ -1256,25 +1242,25 @@
     </body>
 </table>
 
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-h3lorslc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-h3lorslc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//创建对象</span><br><span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> LocalDateTime.now();<br><span class="hljs-type">DateTimeFormatter</span> <span class="hljs-variable">sdf</span> <span class="hljs-operator">=</span> DateTimeFormatter.ofPattern(<span class="hljs-string">&quot;yyyy年MM月dd日 HH:mm:ss EEE a&quot;</span>);<br><br><span class="hljs-comment">//正反均可调用format方法</span><br><span class="hljs-type">String</span> <span class="hljs-variable">str1</span> <span class="hljs-operator">=</span> sdf.format(d);<br><span class="hljs-type">String</span> <span class="hljs-variable">str2</span> <span class="hljs-operator">=</span> d.format(sdf);<br><br>System.out.println(str1);       <span class="hljs-comment">//2022年09月23日 14:56:11 周五 下午</span><br>System.out.println(str2);       <span class="hljs-comment">//2022年09月23日 14:56:11 周五 下午</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-40gt14lcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-40gt14lcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">//创建对象</span><br><span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">d</span> <span class="hljs-operator">=</span> LocalDateTime.now();<br><span class="hljs-type">DateTimeFormatter</span> <span class="hljs-variable">sdf</span> <span class="hljs-operator">=</span> DateTimeFormatter.ofPattern(<span class="hljs-string">&quot;yyyy年MM月dd日 HH:mm:ss EEE a&quot;</span>);<br><br><span class="hljs-comment">//正反均可调用format方法</span><br><span class="hljs-type">String</span> <span class="hljs-variable">str1</span> <span class="hljs-operator">=</span> sdf.format(d);<br><span class="hljs-type">String</span> <span class="hljs-variable">str2</span> <span class="hljs-operator">=</span> d.format(sdf);<br><br>System.out.println(str1);       <span class="hljs-comment">//2022年09月23日 14:56:11 周五 下午</span><br>System.out.println(str2);       <span class="hljs-comment">//2022年09月23日 14:56:11 周五 下午</span><br></code></pre></td></tr></table></div></figure>
 
 <h3 id="9-4-4-日期时间差"><a href="#9-4-4-日期时间差" class="headerlink" title="9.4.4 日期时间差"></a>9.4.4 日期时间差</h3><p>日期差和时间差分别用两个类来计算：</p>
 <ul>
 <li><p><strong>计算日期差</strong>：在 JDK8 中，我们可以使用 <font class="code-word"><code>Period</code></font> 类来计算日期间隔差异，用于 <font class="code-word"><code>LocalDate</code></font> 之间的比较。</p>
 <p>通过Period 类方法 <font class="code-word"><code>getYears()</code></font>、<font class="code-word"><code>getMonths()</code></font>、<font class="code-word"><code>getDays()</code></font> 来计算，只能精确到年月日。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-6u3gd9lc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-6u3gd9lc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">LocalDate</span> <span class="hljs-variable">day1</span> <span class="hljs-operator">=</span> LocalDate.now();<br>System.out.println(day1);                               <span class="hljs-comment">//输出：2022-09-23</span><br><span class="hljs-type">LocalDate</span> <span class="hljs-variable">day2</span> <span class="hljs-operator">=</span> LocalDate.of(<span class="hljs-number">1995</span>, <span class="hljs-number">1</span>, <span class="hljs-number">11</span>);<br>System.out.println(day2);                               <span class="hljs-comment">//输出：1995-01-11</span><br><br><span class="hljs-comment">//计算日期差</span><br><span class="hljs-type">Period</span> <span class="hljs-variable">period</span> <span class="hljs-operator">=</span> Period.between(day2, day1);<br>System.out.printf(<span class="hljs-string">&quot;相差 %d 年\n&quot;</span>,period.getYears());     <span class="hljs-comment">//输出：相差 27 年</span><br>System.out.printf(<span class="hljs-string">&quot;相差 %d 月\n&quot;</span>,period.getMonths());    <span class="hljs-comment">//输出：相差 8 月</span><br>System.out.printf(<span class="hljs-string">&quot;相差 %d 日\n&quot;</span>,period.getDays());      <span class="hljs-comment">//输出：相差 12 日</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-eom6edlcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-eom6edlcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">LocalDate</span> <span class="hljs-variable">day1</span> <span class="hljs-operator">=</span> LocalDate.now();<br>System.out.println(day1);                               <span class="hljs-comment">//输出：2022-09-23</span><br><span class="hljs-type">LocalDate</span> <span class="hljs-variable">day2</span> <span class="hljs-operator">=</span> LocalDate.of(<span class="hljs-number">1995</span>, <span class="hljs-number">1</span>, <span class="hljs-number">11</span>);<br>System.out.println(day2);                               <span class="hljs-comment">//输出：1995-01-11</span><br><br><span class="hljs-comment">//计算日期差</span><br><span class="hljs-type">Period</span> <span class="hljs-variable">period</span> <span class="hljs-operator">=</span> Period.between(day2, day1);<br>System.out.printf(<span class="hljs-string">&quot;相差 %d 年\n&quot;</span>,period.getYears());     <span class="hljs-comment">//输出：相差 27 年</span><br>System.out.printf(<span class="hljs-string">&quot;相差 %d 月\n&quot;</span>,period.getMonths());    <span class="hljs-comment">//输出：相差 8 月</span><br>System.out.printf(<span class="hljs-string">&quot;相差 %d 日\n&quot;</span>,period.getDays());      <span class="hljs-comment">//输出：相差 12 日</span><br></code></pre></td></tr></table></div></figure>
 </li>
 <li><p><strong>计算时间差</strong>：在 JDK8 中，我们可以使用 <font class="code-word"><code>Duration</code></font> 类来计算时间间隔差异，用于 <font class="code-word"><code>LocalDateTime</code></font>、<font class="code-word"><code>LocalTime</code></font>、或 <font class="code-word"><code>Instant</code></font> 之间的比较。</p>
 <p>通过Duration 类方法 <font class="code-word"><code>toDays()</code></font>、<font class="code-word"><code>toHours()</code></font>、<font class="code-word"><code>toMinutes()</code></font>、<font class="code-word"><code>toMillis()</code></font>、<font class="code-word"><code>toNanos()</code></font> 来计算。</p>
-<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-6mncbhlc38hmdh"></i><span>java</span><div class="collapse show" id="collapse-6mncbhlc38hmdh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">day1</span> <span class="hljs-operator">=</span> LocalDateTime.now();                                                            <br>System.out.println(day1);                        <span class="hljs-comment">//输出：2022-09-23T15:19:48.763557400                 </span><br><span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">day2</span> <span class="hljs-operator">=</span> LocalDateTime.of(<span class="hljs-number">1990</span>,<span class="hljs-number">10</span>,<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,<span class="hljs-number">50</span>,<span class="hljs-number">30</span>);                                           <br>System.out.println(day2);                        <span class="hljs-comment">//输出：1990-10-01T10:50:30                                                                                                                            </span><br><span class="hljs-comment">//计算时间差                                                                                           </span><br><span class="hljs-type">Duration</span> <span class="hljs-variable">duration</span> <span class="hljs-operator">=</span> Duration.between(day2, day1);                                                    <br>System.out.println(duration.toDays());           <span class="hljs-comment">//输出：11680                                         </span><br>System.out.println(duration.toHours());          <span class="hljs-comment">//输出：280324                                       </span><br>System.out.println(duration.toMinutes());        <span class="hljs-comment">//输出：16819469                                     </span><br>System.out.println(duration.toMillis());         <span class="hljs-comment">//输出：1009168158763                                 </span><br>System.out.println(duration.toNanos());          <span class="hljs-comment">//输出：1009168158763557400                           </span><br></code></pre></td></tr></table></div></figure></li>
+<figure class="highlight java"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-7stvcllcjcfpi2"></i><span>java</span><div class="collapse show" id="collapse-7stvcllcjcfpi2"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">day1</span> <span class="hljs-operator">=</span> LocalDateTime.now();                                                            <br>System.out.println(day1);                        <span class="hljs-comment">//输出：2022-09-23T15:19:48.763557400                 </span><br><span class="hljs-type">LocalDateTime</span> <span class="hljs-variable">day2</span> <span class="hljs-operator">=</span> LocalDateTime.of(<span class="hljs-number">1990</span>,<span class="hljs-number">10</span>,<span class="hljs-number">1</span>,<span class="hljs-number">10</span>,<span class="hljs-number">50</span>,<span class="hljs-number">30</span>);                                           <br>System.out.println(day2);                        <span class="hljs-comment">//输出：1990-10-01T10:50:30                                                                                                                            </span><br><span class="hljs-comment">//计算时间差                                                                                           </span><br><span class="hljs-type">Duration</span> <span class="hljs-variable">duration</span> <span class="hljs-operator">=</span> Duration.between(day2, day1);                                                    <br>System.out.println(duration.toDays());           <span class="hljs-comment">//输出：11680                                         </span><br>System.out.println(duration.toHours());          <span class="hljs-comment">//输出：280324                                       </span><br>System.out.println(duration.toMinutes());        <span class="hljs-comment">//输出：16819469                                     </span><br>System.out.println(duration.toMillis());         <span class="hljs-comment">//输出：1009168158763                                 </span><br>System.out.println(duration.toNanos());          <span class="hljs-comment">//输出：1009168158763557400                           </span><br></code></pre></td></tr></table></div></figure></li>
 </ul>
 
-                
-              </div>
-            
-            <hr/>
-            <div>
-              <div class="post-metas my-3">
+        
+      </div>
+    
+    <hr/>
+    <div>
+      <div class="post-metas my-3">
   
     <div class="post-meta mr-3 d-flex align-items-center">
       <i class="iconfont icon-category"></i>
@@ -1310,7 +1296,7 @@
 </div>
 
 
-              
+      
   
 
   <div class="license-box my-3">
@@ -1355,24 +1341,32 @@
 
 
 
-              
-            </div>
-
-            
-          </article>
-        </div>
-      </div>
+      
     </div>
 
-    <div class="side-col d-none d-lg-block col-lg-2">
-      <!-- 这部分全改成自己的侧边栏了 -->
+    
+  </div>
+  
+
+  <div class="side-col d-none d-lg-block col-lg-2">
+
+    <!-- 这部分全改成自己的侧边栏了 -->
 <section id="mysidebar">
+  <!--头部-->
+  <div class="content-header clearfix">
+    <a href="javaScript:;" class="current">目录</a>
+    <a href="javaScript:;" >分类</a>
+</div>
+<!--内容-->
 <!-- 目录/分类 -->
   <div class="content-body" id="mysidebar-body">
     <div class="dom" style="display: block">
-      <aside class="sidebar" style="margin-left: -1rem">
+      <aside class="bar toc-bar" >
         <div id="toc">
-  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
   <div class="toc-body" id="toc-body"></div>
 </div>
 
@@ -1381,7 +1375,7 @@
       </aside>
     </div>
     <div class="dom" style="display: none;">
-      <aside class="sidebar category-bar" style="margin-right: -1rem">
+      <aside class="bar category-bar" >
         
 
 
@@ -1395,16 +1389,19 @@
     
     
     <div class="category row nomargin-x">
+      <div class="category-title">
       <a class="category-item 
-          list-group-item category-item-action col-10 col-md-11 col-xm-11" title="02 Java SE"
+          list-group-item category-item-action " title="02 Java SE"
         id="heading-d38f32cc8472004d980caddd508b0093" role="tab" data-toggle="collapse" href="#collapse-d38f32cc8472004d980caddd508b0093"
         aria-expanded="true"
       >
-        02 Java SE
+      <!-- 字符串删掉前面的数字 -->
+        Java SE
         <span class="list-group-count">(15)</span>
         <i class="iconfont icon-arrowright"></i>
       </a>
       
+    </div>
       <div class="category-collapse collapse show" id="collapse-d38f32cc8472004d980caddd508b0093"
            role="tabpanel" aria-labelledby="heading-d38f32cc8472004d980caddd508b0093">
         
@@ -1419,6 +1416,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 (一) - Java SE</span>
+          <time>08-25</time>
         </a>
       
     
@@ -1428,6 +1426,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">基础语法 (二) - Java SE</span>
+          <time>09-20</time>
         </a>
       
     
@@ -1437,6 +1436,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (一) - Java SE</span>
+          <time>08-27</time>
         </a>
       
     
@@ -1446,6 +1446,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (二) - Java SE</span>
+          <time>08-29</time>
         </a>
       
     
@@ -1455,6 +1456,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">面向对象 (三) - Java SE</span>
+          <time>08-30</time>
         </a>
       
     
@@ -1464,6 +1466,7 @@
            class="list-group-item list-group-item-action
            active">
           <span class="category-post">常用 API - Java SE</span>
+          <time>09-23</time>
         </a>
       
     
@@ -1473,6 +1476,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">泛型 - Java SE</span>
+          <time>09-01</time>
         </a>
       
     
@@ -1482,6 +1486,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (一) - Java SE</span>
+          <time>09-03</time>
         </a>
       
     
@@ -1491,6 +1496,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">集合 (二) - Java SE</span>
+          <time>09-05</time>
         </a>
       
     
@@ -1500,6 +1506,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">异常 - Java SE</span>
+          <time>09-07</time>
         </a>
       
     
@@ -1509,6 +1516,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (一) - Java SE</span>
+          <time>09-17</time>
         </a>
       
     
@@ -1518,6 +1526,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">IO 流 (二) - Java SE</span>
+          <time>09-19</time>
         </a>
       
     
@@ -1527,15 +1536,7 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">并发 - Java SE</span>
-        </a>
-      
-    
-      
-      
-        <a href="/post/49545/" title="注解 - Java SE"
-           class="list-group-item list-group-item-action
-           ">
-          <span class="category-post">注解 - Java SE</span>
+          <time>09-26</time>
         </a>
       
     
@@ -1545,6 +1546,17 @@
            class="list-group-item list-group-item-action
            ">
           <span class="category-post">反射 - Java SE</span>
+          <time>09-27</time>
+        </a>
+      
+    
+      
+      
+        <a href="/post/49545/" title="注解 - Java SE"
+           class="list-group-item list-group-item-action
+           ">
+          <span class="category-post">注解 - Java SE</span>
+          <time>09-27</time>
         </a>
       
     
@@ -1586,11 +1598,18 @@
         }
     }
 </script>
+
 </section>
 
 
 
-    </div>
+
+    <!-- <script src="https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" language="javascript">
+      $(function(){
+          $('.toc-body').wrap('<div></div>');
+      });
+   </script> -->
   </div>
 </div>
 
@@ -1598,14 +1617,6 @@
 
 
 
-  
-
-
-
-  
-
-
-
 
   
 
@@ -1616,9 +1627,23 @@
 
 
 
+  
 
 
 
+  
+
+
+
+
+
+
+
+              </div>
+            </div>
+        </div>
+      </div>
+      <!-- post页格式和下面统一 -->
     
 
     <!-- 这里删除了向上的按钮 -->
@@ -1650,14 +1675,18 @@
     
   </main>
 
-  <footer>
+  <footer id="footer">
     <div class="footer-inner">
   
+    <div class="footer-left">
+      <div class="copyright">©2022 - 2023 By MQY</div>
+    </div>
     <div class="footer-content">
        <div style="font-size: 0.85rem"> <span id="timeDate">载入天数...</span> <span id="times">载入时分秒...</span> <script src="/js/duration.js"></script> </div> 
     </div>
   
   
+  <div class="footer-right">
   
     <!-- 备案信息 ICP for China -->
     <div class="beian">
@@ -1670,6 +1699,7 @@
 </div>
 
   
+  </div>
   
 </div>
 
@@ -1693,6 +1723,9 @@
 <script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
+<script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
+<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
+<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
 
 
 
@@ -1727,6 +1760,8 @@
       includeTitleTags: true,
       headingsOffset  : -boardTop,
     }, CONFIG.toc));
+    //添加这一句
+    toc.find('.tocbot-link').wrapInner('<div class="text"></div>');
     if (toc.find('.toc-list-item').length > 0) {
       toc.css('visibility', 'visible');
     }

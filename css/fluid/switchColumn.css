@@ -142,37 +142,28 @@
 
 
 
-.post #mysidebar {
-  width: 100%;
-  position: sticky;
-  position: -webkit-sticky;
-  z-index: 99;
-  top: 2rem;
-  transition: background-color .2s ease-in-out, bottom .3s ease;
-  margin-left: 1rem;
-}
 
 
 /* 切换动画:和目录进入动画的标签区分开来 */
-.post .container-fluid.nopadding-x aside.sidebar {
+/* .post .container-fluid.nopadding-x aside.sidebar {
   animation: getright-post 1s ease;
   animation-fill-mode: both;
 }
 
 .mysidebar-bar {
-  position: fixed;
-  bottom: 40px;
-  right: 4px;
+  position: absolute;
+  right: 0;
+  bottom: 20px;
   z-index: 98;
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   transform: translateX(100%);
   width: auto;
 }
 
 .mysidebar-bar.show {
   opacity: 1;
-  transform: translateX(0);
+  transform: translateX(-10%);
 }
 
 
@@ -184,6 +175,13 @@
   width: auto;
 }
 
+.mysidebar-bar .mytoolbox{
+  background: var(--board-bg-color);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-dark);
+  border: 1px solid var(--unfocus-border-color);
+}
+
 
 .mysidebar-bar .mytoolbox a,
 .mysidebar-bar .opentoolbox a {
@@ -192,14 +190,17 @@
   text-align: center;
   margin-bottom: 0.25rem;
   color: var(--sec-text-color);
-  background: var(--board-bg-color);
-  box-shadow: 0px 2px 5px 2px rgb(0 0 0 / 15%);
-  border-radius: 2px;
 }
+
+
 
 
 .mysidebar-bar .opentoolbox a {
   margin-top: 0.8rem;
+  background: var(--board-bg-color);
+  border-radius: 5px;
+  box-shadow: var(--box-shadow-dark);
+  border: 1px solid var(--unfocus-border-color);
 }
 
 
@@ -216,7 +217,7 @@
 .mysidebar-bar .mytoolbox {
   opacity: 0;
   transform: translateX(100%);
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
 }
 
 .mysidebar-bar .mytoolbox.show {
@@ -227,16 +228,6 @@
 
 
 
-.mysidebar-bar .mytoolbox a:hover i {
-  animation-name: bar-icon;
-  animation-duration: 0.7s;
-  animation-delay: .1s;
-  animation-timing-function: ease-in-out;
-  animation-fill-mode: forwards;
-  animation-direction: alternate;
-
-}
-
 .mysidebar-bar .mytoolbox i {
   margin: auto;
   display: flex;
@@ -245,19 +236,6 @@
 
 
 
-@keyframes bar-icon {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-0.3rem);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
 
 
 @media (max-width:992px) {
@@ -265,3 +243,13 @@
     display: none;
   }
 }
+
+
+
+.bar-position{
+  position: fixed;
+  width: 0;
+  height: 100vh;
+  right: 0;
+  top:0;
+} */
