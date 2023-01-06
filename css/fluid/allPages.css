@@ -1,37 +1,5 @@
 /* ——————————————页面通用动画—————————————— */
 
-/* --------------页面进入动画-------------- */
-/* main>.container {
-  animation: getsolid-all 0.8s ease;
-  animation-fill-mode: both;
-} */
-/* body > :not(.home) #coloum-left,
-article.page-content {
-  animation: getup-all 0.8s ease;
-  animation-fill-mode: both;
-} */
-
-/* 上移动画 */
-@keyframes getup-all {
-    from {
-        transform: scaleX(0.8);
-    }
-
-    to {
-        transform: scale(1);
-    }
-}
-
-/* 渐入动画 */
-@keyframes getsolid-all {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 100;
-    }
-}
 
 
 /* ------------文章顶部波浪效果------------ */
@@ -201,6 +169,10 @@ header .header-inner #subtitle{
 @media(max-width:424px){
   header .header-inner #subtitle{
     font-size: 22px;
+  }
+
+  .header-inner .banner-text{
+    margin-top: 40px;
   }
 }
 
