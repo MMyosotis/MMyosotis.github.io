@@ -34,6 +34,7 @@
   <link rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css">
 
 
+<link rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css">
 
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
@@ -93,7 +94,7 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="about" id="pageName"><!-- hexo injector body_begin end -->
+<body>
   
 
   <header>
@@ -283,21 +284,56 @@
   </header>
 
   <main>
-    
-      <div class="container nopadding-x-md" id="#pjax-container">
-        <div id="board">
-          
-            <div class="about-avatar">
-              <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/myavatar.png" class="img-fluid" alt="avatar">
-            </div>
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
-
-
+    <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
 <script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
+
+<script data-pace-options="{ &quot;restartOnRequestAfter&quot;:false}" src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+
+    
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+    
+    <div class="container nopadding-x-md pjax-container">
+    
+    
+    
+    
+    
+    
+    
+    
+        <div class="about" id="board">
+          <div class="about-avatar">
+            <img src="https://mmimages.oss-cn-chengdu.aliyuncs.com/blog/myavatar.png" class="img-fluid" alt="avatar">
+          </div>
+        
+    
+    
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 m-auto">
+          
+
 
 <div class="text-center">
   <div class="about-info">
@@ -456,7 +492,7 @@
         radius: ['15%', '90%'],
         center: ['50%', '55%'],
         sort: 'desc',
-        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clckj4zvm002rtgie050a54si","parentId":"0"},{"name":"MySQL","value":8,"path":"categories/04-MySQL/","id":"clckj4zv20004tgie93hf57qz","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clckj4zvj0024tgie16grei09","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clckj4zvg001utgiedtq13g5o","parentId":"0"},{"name":"单元测试","value":1,"path":"categories/08-单元测试/","id":"clckj4zvt0045tgiee3uihs8n","parentId":"0"}],
+        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clcm3a87q00227kie6e5v8f00","parentId":"0"},{"name":"MySQL","value":8,"path":"categories/04-MySQL/","id":"clcm3a87x003e7kiednhq5ksn","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clcm3a87d00047kiegnha979v","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clcm3a87s00277kiebe1v4ieh","parentId":"0"},{"name":"单元测试","value":1,"path":"categories/08-单元测试/","id":"clcm3a886006f7kie6hnehm54","parentId":"0"}],
         itemStyle: {
           borderColor: '#fff',
           borderWidth: 2,
@@ -478,7 +514,7 @@
           color: color,
           formatter: '{b} : {c} ({d}%)'
         },
-        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clckj4zvm002rtgie050a54si","parentId":"0"},{"name":"MySQL","value":8,"path":"categories/04-MySQL/","id":"clckj4zv20004tgie93hf57qz","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clckj4zvj0024tgie16grei09","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clckj4zvg001utgiedtq13g5o","parentId":"0"},{"name":"单元测试","value":1,"path":"categories/08-单元测试/","id":"clckj4zvt0045tgiee3uihs8n","parentId":"0"},{"name":"其他","value":5}],
+        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clcm3a87q00227kie6e5v8f00","parentId":"0"},{"name":"MySQL","value":8,"path":"categories/04-MySQL/","id":"clcm3a87x003e7kiednhq5ksn","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clcm3a87d00047kiegnha979v","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clcm3a87s00277kiebe1v4ieh","parentId":"0"},{"name":"单元测试","value":1,"path":"categories/08-单元测试/","id":"clcm3a886006f7kie6hnehm54","parentId":"0"},{"name":"其他","value":5}],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
@@ -526,12 +562,10 @@
 
 
 
-              </div>
-            </div>
-          </div>
         </div>
       </div>
-    
+  </div>
+</div>
 
     <!-- 这里删除了向上的按钮 -->
 
@@ -559,7 +593,7 @@
     
 
     
-  </main>
+  </div></main>
 
   <footer id="footer">
     <div class="footer-inner">
@@ -610,8 +644,9 @@
 <script src="/js/events.js"></script>
 <script src="/js/plugins.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js"></script>
-<script src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js"></script>
-<link rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css">
+<!-- <script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script> -->
+<!-- <link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" /> -->
+
 
 
   <script src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js"></script>
@@ -664,6 +699,7 @@
   
 <script src="/js/random.js"></script>
 <script src="/js/myo.js"></script>
+<script src="/js/postTag.js"></script>
 
 
 
@@ -677,6 +713,7 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<!-- hexo injector body_end start --></div><!-- hexo injector body_end end -->
+
+
 
 </body></html>

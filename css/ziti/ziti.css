@@ -5,14 +5,14 @@
     font-style: normal;
 } */
 
-/* @font-face{
+@font-face{
     font-family: 'pingFangSC-Regular';
     src: url('pingFangRegular.ttf');
     font-weight: normal;
     font-style: normal;
 }
 
-@font-face{
+/* @font-face{
     font-family: 'pingFangSC-Medium';
     src: url('pingFangSCMedium.ttf');
     font-weight: normal;

@@ -1,5 +1,5 @@
 :root {
-  --highlight-title-bg-color: #eff3f8;
+  --highlight-title-bg-color: #e6ebf1;
 }
 [data-user-color-scheme='dark'] {
   --highlight-title-bg-color: #343a43;

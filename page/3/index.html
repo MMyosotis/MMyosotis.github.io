@@ -34,6 +34,7 @@
 
 
 
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
@@ -93,13 +94,13 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="home" id="pageName"><!-- hexo injector body_begin end -->
+<body>
   
 
   <header>
     
 
-<div class="header-inner" style="height: 100vh;">
+<div class="header-inner" style="height: 40vh;">
   <script src="https://kit.fontawesome.com/76e132f4de.js" crossorigin="anonymous"></script>
 
 <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
@@ -261,10 +262,6 @@
       </div>
 
       
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
     </div>
   </div>
   
@@ -291,17 +288,53 @@
   </header>
 
   <main>
+    <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
+
+<script data-pace-options='{ "restartOnRequestAfter":false}' src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+
     
-      <div class="container nopadding-x-md" id="#pjax-container">
-        <div id="board"
-          style="margin-top: 0">
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+    
+    <div class="container nopadding-x-md pjax-container">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        <div id="board" class="home">
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 m-auto">
           
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
 
-
+<div class="home">
 <div class="home-top">
 
   <!-- 公告栏 -->
@@ -537,7 +570,7 @@
           <div class="Card-tips">快速入门</div>
           <div class="Card-title">Java SE + MySQL + Spring 重点知识整理</div>
         </div>
-        <div class="banner-button-group"><a class="banner-button" onclick="hideTodayCard();"><i
+        <div class="banner-button-group"><a class="banner-button" onclick="hideFaceCard();"><i
               class="fa-solid fa-circle-plus"></i><span class="banner-button-text">快速入门</span></a></div>
       </div>
 
@@ -1466,13 +1499,11 @@
 </div>
 
 
-
-              </div>
-            </div>
-          </div>
+</div>
         </div>
       </div>
-    
+  </div>
+</div>
 
     <!-- 这里删除了向上的按钮 -->
 
@@ -1552,8 +1583,9 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
-<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
-<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
+<!-- <script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script> -->
+<!-- <link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" /> -->
+
 
 
   <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
@@ -1583,12 +1615,28 @@
 
   <script  src="/js/local-search.js" ></script>
 
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.10/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
 
 
 
   
 <script src="/js/random.js"></script>
 <script src="/js/myo.js"></script>
+<script src="/js/postTag.js"></script>
 
 
 
@@ -1602,5 +1650,6 @@
   <noscript>
     <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
   </noscript>
-<!-- hexo injector body_end start --></div><!-- hexo injector body_end end --></body>
+</body>
 </html>
+

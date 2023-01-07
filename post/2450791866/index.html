@@ -49,6 +49,7 @@
   <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
 
 
+<link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
 
 <!-- 主题依赖的图标库，不要自行修改 -->
 <!-- Do not modify the link that theme dependent icons -->
@@ -108,7 +109,7 @@
 <meta name="generator" content="Hexo 6.3.0"></head>
 
 
-<body><!-- hexo injector body_begin start --><div class="post" id="pageName"><!-- hexo injector body_begin end -->
+<body>
   
 
   <header>
@@ -339,13 +340,51 @@
   </header>
 
   <main>
+    <script type="text/javascript" src="https://unpkg.com/artitalk"></script>
+<script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js"></script>
+
+<script data-pace-options='{ "restartOnRequestAfter":false}' src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+
     
-      <div class="container nopadding-x-md" id="#pjax-container">
-        <div id="board">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
-                
+
+
+
+  
+
+
+
+  
+
+
+
+
+  
+
+
+
+  
+
+
+
+
+    
+    <div class="container nopadding-x-md pjax-container">
+    
+        <div class="post" id="board">
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <div class="container">
+      <div class="row">
+        <div class="col-12 col-md-10 m-auto">
+          
 
 
 
@@ -395,7 +434,7 @@
 </ul>
 <h1 id="2-依赖配置"><a href="#2-依赖配置" class="headerlink" title="2. 依赖配置"></a>2. 依赖配置</h1><p><strong>依赖管理</strong></p>
 <p>依赖指当前项目运行所需要的 jar 包，一个项目可以在 <code>pom.xml</code> 文件中通过坐标配置多个依赖。</p>
-<figure class="highlight xml"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-6mviwhlckj50ki"></i><span>xml</span><div class="collapse show" id="collapse-6mviwhlckj50ki"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--导入MySQL驱动jar包--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span><br>    ...<br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>mysql<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>                                <span class="hljs-comment">&lt;!--依赖所属群组ID--&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mysql-connector-java<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>           <span class="hljs-comment">&lt;!--依赖所属项目ID--&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.1.34<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>                               <span class="hljs-comment">&lt;!--依赖版本号--&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br>    ...<br><span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span><br><span class="hljs-comment">&lt;!--配置好后需点击刷新按钮才能生效--&gt;</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight xml"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-nz7oa0lcm3a8s7"></i><span>xml</span><div class="collapse show" id="collapse-nz7oa0lcm3a8s7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--导入MySQL驱动jar包--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span><br>    ...<br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>mysql<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>                                <span class="hljs-comment">&lt;!--依赖所属群组ID--&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mysql-connector-java<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>           <span class="hljs-comment">&lt;!--依赖所属项目ID--&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.1.34<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>                               <span class="hljs-comment">&lt;!--依赖版本号--&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br>    ...<br><span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span><br><span class="hljs-comment">&lt;!--配置好后需点击刷新按钮才能生效--&gt;</span><br></code></pre></td></tr></table></div></figure>
 
 <p><strong>依赖范围</strong></p>
 <p>可以通过设置坐标的依赖范围（<font class="code-word"><code>scope</code></font>）来设置对应 jar 包的作用范围，默认取 <font class="code-word"><code>compile</code></font>。</p>
@@ -456,11 +495,11 @@
             <td style="text-align: center;">import</td>  
             <td style="text-align: center;" colspan="4">引入 DependencyManagement</td> 
         </tr>   
-    <!-- hexo injector body_end start --><script src="https://fastly.jsdelivr.net/npm/hexo-tag-common@0.2.0/js/index.js"></script></div><!-- hexo injector body_end end --></body>
+    </body>
 </table>
 
 <p>可以在 <code>pom.xml</code> 文件中配置依赖时指定依赖范围。</p>
-<figure class="highlight xml"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-iy5ty1lckj50ki"></i><span>xml</span><div class="collapse show" id="collapse-iy5ty1lckj50ki"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--导入MySQL驱动jar包--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span><br>    ...<br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>mysql<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>                                <br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mysql-connector-java<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>          <br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.1.34<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>                               <br>            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>compile<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>                                  <span class="hljs-comment">&lt;!--指定依赖范围--&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br>    ...<br><span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span><br></code></pre></td></tr></table></div></figure>
+<figure class="highlight xml"><i class="fa fa-angle-down" type="button" data-toggle="collapse" data-target="#collapse-0rz1relcm3a8s7"></i><span>xml</span><div class="collapse show" id="collapse-0rz1relcm3a8s7"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs xml"><span class="hljs-comment">&lt;!--导入MySQL驱动jar包--&gt;</span><br><span class="hljs-tag">&lt;<span class="hljs-name">project</span>&gt;</span><br>    ...<br>    <span class="hljs-tag">&lt;<span class="hljs-name">dependencies</span>&gt;</span><br>        <span class="hljs-tag">&lt;<span class="hljs-name">dependency</span>&gt;</span><br>            <span class="hljs-tag">&lt;<span class="hljs-name">groupId</span>&gt;</span>mysql<span class="hljs-tag">&lt;/<span class="hljs-name">groupId</span>&gt;</span>                                <br>            <span class="hljs-tag">&lt;<span class="hljs-name">artifactId</span>&gt;</span>mysql-connector-java<span class="hljs-tag">&lt;/<span class="hljs-name">artifactId</span>&gt;</span>          <br>            <span class="hljs-tag">&lt;<span class="hljs-name">version</span>&gt;</span>5.1.34<span class="hljs-tag">&lt;/<span class="hljs-name">version</span>&gt;</span>                               <br>            <span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>compile<span class="hljs-tag">&lt;/<span class="hljs-name">scope</span>&gt;</span>                                  <span class="hljs-comment">&lt;!--指定依赖范围--&gt;</span><br>        <span class="hljs-tag">&lt;/<span class="hljs-name">dependency</span>&gt;</span><br>    <span class="hljs-tag">&lt;/<span class="hljs-name">dependencies</span>&gt;</span><br>    ...<br><span class="hljs-tag">&lt;/<span class="hljs-name">project</span>&gt;</span><br></code></pre></td></tr></table></div></figure>
 
 
 
@@ -683,33 +722,6 @@
       </aside>
     </div>
   </div>
-
-  <!-- 切换栏:放在post.ejs中了 -->
-
-<!-- 点击切换 -->
-<script type="application/javascript" >
-    window.onload=function () {
-        let as=document.getElementsByClassName('content-header')[0].getElementsByTagName('a');
-        let contents=document.getElementsByClassName("dom");
-        for (let i=0;i<2;i++){
-            let a=as[i];
-            a.id=i;
-            // 设置每个a标签的onclick事件
-            a.onclick=function () {
-                // 清楚所有标签的css设置，隐藏dom标签
-                for(let j=0;j<2;j++){
-                    as[j].className="";
-                    contents[j].style.display="none";
-                }
-                // 设置当前标签样式及当前标签下的所有dom标签可见
-                this.className='current';
-                // 当前div可见
-                contents[this.id].style.display='block';
-            }
-        }
-    }
-</script>
-
 </section>
 
 
@@ -750,12 +762,10 @@
 
 
 
-              </div>
-            </div>
         </div>
       </div>
-      <!-- post页格式和下面统一 -->
-    
+  </div>
+</div>
 
     <!-- 这里删除了向上的按钮 -->
 
@@ -835,8 +845,9 @@
 <script  src="/js/events.js" ></script>
 <script  src="/js/plugins.js" ></script>
 <script  src="https://cdn.jsdelivr.net/npm/pjax@latest/pjax.min.js" ></script>
-<script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script>
-<link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" />
+<!-- <script  src="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.js" ></script> -->
+<!-- <link  rel="stylesheet" href="https://cdn.bootcss.com/nprogress/0.2.0/nprogress.min.css" /> -->
+
 
 
 
@@ -916,6 +927,7 @@
   
 <script src="/js/random.js"></script>
 <script src="/js/myo.js"></script>
+<script src="/js/postTag.js"></script>
 
 
 
@@ -931,3 +943,4 @@
   </noscript>
 </body>
 </html>
+

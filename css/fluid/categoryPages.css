@@ -21,6 +21,9 @@
 .category #coloum-left .list-group hr {
     margin-top: 0;
 }
+.category #coloum-left .list-group {
+    margin-top: 3rem !important;
+}
 
 /* ----------------分类导航---------------- */
 .category #category-bar {
@@ -92,7 +95,7 @@
 
 
 /* ---------------分类快属性--------------- */
-.categories #board .category{
+.categories .category{
     background: white;
     border-radius: 12px;
     border: 1px solid var(--unfocus-border-color);
