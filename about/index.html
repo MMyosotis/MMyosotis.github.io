@@ -55,6 +55,7 @@
 
 
   
+<link rel="stylesheet" href="/css/fluid/postTag.css">
 <link rel="stylesheet" href="/css/fluid/aboutPages.css">
 <link rel="stylesheet" href="/css/fluid/allPages.css">
 <link rel="stylesheet" href="/css/fluid/archivePages.css">
@@ -473,7 +474,7 @@
       },
       legend: {
         top: 'bottom',
-        data: ["Java SE","MySQL","博客搭建","数据结构与算法","单元测试","其他"],
+        data: ["Java SE","博客搭建","SSM 框架","数据结构与算法","软件配置","其他"],
         textStyle: {
           color: color
         }
@@ -492,7 +493,7 @@
         radius: ['15%', '90%'],
         center: ['50%', '55%'],
         sort: 'desc',
-        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clcm3a87q00227kie6e5v8f00","parentId":"0"},{"name":"MySQL","value":8,"path":"categories/04-MySQL/","id":"clcm3a87x003e7kiednhq5ksn","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clcm3a87d00047kiegnha979v","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clcm3a87s00277kiebe1v4ieh","parentId":"0"},{"name":"单元测试","value":1,"path":"categories/08-单元测试/","id":"clcm3a886006f7kie6hnehm54","parentId":"0"}],
+        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clcm56y580004u4iefq378e9f","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clcm56y5q002au4ie6movev0k","parentId":"0"},{"name":"SSM 框架","value":3,"path":"categories/07-SSM-框架/","id":"clcm56y66006au4iedzuo3opy","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clcm56y5u0035u4ie64li5lmc","parentId":"0"},{"name":"软件配置","value":1,"path":"categories/05-软件配置/","id":"clcm56y5t002vu4ieagbehg55","parentId":"0"}],
         itemStyle: {
           borderColor: '#fff',
           borderWidth: 2,
@@ -514,7 +515,7 @@
           color: color,
           formatter: '{b} : {c} ({d}%)'
         },
-        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clcm3a87q00227kie6e5v8f00","parentId":"0"},{"name":"MySQL","value":8,"path":"categories/04-MySQL/","id":"clcm3a87x003e7kiednhq5ksn","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clcm3a87d00047kiegnha979v","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clcm3a87s00277kiebe1v4ieh","parentId":"0"},{"name":"单元测试","value":1,"path":"categories/08-单元测试/","id":"clcm3a886006f7kie6hnehm54","parentId":"0"},{"name":"其他","value":5}],
+        data: [{"name":"Java SE","value":15,"path":"categories/02-Java-SE/","id":"clcm56y580004u4iefq378e9f","parentId":"0"},{"name":"博客搭建","value":4,"path":"categories/01-博客搭建/","id":"clcm56y5q002au4ie6movev0k","parentId":"0"},{"name":"SSM 框架","value":3,"path":"categories/07-SSM-框架/","id":"clcm56y66006au4iedzuo3opy","parentId":"0"},{"name":"数据结构与算法","value":2,"path":"categories/03-数据结构与算法/","id":"clcm56y5u0035u4ie64li5lmc","parentId":"0"},{"name":"软件配置","value":1,"path":"categories/05-软件配置/","id":"clcm56y5t002vu4ieagbehg55","parentId":"0"},{"name":"其他","value":10}],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
@@ -529,7 +530,7 @@
       categoriesChart.resize();
     });
     categoriesChart.on('click', 'series', (event) => {
-      if(event.data.path) window.location.href = '/' + event.data.path;
+      if(event.data.path)pjaxforOthers.loadUrl( '/' + event.data.path);
     });
   </script>
     </div>
@@ -626,9 +627,9 @@
   </footer>
 
   <!-- Scripts -->
-  
-  <script src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js"></script>
-  <link rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css">
+  <!-- 
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
 
   <script>
     NProgress.configure({"showSpinner":false,"trickleSpeed":100})
@@ -638,7 +639,7 @@
     })
   </script>
 
-
+ -->
 <script src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
 <script src="/js/events.js"></script>
@@ -697,7 +698,7 @@
 
 
   
-<script src="/js/random.js"></script>
+<script src="/js/randomPost.js"></script>
 <script src="/js/myo.js"></script>
 <script src="/js/postTag.js"></script>
 

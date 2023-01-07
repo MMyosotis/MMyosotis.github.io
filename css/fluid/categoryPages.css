@@ -22,7 +22,7 @@
     margin-top: 0;
 }
 .category #coloum-left .list-group {
-    margin-top: 3rem !important;
+    margin-top: 1rem;
 }
 
 /* ----------------分类导航---------------- */
@@ -67,6 +67,10 @@
 
     .category .body-content #coloum-left {
         padding: 10px 20px 10px;
+    }
+
+    .category #coloum-left .list-group {
+        margin-top: 0rem;
     }
 }
 

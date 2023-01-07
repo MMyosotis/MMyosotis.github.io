@@ -35,6 +35,7 @@ function pjax_init(){
     switchbar();
     helloTime();
     homeFaceCard();
+    addRandom();
     categoriesBarActive();
     CommonTags.registerTabsTag();
     $.getScript("/js/img-lazyload.js");
@@ -83,3 +84,11 @@ function pjax_init(){
 });
 }
 pjax_init();
+
+
+var pjaxforOthers= new Pjax({
+  elements: 'a[href]:not([href^="#"]):not([href="javascript:void(0)"])',
+  selectors: [".pjax-container",'.banner'],
+  //三个分别是容器 标题 头图
+  debug: true
+});
